@@ -29,7 +29,7 @@ export function HeroSectionRefined({ content }: HeroSectionRefinedProps) {
                     <path d="M6.75 8.75h10.5M6.75 12h6.2M12 18.25l-3.25 2.5v-2.5H7.5c-1.38 0-2.5-1.12-2.5-2.5V7.25c0-1.38 1.12-2.5 2.5-2.5h9c1.38 0 2.5 1.12 2.5 2.5v8.5c0 1.38-1.12 2.5-2.5 2.5H12Z" />
                   </svg>
                 </span>
-                Chưa biết bắt đầu từ đâu?
+                Chưa biết bắt đầu từ đâu? Thử để web gợi một hướng phù hợp.
               </p>
             </div>
           </div>
