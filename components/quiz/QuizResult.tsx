@@ -51,7 +51,12 @@ export function QuizResult({
               key={article.href}
               className="rounded-[16px] border border-[var(--color-border)] bg-[rgba(251,248,242,0.92)] p-4"
             >
-              <p className="text-base font-semibold text-[var(--color-text-strong)]">{article.title}</p>
+              <Link
+                href={article.href}
+                className="text-base font-semibold text-[var(--color-text-strong)] transition-colors hover:text-[var(--color-navy)]"
+              >
+                {article.title}
+              </Link>
               <p className="mt-1 text-sm text-[var(--color-text-muted)]">{article.summary}</p>
             </li>
           ))}
