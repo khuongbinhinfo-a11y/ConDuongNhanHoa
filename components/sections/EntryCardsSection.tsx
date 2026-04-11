@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { SectionTitle } from "@/components/ui/SectionTitle";
-import type { EntryCardContent } from "@/data/homepage";
+import type { EntryCardContent } from "@/data/homepageData";
 
 type EntryCardsSectionProps = {
   title: string;
