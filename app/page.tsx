@@ -1,6 +1,6 @@
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { EntryCardsSection } from "@/components/sections/EntryCardsSection";
-import { HeroSection } from "@/components/sections/HeroSection";
+import { HeroSectionRefined } from "@/components/sections/HeroSectionRefined";
 import { homepageData } from "@/data/homepageData";
 
 export default function HomePage() {
@@ -8,7 +8,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text-strong)]">
       <SiteHeader brandName={homepageData.brandName} links={homepageData.headerLinks} cta={homepageData.headerCta} />
       <main>
-        <HeroSection content={homepageData.hero} />
+        <HeroSectionRefined content={homepageData.hero} />
         <EntryCardsSection title={homepageData.entrySection.title} cards={homepageData.entrySection.cards} />
       </main>
     </div>
