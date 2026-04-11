@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import type { HeroContent } from "@/data/homepageData";
 
-type HeroSectionProps = {
+type HeroSectionGuidedProps = {
   content: HeroContent;
 };
 
-export function HeroSection({ content }: HeroSectionProps) {
-  const ctaHref = content.secondaryCta.href || content.primaryCta.href;
+export function HeroSectionGuided({ content }: HeroSectionGuidedProps) {
+  const ctaHref = content.primaryCta.href;
 
   return (
     <section className="relative overflow-hidden py-14 lg:py-20">
@@ -23,7 +23,7 @@ export function HeroSection({ content }: HeroSectionProps) {
             </h1>
             <p className="mt-5 max-w-[56ch] text-base text-[var(--color-text-muted)] lg:text-lg">{content.subtitle}</p>
 
-            <div className="mt-8 flex flex-wrap items-start gap-3">
+            <div className="mt-8 flex flex-wrap items-start gap-3 sm:items-center">
               <Button href={ctaHref}>Xem hướng bắt đầu</Button>
 
               <div className="hero-chat-bubble" aria-live="polite">
@@ -35,17 +35,20 @@ export function HeroSection({ content }: HeroSectionProps) {
                 <p>Chưa biết bắt đầu từ đâu?</p>
               </div>
             </div>
-
-            <p className="hero-soft-prompt mt-4 text-sm text-[var(--color-text-muted)]">
-              Không cần đi nhanh, chỉ cần đi đúng nhịp.
-            </p>
           </div>
 
           <div className="relative isolate rounded-[24px] border border-[var(--color-border)] bg-[var(--color-card)] p-2 shadow-[0_18px_40px_rgba(36,76,99,0.10)]">
-            <div className="absolute -right-10 -top-10 -z-10 h-44 w-44 rounded-full bg-[rgba(111,167,166,0.28)] blur-2xl" />
-            <div className="absolute -bottom-8 -left-8 -z-10 h-36 w-36 rounded-full bg-[rgba(220,232,221,0.65)] blur-2xl" />
+            <div className="absolute -right-10 -top-10 -z-10 h-44 w-44 rounded-full bg-[rgba(111,167,166,0.22)] blur-2xl" />
+            <div className="absolute -bottom-8 -left-8 -z-10 h-36 w-36 rounded-full bg-[rgba(220,232,221,0.55)] blur-2xl" />
             <div className="relative min-h-[320px] overflow-hidden rounded-[20px] lg:min-h-[460px]">
-              <Image src={content.image.src} alt={content.image.alt} fill priority sizes="(max-width: 1024px) 100vw, 48vw" className="object-cover" />
+              <Image
+                src={content.image.src}
+                alt={content.image.alt}
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 48vw"
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
