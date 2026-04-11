@@ -13,6 +13,9 @@ export function QuizIntro({ onStart, totalQuestions }: QuizIntroProps) {
         <p className="text-base">
           Mỗi câu đều ngắn và thực tế. Bạn chỉ cần chọn phương án thấy gần với mình nhất ở thời điểm này.
         </p>
+        <p className="quiz-soft-prompt text-sm">
+          Có thể bắt đầu từ một điều gần với mình, vừa đủ và chân thật.
+        </p>
       </div>
 
       <div className="mt-6 rounded-[18px] border border-[rgba(111,167,166,0.36)] bg-[rgba(220,232,221,0.42)] p-4">
@@ -24,7 +27,7 @@ export function QuizIntro({ onStart, totalQuestions }: QuizIntroProps) {
       <button
         type="button"
         onClick={onStart}
-        className="mt-6 inline-flex items-center justify-center rounded-full bg-[var(--color-navy)] px-5 py-2.5 text-sm font-semibold text-[#F6F1E8] shadow-[0_12px_26px_rgba(36,76,99,0.20)] transition-all duration-200 hover:bg-[#1f4256] hover:shadow-[0_16px_30px_rgba(36,76,99,0.28)]"
+        className="calm-action calm-action--primary mt-6 inline-flex items-center justify-center rounded-full bg-[var(--color-navy)] px-5 py-2.5 text-sm font-semibold text-[#F6F1E8] shadow-[0_12px_26px_rgba(36,76,99,0.20)] transition-all duration-200 hover:bg-[#1f4256] hover:shadow-[0_16px_30px_rgba(36,76,99,0.28)]"
       >
         Bắt đầu {totalQuestions} câu hỏi
       </button>

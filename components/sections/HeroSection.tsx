@@ -10,6 +10,8 @@ type HeroSectionProps = {
 export function HeroSection({ content }: HeroSectionProps) {
   return (
     <section className="relative overflow-hidden py-14 lg:py-20">
+      <div aria-hidden className="hero-wing hero-wing--left" />
+      <div aria-hidden className="hero-wing hero-wing--right" />
       <Container>
         <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:gap-12">
           <div className="relative z-10 max-w-[620px]">
@@ -27,6 +29,10 @@ export function HeroSection({ content }: HeroSectionProps) {
                 {content.secondaryCta.label}
               </Button>
             </div>
+
+            <p className="hero-soft-prompt mt-4 text-sm text-[var(--color-text-muted)]">
+              Không cần đi nhanh, chỉ cần đi đúng nhịp.
+            </p>
           </div>
 
           <div className="relative isolate rounded-[24px] border border-[var(--color-border)] bg-[var(--color-card)] p-2 shadow-[0_18px_40px_rgba(36,76,99,0.10)]">

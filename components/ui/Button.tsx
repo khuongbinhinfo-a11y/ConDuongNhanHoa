@@ -10,6 +10,12 @@ type ButtonProps = {
   className?: string;
 };
 
+const variantTokens: Record<ButtonVariant, string> = {
+  primary: "calm-cta calm-cta--primary",
+  ghost: "calm-cta calm-cta--ghost",
+  text: "calm-cta calm-cta--text",
+};
+
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
     "bg-[var(--color-navy)] text-[#F6F1E8] shadow-[0_12px_26px_rgba(36,76,99,0.20)] hover:bg-[#1f4256] hover:shadow-[0_16px_30px_rgba(36,76,99,0.28)]",
@@ -22,7 +28,7 @@ export function Button({ href, children, variant = "primary", className = "" }: 
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-200 ${variantStyles[variant]} ${className}`}
+      className={`inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-200 ${variantStyles[variant]} ${variantTokens[variant]} ${className}`}
     >
       {children}
     </Link>
