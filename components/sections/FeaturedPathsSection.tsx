@@ -2,7 +2,20 @@ import Link from "next/link";
 import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { SectionTitle } from "@/components/ui/SectionTitle";
-import type { FeaturedPathsContent } from "@/data/homepageVisualContent";
+
+export type FeaturedPathItem = {
+  title: string;
+  description: string;
+  href: string;
+  ctaLabel: string;
+};
+
+export type FeaturedPathsContent = {
+  eyebrow?: string;
+  title: string;
+  subtitle: string;
+  cards: FeaturedPathItem[];
+};
 
 type FeaturedPathsSectionProps = {
   content: FeaturedPathsContent;

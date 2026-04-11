@@ -1,6 +1,16 @@
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import type { ClosingEditorialContent } from "@/data/homepageVisualContent";
+
+export type ClosingEditorialContent = {
+  kicker?: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  cta: {
+    label: string;
+    href: string;
+  };
+};
 
 type ClosingEditorialSectionProps = {
   content: ClosingEditorialContent;
@@ -17,7 +27,9 @@ export function ClosingEditorialSection({ content }: ClosingEditorialSectionProp
           <div className="pointer-events-none absolute bottom-6 left-16 h-24 w-64 rounded-[100%] border border-[rgba(109,159,155,0.16)] opacity-55" />
 
           <div className="relative z-10 mx-auto max-w-[760px] text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-teal)]">{content.kicker}</p>
+            {content.kicker ? (
+              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-teal)]">{content.kicker}</p>
+            ) : null}
             <h2 className="mt-3 text-[clamp(1.7rem,2.8vw,2.4rem)] font-semibold leading-[1.3] text-[var(--color-text-strong)]">
               {content.title}
             </h2>

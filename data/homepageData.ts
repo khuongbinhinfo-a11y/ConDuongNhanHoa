@@ -18,47 +18,37 @@ export type EntryCardContent = {
   href: string;
 };
 
+import { homepageConfig } from "@/data/homepageConfig";
+import { homepageTranslations } from "@/locales/homepage";
+import { navigationTranslations } from "@/locales/navigation";
+
+const navigationText = navigationTranslations.vi;
+const homepageText = homepageTranslations.vi;
+
 export const homepageData = {
-  brandName: "Con Đường Nhân Hòa",
-  headerLinks: [
-    { label: "Trang chủ", href: "/" },
-    { label: "Hiểu lại điều quen", href: "/hieu-lai-dieu-quen" },
-    { label: "Sống khỏe dễ hiểu", href: "/song-khoe-de-hieu" },
-    { label: "Câu chuyện thay đổi", href: "/cau-chuyen-thay-doi" },
-    { label: "Bắt đầu từ đâu", href: "/quiz" },
-    { label: "Góc nhìn nhân ái", href: "/goc-nhin-nhan-ai" },
-  ] satisfies HeaderLink[],
-  headerCta: { label: "Đồng hành", href: "/quiz" },
+  brandName: navigationText.brand.name,
+  headerLinks: homepageConfig.headerLinks.map((item) => ({
+    label: navigationText.nav[item.key],
+    href: item.href,
+  })) satisfies HeaderLink[],
+  headerCta: { label: navigationText.companion, href: homepageConfig.headerCtaHref },
   hero: {
-    eyebrow: "Editorial Wellness",
-    title: "Hiểu lại để sống tốt hơn",
-    subtitle:
-      "Nhìn sâu điều quen, sống khỏe từ hiểu biết, bắt đầu thay đổi từ những điều nhỏ.",
-    primaryCta: { label: "Khám phá ngay", href: "/quiz" },
-    secondaryCta: { label: "Xem hướng bắt đầu", href: "/quiz" },
+    eyebrow: homepageText.hero.eyebrow,
+    title: homepageText.hero.title,
+    subtitle: homepageText.hero.subtitle,
+    primaryCta: { label: homepageText.hero.primaryCta, href: homepageConfig.hero.primaryCtaHref },
+    secondaryCta: { label: homepageText.hero.primaryCta, href: homepageConfig.hero.primaryCtaHref },
     image: {
-      src: "/images/hero-wellness.jpg",
-      alt: "Người phụ nữ ngắm nhìn thiên nhiên trong buổi sáng yên tĩnh",
+      src: homepageConfig.hero.image.src,
+      alt: homepageConfig.hero.image.alt.vi,
     },
   } satisfies HeroContent,
   entrySection: {
-    title: "Bắt đầu từ điều phù hợp nhất",
-    cards: [
-      {
-        title: "Hiểu Lại Điều Quen",
-        description: "Mở lại những điều vốn quá quen để nhìn rõ hơn điều thật sự quan trọng.",
-        href: "/hieu-lai-dieu-quen",
-      },
-      {
-        title: "Sống Khỏe Dễ Hiểu",
-        description: "Nội dung đơn giản, rõ ràng, gần với đời sống thường ngày.",
-        href: "/song-khoe-de-hieu",
-      },
-      {
-        title: "Bắt Đầu Từ Những Thay Đổi Nhỏ",
-        description: "Những bước nhỏ, dễ làm, đủ thực tế để bắt đầu ngay.",
-        href: "/thay-doi-nho",
-      },
-    ] satisfies EntryCardContent[],
+    title: homepageText.entrySection.title,
+    cards: homepageConfig.entryCards.map((item) => ({
+      title: homepageText.entrySection.cards[item.key].title,
+      description: homepageText.entrySection.cards[item.key].description,
+      href: item.href,
+    })) satisfies EntryCardContent[],
   },
 };

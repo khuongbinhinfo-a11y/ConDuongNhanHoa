@@ -2,11 +2,19 @@ import Link from "next/link";
 import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { SectionTitle } from "@/components/ui/SectionTitle";
-import type { EntryCardContent } from "@/data/homepageData";
+
+export type EntryEditorialCard = {
+  title: string;
+  description: string;
+  href: string;
+  ctaLabel: string;
+};
 
 type EntryCardsEditorialSectionProps = {
   title: string;
-  cards: EntryCardContent[];
+  eyebrow?: string;
+  leadLabel?: string;
+  cards: EntryEditorialCard[];
 };
 
 function OrganicIcon({ index }: { index: number }) {
@@ -24,11 +32,11 @@ function OrganicIcon({ index }: { index: number }) {
   );
 }
 
-export function EntryCardsEditorialSection({ title, cards }: EntryCardsEditorialSectionProps) {
+export function EntryCardsEditorialSection({ title, eyebrow, leadLabel, cards }: EntryCardsEditorialSectionProps) {
   return (
     <section id="entry-cards" className="pb-16 pt-4 lg:pb-24">
       <Container>
-        <SectionTitle title={title} eyebrow="Lối vào chính" className="mb-6 lg:mb-8" />
+        <SectionTitle title={title} eyebrow={eyebrow} className="mb-6 lg:mb-8" />
 
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-12">
           {cards.map((card, index) => {
@@ -50,9 +58,9 @@ export function EntryCardsEditorialSection({ title, cards }: EntryCardsEditorial
                   }`}
                 />
 
-                {isLead ? (
+                {isLead && leadLabel ? (
                   <p className="mb-3 text-xs font-semibold uppercase tracking-[0.08em] text-[var(--color-teal)]">
-                    Gợi ý bắt đầu
+                    {leadLabel}
                   </p>
                 ) : null}
 
@@ -72,7 +80,7 @@ export function EntryCardsEditorialSection({ title, cards }: EntryCardsEditorial
                   href={card.href}
                   className="mt-auto pt-5 text-sm font-semibold text-[var(--color-navy)] transition-colors duration-200 hover:text-[#183447]"
                 >
-                  Xem thêm
+                  {card.ctaLabel}
                 </Link>
               </Card>
             );

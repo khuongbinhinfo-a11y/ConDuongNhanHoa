@@ -1,10 +1,22 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import type { HeroContent } from "@/data/homepageData";
+
+export type HeroSectionEditorialContent = {
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+  primaryCtaLabel: string;
+  primaryCtaHref: string;
+  noteHint: string;
+  image: {
+    src: string;
+    alt: string;
+  };
+};
 
 type HeroSectionEditorialProps = {
-  content: HeroContent;
+  content: HeroSectionEditorialContent;
 };
 
 export function HeroSectionEditorial({ content }: HeroSectionEditorialProps) {
@@ -22,8 +34,8 @@ export function HeroSectionEditorial({ content }: HeroSectionEditorialProps) {
             <p className="mt-5 max-w-[56ch] text-base text-[var(--color-text-muted)] lg:text-lg">{content.subtitle}</p>
 
             <div className="mt-8 flex flex-wrap items-start gap-3 sm:items-center">
-              <Button href={content.primaryCta.href}>Xem hướng bắt đầu</Button>
-              <p className="hero-note-hint">Bắt đầu từ một điều gần với mình.</p>
+              <Button href={content.primaryCtaHref}>{content.primaryCtaLabel}</Button>
+              <p className="hero-note-hint">{content.noteHint}</p>
             </div>
           </div>
 
