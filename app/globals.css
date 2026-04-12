@@ -2,13 +2,15 @@
 
 :root {
   --color-bg: #f5efe6;
-  --color-navy: #1f4158;
-  --color-teal: #6d9f9b;
+  --color-top-bg: #f8f4ec;
+  --color-elevated: #fcfaf6;
+  --color-navy: #1e3e52;
+  --color-teal: #739a96;
   --color-sage: #d9e4da;
-  --color-card: #fbf7f1;
-  --color-text-strong: #2a3640;
-  --color-text-muted: #5a6771;
-  --color-border: rgba(31, 65, 88, 0.12);
+  --color-card: #fcfaf6;
+  --color-text-strong: #273640;
+  --color-text-muted: #66737b;
+  --color-border: rgba(30, 62, 82, 0.08);
 }
 
 @theme inline {
@@ -19,8 +21,8 @@
 }
 
 body {
-  background: radial-gradient(circle at top right, rgba(109, 159, 155, 0.17), transparent 40%),
-    linear-gradient(180deg, #f5efe6 0%, #f8f3eb 44%, #f5efe6 100%);
+  background: radial-gradient(circle at top right, rgba(115, 154, 150, 0.16), transparent 42%),
+    linear-gradient(180deg, var(--color-top-bg) 0%, #f7f1e8 44%, var(--color-bg) 100%);
   color: var(--color-text-strong);
   font-family: var(--font-sans);
   letter-spacing: 0;
@@ -38,7 +40,7 @@ p {
 }
 
 ::selection {
-  background: rgba(109, 159, 155, 0.32);
+  background: rgba(115, 154, 150, 0.3);
   color: var(--color-text-strong);
 }
 
