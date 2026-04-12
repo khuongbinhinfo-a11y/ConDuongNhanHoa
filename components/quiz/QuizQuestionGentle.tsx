@@ -42,7 +42,9 @@ export function QuizQuestionGentle({
           </div>
 
           <div className="quiz-message-row quiz-message-row--question">
-            <h3 className="quiz-question-bubble">{question.prompt}</h3>
+            <h3 key={question.id} className="quiz-question-text">
+              {question.prompt}
+            </h3>
           </div>
 
           <p className="quiz-gentle-note">{noRightWrongText}</p>
