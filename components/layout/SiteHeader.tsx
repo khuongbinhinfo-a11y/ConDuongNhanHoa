@@ -74,25 +74,10 @@ export function SiteHeader({
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[rgba(245,239,230,0.84)] backdrop-blur-md">
       <Container>
-        <div className="flex min-h-[74px] items-center justify-between gap-4 lg:min-h-[84px]">
+        <div className="relative flex min-h-[74px] items-center justify-between gap-4 lg:min-h-[84px]">
           <Link href="/" className="text-base font-semibold tracking-[0.01em] text-[var(--color-navy)] lg:text-lg">
             {brandName}
           </Link>
-
-          <div className="flex items-center gap-2 lg:hidden">
-            {onLocaleChange ? (
-              <LocaleSwitcher locale={locale} onChange={onLocaleChange} ariaLabel={localeSwitchAriaLabel} />
-            ) : null}
-            <button
-              type="button"
-              onClick={() => setOpen((current) => !current)}
-              className="inline-flex items-center justify-center rounded-full border border-[var(--color-border)] px-4 py-2 text-sm font-medium text-[var(--color-navy)]"
-              aria-label={menuButtonLabel}
-              aria-expanded={open}
-            >
-              {menuButtonLabel}
-            </button>
-          </div>
 
           <div className="hidden items-center gap-4 lg:flex">
             <nav aria-label={navAriaLabel}>
@@ -118,37 +103,58 @@ export function SiteHeader({
               {cta.label}
             </Button>
           </div>
-        </div>
 
-        <div
-          className={`absolute left-0 right-0 top-full border-b border-[var(--color-border)] bg-[rgba(251,247,241,0.97)] px-5 py-4 shadow-[0_16px_30px_rgba(31,65,88,0.12)] transition lg:hidden ${
-            open ? "visible opacity-100" : "invisible opacity-0"
-          }`}
-        >
-          <div className="flex flex-col gap-4">
-            <nav aria-label={navAriaLabel}>
-              <ul className="flex flex-col gap-3">
-                {links.map((item) => (
-                  <li key={item.label}>
-                    <Link
-                      href={item.href}
-                      className="text-sm font-medium text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-navy)]"
-                      onClick={() => setOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-
-            <Link
-              href={cta.href}
-              className="calm-cta calm-cta--primary inline-flex self-start rounded-full bg-[var(--color-navy)] px-4 py-2 text-sm font-semibold text-[#F6F1E8] shadow-[0_12px_26px_rgba(36,76,99,0.20)] transition-all duration-200 hover:bg-[#1f4256] hover:shadow-[0_16px_30px_rgba(36,76,99,0.28)]"
-              onClick={() => setOpen(false)}
+          <div className="relative lg:hidden">
+            <button
+              type="button"
+              onClick={() => setOpen((current) => !current)}
+              className="inline-flex items-center justify-center rounded-full border border-[var(--color-border)] bg-[rgba(251,247,241,0.85)] px-4 py-2 text-sm font-medium text-[var(--color-navy)] shadow-[0_8px_18px_rgba(31,65,88,0.08)] backdrop-blur-sm"
+              aria-label={menuButtonLabel}
+              aria-expanded={open}
             >
-              {cta.label}
-            </Link>
+              {menuButtonLabel}
+            </button>
+
+            <div
+              className={`absolute right-0 top-[calc(100%+0.6rem)] z-50 w-[min(320px,92vw)] origin-top-right rounded-[18px] border border-[rgba(31,65,88,0.14)] bg-[rgba(250,244,236,0.96)] p-4 shadow-[0_22px_38px_rgba(31,65,88,0.16)] backdrop-blur-sm transition duration-200 motion-safe:transition-[opacity,transform] ${
+                open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"
+              }`}
+            >
+              {onLocaleChange ? (
+                <div className="mb-3 border-b border-[var(--color-border)] pb-3">
+                  <LocaleSwitcher
+                    locale={locale}
+                    onChange={onLocaleChange}
+                    ariaLabel={localeSwitchAriaLabel}
+                    onSelect={() => setOpen(false)}
+                  />
+                </div>
+              ) : null}
+
+              <nav aria-label={navAriaLabel}>
+                <ul className="flex flex-col gap-2.5">
+                  {links.map((item) => (
+                    <li key={item.label}>
+                      <Link
+                        href={item.href}
+                        className="block rounded-[10px] px-2.5 py-2 text-sm font-medium text-[var(--color-text-muted)] transition-colors hover:bg-[rgba(217,228,218,0.4)] hover:text-[var(--color-navy)]"
+                        onClick={() => setOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+
+              <Link
+                href={cta.href}
+                className="calm-cta calm-cta--primary mt-4 inline-flex rounded-full bg-[var(--color-navy)] px-4 py-2 text-sm font-semibold text-[#F6F1E8] shadow-[0_12px_24px_rgba(31,65,88,0.2)] transition-all duration-200 hover:bg-[#1f4256] hover:shadow-[0_15px_28px_rgba(31,65,88,0.24)]"
+                onClick={() => setOpen(false)}
+              >
+                {cta.label}
+              </Link>
+            </div>
           </div>
         </div>
       </Container>

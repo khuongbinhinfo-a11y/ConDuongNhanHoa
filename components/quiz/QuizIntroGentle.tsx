@@ -1,22 +1,21 @@
 type QuizIntroGentleProps = {
   onStart: () => void;
-  totalQuestions: number;
   note: string;
+  whisper: string;
+  progressHint: string;
   startLabel: string;
 };
 
-export function QuizIntroGentle({ onStart, totalQuestions, note, startLabel }: QuizIntroGentleProps) {
+export function QuizIntroGentle({ onStart, note, whisper, progressHint, startLabel }: QuizIntroGentleProps) {
   return (
     <section className="rounded-[24px] border border-[var(--color-border)] bg-[var(--color-card)] p-6 shadow-[0_16px_34px_rgba(36,76,99,0.08)] lg:p-8">
       <div className="space-y-3 text-[var(--color-text-muted)]">
         <p className="text-base">{note}</p>
-        <p className="quiz-soft-prompt text-sm">Không có đúng hay sai ở đây.</p>
+        <p className="quiz-soft-prompt text-sm">{whisper}</p>
       </div>
 
       <div className="mt-6 rounded-[18px] border border-[rgba(109,159,155,0.34)] bg-[rgba(217,228,218,0.42)] p-4">
-        <p className="text-sm text-[var(--color-text-strong)]">
-          {totalQuestions} câu hỏi ngắn • một nhịp đọc gợi mở • không mang tính phán xét
-        </p>
+        <p className="text-sm text-[var(--color-text-strong)]">{progressHint}</p>
       </div>
 
       <button
