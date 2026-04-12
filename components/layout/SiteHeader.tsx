@@ -27,15 +27,15 @@ type LocaleSwitcherProps = {
 
 function LocaleSwitcher({ locale, onChange, ariaLabel, onSelect, compact = false }: LocaleSwitcherProps) {
   const wrapperClass = compact
-    ? "inline-flex items-center rounded-full border border-[rgba(31,65,88,0.16)] bg-[rgba(251,247,241,0.84)] px-1 py-0.5"
+    ? "inline-flex items-center rounded-[12px] border border-[rgba(31,65,88,0.14)] bg-[rgba(251,247,241,0.72)] px-1 py-0.5 backdrop-blur-sm"
     : "inline-flex items-center rounded-full border border-[var(--color-border)] bg-[rgba(251,247,241,0.9)] px-1 py-0.5";
 
   const activeClass = compact
-    ? "bg-[rgba(31,65,88,0.11)] text-[var(--color-navy)]"
+    ? "bg-[rgba(31,65,88,0.1)] text-[var(--color-navy)]"
     : "bg-[rgba(31,65,88,0.12)] text-[var(--color-navy)]";
 
   const idleClass = compact
-    ? "text-[rgba(42,54,64,0.66)] hover:text-[var(--color-navy)]"
+    ? "text-[rgba(42,54,64,0.64)] hover:text-[var(--color-navy)]"
     : "text-[var(--color-text-muted)] hover:text-[var(--color-navy)]";
 
   return (
@@ -51,14 +51,14 @@ function LocaleSwitcher({ locale, onChange, ariaLabel, onSelect, compact = false
                 onChange(itemLocale);
                 onSelect?.();
               }}
-              className={`rounded-full px-2 py-1 text-xs font-semibold uppercase tracking-[0.06em] transition-colors ${
+              className={`rounded-[8px] px-2 py-1 text-[0.66rem] font-semibold uppercase tracking-[0.09em] transition-colors ${
                 isActive ? activeClass : idleClass
               }`}
               aria-pressed={isActive}
             >
               {itemLocale}
             </button>
-            {index === 0 ? <span className="mx-0.5 h-3.5 w-px bg-[var(--color-border)]" aria-hidden="true" /> : null}
+            {index === 0 ? <span className="mx-0.5 h-3 w-px bg-[var(--color-border)]" aria-hidden="true" /> : null}
           </div>
         );
       })}
@@ -81,35 +81,39 @@ export function SiteHeader({
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[rgba(245,239,230,0.84)] backdrop-blur-md">
       <Container>
-        <div className="hidden min-h-[88px] grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-5 lg:grid">
-          <Link href="/" className="inline-flex items-center gap-3 justify-self-start text-[var(--color-navy)]">
+        <div className="hidden min-h-[90px] grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)_minmax(0,1fr)] items-center gap-6 lg:grid">
+          <Link href="/" className="inline-flex items-center gap-3.5 justify-self-start text-[var(--color-navy)]">
             <span className="inline-flex h-10 w-10 items-center justify-center rounded-[14px] border border-[rgba(31,65,88,0.14)] bg-[rgba(251,247,241,0.78)] shadow-[0_8px_16px_rgba(31,65,88,0.07)]">
-              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
-                <path d="M6.7 15.8c2.1-3.5 4.5-5.1 7.1-4.8-.8 3-3 4.6-7.1 4.8Z" fill="rgba(109,159,155,0.75)" />
-                <path d="M17.3 8.1c-2.6 1.9-4.2 4.4-4.7 7.7 2.8-1.3 4.3-3.9 4.7-7.7Z" fill="rgba(31,65,88,0.7)" />
+              <svg viewBox="0 0 24 24" className="h-[1.08rem] w-[1.08rem]" fill="none" aria-hidden="true">
                 <path
-                  d="M7 18c2.6 1 5.3 1 8 0"
-                  stroke="rgba(31,65,88,0.52)"
-                  strokeWidth="1.25"
-                  strokeLinecap="round"
+                  d="M5.4 12.4c2.9-2.8 5.8-3.5 8.8-2.2-1.7 2.9-4.7 3.6-8.8 2.2Z"
+                  fill="rgba(109,159,155,0.74)"
                 />
+                <path
+                  d="M18.6 11.5c-2.9 2.7-5.8 3.4-8.8 2.2 1.7-2.9 4.7-3.7 8.8-2.2Z"
+                  fill="rgba(31,65,88,0.7)"
+                />
+                <path d="M6.8 18.1c3.4 1 6.8 1 10.2 0" stroke="rgba(31,65,88,0.48)" strokeWidth="1.25" strokeLinecap="round" />
               </svg>
             </span>
-            <span className="block max-w-[220px] leading-[1.2]">
-              <span className="block text-[0.95rem] font-semibold tracking-[0.01em]">{brandName}</span>
-              <span className="mt-0.5 block text-[0.64rem] font-medium uppercase tracking-[0.1em] text-[rgba(42,54,64,0.56)]">
+            <span className="block max-w-[236px] leading-[1.18]">
+              <span className="block text-[0.96rem] font-semibold tracking-[0.012em]">{brandName}</span>
+              <span className="mt-[0.18rem] block text-[0.63rem] font-medium uppercase tracking-[0.12em] text-[rgba(42,54,64,0.55)]">
                 editorial wellness
               </span>
             </span>
           </Link>
 
-          <nav aria-label={navAriaLabel} className="justify-self-center">
-            <ul className="flex items-center gap-1.5 xl:gap-2">
+          <nav
+            aria-label={navAriaLabel}
+            className="justify-self-center rounded-[16px] border border-[rgba(31,65,88,0.08)] bg-[rgba(251,247,241,0.56)] px-2 py-1.5 backdrop-blur-sm"
+          >
+            <ul className="flex items-center gap-0.5 xl:gap-1">
               {links.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="inline-flex whitespace-nowrap rounded-full px-3 py-1.5 text-[0.88rem] font-medium text-[rgba(42,54,64,0.76)] transition-colors hover:bg-[rgba(217,228,218,0.46)] hover:text-[var(--color-navy)]"
+                    className="inline-flex whitespace-nowrap rounded-[10px] px-2.5 py-[0.42rem] text-[0.82rem] font-medium tracking-[0.01em] text-[rgba(42,54,64,0.76)] transition-colors hover:bg-[rgba(217,228,218,0.46)] hover:text-[var(--color-navy)]"
                   >
                     {item.shortLabel ?? item.label}
                   </Link>
@@ -118,14 +122,14 @@ export function SiteHeader({
             </ul>
           </nav>
 
-          <div className="inline-flex items-center justify-self-end gap-2.5">
+          <div className="inline-flex items-center justify-self-end gap-2">
             {onLocaleChange ? (
               <LocaleSwitcher locale={locale} onChange={onLocaleChange} ariaLabel={localeSwitchAriaLabel} compact />
             ) : null}
 
             <Button
               href={cta.href}
-              className="px-4 py-2 text-[0.82rem] shadow-[0_10px_20px_rgba(31,65,88,0.17)] hover:shadow-[0_13px_24px_rgba(31,65,88,0.23)]"
+              className="rounded-[14px] border border-[rgba(245,239,230,0.22)] px-3.5 py-2 text-[0.77rem] font-semibold tracking-[0.02em] shadow-[0_8px_16px_rgba(31,65,88,0.15)] hover:shadow-[0_11px_20px_rgba(31,65,88,0.2)]"
             >
               {cta.label}
             </Button>

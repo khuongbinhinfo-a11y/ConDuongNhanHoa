@@ -36,18 +36,20 @@ export function QuizQuestionGentle({
         <QuizProgressGentle currentStep={questionIndex + 1} totalSteps={totalQuestions} hint={hint} />
 
         <div className="quiz-chat-stream">
-          <div className="quiz-message-row">
-            <span className="quiz-message-dot" aria-hidden="true" />
-            <p className="quiz-lead-bubble">{leadIn}</p>
-          </div>
+          <div className="quiz-question-moment">
+            <div className="quiz-message-row">
+              <span className="quiz-message-dot" aria-hidden="true" />
+              <p className="quiz-lead-bubble">{leadIn}</p>
+            </div>
 
-          <div className="quiz-message-row quiz-message-row--question">
-            <h3 key={question.id} className="quiz-question-text">
-              {question.prompt}
-            </h3>
-          </div>
+            <div className="quiz-message-row quiz-message-row--question">
+              <h3 key={question.id} className="quiz-question-text">
+                {question.prompt}
+              </h3>
+            </div>
 
-          <p className="quiz-gentle-note">{noRightWrongText}</p>
+            <p className="quiz-gentle-note">{noRightWrongText}</p>
+          </div>
 
           <div className={`quiz-reply-list ${isAutoAdvancing ? "quiz-reply-list--advancing" : ""}`}>
             {question.options.map((option, index) => {

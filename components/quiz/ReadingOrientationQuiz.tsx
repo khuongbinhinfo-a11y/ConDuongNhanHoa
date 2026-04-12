@@ -13,7 +13,7 @@ import { combineSuggestedArticles, resolveQuizResult, type QuizAnswers } from "@
 type QuizStage = "intro" | "question" | "result";
 
 const TOTAL_QUESTIONS = quizQuestions.length;
-const AUTO_ADVANCE_DELAY_MS = 280;
+const AUTO_ADVANCE_DELAY_MS = 250;
 
 function makeEmptyAnswers(): QuizAnswers {
   return Array.from({ length: TOTAL_QUESTIONS }, () => null);
