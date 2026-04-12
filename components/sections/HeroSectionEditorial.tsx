@@ -34,8 +34,16 @@ export function HeroSectionEditorial({ content }: HeroSectionEditorialProps) {
             <p className="mt-5 max-w-[56ch] text-base text-[var(--color-text-muted)] lg:text-lg">{content.subtitle}</p>
 
             <div className="mt-8 flex flex-wrap items-start gap-3 sm:items-center">
-              <Button href={content.primaryCtaHref}>{content.primaryCtaLabel}</Button>
-              <p className="hero-note-hint">{content.noteHint}</p>
+              <Button
+                href={content.primaryCtaHref}
+                className="border border-[rgba(245,239,230,0.32)] px-5 py-3 shadow-[0_14px_28px_rgba(31,65,88,0.22)] hover:shadow-[0_18px_32px_rgba(31,65,88,0.28)]"
+              >
+                {content.primaryCtaLabel}
+              </Button>
+              <p className="hero-note-hint">
+                <span className="hero-note-hint__mark" aria-hidden="true" />
+                <span>{content.noteHint}</span>
+              </p>
             </div>
           </div>
 

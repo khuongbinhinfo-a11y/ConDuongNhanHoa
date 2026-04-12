@@ -13,7 +13,7 @@ import { combineSuggestedArticles, resolveQuizResult, type QuizAnswers } from "@
 type QuizStage = "intro" | "question" | "result";
 
 const TOTAL_QUESTIONS = quizQuestions.length;
-const AUTO_ADVANCE_DELAY_MS = 220;
+const AUTO_ADVANCE_DELAY_MS = 240;
 
 function makeEmptyAnswers(): QuizAnswers {
   return Array.from({ length: TOTAL_QUESTIONS }, () => null);
@@ -119,10 +119,7 @@ export function ReadingOrientationQuiz() {
             {QUIZ_COPY.sectionSubtitle}
           </p>
 
-          <div
-            key={stage === "question" ? `question-${currentIndex}` : stage}
-            className="mt-7 motion-safe:animate-[quiz-step-in_.34s_ease]"
-          >
+          <div key={stage} className="mt-7 motion-safe:animate-[quiz-step-in_.28s_ease]">
             {stage === "intro" ? (
               <QuizIntroGentle
                 onStart={handleStart}
