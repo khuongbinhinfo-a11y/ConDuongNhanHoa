@@ -1,17 +1,13 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { QuizIntro } from "@/components/quiz/QuizIntro";
-import { QuizQuestion } from "@/components/quiz/QuizQuestion";
+import { QuizIntroGentle } from "@/components/quiz/QuizIntroGentle";
+import { QuizQuestionGentle } from "@/components/quiz/QuizQuestionGentle";
 import { QuizResult } from "@/components/quiz/QuizResult";
 import { Container } from "@/components/ui/Container";
 import { SectionTitle } from "@/components/ui/SectionTitle";
-import {
-  QUIZ_SECTION,
-  quizBranchProfiles,
-  quizQuestions,
-  type QuizBranchKey,
-} from "@/data/quiz";
+import { quizBranchProfiles, type QuizBranchKey } from "@/data/quiz";
+import { QUIZ_COPY, quizQuestions } from "@/data/quizContent";
 import { combineSuggestedArticles, resolveQuizResult, type QuizAnswers } from "@/lib/quizLogic";
 
 type QuizStage = "intro" | "question" | "result";
@@ -81,9 +77,9 @@ export function ReadingOrientationQuiz() {
     <section className="py-10 lg:py-14">
       <Container>
         <div className="mx-auto max-w-[980px]">
-          <SectionTitle title={QUIZ_SECTION.title} />
+          <SectionTitle title={QUIZ_COPY.sectionTitle} />
           <p className="mt-3 max-w-[64ch] text-base text-[var(--color-text-muted)] lg:text-lg">
-            {QUIZ_SECTION.subtitle}
+            {QUIZ_COPY.sectionSubtitle}
           </p>
 
           <div
@@ -91,11 +87,16 @@ export function ReadingOrientationQuiz() {
             className="mt-7 motion-safe:animate-[quiz-step-in_.34s_ease]"
           >
             {stage === "intro" ? (
-              <QuizIntro onStart={handleStart} totalQuestions={TOTAL_QUESTIONS} />
+              <QuizIntroGentle
+                onStart={handleStart}
+                totalQuestions={TOTAL_QUESTIONS}
+                note={QUIZ_COPY.introNote}
+                startLabel={QUIZ_COPY.startButton}
+              />
             ) : null}
 
             {stage === "question" ? (
-              <QuizQuestion
+              <QuizQuestionGentle
                 question={quizQuestions[currentIndex]}
                 questionIndex={currentIndex}
                 totalQuestions={TOTAL_QUESTIONS}
@@ -103,6 +104,12 @@ export function ReadingOrientationQuiz() {
                 onChoose={handleSelect}
                 onBack={handleBack}
                 onNext={handleNext}
+                progressLabel={QUIZ_COPY.progressLabel}
+                hint={QUIZ_COPY.questionHint}
+                noRightWrongText={QUIZ_COPY.noRightWrong}
+                backLabel={QUIZ_COPY.backButton}
+                nextLabel={QUIZ_COPY.nextButton}
+                finishLabel={QUIZ_COPY.finishButton}
               />
             ) : null}
 
