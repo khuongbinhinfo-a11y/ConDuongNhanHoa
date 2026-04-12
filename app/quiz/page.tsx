@@ -23,6 +23,7 @@ export default function QuizPage() {
       homepageConfig.headerLinks.map((item) => ({
         href: item.href,
         label: navigationText.nav[item.key],
+        shortLabel: navigationText.navShort[item.key],
       })),
     [navigationText],
   );
