@@ -27,7 +27,7 @@ export function FeaturedPathsSection({ content }: FeaturedPathsSectionProps) {
   return (
     <section className="pb-16 lg:pb-24">
       <Container>
-        <div className="rounded-[26px] border border-[var(--color-border)] bg-[rgba(251,247,241,0.76)] p-6 shadow-[0_16px_30px_rgba(31,65,88,0.07)] lg:p-8">
+        <div className="rounded-[26px] border border-[var(--color-border)] bg-[linear-gradient(160deg,rgba(252,250,246,0.88),rgba(220,232,221,0.55),rgba(252,250,246,0.9))] p-6 shadow-[0_16px_30px_rgba(31,65,88,0.07)] lg:p-8">
           <div className="mx-auto max-w-[920px] text-center">
             <SectionTitle title={content.title} eyebrow={content.eyebrow} />
             <p className="mx-auto mt-4 max-w-[66ch] text-[0.98rem] text-[var(--color-text-muted)]">{content.subtitle}</p>

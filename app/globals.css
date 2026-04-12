@@ -21,7 +21,9 @@
 }
 
 body {
-  background: radial-gradient(circle at top right, rgba(115, 154, 150, 0.16), transparent 42%),
+  background:
+    radial-gradient(circle at 78% -8%, rgba(220, 232, 221, 0.68), transparent 40%),
+    radial-gradient(circle at -4% 16%, rgba(217, 228, 218, 0.55), transparent 36%),
     linear-gradient(180deg, var(--color-top-bg) 0%, #f7f1e8 44%, var(--color-bg) 100%);
   color: var(--color-text-strong);
   font-family: var(--font-sans);
@@ -98,17 +100,17 @@ p {
   max-width: min(360px, 86vw);
   align-items: flex-start;
   gap: 0.6rem;
-  border: 1px solid rgba(109, 159, 155, 0.2);
+  border: 1px solid rgba(217, 228, 218, 0.78);
   border-radius: 18px;
   background:
-    linear-gradient(135deg, rgba(248, 244, 236, 0.92), rgba(245, 239, 230, 0.8)),
+    linear-gradient(135deg, rgba(252, 250, 246, 0.95), rgba(220, 232, 221, 0.68)),
     rgba(248, 244, 236, 0.72);
   padding: 0.68rem 0.94rem 0.7rem 0.78rem;
-  color: rgba(42, 54, 64, 0.86);
+  color: rgba(39, 54, 64, 0.86);
   font-size: 0.82rem;
   font-weight: 430;
   line-height: 1.6;
-  box-shadow: 0 12px 24px rgba(31, 65, 88, 0.055);
+  box-shadow: 0 12px 24px rgba(30, 62, 82, 0.07);
   backdrop-filter: blur(10px);
   opacity: 0;
   animation: soft-rise-in 0.9s ease-out 0.45s forwards, bubble-breathe 9s ease-in-out 2.4s infinite;
@@ -120,8 +122,8 @@ p {
   margin-top: 0.42rem;
   flex: 0 0 auto;
   border-radius: 999px;
-  background: rgba(109, 159, 155, 0.76);
-  box-shadow: 0 0 0 4px rgba(109, 159, 155, 0.11);
+  background: rgba(115, 154, 150, 0.82);
+  box-shadow: 0 0 0 4px rgba(220, 232, 221, 0.68);
 }
 
 .hero-editorial__eyebrow::before {
@@ -130,8 +132,8 @@ p {
   height: 0.3rem;
   margin-right: 0.46rem;
   border-radius: 999px;
-  background: rgba(109, 159, 155, 0.72);
-  box-shadow: 0 0 0 4px rgba(109, 159, 155, 0.14);
+  background: rgba(115, 154, 150, 0.78);
+  box-shadow: 0 0 0 4px rgba(220, 232, 221, 0.66);
 }
 
 .hero-editorial__title {
@@ -224,10 +226,10 @@ p {
 
 .quiz-shell-surface {
   border-radius: 30px;
-  border: 1px solid rgba(31, 65, 88, 0.08);
+  border: 1px solid rgba(30, 62, 82, 0.08);
   box-shadow:
-    0 14px 30px rgba(31, 65, 88, 0.06),
-    inset 0 1px 0 rgba(248, 244, 236, 0.54);
+    0 14px 30px rgba(30, 62, 82, 0.06),
+    inset 0 1px 0 rgba(252, 250, 246, 0.74);
 }
 
 .quiz-stage-wrap {
@@ -243,8 +245,8 @@ p {
   isolation: isolate;
   overflow: hidden;
   background:
-    linear-gradient(150deg, rgba(245, 239, 230, 0.84) 0%, rgba(217, 228, 218, 0.5) 52%, rgba(245, 239, 230, 0.84) 100%),
-    rgba(251, 247, 241, 0.56);
+    linear-gradient(150deg, rgba(245, 239, 230, 0.88) 0%, rgba(220, 232, 221, 0.66) 52%, rgba(245, 239, 230, 0.9) 100%),
+    rgba(252, 250, 246, 0.7);
 }
 
 .quiz-intro-scene::before {
@@ -253,8 +255,8 @@ p {
   inset: 0;
   z-index: 0;
   background:
-    radial-gradient(ellipse at 74% 88%, rgba(217, 228, 218, 0.38), transparent 52%),
-    radial-gradient(ellipse at 28% -2%, rgba(248, 244, 236, 0.56), transparent 46%);
+    radial-gradient(ellipse at 74% 88%, rgba(220, 232, 221, 0.62), transparent 56%),
+    radial-gradient(ellipse at 28% -2%, rgba(252, 250, 246, 0.62), transparent 46%);
   pointer-events: none;
 }
 
@@ -276,10 +278,10 @@ p {
   position: relative;
   min-height: 192px;
   overflow: hidden;
-  border: 1px solid rgba(31, 65, 88, 0.07);
+  border: 1px solid rgba(30, 62, 82, 0.08);
   border-radius: 24px;
-  background: rgba(251, 247, 241, 0.54);
-  box-shadow: inset 0 1px 0 rgba(248, 244, 236, 0.58), 0 10px 20px rgba(31, 65, 88, 0.05);
+  background: rgba(252, 250, 246, 0.74);
+  box-shadow: inset 0 1px 0 rgba(252, 250, 246, 0.74), 0 10px 20px rgba(30, 62, 82, 0.05);
 }
 
 .quiz-intro-media::before {
@@ -288,9 +290,9 @@ p {
   z-index: 2;
   inset: -1.5rem;
   background:
-    linear-gradient(180deg, rgba(248, 244, 236, 0.62) 0%, rgba(248, 244, 236, 0.08) 40%, transparent 100%),
-    radial-gradient(ellipse at 88% 18%, rgba(248, 244, 236, 0.56), transparent 48%),
-    radial-gradient(ellipse at 12% 82%, rgba(217, 228, 218, 0.42), transparent 52%);
+    linear-gradient(180deg, rgba(252, 250, 246, 0.68) 0%, rgba(252, 250, 246, 0.1) 40%, transparent 100%),
+    radial-gradient(ellipse at 88% 18%, rgba(252, 250, 246, 0.6), transparent 48%),
+    radial-gradient(ellipse at 12% 82%, rgba(220, 232, 221, 0.56), transparent 52%);
   pointer-events: none;
 }
 
@@ -300,8 +302,8 @@ p {
   z-index: 2;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(245, 239, 230, 0.44) 0%, rgba(245, 239, 230, 0.08) 42%, rgba(109, 159, 155, 0.12) 100%),
-    linear-gradient(178deg, rgba(217, 228, 218, 0.3), rgba(248, 244, 236, 0.16));
+    linear-gradient(180deg, rgba(245, 239, 230, 0.46) 0%, rgba(245, 239, 230, 0.08) 42%, rgba(115, 154, 150, 0.18) 100%),
+    linear-gradient(178deg, rgba(220, 232, 221, 0.42), rgba(252, 250, 246, 0.2));
   pointer-events: none;
 }
 
@@ -332,8 +334,8 @@ p {
   isolation: isolate;
   overflow: hidden;
   background:
-    linear-gradient(140deg, rgba(220, 232, 221, 0.8) 0%, rgba(245, 239, 230, 0.9) 48%, rgba(227, 236, 226, 0.74) 100%),
-    repeating-linear-gradient(118deg, rgba(109, 159, 155, 0.08) 0 1px, transparent 1px 24px);
+    linear-gradient(140deg, rgba(220, 232, 221, 0.82) 0%, rgba(245, 239, 230, 0.92) 46%, rgba(227, 236, 226, 0.84) 100%),
+    repeating-linear-gradient(118deg, rgba(115, 154, 150, 0.08) 0 1px, transparent 1px 24px);
   padding: 1.25rem 1rem;
 }
 
@@ -356,10 +358,10 @@ p {
   inset: 0;
   z-index: -2;
   background:
-    radial-gradient(ellipse at 84% 2%, rgba(248, 244, 236, 0.7), transparent 44%),
-    radial-gradient(ellipse at 96% 20%, rgba(109, 159, 155, 0.18), transparent 34%),
-    linear-gradient(96deg, rgba(248, 244, 236, 0.9) 0%, rgba(248, 244, 236, 0.56) 44%, rgba(217, 228, 218, 0.72) 100%),
-    linear-gradient(172deg, transparent 0%, rgba(109, 159, 155, 0.14) 100%);
+    radial-gradient(ellipse at 84% 2%, rgba(252, 250, 246, 0.72), transparent 44%),
+    radial-gradient(ellipse at 96% 20%, rgba(115, 154, 150, 0.24), transparent 34%),
+    linear-gradient(96deg, rgba(252, 250, 246, 0.9) 0%, rgba(252, 250, 246, 0.58) 44%, rgba(220, 232, 221, 0.76) 100%),
+    linear-gradient(172deg, transparent 0%, rgba(115, 154, 150, 0.18) 100%);
   opacity: 0.98;
 }
 
@@ -405,19 +407,19 @@ p {
   margin-top: 0.82rem;
   flex: 0 0 auto;
   border-radius: 999px;
-  background: rgba(109, 159, 155, 0.62);
+  background: rgba(115, 154, 150, 0.72);
 }
 
 .quiz-lead-bubble {
-  border: 1px solid rgba(31, 65, 88, 0.08);
+  border: 1px solid rgba(30, 62, 82, 0.08);
   border-radius: 18px;
   border-top-left-radius: 6px;
-  box-shadow: 0 10px 20px rgba(31, 65, 88, 0.05);
+  box-shadow: 0 10px 20px rgba(30, 62, 82, 0.05);
 }
 
 .quiz-lead-bubble {
   max-width: 520px;
-  background: rgba(245, 239, 230, 0.72);
+  background: linear-gradient(140deg, rgba(252, 250, 246, 0.76), rgba(220, 232, 221, 0.68));
   padding: 0.62rem 0.95rem;
   color: var(--color-text-muted);
   font-size: 0.92rem;
@@ -468,10 +470,10 @@ p {
   max-width: min(86%, 650px);
   align-items: flex-start;
   gap: 0.72rem;
-  border: 1px solid rgba(31, 65, 88, 0.08);
+  border: 1px solid rgba(30, 62, 82, 0.08);
   border-radius: 22px;
   border-top-right-radius: 8px;
-  background: rgba(251, 247, 241, 0.73);
+  background: linear-gradient(155deg, rgba(252, 250, 246, 0.88), rgba(227, 236, 226, 0.58));
   padding: 0.78rem 1rem;
   color: var(--color-text-strong);
   font-size: 0.95rem;
@@ -484,15 +486,15 @@ p {
 
 .quiz-reply:hover {
   transform: translateY(-1px);
-  border-color: rgba(109, 159, 155, 0.26);
-  background: rgba(251, 247, 241, 0.96);
-  box-shadow: 0 8px 14px rgba(31, 65, 88, 0.04);
+  border-color: rgba(115, 154, 150, 0.3);
+  background: linear-gradient(155deg, rgba(252, 250, 246, 0.95), rgba(220, 232, 221, 0.68));
+  box-shadow: 0 8px 14px rgba(30, 62, 82, 0.05);
 }
 
 .quiz-reply--active {
-  border-color: rgba(109, 159, 155, 0.32);
-  background: rgba(217, 228, 218, 0.42);
-  box-shadow: 0 6px 12px rgba(31, 65, 88, 0.04);
+  border-color: rgba(115, 154, 150, 0.34);
+  background: rgba(220, 232, 221, 0.68);
+  box-shadow: 0 6px 12px rgba(30, 62, 82, 0.04);
   transform: translateY(-0.5px);
 }
 
@@ -523,7 +525,7 @@ p {
 
 .quiz-reply--active .quiz-reply__dot {
   background: var(--color-teal);
-  box-shadow: 0 0 0 4px rgba(109, 159, 155, 0.12);
+  box-shadow: 0 0 0 4px rgba(220, 232, 221, 0.68);
 }
 
 .calm-cta,

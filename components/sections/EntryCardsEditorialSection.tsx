@@ -26,7 +26,7 @@ function OrganicIcon({ index }: { index: number }) {
 
   return (
     <span
-      className={`relative inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-border)] bg-[rgba(251,247,241,0.92)] before:absolute before:h-4 before:w-2 before:rounded-full before:border before:border-[rgba(31,65,88,0.54)] before:border-b-0 before:border-l-0 after:absolute after:h-3 after:w-2 after:rounded-full after:bg-[rgba(109,159,155,0.66)] ${shape}`}
+      className={`relative inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-border)] bg-[linear-gradient(155deg,rgba(252,250,246,0.92),rgba(220,232,221,0.65))] before:absolute before:h-4 before:w-2 before:rounded-full before:border before:border-[rgba(30,62,82,0.52)] before:border-b-0 before:border-l-0 after:absolute after:h-3 after:w-2 after:rounded-full after:bg-[rgba(115,154,150,0.72)] ${shape}`}
       aria-hidden="true"
     />
   );
@@ -46,15 +46,15 @@ export function EntryCardsEditorialSection({ title, eyebrow, leadLabel, cards }:
                 key={card.title}
                 className={`flex h-full flex-col overflow-hidden ${
                   isLead
-                    ? "md:col-span-2 xl:col-span-6 bg-[linear-gradient(155deg,rgba(217,228,218,0.58),rgba(251,247,241,0.96))] p-7 lg:p-8"
-                    : "xl:col-span-3 p-6"
+                    ? "md:col-span-2 xl:col-span-6 bg-[linear-gradient(155deg,rgba(220,232,221,0.72),rgba(252,250,246,0.96))] p-7 lg:p-8"
+                    : "xl:col-span-3 bg-[linear-gradient(165deg,rgba(252,250,246,0.94),rgba(227,236,226,0.62))] p-6"
                 } transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_18px_34px_rgba(31,65,88,0.10)]`}
               >
                 <div
                   className={`pointer-events-none absolute -right-12 -top-10 h-36 w-36 rounded-[42%_58%_50%_50%] ${
                     isLead
-                      ? "bg-[radial-gradient(circle_at_35%_35%,rgba(109,159,155,0.44),rgba(109,159,155,0.08))]"
-                      : "bg-[radial-gradient(circle_at_35%_35%,rgba(217,228,218,0.88),rgba(217,228,218,0.2))]"
+                      ? "bg-[radial-gradient(circle_at_35%_35%,rgba(115,154,150,0.46),rgba(115,154,150,0.1))]"
+                      : "bg-[radial-gradient(circle_at_35%_35%,rgba(220,232,221,0.92),rgba(217,228,218,0.24))]"
                   }`}
                 />
 
