@@ -31,7 +31,7 @@ export function QuizQuestionGentle({
   const replyOffsets = ["", "quiz-reply--soft-right", "quiz-reply--near", "quiz-reply--wide-right", "quiz-reply--near"] as const;
 
   return (
-    <section className="quiz-scene">
+    <section className={`quiz-scene ${isAutoAdvancing ? "quiz-scene--advancing" : ""}`}>
       <div className="quiz-scene__content space-y-6">
         <QuizProgressGentle currentStep={questionIndex + 1} totalSteps={totalQuestions} hint={hint} />
 
@@ -49,7 +49,7 @@ export function QuizQuestionGentle({
 
           <p className="quiz-gentle-note">{noRightWrongText}</p>
 
-          <div className="quiz-reply-list">
+          <div className={`quiz-reply-list ${isAutoAdvancing ? "quiz-reply-list--advancing" : ""}`}>
             {question.options.map((option, index) => {
               const isActive = selectedOption === option.key;
               const offsetClass = replyOffsets[index] ?? "";
