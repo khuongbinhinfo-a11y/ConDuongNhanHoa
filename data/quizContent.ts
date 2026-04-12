@@ -6,19 +6,19 @@ export const QUIZ_COPY = {
   introNote: "Chỉ cần đi từng chút thôi. Chọn điều gần với mình nhất lúc này.",
   introWhisper: "Không cần trả lời thật nhanh.",
   startButton: "Mình bắt đầu",
-  progressHint: "Mỗi lựa chọn sẽ mở ra câu hỏi tiếp theo.",
-  questionHint: "Chạm một lựa chọn để đi tiếp.",
-  noRightWrong: "Không có đúng hay sai ở đây.",
+  progressHint: "Mình sẽ hỏi thật ngắn thôi.",
+  questionHint: "Cứ chọn điều nghe gần nhất.",
+  noRightWrong: "Không cần chọn cho thật đúng.",
   leadIns: [
     "Có một điều nhỏ muốn hỏi bạn.",
-    "Nếu được chọn lúc này...",
-    "Thử nghe mình một chút nhé.",
-    "Cho mình hỏi thêm một điều nữa.",
-    "Mình đi thêm một nhịp nhỏ nhé.",
-    "Gần xong rồi, thêm một câu thôi.",
-    "Và điều cuối cùng lúc này là gì?",
+    "Nếu nghe theo cảm giác lúc này...",
+    "Thử dừng lại một chút nhé.",
+    "Mình hỏi thêm một điều nhỏ nữa.",
+    "Đi chậm thêm một nhịp thôi.",
+    "Có vẻ mình sắp chạm được hướng gần hơn.",
+    "Và nếu chọn thật nhẹ lúc này...",
   ],
-  backButton: "Quay lại",
+  backButton: "Lùi lại một chút",
 } as const;
 
 const SOFT_OPTIONS: QuizQuestion["options"] = [
@@ -37,17 +37,17 @@ export const quizQuestions: QuizQuestion[] = [
   },
   {
     id: 2,
-    prompt: "Khi vừa mở một bài viết mới, điều nào bạn mong có trước tiên?",
+    prompt: "Khi vừa mở một bài viết mới, bạn muốn nó giúp mình theo cách nào?",
     options: SOFT_OPTIONS,
   },
   {
     id: 3,
-    prompt: "Giữa nhiều điều đang diễn ra, điều nào nghe gần với bạn hơn cả?",
+    prompt: "Giữa nhiều điều đang diễn ra, điều nào nghe gần với lòng mình hơn cả?",
     options: SOFT_OPTIONS,
   },
   {
     id: 4,
-    prompt: "Nếu bắt đầu từ hôm nay, cách nào khiến bạn thấy vừa sức nhất?",
+    prompt: "Nếu chỉ bắt đầu rất nhẹ từ hôm nay, điều nào khiến bạn thấy vừa sức hơn?",
     options: SOFT_OPTIONS,
   },
   {
@@ -57,12 +57,12 @@ export const quizQuestions: QuizQuestion[] = [
   },
   {
     id: 6,
-    prompt: "Dạng nội dung nào thường ở lại với bạn lâu hơn sau khi đọc xong?",
+    prompt: "Sau khi đọc xong, điều gì thường ở lại với bạn lâu hơn?",
     options: SOFT_OPTIONS,
   },
   {
     id: 7,
-    prompt: "Ngay lúc này, điều nào có thể là điểm bắt đầu hợp hơn cho bạn?",
+    prompt: "Ngay lúc này, điều nào có thể là một điểm bắt đầu đủ gần?",
     options: SOFT_OPTIONS,
   },
 ];

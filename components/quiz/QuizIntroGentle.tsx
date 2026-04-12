@@ -8,14 +8,14 @@ type QuizIntroGentleProps = {
 
 export function QuizIntroGentle({ onStart, note, whisper, progressHint, startLabel }: QuizIntroGentleProps) {
   return (
-    <section className="rounded-[24px] border border-[var(--color-border)] bg-[var(--color-card)] p-6 shadow-[0_16px_34px_rgba(36,76,99,0.08)] lg:p-8">
-      <div className="space-y-3 text-[var(--color-text-muted)]">
-        <p className="text-base">{note}</p>
+    <section className="rounded-[28px] bg-[rgba(251,247,241,0.48)] px-4 py-5 lg:px-7 lg:py-7">
+      <div className="max-w-[680px] space-y-3 text-[var(--color-text-muted)]">
+        <p className="text-base text-[var(--color-text-strong)]">{note}</p>
         <p className="quiz-soft-prompt text-sm">{whisper}</p>
       </div>
 
-      <div className="mt-6 rounded-[18px] border border-[rgba(109,159,155,0.34)] bg-[rgba(217,228,218,0.42)] p-4">
-        <p className="text-sm text-[var(--color-text-strong)]">{progressHint}</p>
+      <div className="mt-6 inline-flex rounded-full bg-[rgba(217,228,218,0.42)] px-4 py-2">
+        <p className="text-sm text-[var(--color-text-muted)]">{progressHint}</p>
       </div>
 
       <button
