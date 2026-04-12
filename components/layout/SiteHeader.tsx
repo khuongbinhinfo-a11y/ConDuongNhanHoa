@@ -30,9 +30,9 @@ type LocaleSwitcherProps = {
 function LogoMark({ compact = false }: { compact?: boolean }) {
   const wrapperClass = compact
     ? "inline-flex h-[2.2rem] w-[2.2rem] items-center justify-center rounded-[11px] border border-[rgba(30,62,82,0.12)] bg-[rgba(252,250,246,0.9)] shadow-[0_6px_12px_rgba(30,62,82,0.06)]"
-    : "inline-flex h-[2.65rem] w-[2.65rem] items-center justify-center rounded-[13px] border border-[rgba(30,62,82,0.12)] bg-[rgba(252,250,246,0.92)] shadow-[0_8px_16px_rgba(30,62,82,0.06)]";
+    : "inline-flex h-[2.85rem] w-[2.85rem] items-center justify-center rounded-[13px] border border-[rgba(30,62,82,0.12)] bg-[rgba(252,250,246,0.92)] shadow-[0_8px_16px_rgba(30,62,82,0.06)]";
 
-  const iconClass = compact ? "h-[1.05rem] w-[1.05rem]" : "h-[1.3rem] w-[1.3rem]";
+  const iconClass = compact ? "h-[1.05rem] w-[1.05rem]" : "h-[1.4rem] w-[1.4rem]";
 
   return (
     <span className={wrapperClass} aria-hidden="true">
@@ -140,16 +140,16 @@ export function SiteHeader({
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[linear-gradient(180deg,rgba(248,244,236,0.95),rgba(248,244,236,0.86))] backdrop-blur-md">
       <Container>
-        <div className="hidden min-h-[84px] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-6 lg:grid xl:gap-8">
-          <Link href="/" className="inline-flex shrink-0 flex-col items-start gap-2 text-[var(--color-navy)]">
+        <div className="hidden min-h-[88px] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-6 lg:grid xl:gap-8">
+          <Link href="/" className="inline-flex shrink-0 flex-col items-start gap-2.5 text-[var(--color-navy)]">
             <LogoMark />
-            <span className="max-w-[136px] text-[0.79rem] font-semibold leading-[1.3] tracking-[0.01em] text-[rgba(39,54,64,0.92)]">
+            <span className="max-w-[152px] text-[0.84rem] font-semibold leading-[1.3] tracking-[0.01em] text-[rgba(39,54,64,0.94)]">
               {brandName}
             </span>
           </Link>
 
           <nav aria-label={navAriaLabel} className="justify-self-center">
-            <ul className="flex flex-nowrap items-center gap-0.5 xl:gap-1.5">
+            <ul className="flex flex-nowrap items-center gap-1.5 xl:gap-2.5">
               {desktopNav.map((item) => {
                 const isActive = pathname === item.href;
 
@@ -157,7 +157,7 @@ export function SiteHeader({
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className={`inline-flex whitespace-nowrap rounded-[9px] px-2.5 py-1.5 text-[0.82rem] font-medium tracking-[0.01em] transition-colors ${
+                      className={`inline-flex whitespace-nowrap rounded-[9px] px-3 py-1.5 text-[0.84rem] font-medium tracking-[0.01em] transition-colors ${
                         isActive
                           ? "bg-[rgba(220,232,221,0.68)] text-[var(--color-navy)]"
                           : "text-[rgba(39,54,64,0.79)] hover:bg-[rgba(217,228,218,0.55)] hover:text-[var(--color-navy)]"
@@ -180,7 +180,10 @@ export function SiteHeader({
               disabled={!localeInteractive}
             />
 
-            <Button href={cta.href} className="rounded-[12px] border border-[rgba(248,244,236,0.35)] px-3.5 py-[0.56rem] text-[0.76rem] font-semibold tracking-[0.02em] shadow-[0_8px_14px_rgba(30,62,82,0.15)] hover:shadow-[0_10px_18px_rgba(30,62,82,0.19)]">
+            <Button
+              href={cta.href}
+              className="rounded-[12px] border border-[rgba(248,244,236,0.42)] bg-[rgba(30,62,82,0.9)] px-3.5 py-[0.54rem] text-[0.76rem] font-semibold tracking-[0.02em] shadow-[0_7px_12px_rgba(30,62,82,0.12)] hover:bg-[#23495f] hover:shadow-[0_9px_15px_rgba(30,62,82,0.16)]"
+            >
               {cta.label}
             </Button>
           </div>
@@ -246,7 +249,7 @@ export function SiteHeader({
 
               <Link
                 href={cta.href}
-                className="calm-cta calm-cta--primary mt-3 inline-flex w-full justify-center rounded-[12px] bg-[var(--color-navy)] px-4 py-2.5 text-sm font-semibold text-[#F8F4EC] shadow-[0_10px_20px_rgba(30,62,82,0.16)] transition-all duration-200 hover:bg-[#23485f] hover:shadow-[0_12px_22px_rgba(30,62,82,0.2)]"
+                className="calm-cta calm-cta--primary mt-3 inline-flex w-full justify-center rounded-[12px] bg-[rgba(30,62,82,0.9)] px-4 py-2.5 text-sm font-semibold text-[#F8F4EC] shadow-[0_8px_16px_rgba(30,62,82,0.14)] transition-all duration-200 hover:bg-[#23495f] hover:shadow-[0_10px_18px_rgba(30,62,82,0.18)]"
                 onClick={() => setOpen(false)}
               >
                 {cta.label}
