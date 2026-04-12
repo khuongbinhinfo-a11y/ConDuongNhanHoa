@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
+
 type QuizIntroGentleProps = {
   onStart: () => void;
   note: string;
@@ -6,7 +10,54 @@ type QuizIntroGentleProps = {
   startLabel: string;
 };
 
+const QUIZ_INTRO_MOOD_IMAGES = [
+  "/images/quiz-nature-photo.jpg",
+  "/images/quiz-mood-leaf.svg",
+  "/images/quiz-mood-window.svg",
+  "/images/quiz-mood-water.svg",
+  "/images/quiz-mood-desk.svg",
+  "/images/quiz-nature-mood.svg",
+] as const;
+
 export function QuizIntroGentle({ onStart, note, whisper, progressHint, startLabel }: QuizIntroGentleProps) {
+  const [activeMoodIndex, setActiveMoodIndex] = useState(0);
+  const [reduceMotion, setReduceMotion] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updateMotionPreference = () => {
+      setReduceMotion(mediaQuery.matches);
+    };
+
+    updateMotionPreference();
+    mediaQuery.addEventListener("change", updateMotionPreference);
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateMotionPreference);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (reduceMotion) {
+      return;
+    }
+
+    const stepDuration = typeof window !== "undefined" && window.matchMedia("(max-width: 640px)").matches ? 7000 : 6200;
+    const intervalId = window.setInterval(() => {
+      setActiveMoodIndex((previous) => (previous + 1) % QUIZ_INTRO_MOOD_IMAGES.length);
+    }, stepDuration);
+
+    return () => {
+      window.clearInterval(intervalId);
+    };
+  }, [reduceMotion]);
+
+  const moodFrames = useMemo(() => QUIZ_INTRO_MOOD_IMAGES, []);
+
   return (
     <section className="quiz-intro-scene rounded-[28px] bg-[rgba(251,247,241,0.48)] px-4 py-5 lg:px-7 lg:py-7">
       <div className="max-w-[680px] space-y-3 text-[var(--color-text-muted)]">
@@ -28,7 +79,17 @@ export function QuizIntroGentle({ onStart, note, whisper, progressHint, startLab
         </button>
       </div>
 
-      <div className="quiz-intro-media mt-5" aria-hidden="true" />
+      <div className="quiz-intro-media mt-5" aria-hidden="true">
+        <div className="quiz-intro-media__stack">
+          {moodFrames.map((source, index) => (
+            <div
+              key={source}
+              className={`quiz-intro-media__frame ${index === activeMoodIndex ? "is-active" : ""}`}
+              style={{ backgroundImage: `url("${source}")` }}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

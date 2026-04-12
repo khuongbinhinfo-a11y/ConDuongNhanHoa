@@ -134,28 +134,49 @@ p {
   overflow: hidden;
   border: 1px solid rgba(31, 65, 88, 0.08);
   border-radius: 22px;
-  background: rgba(251, 247, 241, 0.62);
+  background: rgba(251, 247, 241, 0.6);
 }
 
 .quiz-intro-media::before {
   content: "";
   position: absolute;
+  z-index: 2;
   inset: -1.5rem;
-  background-image: url("/images/quiz-nature-photo.jpg");
-  background-size: cover;
-  background-position: center;
-  filter: blur(18px) saturate(0.72) brightness(1.08);
-  opacity: 0.45;
-  transform: scale(1.1);
+  background:
+    radial-gradient(ellipse at 88% 18%, rgba(248, 244, 236, 0.56), transparent 48%),
+    radial-gradient(ellipse at 12% 82%, rgba(217, 228, 218, 0.42), transparent 52%);
+  pointer-events: none;
 }
 
 .quiz-intro-media::after {
   content: "";
   position: absolute;
+  z-index: 2;
   inset: 0;
   background:
-    radial-gradient(ellipse at 18% 84%, rgba(217, 228, 218, 0.5), transparent 58%),
-    linear-gradient(118deg, rgba(248, 244, 236, 0.82) 0%, rgba(248, 244, 236, 0.4) 52%, rgba(109, 159, 155, 0.14) 100%);
+    linear-gradient(115deg, rgba(245, 239, 230, 0.5) 0%, rgba(245, 239, 230, 0.2) 54%, rgba(109, 159, 155, 0.14) 100%),
+    linear-gradient(178deg, rgba(217, 228, 218, 0.32), rgba(248, 244, 236, 0.18));
+  pointer-events: none;
+}
+
+.quiz-intro-media__stack {
+  position: absolute;
+  inset: 0;
+}
+
+.quiz-intro-media__frame {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  filter: blur(3px) saturate(0.78) brightness(1.05);
+  transform: scale(1.04);
+  transition: opacity 1.4s ease;
+}
+
+.quiz-intro-media__frame.is-active {
+  opacity: 1;
 }
 
 .quiz-scene {
@@ -392,6 +413,10 @@ p {
   .calm-action::after {
     display: none;
   }
+
+  .quiz-intro-media__frame {
+    transition: none !important;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -432,8 +457,6 @@ p {
 
   .quiz-intro-media::before {
     inset: -2rem;
-    background-position: center;
-    opacity: 0.4;
   }
 
   .quiz-scene {

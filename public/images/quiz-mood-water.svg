@@ -1,0 +1,22 @@
+<svg width="1600" height="960" viewBox="0 0 1600 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgWater" x1="0" y1="0" x2="1600" y2="960" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5EFE6"/>
+      <stop offset="0.52" stop-color="#E3ECE2"/>
+      <stop offset="1" stop-color="#DCE8DD"/>
+    </linearGradient>
+    <filter id="waterBlur" x="-140" y="-140" width="1880" height="1240" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="960" fill="url(#bgWater)"/>
+  <g filter="url(#waterBlur)" opacity="0.56">
+    <path d="M-80 616C230 528 520 532 790 628C1060 724 1340 728 1630 640V1020H-80V616Z" fill="#6D9F9B" fill-opacity="0.32"/>
+    <path d="M-40 506C240 408 498 404 734 494C970 584 1258 594 1598 510" stroke="#6D9F9B" stroke-opacity="0.34" stroke-width="56" stroke-linecap="round"/>
+    <path d="M120 338C440 244 758 252 1074 352C1286 418 1486 430 1674 388" stroke="#D9E4DA" stroke-opacity="0.68" stroke-width="60" stroke-linecap="round"/>
+  </g>
+  <g opacity="0.2">
+    <path d="M96 686C344 610 572 618 782 710C992 802 1264 810 1590 720" stroke="#1F4158" stroke-opacity="0.24" stroke-width="3" stroke-linecap="round"/>
+    <path d="M210 820C510 752 794 760 1060 844C1252 904 1436 916 1610 892" stroke="#1F4158" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

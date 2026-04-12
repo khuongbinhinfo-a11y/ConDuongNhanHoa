@@ -1,0 +1,30 @@
+<svg width="1600" height="960" viewBox="0 0 1600 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgWindow" x1="0" y1="0" x2="1600" y2="960" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8F4EC"/>
+      <stop offset="0.48" stop-color="#E3ECE2"/>
+      <stop offset="1" stop-color="#D9E4DA"/>
+    </linearGradient>
+    <radialGradient id="sunWindow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1120 180) rotate(128) scale(440 300)">
+      <stop stop-color="#F8F4EC" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#F8F4EC" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="windowBlur" x="-120" y="-120" width="1840" height="1200" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="960" fill="url(#bgWindow)"/>
+  <rect width="1600" height="960" fill="url(#sunWindow)"/>
+  <g filter="url(#windowBlur)" opacity="0.58">
+    <rect x="180" y="90" width="590" height="760" rx="52" fill="#F5EFE6"/>
+    <rect x="800" y="120" width="470" height="680" rx="40" fill="#DCE8DD"/>
+    <path d="M660 250C830 220 990 280 1140 430C1020 540 860 580 660 250Z" fill="#6D9F9B" fill-opacity="0.26"/>
+    <path d="M190 740C390 570 620 520 880 590C690 760 470 820 190 740Z" fill="#6D9F9B" fill-opacity="0.2"/>
+  </g>
+  <g opacity="0.16">
+    <path d="M430 98V842" stroke="#1F4158" stroke-width="3" stroke-linecap="round"/>
+    <path d="M957 128V772" stroke="#1F4158" stroke-width="3" stroke-linecap="round"/>
+    <path d="M182 398H770" stroke="#1F4158" stroke-width="3" stroke-linecap="round"/>
+    <path d="M802 468H1268" stroke="#1F4158" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

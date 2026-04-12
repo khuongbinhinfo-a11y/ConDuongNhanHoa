@@ -1,0 +1,28 @@
+<svg width="1600" height="960" viewBox="0 0 1600 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgLeaf" x1="0" y1="0" x2="1600" y2="960" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8F4EC"/>
+      <stop offset="0.46" stop-color="#DCE8DD"/>
+      <stop offset="1" stop-color="#E3ECE2"/>
+    </linearGradient>
+    <radialGradient id="sunLeaf" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1200 170) rotate(135) scale(450 330)">
+      <stop stop-color="#F8F4EC" stop-opacity="0.88"/>
+      <stop offset="1" stop-color="#F8F4EC" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="leafBlur" x="-120" y="-120" width="1840" height="1200" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="960" fill="url(#bgLeaf)"/>
+  <rect width="1600" height="960" fill="url(#sunLeaf)"/>
+  <g filter="url(#leafBlur)" opacity="0.56">
+    <path d="M260 826C374 566 554 422 800 394C718 612 538 758 260 826Z" fill="#6D9F9B" fill-opacity="0.34"/>
+    <path d="M1012 126C884 296 840 500 878 736C1088 586 1130 370 1012 126Z" fill="#6D9F9B" fill-opacity="0.26"/>
+    <path d="M30 316C244 204 472 170 714 214C540 360 314 394 30 316Z" fill="#D9E4DA" fill-opacity="0.72"/>
+    <path d="M986 760C1184 626 1368 592 1538 656C1396 796 1212 830 986 760Z" fill="#DCE8DD" fill-opacity="0.72"/>
+  </g>
+  <g opacity="0.18">
+    <path d="M272 808C446 648 620 514 794 406" stroke="#1F4158" stroke-opacity="0.24" stroke-width="3" stroke-linecap="round"/>
+    <path d="M996 152C938 298 912 500 920 758" stroke="#1F4158" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>
