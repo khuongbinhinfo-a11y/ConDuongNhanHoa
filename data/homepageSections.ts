@@ -57,6 +57,6 @@ export const closingInvitationSectionData: ClosingInvitationSectionContent = {
     "Nếu bạn chưa chắc nên đọc từ đâu trước, hãy bắt đầu bằng một câu hỏi ngắn để web gợi ý hướng phù hợp.",
   cta: {
     label: "Làm quiz định hướng",
-    href: "/quiz",
+    href: "/bat-dau-tu-dau",
   },
 };

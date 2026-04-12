@@ -42,7 +42,7 @@ export const footerCopy: Record<AppLocale, FooterCopy> = {
       { label: "Quiz định hướng đọc", href: "/quiz" },
       { label: "Góc nhìn nhân ái", href: "/goc-nhin-nhan-ai" },
     ],
-    languageLabel: "Ngôn ngữ: Việt | English",
+    languageLabel: "Ngôn ngữ: Tiếng Việt (giai đoạn hiện tại)",
     note: "Không cần đi nhanh. Chỉ cần đi đúng nhịp của mình.",
     copyrightText: "© 2026 Con Đường Nhân Hòa. All rights reserved.",
   },
@@ -59,4 +59,3 @@ export const footerCopy: Record<AppLocale, FooterCopy> = {
     copyrightText: "© 2026 The Path of Human Harmony. All rights reserved.",
   },
 };
-

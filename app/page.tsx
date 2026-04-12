@@ -1,6 +1,3 @@
-"use client";
-
-import { useMemo, useState } from "react";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { ClosingEditorialSection } from "@/components/sections/ClosingEditorialSection";
@@ -9,101 +6,57 @@ import { FeaturedPathsSection } from "@/components/sections/FeaturedPathsSection
 import { HeroSectionEditorial } from "@/components/sections/HeroSectionEditorial";
 import { WhyWeExistSection } from "@/components/sections/WhyWeExistSection";
 import { homepageConfig } from "@/data/homepageConfig";
-import { footerCopy, whySectionCopy } from "@/data/siteContent";
-import { DEFAULT_LOCALE, LOCALE_STORAGE_KEY, isAppLocale, type AppLocale } from "@/lib/locale";
-import { homepageTranslations } from "@/locales/homepage";
-import { navigationTranslations } from "@/locales/navigation";
+import { whySectionCopy } from "@/data/siteContent";
+import { getSiteChrome } from "@/lib/siteChrome";
 
 export default function HomePage() {
-  const [locale, setLocale] = useState<AppLocale>(() => {
-    if (typeof window === "undefined") {
-      return DEFAULT_LOCALE;
-    }
-    const storedLocale = window.localStorage.getItem(LOCALE_STORAGE_KEY);
-    return isAppLocale(storedLocale) ? storedLocale : DEFAULT_LOCALE;
-  });
+  const locale = "vi";
+  const siteChrome = getSiteChrome(locale);
 
-  const navigationText = navigationTranslations[locale];
-  const homepageText = homepageTranslations[locale];
+  const navigationText = siteChrome.navigationText;
+  const homepageText = siteChrome.homepageText;
 
-  const headerLinks = useMemo(
-    () =>
-      homepageConfig.headerLinks.map((item) => ({
-        href: item.href,
-        label: navigationText.nav[item.key],
-        shortLabel: navigationText.navShort[item.key],
-      })),
-    [navigationText],
-  );
+  const headerLinks = siteChrome.headerLinks;
 
-  const heroContent = useMemo(
-    () => ({
-      eyebrow: homepageText.hero.eyebrow,
-      title: homepageText.hero.title,
-      subtitle: homepageText.hero.subtitle,
-      primaryCtaLabel: homepageText.hero.primaryCta,
-      primaryCtaHref: homepageConfig.hero.primaryCtaHref,
-      noteHint: homepageText.hero.chatHint,
-      image: {
-        src: homepageConfig.hero.image.src,
-        alt: homepageConfig.hero.image.alt[locale],
-      },
-    }),
-    [homepageText, locale],
-  );
+  const heroContent = {
+    eyebrow: homepageText.hero.eyebrow,
+    title: homepageText.hero.title,
+    subtitle: homepageText.hero.subtitle,
+    primaryCtaLabel: homepageText.hero.primaryCta,
+    primaryCtaHref: homepageConfig.hero.primaryCtaHref,
+    noteHint: homepageText.hero.chatHint,
+    image: {
+      src: homepageConfig.hero.image.src,
+      alt: homepageConfig.hero.image.alt[locale],
+    },
+  };
 
-  const entryCards = useMemo(
-    () =>
-      homepageConfig.entryCards.map((item) => ({
-        href: item.href,
-        title: homepageText.entrySection.cards[item.key].title,
-        description: homepageText.entrySection.cards[item.key].description,
-        ctaLabel: homepageText.entrySection.cards[item.key].cta,
-      })),
-    [homepageText],
-  );
+  const entryCards = homepageConfig.entryCards.map((item) => ({
+    href: item.href,
+    title: homepageText.entrySection.cards[item.key].title,
+    description: homepageText.entrySection.cards[item.key].description,
+    ctaLabel: homepageText.entrySection.cards[item.key].cta,
+  }));
 
-  const featuredContent = useMemo(
-    () => ({
-      title: homepageText.featuredSection.title,
-      subtitle: homepageText.featuredSection.subtitle,
-      cards: homepageConfig.featuredCards.map((item) => ({
-        href: item.href,
-        title: homepageText.featuredSection.cards[item.key].title,
-        description: homepageText.featuredSection.cards[item.key].description,
-        ctaLabel: homepageText.featuredSection.cards[item.key].cta,
-      })),
-    }),
-    [homepageText],
-  );
+  const featuredContent = {
+    title: homepageText.featuredSection.title,
+    subtitle: homepageText.featuredSection.subtitle,
+    cards: homepageConfig.featuredCards.map((item) => ({
+      href: item.href,
+      title: homepageText.featuredSection.cards[item.key].title,
+      description: homepageText.featuredSection.cards[item.key].description,
+      ctaLabel: homepageText.featuredSection.cards[item.key].cta,
+    })),
+  };
 
-  const closingContent = useMemo(
-    () => ({
-      title: homepageText.endingSection.title,
-      subtitle: homepageText.endingSection.subtitle,
-      description: homepageText.endingSection.description,
-      cta: {
-        label: homepageText.endingSection.cta,
-        href: homepageConfig.endingCtaHref,
-      },
-    }),
-    [homepageText],
-  );
-
-  const footerContent = useMemo(
-    () => ({
-      brandTagline: homepageText.brand.tagline,
-      navLinks: headerLinks.map((item) => ({ label: item.label, href: item.href })),
-      ...footerCopy[locale],
-    }),
-    [headerLinks, homepageText, locale],
-  );
-
-  const handleLocaleChange = (nextLocale: AppLocale) => {
-    setLocale(nextLocale);
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem(LOCALE_STORAGE_KEY, nextLocale);
-    }
+  const closingContent = {
+    title: homepageText.endingSection.title,
+    subtitle: homepageText.endingSection.subtitle,
+    description: homepageText.endingSection.description,
+    cta: {
+      label: homepageText.endingSection.cta,
+      href: homepageConfig.endingCtaHref,
+    },
   };
 
   return (
@@ -111,12 +64,7 @@ export default function HomePage() {
       <SiteHeader
         brandName={navigationText.brand.name}
         links={headerLinks}
-        cta={{ label: navigationText.companion, href: homepageConfig.headerCtaHref }}
-        locale={locale}
-        onLocaleChange={handleLocaleChange}
-        menuButtonLabel={navigationText.menuButton}
-        navAriaLabel={navigationText.navAriaLabel}
-        localeSwitchAriaLabel={navigationText.localeSwitchAriaLabel}
+        cta={siteChrome.headerCta}
       />
       <main>
         <HeroSectionEditorial content={heroContent} />
@@ -127,14 +75,14 @@ export default function HomePage() {
       </main>
       <SiteFooter
         brandName={navigationText.brand.name}
-        brandTagline={footerContent.brandTagline}
-        navHeading={footerContent.navHeading}
-        navLinks={footerContent.navLinks}
-        supportHeading={footerContent.supportHeading}
-        supportLinks={footerContent.supportLinks}
-        languageLabel={footerContent.languageLabel}
-        note={footerContent.note}
-        copyrightText={footerContent.copyrightText}
+        brandTagline={siteChrome.footer.brandTagline}
+        navHeading={siteChrome.footer.navHeading}
+        navLinks={siteChrome.footer.navLinks}
+        supportHeading={siteChrome.footer.supportHeading}
+        supportLinks={siteChrome.footer.supportLinks}
+        languageLabel={siteChrome.footer.languageLabel}
+        note={siteChrome.footer.note}
+        copyrightText={siteChrome.footer.copyrightText}
       />
     </div>
   );

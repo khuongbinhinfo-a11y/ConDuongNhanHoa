@@ -56,6 +56,6 @@ export const closingEditorialContent: ClosingEditorialContent = {
   description: "Một lối đi phù hợp thường bắt đầu từ điều đang chạm tới mình nhất lúc này.",
   cta: {
     label: "Xem hướng bắt đầu",
-    href: "/quiz",
+    href: "/bat-dau-tu-dau",
   },
 };
