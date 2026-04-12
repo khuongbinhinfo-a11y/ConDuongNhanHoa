@@ -7,62 +7,62 @@ export const QUIZ_COPY = {
   introWhisper: "Không cần trả lời thật nhanh.",
   startButton: "Mình bắt đầu",
   progressHint: "Mình sẽ hỏi thật ngắn thôi.",
-  questionHint: "Mình theo nhịp của bạn.",
-  noRightWrong: "Không cần chọn cho thật đúng.",
+  questionHint: "Mình ở đây, cứ đi chậm thôi.",
+  noRightWrong: "Chọn như một lời đáp nhẹ là đủ.",
   leadIns: [
-    "Mình hỏi một điều nhỏ thôi.",
-    "Nếu nghe theo cảm giác lúc này...",
-    "Mình dừng lại cùng bạn một chút nhé.",
-    "Có một góc nhỏ nữa muốn hỏi bạn.",
+    "Mình hỏi khẽ một điều thôi.",
+    "Ừ, mình đi theo cảm giác lúc này nhé.",
+    "Mình dừng lại cùng bạn một chút.",
+    "Còn một góc nhỏ nữa.",
     "Mình đi chậm thêm một nhịp thôi.",
-    "Có vẻ hướng gần hơn đang hiện ra rồi.",
-    "Và nếu chọn thật nhẹ lúc này...",
+    "Có vẻ hướng gần hơn đang hiện ra.",
+    "Chọn thật nhẹ ở câu này thôi.",
   ],
   backButton: "Lùi lại một chút",
 } as const;
 
 const SOFT_OPTIONS: QuizQuestion["options"] = [
-  { key: "A", label: "Một cách nhìn để hiểu rõ chuyện gì đang diễn ra." },
-  { key: "B", label: "Một lời giải thích rõ ràng để bớt rối hơn." },
-  { key: "C", label: "Một bước nhỏ, đủ nhẹ để bắt đầu ngay." },
-  { key: "D", label: "Một câu chuyện thật để thấy mình không một mình." },
-  { key: "E", label: "Một lời nhắc dịu dàng để nhìn mình và nhìn người nhẹ hơn." },
+  { key: "A", label: "Mình muốn hiểu rõ hơn chuyện đang diễn ra." },
+  { key: "B", label: "Mình cần một lời giải thích rõ để bớt rối." },
+  { key: "C", label: "Mình muốn một bước nhỏ, đủ nhẹ để làm ngay." },
+  { key: "D", label: "Mình muốn nghe một câu chuyện thật, để thấy không chỉ có mình." },
+  { key: "E", label: "Mình cần một lời nhắc dịu hơn cho mình và cho người khác." },
 ];
 
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    prompt: "Nếu hôm nay hơi mệt, điều nào có thể làm lòng nhẹ hơn một chút?",
+    prompt: "Nếu hôm nay hơi mệt, điều gì có thể làm lòng mình nhẹ hơn một chút?",
     options: SOFT_OPTIONS,
   },
   {
     id: 2,
-    prompt: "Khi vừa mở một bài viết mới, bạn muốn nó giúp mình theo cách nào?",
+    prompt: "Khi mở một bài viết mới, mình mong nó nâng đỡ mình theo cách nào?",
     options: SOFT_OPTIONS,
   },
   {
     id: 3,
-    prompt: "Giữa nhiều điều đang diễn ra, điều nào nghe gần với lòng mình hơn cả?",
+    prompt: "Giữa nhiều điều đang diễn ra, điều nào đang gần với lòng mình hơn?",
     options: SOFT_OPTIONS,
   },
   {
     id: 4,
-    prompt: "Nếu chỉ bắt đầu rất nhẹ từ hôm nay, điều nào khiến bạn thấy vừa sức hơn?",
+    prompt: "Nếu chỉ bắt đầu rất nhẹ từ hôm nay, mình muốn bắt đầu kiểu nào?",
     options: SOFT_OPTIONS,
   },
   {
     id: 5,
-    prompt: "Khi muốn thay đổi nhưng chùn lại, điều gì thường giữ bạn lại lâu nhất?",
+    prompt: "Khi muốn thay đổi mà vẫn chùn lại, điều gì hay giữ mình ở đó?",
     options: SOFT_OPTIONS,
   },
   {
     id: 6,
-    prompt: "Sau khi đọc xong, điều gì thường ở lại với bạn lâu hơn?",
+    prompt: "Sau khi đọc xong, điều gì thường còn ở lại với mình?",
     options: SOFT_OPTIONS,
   },
   {
     id: 7,
-    prompt: "Ngay lúc này, điều nào có thể là một điểm bắt đầu đủ gần?",
+    prompt: "Ngay lúc này, đâu là một điểm bắt đầu đủ gần?",
     options: SOFT_OPTIONS,
   },
 ];
