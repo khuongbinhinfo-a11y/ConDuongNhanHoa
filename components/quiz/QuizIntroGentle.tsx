@@ -59,7 +59,7 @@ export function QuizIntroGentle({ onStart, note, whisper, progressHint, startLab
   const moodFrames = useMemo(() => QUIZ_INTRO_MOOD_IMAGES, []);
 
   return (
-    <section className="quiz-intro-scene rounded-[30px] bg-[rgba(251,247,241,0.48)] px-4 py-5 lg:px-7 lg:py-7">
+    <section className="quiz-shell-surface quiz-intro-scene rounded-[30px] bg-[rgba(251,247,241,0.48)] px-4 py-5 lg:px-7 lg:py-7">
       <div className="quiz-intro-head">
         <div className="quiz-intro-copy max-w-[660px] space-y-3 text-[var(--color-text-muted)]">
           <p className="text-base text-[var(--color-text-strong)]">{note}</p>

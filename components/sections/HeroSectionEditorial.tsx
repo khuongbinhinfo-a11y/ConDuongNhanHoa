@@ -25,22 +25,23 @@ export function HeroSectionEditorial({ content }: HeroSectionEditorialProps) {
       <Container>
         <div className="grid items-center gap-9 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-14">
           <div className="relative z-10 max-w-[620px]">
-            <p className="hero-editorial__eyebrow mb-4 inline-flex rounded-full border border-[rgba(109,159,155,0.33)] bg-[rgba(217,228,218,0.46)] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] text-[var(--color-teal)]">
+            <p className="hero-editorial__eyebrow mb-4 inline-flex rounded-full border border-[rgba(109,159,155,0.32)] bg-[rgba(217,228,218,0.45)] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] text-[var(--color-teal)]">
               {content.eyebrow}
             </p>
-            <h1 className="hero-editorial__title text-[clamp(2rem,4.8vw,4.05rem)] font-semibold leading-[1.1] text-[var(--color-text-strong)]">
+            <h1 className="hero-editorial__title text-[clamp(2rem,4.8vw,4.08rem)] font-semibold leading-[1.08] text-[var(--color-text-strong)]">
               {content.title}
             </h1>
-            <p className="hero-editorial__subtitle mt-5 max-w-[58ch] text-base text-[var(--color-text-muted)] lg:text-lg">
+            <p className="hero-editorial__subtitle mt-5 max-w-[56ch] text-base text-[var(--color-text-muted)] lg:text-lg">
               {content.subtitle}
             </p>
 
-            <div className="hero-editorial__cta-cluster mt-8 flex flex-wrap items-start gap-3 sm:items-center">
+            <div className="hero-editorial__cta-cluster mt-8 flex flex-wrap items-start gap-3.5 sm:items-center">
               <Button
                 href={content.primaryCtaHref}
-                className="hero-editorial__cta rounded-[14px] border border-[rgba(245,239,230,0.34)] px-5 py-3 text-[0.88rem] tracking-[0.01em] shadow-[0_14px_28px_rgba(31,65,88,0.22)] hover:shadow-[0_18px_32px_rgba(31,65,88,0.28)]"
+                className="hero-editorial__cta rounded-[14px] border border-[rgba(245,239,230,0.34)] px-5 py-3 text-[0.88rem] tracking-[0.01em] shadow-[0_14px_28px_rgba(31,65,88,0.2)] hover:shadow-[0_18px_32px_rgba(31,65,88,0.24)]"
               >
-                {content.primaryCtaLabel}
+                <span className="hero-editorial__cta-label">{content.primaryCtaLabel}</span>
+                <span className="hero-editorial__cta-mark" aria-hidden="true" />
               </Button>
               <p className="hero-note-hint">
                 <span className="hero-note-hint__mark" aria-hidden="true" />

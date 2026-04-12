@@ -13,7 +13,8 @@ import { combineSuggestedArticles, resolveQuizResult, type QuizAnswers } from "@
 type QuizStage = "intro" | "question" | "result";
 
 const TOTAL_QUESTIONS = quizQuestions.length;
-const AUTO_ADVANCE_DELAY_MS = 250;
+const AUTO_ADVANCE_DELAY_MS = 190;
+const AUTO_SETTLE_DELAY_MS = 110;
 
 function makeEmptyAnswers(): QuizAnswers {
   return Array.from({ length: TOTAL_QUESTIONS }, () => null);
@@ -86,12 +87,17 @@ export function ReadingOrientationQuiz() {
         setStage("result");
         return;
       }
+
       setCurrentIndex(indexAtSelection + 1);
-      setIsAutoAdvancing(false);
+      autoAdvanceRef.current = setTimeout(() => {
+        setIsAutoAdvancing(false);
+        autoAdvanceRef.current = null;
+      }, AUTO_SETTLE_DELAY_MS);
     };
 
     if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       advanceToNext();
+      setIsAutoAdvancing(false);
       return;
     }
 
@@ -119,40 +125,46 @@ export function ReadingOrientationQuiz() {
             {QUIZ_COPY.sectionSubtitle}
           </p>
 
-          <div key={stage} className="mt-7 motion-safe:animate-[quiz-step-in_.28s_ease]">
+          <div className="quiz-stage-wrap mt-7">
             {stage === "intro" ? (
-              <QuizIntroGentle
-                onStart={handleStart}
-                note={QUIZ_COPY.introNote}
-                whisper={QUIZ_COPY.introWhisper}
-                progressHint={QUIZ_COPY.progressHint}
-                startLabel={QUIZ_COPY.startButton}
-              />
+              <div className="quiz-stage-view motion-safe:animate-[quiz-step-in_.25s_ease]">
+                <QuizIntroGentle
+                  onStart={handleStart}
+                  note={QUIZ_COPY.introNote}
+                  whisper={QUIZ_COPY.introWhisper}
+                  progressHint={QUIZ_COPY.progressHint}
+                  startLabel={QUIZ_COPY.startButton}
+                />
+              </div>
             ) : null}
 
             {stage === "question" ? (
-              <QuizQuestionGentle
-                question={quizQuestions[currentIndex]}
-                questionIndex={currentIndex}
-                totalQuestions={TOTAL_QUESTIONS}
-                selectedOption={answers[currentIndex]}
-                leadIn={QUIZ_COPY.leadIns[currentIndex] ?? QUIZ_COPY.leadIns[QUIZ_COPY.leadIns.length - 1]}
-                hint={QUIZ_COPY.questionHint}
-                noRightWrongText={QUIZ_COPY.noRightWrong}
-                isAutoAdvancing={isAutoAdvancing}
-                onChoose={handleSelect}
-                onBack={handleBack}
-                backLabel={QUIZ_COPY.backButton}
-              />
+              <div className="quiz-stage-view motion-safe:animate-[quiz-step-in_.22s_ease]">
+                <QuizQuestionGentle
+                  question={quizQuestions[currentIndex]}
+                  questionIndex={currentIndex}
+                  totalQuestions={TOTAL_QUESTIONS}
+                  selectedOption={answers[currentIndex]}
+                  leadIn={QUIZ_COPY.leadIns[currentIndex] ?? QUIZ_COPY.leadIns[QUIZ_COPY.leadIns.length - 1]}
+                  hint={QUIZ_COPY.questionHint}
+                  noRightWrongText={QUIZ_COPY.noRightWrong}
+                  isAutoAdvancing={isAutoAdvancing}
+                  onChoose={handleSelect}
+                  onBack={handleBack}
+                  backLabel={QUIZ_COPY.backButton}
+                />
+              </div>
             ) : null}
 
             {stage === "result" ? (
-              <QuizResultGentle
-                primaryProfile={primaryProfile}
-                secondaryProfile={secondaryProfile}
-                articles={suggestedArticles}
-                onRestart={handleRestart}
-              />
+              <div className="quiz-stage-view motion-safe:animate-[quiz-step-in_.26s_ease]">
+                <QuizResultGentle
+                  primaryProfile={primaryProfile}
+                  secondaryProfile={secondaryProfile}
+                  articles={suggestedArticles}
+                  onRestart={handleRestart}
+                />
+              </div>
             ) : null}
           </div>
         </div>

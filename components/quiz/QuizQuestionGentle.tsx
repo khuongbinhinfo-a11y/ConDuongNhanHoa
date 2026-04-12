@@ -31,12 +31,12 @@ export function QuizQuestionGentle({
   const replyOffsets = ["", "quiz-reply--soft-right", "quiz-reply--near", "quiz-reply--wide-right", "quiz-reply--near"] as const;
 
   return (
-    <section className={`quiz-scene ${isAutoAdvancing ? "quiz-scene--advancing" : ""}`}>
+    <section className={`quiz-shell-surface quiz-scene ${isAutoAdvancing ? "quiz-scene--advancing" : ""}`}>
       <div className="quiz-scene__content space-y-6">
         <QuizProgressGentle currentStep={questionIndex + 1} totalSteps={totalQuestions} hint={hint} />
 
         <div className="quiz-chat-stream">
-          <div className="quiz-question-moment">
+          <div className={`quiz-question-moment ${isAutoAdvancing ? "quiz-question-moment--advancing" : ""}`}>
             <div className="quiz-message-row">
               <span className="quiz-message-dot" aria-hidden="true" />
               <p className="quiz-lead-bubble">{leadIn}</p>
@@ -62,7 +62,7 @@ export function QuizQuestionGentle({
                   type="button"
                   onClick={() => onChoose(option.key)}
                   disabled={isAutoAdvancing}
-                  className={`quiz-reply ${offsetClass} ${isActive ? "quiz-reply--active" : ""}`}
+                  className={`quiz-reply ${offsetClass} ${isAutoAdvancing ? "quiz-reply--advancing" : ""} ${isActive ? "quiz-reply--active" : ""}`}
                 >
                   <span className="quiz-reply__dot" aria-hidden="true" />
                   <span>{option.label}</span>
