@@ -15,14 +15,14 @@ export const homepageConfig = {
     { key: "rethink", href: "/hieu-lai-dieu-quen" },
     { key: "wellness", href: "/song-khoe-de-hieu" },
     { key: "stories", href: "/cau-chuyen-thay-doi" },
-    { key: "startHere", href: "/quiz" },
+    { key: "startHere", href: "/bat-dau-tu-dau" },
     { key: "compassion", href: "/goc-nhin-nhan-ai" },
   ] as const satisfies ReadonlyArray<{ key: HeaderLinkKey; href: string }>,
 
-  headerCtaHref: "/quiz",
+  headerCtaHref: "/bat-dau-tu-dau",
 
   hero: {
-    primaryCtaHref: "/quiz",
+    primaryCtaHref: "/bat-dau-tu-dau",
     image: {
       src: "/images/hero-wellness.jpg",
       alt: {
@@ -44,5 +44,5 @@ export const homepageConfig = {
     { key: "third", href: "/thay-doi-nho" },
   ] as const satisfies ReadonlyArray<{ key: FeaturedCardKey; href: string }>,
 
-  endingCtaHref: "/quiz",
+  endingCtaHref: "/bat-dau-tu-dau",
 } as const;
