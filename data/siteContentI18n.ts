@@ -23,13 +23,13 @@ export const whySectionI18n: Record<AppLocale, WhySectionCopy> = {
     eyebrow: "Tinh thần nền tảng",
     title: "Một nền tảng nội dung thiện lành, đi hẹp trước để đi sâu và đi chắc.",
     description:
-      "Con Đường Thiện Lành phát triển theo 5 nhánh nội dung. Giai đoạn đầu ưu tiên đi sâu nhánh Dinh dưỡng thiện lành để giữ chất lượng, sau đó mở rộng đồng đều sang các nhánh còn lại.",
+      "Con Đường Thiện Lành phát triển theo 7 nhánh nội dung. Giai đoạn đầu ưu tiên đi sâu nhánh Dinh dưỡng thiện lành để giữ chất lượng, sau đó mở rộng đồng đều sang các nhánh còn lại, gồm cả Y học thiện lành và Cõi vui cười.",
   },
   en: {
     eyebrow: "Platform Spirit",
     title: "A wholesome content platform that goes narrow first to go deeper and steadier.",
     description:
-      "The Wholesome Path grows through five content branches. This phase focuses deeply on Wholesome Nutrition first, then expands across the remaining branches with the same quality bar.",
+      "The Wholesome Path grows through seven content branches. This phase focuses deeply on Wholesome Nutrition first, then expands across the remaining branches, including Wholesome Medicine and Joyful Laughter, with the same quality bar.",
   },
 };
 
@@ -57,4 +57,3 @@ export const footerI18n: Record<AppLocale, FooterCopy> = {
     copyrightNotice: "All rights reserved.",
   },
 };
-

@@ -17,13 +17,18 @@ export const homepageI18n = {
       chatHint: "Bắt đầu từ một điều gần với mình.",
     },
     entrySection: {
-      title: "Các nhánh nội dung thiện lành",
+      title: "Bảy nhánh nội dung thiện lành",
       leadLabel: "Nhánh ưu tiên giai đoạn đầu",
       cards: {
         nutrition: {
           title: "Dinh dưỡng thiện lành",
           description: "Quay về với dinh dưỡng từ gốc rễ.",
           cta: "Vào nhánh",
+        },
+        medicine: {
+          title: "Y học thiện lành",
+          description: "Góc nhìn sức khỏe lành mạnh, phòng ngừa và chăm sóc từ nền tảng.",
+          cta: "Xem định hướng",
         },
         action: {
           title: "Hành động thiện lành",
@@ -42,7 +47,12 @@ export const homepageI18n = {
         },
         entertainment: {
           title: "Giải trí thiện lành",
-          description: "Chọn lọc nội dung giải trí có giá trị tích cực và lành mạnh.",
+          description: "Chọn lọc phim, sách, video và nội dung giải trí có giá trị tích cực.",
+          cta: "Xem định hướng",
+        },
+        laughter: {
+          title: "Cõi vui cười",
+          description: "Không gian tiếng cười nhẹ nhàng, tích cực và không độc hại.",
           cta: "Xem định hướng",
         },
       },
@@ -93,8 +103,14 @@ export const homepageI18n = {
     },
     expansionSection: {
       title: "Các nhánh mở rộng",
-      subtitle: "Bốn nhánh còn lại được xây theo hướng đi hẹp trước, sâu trước, rồi mới mở rộng.",
+      subtitle:
+        "Sáu nhánh còn lại được phát triển theo hướng đi hẹp trước, sâu trước, rồi mới mở rộng theo cùng chuẩn biên tập.",
       cards: {
+        medicine: {
+          title: "Y học thiện lành",
+          description: "Định hướng kiến thức sức khỏe nền tảng, phòng ngừa và góc nhìn y học nhân văn.",
+          cta: "Vào nhánh",
+        },
         action: {
           title: "Hành động thiện lành",
           description: "Định hướng các hành động nhỏ giúp tạo chuyển biến bền hơn.",
@@ -112,7 +128,12 @@ export const homepageI18n = {
         },
         entertainment: {
           title: "Giải trí thiện lành",
-          description: "Định hướng chọn nội dung giải trí tích cực cho nhịp sống sáng hơn.",
+          description: "Định hướng phim, sách, video và nội dung giải trí tích cực, có giá trị nuôi dưỡng.",
+          cta: "Vào nhánh",
+        },
+        laughter: {
+          title: "Cõi vui cười",
+          description: "Định hướng tiếng cười sạch, thư giãn nhẹ và nội dung vui không giễu cợt xấu.",
           cta: "Vào nhánh",
         },
       },
@@ -140,13 +161,18 @@ export const homepageI18n = {
       chatHint: "Begin with something that feels close to you.",
     },
     entrySection: {
-      title: "Wholesome content branches",
+      title: "Seven wholesome content branches",
       leadLabel: "Current phase priority",
       cards: {
         nutrition: {
           title: "Wholesome Nutrition",
           description: "Returning to nutrition at its roots.",
           cta: "Open branch",
+        },
+        medicine: {
+          title: "Wholesome Medicine",
+          description: "A grounded approach to health, prevention, and long-term well-being.",
+          cta: "View direction",
         },
         action: {
           title: "Wholesome Actions",
@@ -165,7 +191,12 @@ export const homepageI18n = {
         },
         entertainment: {
           title: "Wholesome Entertainment",
-          description: "Curating entertainment with positive and wholesome value.",
+          description: "Curating films, books, videos, and media with positive wholesome value.",
+          cta: "View direction",
+        },
+        laughter: {
+          title: "Joyful Laughter",
+          description: "A space for light, positive humor without harmful ridicule.",
           cta: "View direction",
         },
       },
@@ -216,8 +247,14 @@ export const homepageI18n = {
     },
     expansionSection: {
       title: "Expansion branches",
-      subtitle: "The remaining branches are built with a narrow-first, depth-first strategy.",
+      subtitle:
+        "The remaining six branches are built with a narrow-first, depth-first strategy before broader expansion.",
       cards: {
+        medicine: {
+          title: "Wholesome Medicine",
+          description: "Direction for foundational health knowledge, prevention, and humane medical perspectives.",
+          cta: "Open branch",
+        },
         action: {
           title: "Wholesome Actions",
           description: "Direction for practical actions that support durable positive change.",
@@ -235,7 +272,12 @@ export const homepageI18n = {
         },
         entertainment: {
           title: "Wholesome Entertainment",
-          description: "Direction for healthier entertainment choices and restored attention.",
+          description: "Direction for films, books, videos, and media choices that nourish attention.",
+          cta: "Open branch",
+        },
+        laughter: {
+          title: "Joyful Laughter",
+          description: "Direction for light, wholesome humor that relaxes without harmful mockery.",
           cta: "Open branch",
         },
       },

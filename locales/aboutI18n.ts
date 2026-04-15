@@ -13,7 +13,7 @@ export const aboutI18n = {
       {
         title: "Đi hẹp trước, đi sâu trước",
         description:
-          "Con Đường Thiện Lành phát triển theo 5 nhánh, nhưng giai đoạn đầu chỉ đi sâu nhánh Dinh dưỡng thiện lành để đảm bảo chất lượng.",
+          "Con Đường Thiện Lành phát triển theo 7 nhánh, nhưng giai đoạn đầu chỉ đi sâu nhánh Dinh dưỡng thiện lành để đảm bảo chất lượng.",
       },
       {
         title: "Xây nền từ gốc rễ",
@@ -23,7 +23,7 @@ export const aboutI18n = {
       {
         title: "Mở rộng có trật tự",
         description:
-          "Sau khi nhánh trọng tâm đủ vững, các nhánh Hành động, Lời nói, Suy nghĩ và Giải trí thiện lành sẽ mở rộng cùng tiêu chuẩn biên tập.",
+          "Sau khi nhánh trọng tâm đủ vững, các nhánh Y học, Hành động, Lời nói, Suy nghĩ, Giải trí và Cõi vui cười sẽ mở rộng cùng tiêu chuẩn biên tập.",
       },
     ],
     startTitle: "Bắt đầu ở đâu?",
@@ -43,7 +43,7 @@ export const aboutI18n = {
       {
         title: "Go narrow first, go deep first",
         description:
-          "The Wholesome Path develops across five branches, but this phase goes deep into Wholesome Nutrition to maintain quality.",
+          "The Wholesome Path develops across seven branches, but this phase goes deep into Wholesome Nutrition to maintain quality.",
       },
       {
         title: "Build from the roots",
@@ -53,7 +53,7 @@ export const aboutI18n = {
       {
         title: "Expand with structure",
         description:
-          "Once the focus branch is stable, Wholesome Actions, Speech, Thoughts, and Entertainment will expand with the same editorial standard.",
+          "Once the focus branch is stable, Wholesome Medicine, Actions, Speech, Thoughts, Entertainment, and Joyful Laughter will expand with the same editorial standard.",
       },
     ],
     startTitle: "Where should you begin?",

@@ -120,7 +120,7 @@ export function SiteHeader({
           </Link>
 
           <nav aria-label={navAriaLabel} className="justify-self-center">
-            <ul className="flex flex-nowrap items-center gap-1.5 xl:gap-2.5">
+            <ul className="flex flex-nowrap items-center gap-1 xl:gap-2">
               {desktopNav.map((item) => {
                 const isActive = pathname === item.href;
 
@@ -128,7 +128,7 @@ export function SiteHeader({
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className={`inline-flex whitespace-nowrap rounded-[9px] px-3 py-1.5 text-[0.84rem] font-medium tracking-[0.01em] transition-colors ${
+                      className={`inline-flex whitespace-nowrap rounded-[9px] px-2.5 py-1.5 text-[0.78rem] font-medium tracking-[0.01em] transition-colors xl:px-3 xl:text-[0.82rem] ${
                         isActive
                           ? "bg-[rgba(220,232,221,0.68)] text-[var(--color-navy)]"
                           : "text-[rgba(39,54,64,0.79)] hover:bg-[rgba(217,228,218,0.55)] hover:text-[var(--color-navy)]"

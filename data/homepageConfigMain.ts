@@ -1,25 +1,29 @@
 export type HeaderLinkMainKey =
   | "home"
   | "nutrition"
+  | "medicine"
   | "action"
   | "speech"
   | "thought"
   | "entertainment"
+  | "laughter"
   | "about";
 
-export type EntryCardMainKey = "nutrition" | "action" | "speech" | "thought" | "entertainment";
+export type EntryCardMainKey = "nutrition" | "medicine" | "action" | "speech" | "thought" | "entertainment" | "laughter";
 export type FocusCardMainKey = "foundation" | "documentary" | "practice";
 export type NutritionFeaturedCardMainKey = "foundationalReads" | "documentaryViews" | "specializedTopics";
-export type ExpansionCardMainKey = "action" | "speech" | "thought" | "entertainment";
+export type ExpansionCardMainKey = "medicine" | "action" | "speech" | "thought" | "entertainment" | "laughter";
 
 export const homepageMainConfig = {
   headerLinks: [
     { key: "home", href: "/" },
     { key: "nutrition", href: "/dinh-duong-thien-lanh" },
+    { key: "medicine", href: "/y-hoc-thien-lanh" },
     { key: "action", href: "/hanh-dong-thien-lanh" },
     { key: "speech", href: "/loi-noi-thien-lanh" },
     { key: "thought", href: "/suy-nghi-thien-lanh" },
     { key: "entertainment", href: "/giai-tri-thien-lanh" },
+    { key: "laughter", href: "/coi-vui-cuoi" },
     { key: "about", href: "/gioi-thieu" },
   ] as const satisfies ReadonlyArray<{ key: HeaderLinkMainKey; href: string }>,
 
@@ -39,10 +43,12 @@ export const homepageMainConfig = {
 
   entryCards: [
     { key: "nutrition", href: "/dinh-duong-thien-lanh" },
+    { key: "medicine", href: "/y-hoc-thien-lanh" },
     { key: "action", href: "/hanh-dong-thien-lanh" },
     { key: "speech", href: "/loi-noi-thien-lanh" },
     { key: "thought", href: "/suy-nghi-thien-lanh" },
     { key: "entertainment", href: "/giai-tri-thien-lanh" },
+    { key: "laughter", href: "/coi-vui-cuoi" },
   ] as const satisfies ReadonlyArray<{ key: EntryCardMainKey; href: string }>,
 
   focusCards: [
@@ -58,12 +64,13 @@ export const homepageMainConfig = {
   ] as const satisfies ReadonlyArray<{ key: NutritionFeaturedCardMainKey; href: string }>,
 
   expansionCards: [
+    { key: "medicine", href: "/y-hoc-thien-lanh" },
     { key: "action", href: "/hanh-dong-thien-lanh" },
     { key: "speech", href: "/loi-noi-thien-lanh" },
     { key: "thought", href: "/suy-nghi-thien-lanh" },
     { key: "entertainment", href: "/giai-tri-thien-lanh" },
+    { key: "laughter", href: "/coi-vui-cuoi" },
   ] as const satisfies ReadonlyArray<{ key: ExpansionCardMainKey; href: string }>,
 
   endingCtaHref: "/dinh-duong-thien-lanh",
 } as const;
-
