@@ -1,0 +1,247 @@
+export const homepageI18n = {
+  vi: {
+    brand: {
+      name: "Thông Tin Lành Mạnh",
+      tagline: "Nền tảng nội dung thiện lành cho đời sống tích cực.",
+    },
+    hero: {
+      eyebrow: "Nền tảng nội dung thiện lành",
+      title: "Thông Tin Lành Mạnh",
+      subtitle: "Nền tảng nội dung thiện lành cho đời sống tích cực, bắt đầu từ gốc rễ.",
+      emphasis: "Giai đoạn đầu tập trung vào Dinh dưỡng thiện lành.",
+      primaryCta: "Khám phá Dinh dưỡng thiện lành",
+      secondaryCta: "Xem các nhánh nội dung",
+      chatHint: "Bắt đầu từ một điều gần với mình.",
+    },
+    entrySection: {
+      title: "Các nhánh nội dung thiện lành",
+      leadLabel: "Nhánh ưu tiên giai đoạn đầu",
+      cards: {
+        nutrition: {
+          title: "Dinh dưỡng thiện lành",
+          description: "Quay về với dinh dưỡng từ gốc rễ.",
+          cta: "Vào nhánh",
+        },
+        action: {
+          title: "Hành động thiện lành",
+          description: "Nuôi dưỡng những hành động tích cực, tử tế và thiết thực.",
+          cta: "Xem định hướng",
+        },
+        speech: {
+          title: "Lời nói thiện lành",
+          description: "Xây dựng giao tiếp tích cực, chân thành và có trách nhiệm.",
+          cta: "Xem định hướng",
+        },
+        thought: {
+          title: "Suy nghĩ thiện lành",
+          description: "Nuôi dưỡng nhận thức sáng rõ và đời sống nội tâm cân bằng.",
+          cta: "Xem định hướng",
+        },
+        entertainment: {
+          title: "Giải trí thiện lành",
+          description: "Chọn lọc nội dung giải trí có giá trị tích cực và lành mạnh.",
+          cta: "Xem định hướng",
+        },
+      },
+    },
+    focusSection: {
+      title: "Trọng tâm hiện tại: Dinh dưỡng thiện lành",
+      subtitle:
+        "Quay về với dinh dưỡng từ gốc rễ, bắt đầu từ kiến thức nền tảng, phim tài liệu và góc nhìn, bài viết chuyên đề, rồi đi vào hành trình thực hành.",
+      cards: {
+        foundation: {
+          title: "Kiến thức nền tảng",
+          description: "Nắm nền đúng trước khi áp dụng, để đọc kỹ và đi chắc hơn.",
+          cta: "Xem cụm nội dung",
+        },
+        documentary: {
+          title: "Phim tài liệu / Góc nhìn",
+          description: "What The Health được đặt đúng trong nhánh Dinh dưỡng thiện lành.",
+          cta: "Mở cụm tài liệu",
+        },
+        practice: {
+          title: "Bài viết chuyên đề / Thực hành",
+          description: "Từ đọc sâu đến các bước nhỏ để chuyển hiểu biết thành nếp sống.",
+          cta: "Vào nhánh Dinh dưỡng",
+        },
+      },
+    },
+    nutritionFeaturedSection: {
+      title: "Bài nổi bật thuộc Dinh dưỡng thiện lành",
+      subtitle:
+        "Ưu tiên bốn nhóm: kiến thức nền tảng, phim tài liệu và góc nhìn, bài viết chuyên đề, hành trình thực hành.",
+      cards: {
+        foundationalReads: {
+          title: "Nhóm kiến thức nền tảng",
+          description: "Những bài cần đọc trước để có nền hiểu rõ và tránh nhiễu.",
+          cta: "Đọc nhóm nền tảng",
+        },
+        documentaryViews: {
+          title: "Nhóm phim tài liệu / góc nhìn",
+          description: "Mở rộng bối cảnh qua tài liệu chọn lọc và đối chiếu đa chiều.",
+          cta: "Đọc nhóm tài liệu",
+        },
+        specializedTopics: {
+          title: "Nhóm chuyên đề / thực hành",
+          description: "Đi sâu theo từng chủ đề và bắt đầu bằng các bước vừa sức.",
+          cta: "Đọc nhóm chuyên đề",
+        },
+      },
+    },
+    expansionSection: {
+      title: "Các nhánh mở rộng",
+      subtitle: "Bốn nhánh còn lại được xây theo hướng đi hẹp trước, sâu trước, rồi mới mở rộng.",
+      cards: {
+        action: {
+          title: "Hành động thiện lành",
+          description: "Định hướng các hành động nhỏ giúp tạo chuyển biến bền hơn.",
+          cta: "Vào nhánh",
+        },
+        speech: {
+          title: "Lời nói thiện lành",
+          description: "Định hướng giao tiếp tôn trọng, rõ nghĩa và giảm tổn thương.",
+          cta: "Vào nhánh",
+        },
+        thought: {
+          title: "Suy nghĩ thiện lành",
+          description: "Định hướng nuôi tư duy tỉnh táo để sống cân bằng hơn.",
+          cta: "Vào nhánh",
+        },
+        entertainment: {
+          title: "Giải trí thiện lành",
+          description: "Định hướng chọn nội dung giải trí tích cực cho nhịp sống sáng hơn.",
+          cta: "Vào nhánh",
+        },
+      },
+    },
+    endingSection: {
+      title: "Bắt đầu từ một nhánh, đi sâu đến gốc rễ.",
+      subtitle: "Dinh dưỡng thiện lành là điểm tập trung của giai đoạn này.",
+      description: "Khi nền tảng đủ rõ và đủ chắc, các nhánh còn lại sẽ mở rộng cùng một tiêu chuẩn biên tập.",
+      cta: "Vào nhánh Dinh dưỡng thiện lành",
+    },
+  },
+  en: {
+    brand: {
+      name: "Thong Tin Lanh Manh",
+      tagline: "A wholesome content platform for positive living.",
+    },
+    hero: {
+      eyebrow: "Wholesome Content Platform",
+      title: "Thong Tin Lanh Manh",
+      subtitle: "A wholesome content platform for positive living, starting from the roots.",
+      emphasis: "The first phase focuses on Wholesome Nutrition.",
+      primaryCta: "Explore Wholesome Nutrition",
+      secondaryCta: "View content branches",
+      chatHint: "Begin with something that feels close to you.",
+    },
+    entrySection: {
+      title: "Wholesome content branches",
+      leadLabel: "Current phase priority",
+      cards: {
+        nutrition: {
+          title: "Wholesome Nutrition",
+          description: "Returning to nutrition at its roots.",
+          cta: "Open branch",
+        },
+        action: {
+          title: "Wholesome Actions",
+          description: "Cultivating positive, kind, and practical actions.",
+          cta: "View direction",
+        },
+        speech: {
+          title: "Wholesome Speech",
+          description: "Building communication that is constructive, sincere, and responsible.",
+          cta: "View direction",
+        },
+        thought: {
+          title: "Wholesome Thoughts",
+          description: "Cultivating clarity, balance, and healthy inner awareness.",
+          cta: "View direction",
+        },
+        entertainment: {
+          title: "Wholesome Entertainment",
+          description: "Curating entertainment with positive and wholesome value.",
+          cta: "View direction",
+        },
+      },
+    },
+    focusSection: {
+      title: "Current focus: Wholesome Nutrition",
+      subtitle:
+        "Returning to nutrition at its roots, starting with foundations, documentary perspectives, featured writing, and practical journeys.",
+      cards: {
+        foundation: {
+          title: "Foundational Knowledge",
+          description: "Build clear foundations first, then apply with better judgment.",
+          cta: "Open this cluster",
+        },
+        documentary: {
+          title: "Documentaries / Perspectives",
+          description: "What The Health now sits in the Wholesome Nutrition context.",
+          cta: "Open documentary cluster",
+        },
+        practice: {
+          title: "Featured Topics / Practice",
+          description: "From deep reading to practical steps you can sustain each week.",
+          cta: "Enter Wholesome Nutrition",
+        },
+      },
+    },
+    nutritionFeaturedSection: {
+      title: "Featured reads in Wholesome Nutrition",
+      subtitle:
+        "Organized into four groups: foundations, documentary perspectives, featured topics, and practice journeys.",
+      cards: {
+        foundationalReads: {
+          title: "Foundational group",
+          description: "Read these first to build clarity and reduce information noise.",
+          cta: "Read foundations",
+        },
+        documentaryViews: {
+          title: "Documentary / perspective group",
+          description: "Expand context through curated documentaries and comparative reading.",
+          cta: "Read documentary group",
+        },
+        specializedTopics: {
+          title: "Featured topics / practice group",
+          description: "Go deeper by topic and begin with practical, manageable actions.",
+          cta: "Read featured topics",
+        },
+      },
+    },
+    expansionSection: {
+      title: "Expansion branches",
+      subtitle: "The remaining branches are built with a narrow-first, depth-first strategy.",
+      cards: {
+        action: {
+          title: "Wholesome Actions",
+          description: "Direction for practical actions that support durable positive change.",
+          cta: "Open branch",
+        },
+        speech: {
+          title: "Wholesome Speech",
+          description: "Direction for respectful, clear communication with less harm.",
+          cta: "Open branch",
+        },
+        thought: {
+          title: "Wholesome Thoughts",
+          description: "Direction for clearer thinking and steadier inner balance.",
+          cta: "Open branch",
+        },
+        entertainment: {
+          title: "Wholesome Entertainment",
+          description: "Direction for healthier entertainment choices and restored attention.",
+          cta: "Open branch",
+        },
+      },
+    },
+    endingSection: {
+      title: "Start with one branch, then go deeper to the roots.",
+      subtitle: "Wholesome Nutrition is the focus in this phase.",
+      description: "Once the foundation is solid, the remaining branches will expand with the same editorial quality.",
+      cta: "Enter Wholesome Nutrition",
+    },
+  },
+} as const;
+

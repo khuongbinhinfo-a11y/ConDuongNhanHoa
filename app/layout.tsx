@@ -13,14 +13,9 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const legacyMetadata: Metadata = {
-  title: "Con Đường Nhân Hòa",
-  description: "Homepage framework theo phong cách editorial wellness.",
-};
-
 export const metadata: Metadata = {
-  title: "Thông Tin Lành Mạnh",
-  description: "Nền tảng nội dung thiện lành cho đời sống tích cực, bắt đầu từ gốc rễ.",
+  title: "Thong Tin Lanh Manh",
+  description: "Wholesome content platform for positive living, starting from the roots.",
 };
 
 export default function RootLayout({

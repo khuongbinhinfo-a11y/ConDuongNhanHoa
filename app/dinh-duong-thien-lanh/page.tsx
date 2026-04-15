@@ -1,19 +1,40 @@
+"use client";
+
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { BranchLandingPageSection } from "@/components/sections/BranchLandingPageSection";
-import { contentBranches } from "@/data/contentBranches";
+import { contentBranchesI18n } from "@/data/contentBranchesI18n";
+import { useAppLocale } from "@/lib/useAppLocale";
 import { getSiteChrome } from "@/lib/siteChrome";
+import { commonI18n } from "@/locales/commonI18n";
 
 export default function DinhDuongThienLanhPage() {
-  const locale = "vi";
+  const { locale, handleLocaleChange } = useAppLocale();
   const siteChrome = getSiteChrome(locale);
   const navigationText = siteChrome.navigationText;
 
   return (
     <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text-strong)]">
-      <SiteHeader brandName={navigationText.brand.name} links={siteChrome.headerLinks} cta={siteChrome.headerCta} />
+      <SiteHeader
+        brandName={navigationText.brand.name}
+        links={siteChrome.headerLinks}
+        cta={siteChrome.headerCta}
+        locale={locale}
+        onLocaleChange={handleLocaleChange}
+        menuButtonLabel={navigationText.menuButton}
+        navAriaLabel={navigationText.navAriaLabel}
+        localeSwitchAriaLabel={navigationText.localeSwitchAriaLabel}
+      />
       <main>
-        <BranchLandingPageSection content={contentBranches["dinh-duong-thien-lanh"]} />
+        <BranchLandingPageSection
+          content={contentBranchesI18n["dinh-duong-thien-lanh"]}
+          locale={locale}
+          labels={{
+            relatedHeading: commonI18n[locale].articles.suggestedDirection,
+            openCluster: commonI18n[locale].cta.openCluster,
+            backToHome: commonI18n[locale].cta.backToHome,
+          }}
+        />
       </main>
       <SiteFooter
         brandName={navigationText.brand.name}
@@ -29,4 +50,3 @@ export default function DinhDuongThienLanhPage() {
     </div>
   );
 }
-

@@ -1,8 +1,8 @@
-import { homepageMainConfig } from "@/data/homepageConfigMain";
-import { footerMainCopy } from "@/data/siteContentMain";
+import { homepageConfigI18n } from "@/data/homepageConfigI18n";
+import { footerI18n } from "@/data/siteContentI18n";
 import type { AppLocale } from "@/lib/locale";
-import { homepageMainTranslations } from "@/locales/homepageMain";
-import { navigationMainTranslations } from "@/locales/navigationMain";
+import { homepageI18n } from "@/locales/homepageI18n";
+import { navigationI18n } from "@/locales/navigationI18n";
 
 export type SiteHeaderLink = {
   href: string;
@@ -11,11 +11,11 @@ export type SiteHeaderLink = {
 };
 
 export function getSiteChrome(locale: AppLocale) {
-  const navigationText = navigationMainTranslations[locale];
-  const homepageText = homepageMainTranslations[locale];
-  const footerText = footerMainCopy[locale];
+  const navigationText = navigationI18n[locale];
+  const homepageText = homepageI18n[locale];
+  const footerText = footerI18n[locale];
 
-  const headerLinks: SiteHeaderLink[] = homepageMainConfig.headerLinks.map((item) => ({
+  const headerLinks: SiteHeaderLink[] = homepageConfigI18n.headerLinks.map((item) => ({
     href: item.href,
     label: navigationText.nav[item.key],
     shortLabel: navigationText.navShort[item.key],
@@ -23,7 +23,7 @@ export function getSiteChrome(locale: AppLocale) {
 
   const headerCta = {
     label: navigationText.companion,
-    href: homepageMainConfig.headerCtaHref,
+    href: homepageConfigI18n.headerCtaHref,
   };
 
   const footer = {
