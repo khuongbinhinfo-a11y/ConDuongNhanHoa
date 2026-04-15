@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -27,43 +28,6 @@ type LocaleSwitcherProps = {
   compact?: boolean;
   disabled?: boolean;
 };
-
-function LogoMark({ compact = false }: { compact?: boolean }) {
-  const wrapperClass = compact
-    ? "inline-flex h-[2.2rem] w-[2.2rem] items-center justify-center rounded-[11px] border border-[rgba(30,62,82,0.12)] bg-[rgba(252,250,246,0.9)] shadow-[0_6px_12px_rgba(30,62,82,0.06)]"
-    : "inline-flex h-[2.85rem] w-[2.85rem] items-center justify-center rounded-[13px] border border-[rgba(30,62,82,0.12)] bg-[rgba(252,250,246,0.92)] shadow-[0_8px_16px_rgba(30,62,82,0.06)]";
-
-  const iconClass = compact ? "h-[1.05rem] w-[1.05rem]" : "h-[1.4rem] w-[1.4rem]";
-
-  return (
-    <span className={wrapperClass} aria-hidden="true">
-      <svg viewBox="0 0 32 32" className={iconClass} fill="none">
-        <path
-          d="M4.6 24.8c4.4-5.4 8.7-9.6 14.8-14.5"
-          stroke="rgba(30,62,82,0.8)"
-          strokeWidth="2.2"
-          strokeLinecap="round"
-        />
-        <path
-          d="M9.1 25.1c3.8-4.1 7.8-7.7 16.3-12.3"
-          stroke="rgba(115,154,150,0.9)"
-          strokeWidth="2.05"
-          strokeLinecap="round"
-        />
-        <path
-          d="M23.2 6.8c2.7-2.2 5.8-1.5 7.2 1-2.4 2.4-5.7 2.8-8.2.8-.4-.7-.1-1.4 1-1.8Z"
-          fill="rgba(217,228,218,0.95)"
-        />
-        <path
-          d="M24.2 8.2c1.6.1 2.9-.1 4-.8"
-          stroke="rgba(30,62,82,0.52)"
-          strokeWidth="1.1"
-          strokeLinecap="round"
-        />
-      </svg>
-    </span>
-  );
-}
 
 function LocaleSwitcher({
   locale,
@@ -134,7 +98,7 @@ export function SiteHeader({
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const localeInteractive = Boolean(onLocaleChange);
-  const mobileBrandLabel = brandShortName ?? brandName;
+  const brandAlt = brandShortName ?? brandName;
   const desktopNav = links.map((item) => ({
     href: item.href,
     label: item.shortLabel ?? item.label,
@@ -144,11 +108,15 @@ export function SiteHeader({
     <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[linear-gradient(180deg,rgba(248,244,236,0.95),rgba(248,244,236,0.86))] backdrop-blur-md">
       <Container>
         <div className="hidden min-h-[88px] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-6 lg:grid xl:gap-8">
-          <Link href="/" className="inline-flex shrink-0 flex-col items-start gap-2.5 text-[var(--color-navy)]">
-            <LogoMark />
-            <span className="max-w-[152px] text-[0.84rem] font-semibold leading-[1.3] tracking-[0.01em] text-[rgba(39,54,64,0.94)]">
-              {brandName}
-            </span>
+          <Link href="/" aria-label={brandName} className="inline-flex shrink-0 items-center py-1 text-[var(--color-navy)]">
+            <Image
+              src="/logo_CDTL/logo_CDTL.png"
+              alt={brandAlt}
+              width={1536}
+              height={1024}
+              priority
+              className="h-12 w-auto max-w-[190px] object-contain"
+            />
           </Link>
 
           <nav aria-label={navAriaLabel} className="justify-self-center">
@@ -193,11 +161,15 @@ export function SiteHeader({
         </div>
 
         <div className="relative flex min-h-[70px] items-center justify-between gap-3.5 lg:hidden">
-          <Link href="/" className="inline-flex min-w-0 items-center gap-2.5 text-[var(--color-navy)]">
-            <LogoMark compact />
-            <span className="max-w-[152px] text-[0.82rem] font-semibold leading-[1.2] tracking-[0.01em] text-[rgba(39,54,64,0.92)]">
-              {mobileBrandLabel}
-            </span>
+          <Link href="/" aria-label={brandName} className="inline-flex min-w-0 items-center py-0.5 text-[var(--color-navy)]">
+            <Image
+              src="/logo_CDTL/logo_CDTL.png"
+              alt={brandAlt}
+              width={1536}
+              height={1024}
+              priority
+              className="h-9 w-auto max-w-[150px] object-contain"
+            />
           </Link>
 
           <div className="relative">
