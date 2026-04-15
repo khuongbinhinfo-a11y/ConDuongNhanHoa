@@ -8,6 +8,8 @@ export type HeroSectionEditorialContent = {
   subtitle: string;
   primaryCtaLabel: string;
   primaryCtaHref: string;
+  secondaryCtaLabel?: string;
+  secondaryCtaHref?: string;
   noteHint: string;
   image: {
     src: string;
@@ -43,6 +45,15 @@ export function HeroSectionEditorial({ content }: HeroSectionEditorialProps) {
                 <span className="hero-editorial__cta-label">{content.primaryCtaLabel}</span>
                 <span className="hero-editorial__cta-mark" aria-hidden="true" />
               </Button>
+              {content.secondaryCtaLabel && content.secondaryCtaHref ? (
+                <Button
+                  href={content.secondaryCtaHref}
+                  variant="ghost"
+                  className="rounded-[12px] border-[rgba(30,62,82,0.12)] bg-[rgba(252,250,246,0.82)] px-4 py-2.5 text-[0.8rem] font-semibold shadow-none"
+                >
+                  {content.secondaryCtaLabel}
+                </Button>
+              ) : null}
               <p className="hero-note-hint">
                 <span className="hero-note-hint__mark" aria-hidden="true" />
                 <span>{content.noteHint}</span>

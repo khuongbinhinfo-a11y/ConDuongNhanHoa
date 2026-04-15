@@ -5,8 +5,8 @@ import { EntryCardsEditorialSection } from "@/components/sections/EntryCardsEdit
 import { FeaturedPathsSection } from "@/components/sections/FeaturedPathsSection";
 import { HeroSectionEditorial } from "@/components/sections/HeroSectionEditorial";
 import { WhyWeExistSection } from "@/components/sections/WhyWeExistSection";
-import { homepageConfig } from "@/data/homepageConfig";
-import { whySectionCopy } from "@/data/siteContent";
+import { homepageMainConfig } from "@/data/homepageConfigMain";
+import { whySectionMainCopy } from "@/data/siteContentMain";
 import { getSiteChrome } from "@/lib/siteChrome";
 
 export default function HomePage() {
@@ -23,29 +23,53 @@ export default function HomePage() {
     title: homepageText.hero.title,
     subtitle: homepageText.hero.subtitle,
     primaryCtaLabel: homepageText.hero.primaryCta,
-    primaryCtaHref: homepageConfig.hero.primaryCtaHref,
+    primaryCtaHref: homepageMainConfig.hero.primaryCtaHref,
+    secondaryCtaLabel: homepageText.hero.secondaryCta,
+    secondaryCtaHref: homepageMainConfig.hero.secondaryCtaHref,
     noteHint: homepageText.hero.chatHint,
     image: {
-      src: homepageConfig.hero.image.src,
-      alt: homepageConfig.hero.image.alt[locale],
+      src: homepageMainConfig.hero.image.src,
+      alt: homepageMainConfig.hero.image.alt[locale],
     },
   };
 
-  const entryCards = homepageConfig.entryCards.map((item) => ({
+  const entryCards = homepageMainConfig.entryCards.map((item) => ({
     href: item.href,
     title: homepageText.entrySection.cards[item.key].title,
     description: homepageText.entrySection.cards[item.key].description,
     ctaLabel: homepageText.entrySection.cards[item.key].cta,
   }));
 
-  const featuredContent = {
-    title: homepageText.featuredSection.title,
-    subtitle: homepageText.featuredSection.subtitle,
-    cards: homepageConfig.featuredCards.map((item) => ({
+  const focusContent = {
+    title: homepageText.focusSection.title,
+    subtitle: homepageText.focusSection.subtitle,
+    cards: homepageMainConfig.focusCards.map((item) => ({
       href: item.href,
-      title: homepageText.featuredSection.cards[item.key].title,
-      description: homepageText.featuredSection.cards[item.key].description,
-      ctaLabel: homepageText.featuredSection.cards[item.key].cta,
+      title: homepageText.focusSection.cards[item.key].title,
+      description: homepageText.focusSection.cards[item.key].description,
+      ctaLabel: homepageText.focusSection.cards[item.key].cta,
+    })),
+  };
+
+  const nutritionFeaturedContent = {
+    title: homepageText.nutritionFeaturedSection.title,
+    subtitle: homepageText.nutritionFeaturedSection.subtitle,
+    cards: homepageMainConfig.nutritionFeaturedCards.map((item) => ({
+      href: item.href,
+      title: homepageText.nutritionFeaturedSection.cards[item.key].title,
+      description: homepageText.nutritionFeaturedSection.cards[item.key].description,
+      ctaLabel: homepageText.nutritionFeaturedSection.cards[item.key].cta,
+    })),
+  };
+
+  const expansionContent = {
+    title: homepageText.expansionSection.title,
+    subtitle: homepageText.expansionSection.subtitle,
+    cards: homepageMainConfig.expansionCards.map((item) => ({
+      href: item.href,
+      title: homepageText.expansionSection.cards[item.key].title,
+      description: homepageText.expansionSection.cards[item.key].description,
+      ctaLabel: homepageText.expansionSection.cards[item.key].cta,
     })),
   };
 
@@ -55,7 +79,7 @@ export default function HomePage() {
     description: homepageText.endingSection.description,
     cta: {
       label: homepageText.endingSection.cta,
-      href: homepageConfig.endingCtaHref,
+      href: homepageMainConfig.endingCtaHref,
     },
   };
 
@@ -68,9 +92,15 @@ export default function HomePage() {
       />
       <main>
         <HeroSectionEditorial content={heroContent} />
-        <EntryCardsEditorialSection title={homepageText.entrySection.title} cards={entryCards} />
-        <FeaturedPathsSection content={featuredContent} />
-        <WhyWeExistSection content={whySectionCopy[locale]} />
+        <WhyWeExistSection content={whySectionMainCopy[locale]} />
+        <EntryCardsEditorialSection
+          title={homepageText.entrySection.title}
+          leadLabel="Nhánh ưu tiên giai đoạn đầu"
+          cards={entryCards}
+        />
+        <FeaturedPathsSection content={focusContent} />
+        <FeaturedPathsSection content={nutritionFeaturedContent} />
+        <FeaturedPathsSection content={expansionContent} />
         <ClosingEditorialSection content={closingContent} />
       </main>
       <SiteFooter
