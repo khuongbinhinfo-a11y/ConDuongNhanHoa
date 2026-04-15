@@ -115,7 +115,7 @@ export function SiteHeader({
               width={1536}
               height={1024}
               priority
-              className="h-[3.6rem] w-auto max-w-[250px] object-contain"
+              className="h-[1.35rem] w-auto max-w-[185px] object-contain"
             />
           </Link>
 
@@ -168,7 +168,7 @@ export function SiteHeader({
               width={1536}
               height={1024}
               priority
-              className="h-[2.85rem] w-auto max-w-[195px] object-contain"
+              className="h-[1.25rem] w-auto max-w-[165px] object-contain"
             />
           </Link>
 
