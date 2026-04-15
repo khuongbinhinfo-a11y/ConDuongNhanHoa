@@ -91,6 +91,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text-strong)]">
       <SiteHeader
         brandName={navigationText.brand.name}
+        brandShortName={navigationText.brand.shortName}
         links={headerLinks}
         cta={siteChrome.headerCta}
         locale={locale}

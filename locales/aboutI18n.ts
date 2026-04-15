@@ -1,8 +1,10 @@
+import { brandI18n } from "@/locales/brandI18n";
+
 export const aboutI18n = {
   vi: {
     hero: {
       eyebrow: "Giới thiệu nền tảng",
-      title: "Thông Tin Lành Mạnh",
+      title: brandI18n.vi.name,
       description:
         "Đây là nền tảng nội dung thiện lành cho đời sống tích cực. Chúng tôi chọn cách phát triển bền: đi sâu một nhánh trước, mở rộng các nhánh còn lại sau.",
     },
@@ -11,7 +13,7 @@ export const aboutI18n = {
       {
         title: "Đi hẹp trước, đi sâu trước",
         description:
-          "Thông Tin Lành Mạnh phát triển theo 5 nhánh, nhưng giai đoạn đầu chỉ đi sâu nhánh Dinh dưỡng thiện lành để đảm bảo chất lượng.",
+          "Con Đường Thiện Lành phát triển theo 5 nhánh, nhưng giai đoạn đầu chỉ đi sâu nhánh Dinh dưỡng thiện lành để đảm bảo chất lượng.",
       },
       {
         title: "Xây nền từ gốc rễ",
@@ -32,7 +34,7 @@ export const aboutI18n = {
   en: {
     hero: {
       eyebrow: "About the Platform",
-      title: "Thong Tin Lanh Manh",
+      title: brandI18n.en.name,
       description:
         "This is a wholesome content platform for positive living. We grow sustainably: go deep into one branch first, then expand the rest.",
     },
@@ -41,7 +43,7 @@ export const aboutI18n = {
       {
         title: "Go narrow first, go deep first",
         description:
-          "Thong Tin Lanh Manh develops across five branches, but this phase goes deep into Wholesome Nutrition to maintain quality.",
+          "The Wholesome Path develops across five branches, but this phase goes deep into Wholesome Nutrition to maintain quality.",
       },
       {
         title: "Build from the roots",
@@ -60,4 +62,3 @@ export const aboutI18n = {
     primaryCta: "Enter Wholesome Nutrition",
   },
 } as const;
-

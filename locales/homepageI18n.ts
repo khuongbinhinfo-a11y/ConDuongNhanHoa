@@ -1,12 +1,15 @@
+import { brandI18n } from "@/locales/brandI18n";
+
 export const homepageI18n = {
   vi: {
     brand: {
-      name: "Thông Tin Lành Mạnh",
+      name: brandI18n.vi.name,
+      shortName: brandI18n.vi.shortName,
       tagline: "Nền tảng nội dung thiện lành cho đời sống tích cực.",
     },
     hero: {
       eyebrow: "Nền tảng nội dung thiện lành",
-      title: "Thông Tin Lành Mạnh",
+      title: brandI18n.vi.name,
       subtitle: "Nền tảng nội dung thiện lành cho đời sống tích cực, bắt đầu từ gốc rễ.",
       emphasis: "Giai đoạn đầu tập trung vào Dinh dưỡng thiện lành.",
       primaryCta: "Khám phá Dinh dưỡng thiện lành",
@@ -123,12 +126,13 @@ export const homepageI18n = {
   },
   en: {
     brand: {
-      name: "Thong Tin Lanh Manh",
+      name: brandI18n.en.name,
+      shortName: brandI18n.en.shortName,
       tagline: "A wholesome content platform for positive living.",
     },
     hero: {
       eyebrow: "Wholesome Content Platform",
-      title: "Thong Tin Lanh Manh",
+      title: brandI18n.en.name,
       subtitle: "A wholesome content platform for positive living, starting from the roots.",
       emphasis: "The first phase focuses on Wholesome Nutrition.",
       primaryCta: "Explore Wholesome Nutrition",
@@ -244,4 +248,3 @@ export const homepageI18n = {
     },
   },
 } as const;
-

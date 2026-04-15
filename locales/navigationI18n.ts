@@ -1,7 +1,10 @@
+import { brandI18n } from "@/locales/brandI18n";
+
 export const navigationI18n = {
   vi: {
     brand: {
-      name: "Thông Tin Lành Mạnh",
+      name: brandI18n.vi.name,
+      shortName: brandI18n.vi.shortName,
       tagline: "Nội dung thiện lành cho đời sống tích cực.",
     },
     nav: {
@@ -29,7 +32,8 @@ export const navigationI18n = {
   },
   en: {
     brand: {
-      name: "Thong Tin Lanh Manh",
+      name: brandI18n.en.name,
+      shortName: brandI18n.en.shortName,
       tagline: "Wholesome content for positive living.",
     },
     nav: {

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Be_Vietnam_Pro, Inter } from "next/font/google";
+import { brandI18n } from "@/locales/brandI18n";
 import "./globals.css";
 
 const beVietnamPro = Be_Vietnam_Pro({
@@ -14,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Thong Tin Lanh Manh",
+  title: brandI18n.en.name,
   description: "Wholesome content platform for positive living, starting from the roots.",
 };
 

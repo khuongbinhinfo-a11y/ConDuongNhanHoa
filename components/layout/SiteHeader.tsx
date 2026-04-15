@@ -9,6 +9,7 @@ import type { AppLocale } from "@/lib/locale";
 
 type SiteHeaderProps = {
   brandName: string;
+  brandShortName?: string;
   links: { label: string; shortLabel?: string; href: string }[];
   cta: { label: string; href: string };
   locale?: AppLocale;
@@ -121,6 +122,7 @@ function LocaleSwitcher({
 
 export function SiteHeader({
   brandName,
+  brandShortName,
   links,
   cta,
   locale = "vi",
@@ -132,6 +134,7 @@ export function SiteHeader({
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const localeInteractive = Boolean(onLocaleChange);
+  const mobileBrandLabel = brandShortName ?? brandName;
   const desktopNav = links.map((item) => ({
     href: item.href,
     label: item.shortLabel ?? item.label,
@@ -193,7 +196,7 @@ export function SiteHeader({
           <Link href="/" className="inline-flex min-w-0 items-center gap-2.5 text-[var(--color-navy)]">
             <LogoMark compact />
             <span className="max-w-[152px] text-[0.82rem] font-semibold leading-[1.2] tracking-[0.01em] text-[rgba(39,54,64,0.92)]">
-              {brandName}
+              {mobileBrandLabel}
             </span>
           </Link>
 

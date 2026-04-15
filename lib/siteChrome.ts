@@ -34,7 +34,7 @@ export function getSiteChrome(locale: AppLocale) {
     supportLinks: footerText.supportLinks,
     languageLabel: footerText.languageLabel,
     note: footerText.note,
-    copyrightText: footerText.copyrightText,
+    copyrightText: `© 2026 ${navigationText.brand.name}. ${footerText.copyrightNotice}`,
   };
 
   return {

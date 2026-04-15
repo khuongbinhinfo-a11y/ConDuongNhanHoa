@@ -17,6 +17,7 @@ export default function SuyNghiThienLanhPage() {
     <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text-strong)]">
       <SiteHeader
         brandName={navigationText.brand.name}
+        brandShortName={navigationText.brand.shortName}
         links={siteChrome.headerLinks}
         cta={siteChrome.headerCta}
         locale={locale}
