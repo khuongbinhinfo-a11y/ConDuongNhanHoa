@@ -10,6 +10,7 @@ import { homepageConfigI18n } from "@/data/homepageConfigI18n";
 import { whySectionI18n } from "@/data/siteContentI18n";
 import { useAppLocale } from "@/lib/useAppLocale";
 import { getSiteChrome } from "@/lib/siteChrome";
+import { getImageForSlot } from "@/lib/getImageForSlot";
 
 export default function HomePage() {
   const { locale, handleLocaleChange } = useAppLocale();
@@ -30,7 +31,7 @@ export default function HomePage() {
     secondaryCtaHref: homepageConfigI18n.hero.secondaryCtaHref,
     noteHint: homepageText.hero.chatHint,
     image: {
-      src: homepageConfigI18n.hero.image.src,
+      src: getImageForSlot("dinh-duong.hero") ?? homepageConfigI18n.hero.image.src,
       alt: homepageConfigI18n.hero.image.alt[locale],
     },
   };

@@ -30,6 +30,7 @@ export default function DinhDuongThienLanhPage() {
         <BranchLandingPageSection
           content={contentBranchesI18n["dinh-duong-thien-lanh"]}
           locale={locale}
+          branchId="dinh-duong"
           labels={{
             relatedHeading: commonI18n[locale].articles.suggestedDirection,
             openCluster: commonI18n[locale].cta.openCluster,

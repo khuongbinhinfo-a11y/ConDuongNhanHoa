@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "image:assign": "node scripts/assign-raw-images.mjs",
+    "image:report": "node scripts/assign-raw-images.mjs --report"
   },
   "dependencies": {
     "next": "16.2.3",
