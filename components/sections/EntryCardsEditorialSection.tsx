@@ -8,7 +8,10 @@ export type EntryEditorialCard = {
   description: string;
   href: string;
   ctaLabel: string;
-  subBranches?: readonly string[];
+  suggestions?: readonly {
+    title: string;
+    hint: string;
+  }[];
 };
 
 type EntryCardsEditorialSectionProps = {
@@ -79,12 +82,15 @@ export function EntryCardsEditorialSection({ title, eyebrow, leadLabel, cards }:
                   {card.description}
                 </p>
 
-                {card.subBranches?.length ? (
-                  <ul className="mt-4 space-y-1.5 border-t border-[var(--color-border)] pt-4">
-                    {card.subBranches.map((subBranch) => (
-                      <li key={`${card.title}-${subBranch}`} className="text-sm text-[var(--color-text-muted)]">
-                        <span className="mr-2 text-[var(--color-primary-strong)]">•</span>
-                        <span>{subBranch}</span>
+                {card.suggestions?.length ? (
+                  <ul className="mt-4 space-y-2.5 border-t border-[var(--color-border)] pt-4">
+                    {card.suggestions.map((suggestion) => (
+                      <li
+                        key={`${card.title}-${suggestion.title}`}
+                        className="rounded-[14px] border border-[var(--color-border)] bg-[rgba(255,253,253,0.78)] p-3"
+                      >
+                        <p className="text-sm font-medium leading-[1.35] text-[var(--color-text-strong)]">{suggestion.title}</p>
+                        <p className="mt-1 text-xs leading-relaxed text-[var(--color-text-muted)]">{suggestion.hint}</p>
                       </li>
                     ))}
                   </ul>

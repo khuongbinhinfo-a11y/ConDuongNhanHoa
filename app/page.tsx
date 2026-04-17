@@ -40,7 +40,7 @@ export default function HomePage() {
     title: homepageText.entrySection.cards[item.key].title,
     description: homepageText.entrySection.cards[item.key].description,
     ctaLabel: homepageText.entrySection.cards[item.key].cta,
-    subBranches: homepageText.entrySection.cards[item.key].subBranches,
+    suggestions: homepageText.entrySection.cards[item.key].suggestions,
   }));
 
   const closingContent = {

@@ -21,15 +21,15 @@ type FooterCopy = {
 export const whySectionI18n: Record<AppLocale, WhySectionCopy> = {
   vi: {
     eyebrow: "Tinh thần nền tảng",
-    title: "Con Đường Thiện Lành đang được sắp lại theo 3 cây chính để rõ hướng và dễ bắt đầu hơn.",
+    title: "Con Đường Thiện Lành được sắp lại theo ba hướng chính để người đọc dễ bắt đầu hơn.",
     description:
-      "Ngoài mặt website hiện tập trung 3 cây: Dinh dưỡng thiện lành, Ứng xử thiện lành và Giải trí thiện lành. Các nhánh cũ vẫn được giữ nguyên route và nội dung, chỉ tạm ẩn khỏi menu và homepage để tránh loãng.",
+      "Trang chủ hiện tập trung vào Dinh dưỡng thiện lành, Ứng xử thiện lành và Giải trí thiện lành. Những phần đã chuẩn bị trước đó vẫn được giữ nguyên đường dẫn và nội dung, chỉ tạm ẩn khỏi menu để giữ trải nghiệm gọn hơn.",
   },
   en: {
     eyebrow: "Platform Spirit",
-    title: "The Wholesome Path is now surfaced through three clear pillars for easier guidance.",
+    title: "The Wholesome Path now presents three clear pillars for easier guidance.",
     description:
-      "The public structure now highlights three pillars: Wholesome Nutrition, Wholesome Conduct, and Wholesome Entertainment. Older branches are preserved with their existing routes and content, but hidden from navigation and homepage entry points for now.",
+      "The public structure now highlights three pillars: Wholesome Nutrition, Wholesome Conduct, and Wholesome Entertainment. Other prepared areas are still preserved with their routes and content, but kept out of the main entry flow for now.",
   },
 };
 

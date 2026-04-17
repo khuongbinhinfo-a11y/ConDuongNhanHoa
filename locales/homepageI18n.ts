@@ -10,162 +10,128 @@ export const homepageI18n = {
     hero: {
       eyebrow: "Nền tảng nội dung thiện lành",
       title: brandI18n.vi.name,
-      subtitle: "Nền tảng nội dung thiện lành cho đời sống tích cực, đi từ điều gần gũi và thực hành được.",
-      emphasis: "Hiện tại website tập trung rõ 3 cây chính, với Dinh dưỡng thiện lành là hướng đi sâu trước.",
+      subtitle: "Nơi khởi đầu cho một đời sống tích cực, đi từ điều gần gũi và thực hành được.",
+      emphasis: "Giai đoạn này tập trung vào ba hướng nội dung rõ ràng, trong đó Dinh dưỡng thiện lành được đi sâu trước.",
       primaryCta: "Khám phá Dinh dưỡng thiện lành",
-      secondaryCta: "Xem 3 cây chính",
+      secondaryCta: "Xem 3 hướng nội dung",
       chatHint: "Bắt đầu từ một điều gần với mình.",
     },
     entrySection: {
-      title: "Ba cây nội dung chính",
-      leadLabel: "Trọng tâm giai đoạn đầu",
+      title: "Ba hướng nội dung chính",
+      leadLabel: "Hướng đang được đi sâu trước",
       cards: {
         nutrition: {
           title: "Dinh dưỡng thiện lành",
-          description: "Quay về với dinh dưỡng từ gốc rễ, đi từ kiến thức nền đến thực hành hằng ngày.",
-          cta: "Vào nhánh",
-          subBranches: [
-            "Kiến thức nền tảng",
-            "Sữa và những điều thường tin",
-            "Chất đạm hằng ngày",
-            "Đái tháo đường – béo phì – chuyển hóa",
-            "Ung thư và góc nhìn từ bữa ăn",
+          description: "Quay về với dinh dưỡng từ gốc rễ, để hiểu đúng trước khi thay đổi.",
+          cta: "Khám phá thêm",
+          suggestions: [
+            {
+              title: "Những điều thường được tin về sữa",
+              hint: "Sữa có thật sự cần thiết như nhiều người vẫn nghĩ?",
+            },
+            {
+              title: "Chất đạm: hiểu sao cho đúng",
+              hint: "Vì sao nỗi lo thiếu đạm luôn xuất hiện đầu tiên?",
+            },
+            {
+              title: "Sức khỏe chuyển hóa và bữa ăn hằng ngày",
+              hint: "Đái tháo đường có chỉ là câu chuyện của đường?",
+            },
+            {
+              title: "Ung thư và những câu hỏi từ bàn ăn",
+              hint: "Bữa ăn hằng ngày có thể tác động sức khỏe lâu dài ra sao?",
+            },
+            {
+              title: "Góc nhìn mở ra từ phim tài liệu",
+              hint: "Một bộ phim tài liệu có thể làm thay đổi cách nhìn về dinh dưỡng như thế nào?",
+            },
           ],
         },
         medicine: {
           title: "Y học thiện lành",
-          description: "Góc nhìn sức khỏe lành mạnh, phòng ngừa và chăm sóc từ nền tảng.",
-          cta: "Xem định hướng",
+          description: "Góc nhìn sức khỏe nền tảng, phòng ngừa và chăm sóc với tinh thần nhân văn.",
+          cta: "Tìm hiểu thêm",
         },
         action: {
           title: "Ứng xử thiện lành",
           description: "Nuôi dưỡng cách ứng xử tử tế, sáng rõ và thực tế trong từng mối quan hệ.",
-          cta: "Vào nhánh",
-          subBranches: [
-            "Ứng xử với bản thân",
-            "Ứng xử trong gia đình",
-            "Lời nói và giao tiếp",
-            "Ứng xử ngoài xã hội",
-            "Tình huống thường gặp",
+          cta: "Khám phá thêm",
+          suggestions: [
+            {
+              title: "Hiểu mình để sống nhẹ hơn",
+              hint: "Khi mệt hoặc bực bội, điều gì nên giữ lại trước khi nói?",
+            },
+            {
+              title: "Ứng xử trong gia đình",
+              hint: "Trong gia đình, điều gì dễ làm tổn thương nhau nhất?",
+            },
+            {
+              title: "Lời nói và cách giao tiếp",
+              hint: "Làm sao để nói điều đúng mà không làm người khác đau?",
+            },
+            {
+              title: "Ra ngoài xã hội với sự tử tế",
+              hint: "Sự tử tế ngoài xã hội bắt đầu từ những việc rất nhỏ nào?",
+            },
           ],
         },
         speech: {
           title: "Lời nói thiện lành",
           description: "Xây dựng giao tiếp tích cực, chân thành và có trách nhiệm.",
-          cta: "Xem định hướng",
+          cta: "Tìm hiểu thêm",
         },
         thought: {
           title: "Suy nghĩ thiện lành",
           description: "Nuôi dưỡng nhận thức sáng rõ và đời sống nội tâm cân bằng.",
-          cta: "Xem định hướng",
+          cta: "Tìm hiểu thêm",
         },
         entertainment: {
           title: "Giải trí thiện lành",
-          description: "Chọn lọc nội dung giải trí tích cực, thư giãn lành mạnh và nuôi dưỡng cảm hứng sống.",
-          cta: "Vào nhánh",
-          subBranches: [
-            "Tin đáng chú ý",
-            "Vui cười",
-            "Kỹ thuật thời hoàng kim",
-            "Trang sức – Thời trang – Mỹ phẩm",
-            "Vẻ đẹp thiên nhiên",
-            "Xứ sở thần tiên của trẻ thơ",
-            "Tâm linh và đời sống",
+          description: "Chọn lọc nội dung giải trí tích cực để thư giãn mà vẫn nuôi dưỡng tinh thần.",
+          cta: "Khám phá thêm",
+          suggestions: [
+            {
+              title: "Tin đáng chú ý",
+              hint: "Những điều đáng để dừng lại đọc, không cần quá ồn ào.",
+            },
+            {
+              title: "Vui cười",
+              hint: "Sự nhẹ nhàng giúp tinh thần được thả lỏng hơn.",
+            },
+            {
+              title: "Kỹ thuật thời hoàng kim",
+              hint: "Những giá trị kỹ thuật đẹp và đáng nhớ theo thời gian.",
+            },
+            {
+              title: "Trang sức – Thời trang – Mỹ phẩm",
+              hint: "Góc nhìn thẩm mỹ giúp chăm chút bản thân theo hướng lành mạnh.",
+            },
+            {
+              title: "Vẻ đẹp thiên nhiên",
+              hint: "Nơi cái đẹp giúp con người dịu lại và phục hồi nhịp sống.",
+            },
+            {
+              title: "Xứ sở thần tiên của trẻ thơ",
+              hint: "Một góc nhìn trong trẻo và giàu tưởng tượng dành cho trẻ em và gia đình.",
+            },
+            {
+              title: "Tâm linh và đời sống",
+              hint: "Những suy ngẫm chạm đến chiều sâu bên trong của đời sống thường ngày.",
+            },
           ],
         },
         laughter: {
           title: "Cõi vui cười",
           description: "Không gian tiếng cười nhẹ nhàng, tích cực và không độc hại.",
-          cta: "Xem định hướng",
-        },
-      },
-    },
-    focusSection: {
-      title: "Trọng tâm hiện tại: Dinh dưỡng thiện lành",
-      subtitle:
-        "Quay về với dinh dưỡng từ gốc rễ, bắt đầu từ kiến thức nền tảng, phim tài liệu và góc nhìn, bài viết chuyên đề, rồi đi vào hành trình thực hành.",
-      cards: {
-        foundation: {
-          title: "Kiến thức nền tảng",
-          description: "Nắm nền đúng trước khi áp dụng, để đọc kỹ và đi chắc hơn.",
-          cta: "Xem cụm nội dung",
-        },
-        documentary: {
-          title: "Phim tài liệu / Góc nhìn",
-          description: "What The Health được đặt đúng trong nhánh Dinh dưỡng thiện lành.",
-          cta: "Mở cụm tài liệu",
-        },
-        practice: {
-          title: "Bài viết chuyên đề / Thực hành",
-          description: "Từ đọc sâu đến các bước nhỏ để chuyển hiểu biết thành nếp sống.",
-          cta: "Vào nhánh Dinh dưỡng",
-        },
-      },
-    },
-    nutritionFeaturedSection: {
-      title: "Bài nổi bật thuộc Dinh dưỡng thiện lành",
-      subtitle:
-        "Ưu tiên bốn nhóm: kiến thức nền tảng, phim tài liệu và góc nhìn, bài viết chuyên đề, hành trình thực hành.",
-      cards: {
-        foundationalReads: {
-          title: "Nhóm kiến thức nền tảng",
-          description: "Những bài cần đọc trước để có nền hiểu rõ và tránh nhiễu.",
-          cta: "Đọc nhóm nền tảng",
-        },
-        documentaryViews: {
-          title: "Nhóm phim tài liệu / góc nhìn",
-          description: "Mở rộng bối cảnh qua tài liệu chọn lọc và đối chiếu đa chiều.",
-          cta: "Đọc nhóm tài liệu",
-        },
-        specializedTopics: {
-          title: "Nhóm chuyên đề / thực hành",
-          description: "Đi sâu theo từng chủ đề và bắt đầu bằng các bước vừa sức.",
-          cta: "Đọc nhóm chuyên đề",
-        },
-      },
-    },
-    expansionSection: {
-      title: "Các nhánh mở rộng",
-      subtitle:
-        "Sáu nhánh còn lại được phát triển theo hướng đi hẹp trước, sâu trước, rồi mới mở rộng theo cùng chuẩn biên tập.",
-      cards: {
-        medicine: {
-          title: "Y học thiện lành",
-          description: "Định hướng kiến thức sức khỏe nền tảng, phòng ngừa và góc nhìn y học nhân văn.",
-          cta: "Vào nhánh",
-        },
-        action: {
-          title: "Hành động thiện lành",
-          description: "Định hướng các hành động nhỏ giúp tạo chuyển biến bền hơn.",
-          cta: "Vào nhánh",
-        },
-        speech: {
-          title: "Lời nói thiện lành",
-          description: "Định hướng giao tiếp tôn trọng, rõ nghĩa và giảm tổn thương.",
-          cta: "Vào nhánh",
-        },
-        thought: {
-          title: "Suy nghĩ thiện lành",
-          description: "Định hướng nuôi tư duy tỉnh táo để sống cân bằng hơn.",
-          cta: "Vào nhánh",
-        },
-        entertainment: {
-          title: "Giải trí thiện lành",
-          description: "Định hướng phim, sách, video và nội dung giải trí tích cực, có giá trị nuôi dưỡng.",
-          cta: "Vào nhánh",
-        },
-        laughter: {
-          title: "Cõi vui cười",
-          description: "Định hướng tiếng cười sạch, thư giãn nhẹ và nội dung vui không giễu cợt xấu.",
-          cta: "Vào nhánh",
+          cta: "Tìm hiểu thêm",
         },
       },
     },
     endingSection: {
-      title: "Bắt đầu từ cây phù hợp nhất với bạn lúc này.",
-      subtitle: "Ba cây chính giúp việc đọc dễ định hướng hơn, không bị loãng.",
+      title: "Bắt đầu từ điều gần nhất với mình lúc này.",
+      subtitle: "Ba hướng nội dung chính giúp việc tìm đọc rõ ràng và dễ đi hơn.",
       description:
-        "Các nhánh cũ vẫn được bảo toàn để mở rộng sau. Hiện tại, bạn có thể bắt đầu nhanh từ Dinh dưỡng thiện lành, Ứng xử thiện lành hoặc Giải trí thiện lành.",
+        "Những phần đã chuẩn bị từ trước vẫn được bảo toàn để mở dần theo từng giai đoạn. Trước mắt, bạn có thể bắt đầu từ Dinh dưỡng thiện lành, Ứng xử thiện lành hoặc Giải trí thiện lành.",
       cta: "Khám phá Dinh dưỡng thiện lành",
     },
   },
@@ -178,162 +144,128 @@ export const homepageI18n = {
     hero: {
       eyebrow: "Wholesome Content Platform",
       title: brandI18n.en.name,
-      subtitle: "A wholesome content platform for positive living, grounded in practical and humane directions.",
-      emphasis: "The current public structure highlights three main pillars, with Wholesome Nutrition as the deep-focus track.",
+      subtitle: "A grounded place to begin positive living, starting with what feels close and practical.",
+      emphasis: "This phase highlights three clear content directions, with Wholesome Nutrition as the first deep focus.",
       primaryCta: "Explore Wholesome Nutrition",
-      secondaryCta: "View the 3 main pillars",
+      secondaryCta: "View 3 content directions",
       chatHint: "Begin with something that feels close to you.",
     },
     entrySection: {
-      title: "Three main content pillars",
-      leadLabel: "Current phase focus",
+      title: "Three primary content directions",
+      leadLabel: "Current deep-focus direction",
       cards: {
         nutrition: {
           title: "Wholesome Nutrition",
-          description: "Returning to nutrition at its roots, from core understanding to daily practice.",
-          cta: "Open branch",
-          subBranches: [
-            "Foundational Knowledge",
-            "Milk and Common Beliefs",
-            "Daily Protein",
-            "Diabetes – Obesity – Metabolism",
-            "Cancer and Meal-Based Perspectives",
+          description: "Returning to nutrition at its roots, so understanding can come before change.",
+          cta: "Explore more",
+          suggestions: [
+            {
+              title: "What many people believe about milk",
+              hint: "Is milk truly as essential as people often assume?",
+            },
+            {
+              title: "Protein: understanding it more clearly",
+              hint: "Why is protein deficiency often the first concern that appears?",
+            },
+            {
+              title: "Metabolic health and daily meals",
+              hint: "Is diabetes only a story about sugar?",
+            },
+            {
+              title: "Cancer and questions from the dining table",
+              hint: "How can daily meals influence long-term health?",
+            },
+            {
+              title: "Perspectives opened by documentaries",
+              hint: "How can one documentary shift the way we see nutrition?",
+            },
           ],
         },
         medicine: {
           title: "Wholesome Medicine",
-          description: "A grounded approach to health, prevention, and long-term well-being.",
-          cta: "View direction",
+          description: "A humane foundation for health, prevention, and care.",
+          cta: "Learn more",
         },
         action: {
           title: "Wholesome Conduct",
-          description: "Cultivating thoughtful and kind conduct across daily relationships and situations.",
-          cta: "Open branch",
-          subBranches: [
-            "Conduct with Yourself",
-            "Conduct in Family Life",
-            "Speech and Communication",
-            "Conduct in Society",
-            "Common Situations",
+          description: "Cultivating thoughtful and kind conduct across everyday relationships.",
+          cta: "Explore more",
+          suggestions: [
+            {
+              title: "Understanding yourself more gently",
+              hint: "When we feel tense, what should we hold back before speaking?",
+            },
+            {
+              title: "Conduct in family life",
+              hint: "In family life, what tends to cause the deepest hurt?",
+            },
+            {
+              title: "Speech and communication",
+              hint: "How can we speak the truth without causing unnecessary pain?",
+            },
+            {
+              title: "Showing kindness in society",
+              hint: "Which small actions can make everyday interactions kinder?",
+            },
           ],
         },
         speech: {
           title: "Wholesome Speech",
           description: "Building communication that is constructive, sincere, and responsible.",
-          cta: "View direction",
+          cta: "Learn more",
         },
         thought: {
           title: "Wholesome Thoughts",
           description: "Cultivating clarity, balance, and healthy inner awareness.",
-          cta: "View direction",
+          cta: "Learn more",
         },
         entertainment: {
           title: "Wholesome Entertainment",
-          description: "Curating positive entertainment, healthy relaxation, and uplifting media habits.",
-          cta: "Open branch",
-          subBranches: [
-            "Noteworthy News",
-            "Laughter",
-            "Golden Age Technology",
-            "Jewelry – Fashion – Cosmetics",
-            "Beauty of Nature",
-            "Wonderland for Children",
-            "Spirituality and Daily Life",
+          description: "Choosing positive entertainment that relaxes while still nourishing attention.",
+          cta: "Explore more",
+          suggestions: [
+            {
+              title: "Noteworthy news",
+              hint: "Stories worth pausing for, without the need for noise.",
+            },
+            {
+              title: "Laughter",
+              hint: "Gentle humor that helps the mind loosen and breathe.",
+            },
+            {
+              title: "Golden age technology",
+              hint: "Technical ideas with timeless value and lasting beauty.",
+            },
+            {
+              title: "Jewelry – Fashion – Cosmetics",
+              hint: "Aesthetic choices that care for well-being and dignity.",
+            },
+            {
+              title: "Beauty of nature",
+              hint: "Where beauty helps us settle and recover.",
+            },
+            {
+              title: "Wonderland for children",
+              hint: "A clearer and imaginative world for children and families.",
+            },
+            {
+              title: "Spirituality and daily life",
+              hint: "Reflections that open inward depth in ordinary life.",
+            },
           ],
         },
         laughter: {
           title: "Joyful Laughter",
-          description: "A space for light, positive humor without harmful ridicule.",
-          cta: "View direction",
-        },
-      },
-    },
-    focusSection: {
-      title: "Current focus: Wholesome Nutrition",
-      subtitle:
-        "Returning to nutrition at its roots, starting with foundations, documentary perspectives, featured writing, and practical journeys.",
-      cards: {
-        foundation: {
-          title: "Foundational Knowledge",
-          description: "Build clear foundations first, then apply with better judgment.",
-          cta: "Open this cluster",
-        },
-        documentary: {
-          title: "Documentaries / Perspectives",
-          description: "What The Health now sits in the Wholesome Nutrition context.",
-          cta: "Open documentary cluster",
-        },
-        practice: {
-          title: "Featured Topics / Practice",
-          description: "From deep reading to practical steps you can sustain each week.",
-          cta: "Enter Wholesome Nutrition",
-        },
-      },
-    },
-    nutritionFeaturedSection: {
-      title: "Featured reads in Wholesome Nutrition",
-      subtitle:
-        "Organized into four groups: foundations, documentary perspectives, featured topics, and practice journeys.",
-      cards: {
-        foundationalReads: {
-          title: "Foundational group",
-          description: "Read these first to build clarity and reduce information noise.",
-          cta: "Read foundations",
-        },
-        documentaryViews: {
-          title: "Documentary / perspective group",
-          description: "Expand context through curated documentaries and comparative reading.",
-          cta: "Read documentary group",
-        },
-        specializedTopics: {
-          title: "Featured topics / practice group",
-          description: "Go deeper by topic and begin with practical, manageable actions.",
-          cta: "Read featured topics",
-        },
-      },
-    },
-    expansionSection: {
-      title: "Expansion branches",
-      subtitle:
-        "The remaining six branches are built with a narrow-first, depth-first strategy before broader expansion.",
-      cards: {
-        medicine: {
-          title: "Wholesome Medicine",
-          description: "Direction for foundational health knowledge, prevention, and humane medical perspectives.",
-          cta: "Open branch",
-        },
-        action: {
-          title: "Wholesome Actions",
-          description: "Direction for practical actions that support durable positive change.",
-          cta: "Open branch",
-        },
-        speech: {
-          title: "Wholesome Speech",
-          description: "Direction for respectful, clear communication with less harm.",
-          cta: "Open branch",
-        },
-        thought: {
-          title: "Wholesome Thoughts",
-          description: "Direction for clearer thinking and steadier inner balance.",
-          cta: "Open branch",
-        },
-        entertainment: {
-          title: "Wholesome Entertainment",
-          description: "Direction for films, books, videos, and media choices that nourish attention.",
-          cta: "Open branch",
-        },
-        laughter: {
-          title: "Joyful Laughter",
-          description: "Direction for light, wholesome humor that relaxes without harmful mockery.",
-          cta: "Open branch",
+          description: "A space for light, positive, and wholesome humor.",
+          cta: "Learn more",
         },
       },
     },
     endingSection: {
-      title: "Begin with the pillar that feels closest to you right now.",
-      subtitle: "Three main pillars keep the journey clear and readable.",
+      title: "Begin with what feels closest to you right now.",
+      subtitle: "Three clear directions make your reading journey lighter and easier to follow.",
       description:
-        "Older branches are preserved for future phases. For now, start with Wholesome Nutrition, Wholesome Conduct, or Wholesome Entertainment.",
+        "Other prepared areas are still preserved and can be opened in later phases. For now, you can begin with Wholesome Nutrition, Wholesome Conduct, or Wholesome Entertainment.",
       cta: "Explore Wholesome Nutrition",
     },
   },

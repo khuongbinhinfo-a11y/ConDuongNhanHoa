@@ -628,10 +628,10 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
   "dinh-duong-thien-lanh": {
     slug: "dinh-duong-thien-lanh",
     title: { vi: "Dinh dưỡng thiện lành", en: "Wholesome Nutrition" },
-    heroKicker: { vi: "Cây chính đi sâu giai đoạn đầu", en: "Primary deep-focus pillar" },
+    heroKicker: { vi: "Hướng trọng tâm hiện tại", en: "Current focus direction" },
     description: {
-      vi: "Quay về với dinh dưỡng từ gốc rễ, đi từ nền tảng rõ ràng đến thực hành bền vững.",
-      en: "Returning to nutrition at its roots, moving from clear foundations to sustainable practice.",
+      vi: "Quay về với dinh dưỡng từ gốc rễ, bắt đầu bằng hiểu đúng để thay đổi bền hơn.",
+      en: "Returning to nutrition at its roots, starting with clear understanding before lasting change.",
     },
     clusters: [
       {
@@ -647,8 +647,8 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
         id: "sua-va-nhung-dieu-thuong-tin",
         title: { vi: "Sữa và những điều thường tin", en: "Milk and Common Beliefs" },
         summary: {
-          vi: "Đối chiếu các niềm tin phổ biến về sữa bằng góc nhìn cân bằng, rõ nguồn.",
-          en: "A balanced, source-aware look at common beliefs surrounding milk.",
+          vi: "Sữa có thật sự cần thiết như nhiều người vẫn nghĩ? Cùng nhìn lại với dữ liệu và bối cảnh.",
+          en: "Is milk as essential as many people assume? Revisit the topic with context and evidence.",
         },
         href: "/dinh-duong-thien-lanh#sua-va-nhung-dieu-thuong-tin",
       },
@@ -656,8 +656,8 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
         id: "chat-dam-hang-ngay",
         title: { vi: "Chất đạm hằng ngày", en: "Daily Protein" },
         summary: {
-          vi: "Hiểu nhu cầu chất đạm theo nhịp sống thực tế và lựa chọn phù hợp từng hoàn cảnh.",
-          en: "Understanding protein needs in practical daily life and choosing appropriately.",
+          vi: "Vì sao nỗi lo thiếu đạm luôn xuất hiện đầu tiên, và hiểu thế nào để ăn uống cân bằng hơn?",
+          en: "Why is protein deficiency often the first concern, and how can we approach it more wisely?",
         },
         href: "/dinh-duong-thien-lanh#chat-dam-hang-ngay",
       },
@@ -665,8 +665,8 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
         id: "dai-thao-duong-beo-phi-chuyen-hoa",
         title: { vi: "Đái tháo đường – béo phì – chuyển hóa", en: "Diabetes – Obesity – Metabolism" },
         summary: {
-          vi: "Tổng quan các vấn đề chuyển hóa phổ biến và vai trò của bữa ăn hằng ngày.",
-          en: "A practical overview of metabolic conditions and the role of daily meals.",
+          vi: "Đái tháo đường có chỉ là câu chuyện của đường? Góc nhìn chuyển hóa giúp hiểu sâu hơn.",
+          en: "Is diabetes only about sugar? A metabolic perspective opens a broader understanding.",
         },
         href: "/dinh-duong-thien-lanh#dai-thao-duong-beo-phi-chuyen-hoa",
       },
@@ -674,10 +674,19 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
         id: "ung-thu-va-goc-nhin-tu-bua-an",
         title: { vi: "Ung thư và góc nhìn từ bữa ăn", en: "Cancer and Meal-Based Perspectives" },
         summary: {
-          vi: "Tiếp cận thận trọng, nhân văn và rõ nguồn khi đọc các nội dung dinh dưỡng liên quan ung thư.",
-          en: "A careful, humane, source-aware approach to nutrition content related to cancer.",
+          vi: "Bữa ăn hằng ngày có thể tác động sức khỏe lâu dài ra sao? Đọc kỹ để hiểu đúng mức.",
+          en: "How can daily meals influence long-term health? A careful, grounded reading path.",
         },
         href: "/dinh-duong-thien-lanh#ung-thu-va-goc-nhin-tu-bua-an",
+      },
+      {
+        id: "phim-tai-lieu-goc-nhin",
+        title: { vi: "Phim tài liệu / Góc nhìn", en: "Documentaries / Perspectives" },
+        summary: {
+          vi: "Một bộ phim tài liệu có thể làm thay đổi cách nhìn về dinh dưỡng như thế nào?",
+          en: "How can one documentary shift the way we see nutrition?",
+        },
+        href: "/dinh-duong-thien-lanh#phim-tai-lieu-goc-nhin",
       },
     ],
     relatedDirections: [
@@ -700,32 +709,32 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
       {
         title: { vi: "Về trang chủ", en: "Back to Home" },
         description: {
-          vi: "Xem đầy đủ 3 cây chính đang được ưu tiên ngoài mặt website.",
-          en: "View the three primary pillars currently surfaced on the homepage.",
+          vi: "Quay lại trang chủ để xem toàn bộ hướng nội dung đang mở.",
+          en: "Return home to review the full set of active directions.",
         },
         href: "/",
       },
     ],
     primaryCta: {
-      label: { vi: "Khám phá Dinh dưỡng thiện lành", en: "Explore Wholesome Nutrition" },
+      label: { vi: "Mở ra từ đây", en: "Begin Here" },
       href: "/dinh-duong-thien-lanh#kien-thuc-nen-tang",
     },
   },
   "hanh-dong-thien-lanh": {
     slug: "hanh-dong-thien-lanh",
     title: { vi: "Ứng xử thiện lành", en: "Wholesome Conduct" },
-    heroKicker: { vi: "Cây chính", en: "Primary pillar" },
+    heroKicker: { vi: "Hướng nội dung chính", en: "Primary direction" },
     description: {
-      vi: "Ứng xử thiện lành bắt đầu từ bản thân, lan ra gia đình, giao tiếp và đời sống xã hội.",
-      en: "Wholesome conduct begins with self-awareness, then extends to family, communication, and social life.",
+      vi: "Một lối đi giúp ứng xử tử tế với bản thân, gia đình và xã hội theo nhịp sống thực tế.",
+      en: "A reading path for kinder conduct with yourself, family, and society.",
     },
     clusters: [
       {
         id: "ung-xu-voi-ban-than",
-        title: { vi: "Ứng xử với bản thân", en: "Conduct with Yourself" },
+        title: { vi: "Hiểu mình để sống nhẹ hơn", en: "Understand Yourself More Gently" },
         summary: {
-          vi: "Giữ nhịp sống nội tâm cân bằng, tự trọng và tự chăm sóc đúng mực.",
-          en: "Cultivating balanced self-respect, self-care, and inner steadiness.",
+          vi: "Nếu hôm nay hơi mệt, điều gì có thể làm lòng nhẹ hơn một chút?",
+          en: "When today feels heavy, what can make your inner pace a little lighter?",
         },
         href: "/hanh-dong-thien-lanh#ung-xu-voi-ban-than",
       },
@@ -733,35 +742,35 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
         id: "ung-xu-trong-gia-dinh",
         title: { vi: "Ứng xử trong gia đình", en: "Conduct in Family Life" },
         summary: {
-          vi: "Nuôi mối quan hệ gần gũi bằng lắng nghe, tôn trọng và trách nhiệm.",
-          en: "Nurturing close relationships through listening, respect, and responsibility.",
+          vi: "Trong gia đình, điều gì dễ làm tổn thương nhau nhất và có thể làm khác đi ra sao?",
+          en: "In family life, what hurts most often, and how can we respond differently?",
         },
         href: "/hanh-dong-thien-lanh#ung-xu-trong-gia-dinh",
       },
       {
         id: "loi-noi-va-giao-tiep",
-        title: { vi: "Lời nói và giao tiếp", en: "Speech and Communication" },
+        title: { vi: "Lời nói và cách giao tiếp", en: "Speech and Communication" },
         summary: {
-          vi: "Nói rõ mà vẫn tử tế, trao đổi thẳng nhưng không gây tổn thương.",
-          en: "Communicating clearly and directly while preserving care and dignity.",
+          vi: "Làm sao để nói điều đúng mà không làm người khác đau?",
+          en: "How can we speak truthfully without causing unnecessary pain?",
         },
         href: "/hanh-dong-thien-lanh#loi-noi-va-giao-tiep",
       },
       {
         id: "ung-xu-ngoai-xa-hoi",
-        title: { vi: "Ứng xử ngoài xã hội", en: "Conduct in Society" },
+        title: { vi: "Ra ngoài xã hội với sự tử tế", en: "Bringing Kindness into Society" },
         summary: {
-          vi: "Giữ thái độ văn minh, công bằng và có trách nhiệm trong tương tác xã hội.",
-          en: "Practicing civility, fairness, and responsibility in social interactions.",
+          vi: "Sự tử tế ngoài xã hội bắt đầu từ những việc rất nhỏ nào?",
+          en: "Which small actions can make public life kinder every day?",
         },
         href: "/hanh-dong-thien-lanh#ung-xu-ngoai-xa-hoi",
       },
       {
         id: "tinh-huong-thuong-gap",
-        title: { vi: "Tình huống thường gặp", en: "Common Situations" },
+        title: { vi: "Những tình huống thường gặp", en: "Common Everyday Situations" },
         summary: {
-          vi: "Gợi ý cách ứng xử cho những tình huống quen thuộc trong đời sống hàng ngày.",
-          en: "Practical conduct cues for common real-life situations.",
+          vi: "Gợi ý cách xử lý cho các tình huống quen thuộc, để giữ bình tĩnh và tôn trọng nhau.",
+          en: "Practical prompts for familiar situations, with calm and mutual respect.",
         },
         href: "/hanh-dong-thien-lanh#tinh-huong-thuong-gap",
       },
@@ -770,8 +779,8 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
       {
         title: { vi: "Giữ nền từ Dinh dưỡng thiện lành", en: "Keep your base in Wholesome Nutrition" },
         description: {
-          vi: "Nền dinh dưỡng vững giúp các thay đổi về ứng xử dễ duy trì hơn.",
-          en: "A stable nutrition foundation helps behavioral changes remain sustainable.",
+          vi: "Nền dinh dưỡng rõ ràng giúp các thay đổi trong cách ứng xử dễ duy trì hơn.",
+          en: "A clear nutrition foundation helps conduct changes stay more sustainable.",
         },
         href: "/dinh-duong-thien-lanh",
       },
@@ -793,25 +802,25 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
       },
     ],
     primaryCta: {
-      label: { vi: "Khám phá Ứng xử thiện lành", en: "Explore Wholesome Conduct" },
+      label: { vi: "Mở ra từ đây", en: "Begin Here" },
       href: "/hanh-dong-thien-lanh#ung-xu-voi-ban-than",
     },
   },
   "giai-tri-thien-lanh": {
     slug: "giai-tri-thien-lanh",
     title: { vi: "Giải trí thiện lành", en: "Wholesome Entertainment" },
-    heroKicker: { vi: "Cây chính", en: "Primary pillar" },
+    heroKicker: { vi: "Hướng nội dung chính", en: "Primary direction" },
     description: {
-      vi: "Giải trí thiện lành giúp thư giãn, làm giàu cảm xúc tích cực và giữ môi trường nội dung sạch.",
-      en: "Wholesome entertainment supports healthy relaxation and a cleaner media environment.",
+      vi: "Một không gian giải trí nhẹ, sạch và có chiều sâu để tinh thần được thả lỏng đúng cách.",
+      en: "A calmer entertainment space that supports rest, clarity, and positive attention.",
     },
     clusters: [
       {
         id: "tin-dang-chu-y",
         title: { vi: "Tin đáng chú ý", en: "Noteworthy News" },
         summary: {
-          vi: "Những tin cần theo dõi với góc nhìn bình tĩnh và chọn lọc.",
-          en: "News worth following with calm, selective attention.",
+          vi: "Những điều đáng để dừng lại đọc, không cần quá ồn ào.",
+          en: "Stories worth pausing for, without the need for noise.",
         },
         href: "/giai-tri-thien-lanh#tin-dang-chu-y",
       },
@@ -819,8 +828,8 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
         id: "vui-cuoi",
         title: { vi: "Vui cười", en: "Laughter" },
         summary: {
-          vi: "Khoảnh khắc thư giãn nhẹ nhàng, tích cực và không độc hại.",
-          en: "Light, positive humor without harmful undertones.",
+          vi: "Sự nhẹ nhàng giúp tinh thần được thả lỏng hơn, nhưng vẫn giữ sự tử tế.",
+          en: "Gentle humor that helps you unwind while keeping kindness intact.",
         },
         href: "/giai-tri-thien-lanh#vui-cuoi",
       },
@@ -828,8 +837,8 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
         id: "ky-thuat-thoi-hoang-kim",
         title: { vi: "Kỹ thuật thời hoàng kim", en: "Golden Age Technology" },
         summary: {
-          vi: "Nội dung kỹ thuật mang tính giá trị bền, giúp học và nhớ lâu.",
-          en: "Timeless technical content with enduring practical value.",
+          vi: "Những giá trị kỹ thuật đẹp và đáng nhớ theo thời gian.",
+          en: "Technical ideas and stories with timeless value.",
         },
         href: "/giai-tri-thien-lanh#ky-thuat-thoi-hoang-kim",
       },
@@ -837,8 +846,8 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
         id: "trang-suc-thoi-trang-my-pham",
         title: { vi: "Trang sức – Thời trang – Mỹ phẩm", en: "Jewelry – Fashion – Cosmetics" },
         summary: {
-          vi: "Góc nhìn thẩm mỹ tích cực, vừa đẹp vừa tôn trọng sức khỏe và giá trị thật.",
-          en: "Aesthetic content balancing beauty, well-being, and practical value.",
+          vi: "Một góc thẩm mỹ tích cực, tôn trọng vẻ đẹp và sức khỏe.",
+          en: "An aesthetic corner that balances beauty and well-being.",
         },
         href: "/giai-tri-thien-lanh#trang-suc-thoi-trang-my-pham",
       },
@@ -846,8 +855,8 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
         id: "ve-dep-thien-nhien",
         title: { vi: "Vẻ đẹp thiên nhiên", en: "Beauty of Nature" },
         summary: {
-          vi: "Không gian hình ảnh và câu chuyện thiên nhiên giúp phục hồi tinh thần.",
-          en: "Nature-centered visuals and stories that restore attention and mood.",
+          vi: "Nơi cái đẹp giúp con người dịu lại và phục hồi năng lượng.",
+          en: "Where beauty helps us settle and restore energy.",
         },
         href: "/giai-tri-thien-lanh#ve-dep-thien-nhien",
       },
@@ -855,8 +864,8 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
         id: "xu-so-than-tien-cua-tre-tho",
         title: { vi: "Xứ sở thần tiên của trẻ thơ", en: "Wonderland for Children" },
         summary: {
-          vi: "Nội dung vui lành cho trẻ và gia đình, khơi trí tưởng tượng tích cực.",
-          en: "Wholesome content for children and families with positive imagination.",
+          vi: "Một góc nhìn trong trẻo, giàu tưởng tượng cho trẻ em và gia đình.",
+          en: "A clearer and imaginative space for children and families.",
         },
         href: "/giai-tri-thien-lanh#xu-so-than-tien-cua-tre-tho",
       },
@@ -864,8 +873,8 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
         id: "tam-linh-va-doi-song",
         title: { vi: "Tâm linh và đời sống", en: "Spirituality and Daily Life" },
         summary: {
-          vi: "Nội dung nuôi dưỡng đời sống tinh thần theo hướng tỉnh táo và nhân văn.",
-          en: "Content that supports spiritual life with grounded, humane perspectives.",
+          vi: "Những suy ngẫm chạm đến chiều sâu bên trong, theo nhịp sống thực tế.",
+          en: "Reflections that open inner depth while staying grounded in everyday life.",
         },
         href: "/giai-tri-thien-lanh#tam-linh-va-doi-song",
       },
@@ -874,31 +883,303 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
       {
         title: { vi: "Quay về Dinh dưỡng thiện lành", en: "Back to Wholesome Nutrition" },
         description: {
-          vi: "Giữ nền sức khỏe vững để việc giải trí tích cực có tác dụng dài hơn.",
-          en: "Maintain a strong wellness base to make entertainment choices more meaningful.",
+          vi: "Giữ nền sức khỏe vững để việc thư giãn có chất lượng và bền hơn.",
+          en: "A strong wellness base helps entertainment choices become steadier and healthier.",
         },
         href: "/dinh-duong-thien-lanh",
       },
       {
         title: { vi: "Sang Ứng xử thiện lành", en: "Continue to Wholesome Conduct" },
         description: {
-          vi: "Kết nối lựa chọn giải trí với cách sống và cách ứng xử hằng ngày.",
-          en: "Connect entertainment habits with conduct and daily behavior.",
+          vi: "Giữ nhịp giải trí lành mạnh để hỗ trợ cách sống và cách ứng xử tử tế.",
+          en: "Healthy media habits can reinforce kinder daily conduct.",
         },
         href: "/hanh-dong-thien-lanh",
       },
       {
         title: { vi: "Về trang chủ", en: "Back to Home" },
         description: {
-          vi: "Xem đầy đủ 3 cây chính đang được surface ở homepage.",
-          en: "Return to the homepage and review all three surfaced pillars.",
+          vi: "Quay lại trang chủ để xem toàn bộ hướng nội dung đang mở.",
+          en: "Return home to review all active content directions.",
         },
         href: "/",
       },
     ],
     primaryCta: {
-      label: { vi: "Khám phá Giải trí thiện lành", en: "Explore Wholesome Entertainment" },
+      label: { vi: "Mở ra từ đây", en: "Begin Here" },
       href: "/giai-tri-thien-lanh#tin-dang-chu-y",
+    },
+  },
+  "y-hoc-thien-lanh": {
+    slug: "y-hoc-thien-lanh",
+    title: { vi: "Y học thiện lành", en: "Wholesome Medicine" },
+    heroKicker: { vi: "Hướng mở rộng", en: "Expansion direction" },
+    description: {
+      vi: "Góc nhìn sức khỏe nền tảng, đi từ phòng ngừa đến chăm sóc với tinh thần nhân văn.",
+      en: "A humane health perspective, from prevention to practical care.",
+    },
+    clusters: [
+      {
+        id: "kien-thuc-suc-khoe-nen-tang",
+        title: { vi: "Kiến thức sức khỏe nền tảng", en: "Foundational Health Knowledge" },
+        summary: {
+          vi: "Làm rõ những điều căn bản để bớt rối trước khi đi vào thông tin chuyên sâu.",
+          en: "Clarify the basics first, then move into deeper health content with more confidence.",
+        },
+        href: "/y-hoc-thien-lanh#kien-thuc-suc-khoe-nen-tang",
+      },
+      {
+        id: "phong-ngua",
+        title: { vi: "Phòng ngừa", en: "Prevention" },
+        summary: {
+          vi: "Những cách chăm sóc sớm giúp giảm rủi ro và giữ chất lượng sống lâu dài.",
+          en: "Early care practices that reduce risk and support long-term quality of life.",
+        },
+        href: "/y-hoc-thien-lanh#phong-ngua",
+      },
+      {
+        id: "hoi-dap-suc-khoe-pho-thong",
+        title: { vi: "Hỏi đáp sức khỏe phổ thông", en: "General Health Q&A" },
+        summary: {
+          vi: "Các câu hỏi gần đời sống, được trả lời ngắn gọn, dễ hiểu và có căn cứ.",
+          en: "Everyday health questions answered clearly, concisely, and with grounded context.",
+        },
+        href: "/y-hoc-thien-lanh#hoi-dap-suc-khoe-pho-thong",
+      },
+    ],
+    relatedDirections: [
+      {
+        title: { vi: "Bắt đầu từ Dinh dưỡng thiện lành", en: "Begin with Wholesome Nutrition" },
+        description: {
+          vi: "Giữ nền dinh dưỡng rõ ràng trước khi mở rộng thêm góc nhìn sức khỏe.",
+          en: "Keep a clear nutrition base before broadening into wider health perspectives.",
+        },
+        href: "/dinh-duong-thien-lanh",
+      },
+      {
+        title: { vi: "Sang Ứng xử thiện lành", en: "Continue to Wholesome Conduct" },
+        description: {
+          vi: "Khi hiểu rõ sức khỏe hơn, việc ứng xử với bản thân và người thân cũng nhẹ hơn.",
+          en: "As health understanding deepens, daily conduct with self and others often improves too.",
+        },
+        href: "/hanh-dong-thien-lanh",
+      },
+      {
+        title: { vi: "Về trang chủ", en: "Back to Home" },
+        description: {
+          vi: "Quay lại trang chủ để xem các hướng nội dung đang được ưu tiên.",
+          en: "Return home to review the content directions currently prioritized.",
+        },
+        href: "/",
+      },
+    ],
+    primaryCta: {
+      label: { vi: "Khám phá thêm", en: "Explore More" },
+      href: "/",
+    },
+  },
+  "loi-noi-thien-lanh": {
+    slug: "loi-noi-thien-lanh",
+    title: { vi: "Lời nói thiện lành", en: "Wholesome Speech" },
+    heroKicker: { vi: "Hướng mở rộng", en: "Expansion direction" },
+    description: {
+      vi: "Giữ lời nói rõ ràng, tử tế và có trách nhiệm để giảm tổn thương trong giao tiếp.",
+      en: "A communication direction centered on clarity, kindness, and responsibility.",
+    },
+    clusters: [
+      {
+        id: "nguyen-tac-giao-tiep",
+        title: { vi: "Nguyên tắc giao tiếp", en: "Communication Principles" },
+        summary: {
+          vi: "Những nguyên tắc giúp nói thật mà vẫn giữ kết nối.",
+          en: "Principles for speaking honestly while preserving connection.",
+        },
+        href: "/loi-noi-thien-lanh#nguyen-tac-giao-tiep",
+      },
+      {
+        id: "thuc-hanh-doi-thoai",
+        title: { vi: "Thực hành đối thoại", en: "Dialogue Practice" },
+        summary: {
+          vi: "Gợi ý cách trao đổi thẳng thắn nhưng không làm người khác bị đẩy vào thế phòng vệ.",
+          en: "Practical ways to speak directly without pushing others into defensiveness.",
+        },
+        href: "/loi-noi-thien-lanh#thuc-hanh-doi-thoai",
+      },
+      {
+        id: "tinh-huong-thuong-gap",
+        title: { vi: "Tình huống thường gặp", en: "Common Situations" },
+        summary: {
+          vi: "Cách nói khi bất đồng, khi góp ý, khi cần giữ ranh giới.",
+          en: "How to communicate in disagreement, feedback, and boundary-setting moments.",
+        },
+        href: "/loi-noi-thien-lanh#tinh-huong-thuong-gap",
+      },
+    ],
+    relatedDirections: [
+      {
+        title: { vi: "Giữ nền từ Dinh dưỡng thiện lành", en: "Keep your base in Wholesome Nutrition" },
+        description: {
+          vi: "Một nền sống khỏe rõ ràng giúp giao tiếp bình tĩnh và sáng hơn.",
+          en: "A steady wellness foundation often supports calmer and clearer communication.",
+        },
+        href: "/dinh-duong-thien-lanh",
+      },
+      {
+        title: { vi: "Sang Ứng xử thiện lành", en: "Continue to Wholesome Conduct" },
+        description: {
+          vi: "Nối lời nói với hành động để cách sống nhất quán hơn.",
+          en: "Connect speech with action for a more coherent way of living.",
+        },
+        href: "/hanh-dong-thien-lanh",
+      },
+      {
+        title: { vi: "Về trang chủ", en: "Back to Home" },
+        description: {
+          vi: "Quay lại trang chủ để chọn hướng đọc tiếp theo.",
+          en: "Return home and choose your next reading direction.",
+        },
+        href: "/",
+      },
+    ],
+    primaryCta: {
+      label: { vi: "Khám phá thêm", en: "Explore More" },
+      href: "/",
+    },
+  },
+  "suy-nghi-thien-lanh": {
+    slug: "suy-nghi-thien-lanh",
+    title: { vi: "Suy nghĩ thiện lành", en: "Wholesome Thoughts" },
+    heroKicker: { vi: "Hướng mở rộng", en: "Expansion direction" },
+    description: {
+      vi: "Nuôi dưỡng nhận thức sáng rõ để giữ đời sống nội tâm cân bằng hơn mỗi ngày.",
+      en: "Cultivating clearer awareness for a steadier and more balanced inner life.",
+    },
+    clusters: [
+      {
+        id: "thuc-hanh-tu-duy",
+        title: { vi: "Thực hành tư duy", en: "Thinking Practices" },
+        summary: {
+          vi: "Những bước nhỏ giúp bớt cuốn theo nhiễu thông tin và phản ứng vội.",
+          en: "Small practices that reduce noise-driven reactions and rushed conclusions.",
+        },
+        href: "/suy-nghi-thien-lanh#thuc-hanh-tu-duy",
+      },
+      {
+        id: "can-bang-noi-tam",
+        title: { vi: "Cân bằng nội tâm", en: "Inner Balance" },
+        summary: {
+          vi: "Giữ một nhịp sống bên trong vừa sáng vừa dịu, đủ để đi đường dài.",
+          en: "Building an inner rhythm that stays both clear and gentle over time.",
+        },
+        href: "/suy-nghi-thien-lanh#can-bang-noi-tam",
+      },
+      {
+        id: "goc-nhin-thuc-te",
+        title: { vi: "Góc nhìn thực tế", en: "Grounded Perspective" },
+        summary: {
+          vi: "Nhìn vấn đề gần với đời sống thật để bớt cực đoan và bớt mệt.",
+          en: "A grounded lens that keeps thinking practical, humane, and less extreme.",
+        },
+        href: "/suy-nghi-thien-lanh#goc-nhin-thuc-te",
+      },
+    ],
+    relatedDirections: [
+      {
+        title: { vi: "Bắt đầu từ Dinh dưỡng thiện lành", en: "Begin with Wholesome Nutrition" },
+        description: {
+          vi: "Nền dinh dưỡng tốt thường giúp tinh thần sáng hơn và ổn định hơn.",
+          en: "A healthy nutrition base often supports clearer and steadier thinking.",
+        },
+        href: "/dinh-duong-thien-lanh",
+      },
+      {
+        title: { vi: "Sang Giải trí thiện lành", en: "Continue to Wholesome Entertainment" },
+        description: {
+          vi: "Nội dung giải trí phù hợp giúp đầu óc nghỉ ngơi mà không rơi vào quá tải.",
+          en: "The right entertainment can rest the mind without adding overload.",
+        },
+        href: "/giai-tri-thien-lanh",
+      },
+      {
+        title: { vi: "Về trang chủ", en: "Back to Home" },
+        description: {
+          vi: "Quay lại trang chủ để xem các hướng nội dung đang mở.",
+          en: "Return home to review the currently active content directions.",
+        },
+        href: "/",
+      },
+    ],
+    primaryCta: {
+      label: { vi: "Khám phá thêm", en: "Explore More" },
+      href: "/",
+    },
+  },
+  "coi-vui-cuoi": {
+    slug: "coi-vui-cuoi",
+    title: { vi: "Cõi vui cười", en: "Joyful Laughter" },
+    heroKicker: { vi: "Hướng mở rộng", en: "Expansion direction" },
+    description: {
+      vi: "Một không gian tiếng cười nhẹ, tích cực và không độc hại.",
+      en: "A space for light, positive, and wholesome laughter.",
+    },
+    clusters: [
+      {
+        id: "chuyen-vui-nhe-nhang",
+        title: { vi: "Chuyện vui nhẹ nhàng", en: "Gentle Light Stories" },
+        summary: {
+          vi: "Những mẩu chuyện đủ vui để thư giãn mà không đặt ai vào thế bị tổn thương.",
+          en: "Stories that are light enough to relax without turning anyone into a target.",
+        },
+        href: "/coi-vui-cuoi#chuyen-vui-nhe-nhang",
+      },
+      {
+        id: "thu-gian-sach",
+        title: { vi: "Thư giãn sạch", en: "Clean Relaxation" },
+        summary: {
+          vi: "Giữ sự vui vẻ trong giới hạn văn minh, không mỉa mai và không độc hại.",
+          en: "A gentle style of humor that stays civil, kind, and non-toxic.",
+        },
+        href: "/coi-vui-cuoi#thu-gian-sach",
+      },
+      {
+        id: "vui-khong-gieu-cot-xau",
+        title: { vi: "Vui không giễu cợt xấu", en: "Humor Without Cruel Ridicule" },
+        summary: {
+          vi: "Niềm vui vẫn có thể tròn đầy mà không cần dựa trên tổn thương của người khác.",
+          en: "Humor can still feel full and warm without relying on someone else's pain.",
+        },
+        href: "/coi-vui-cuoi#vui-khong-gieu-cot-xau",
+      },
+    ],
+    relatedDirections: [
+      {
+        title: { vi: "Sang Giải trí thiện lành", en: "Continue to Wholesome Entertainment" },
+        description: {
+          vi: "Mở rộng từ tiếng cười sang các lựa chọn giải trí tích cực khác.",
+          en: "Expand from laughter into broader wholesome entertainment choices.",
+        },
+        href: "/giai-tri-thien-lanh",
+      },
+      {
+        title: { vi: "Giữ nền từ Dinh dưỡng thiện lành", en: "Keep your base in Wholesome Nutrition" },
+        description: {
+          vi: "Nền sống khỏe giúp nhịp thư giãn trở nên nhẹ và bền hơn.",
+          en: "A healthy base helps your relaxation rhythm stay gentle and sustainable.",
+        },
+        href: "/dinh-duong-thien-lanh",
+      },
+      {
+        title: { vi: "Về trang chủ", en: "Back to Home" },
+        description: {
+          vi: "Quay lại trang chủ để chọn hướng đọc tiếp theo.",
+          en: "Return home and choose your next reading direction.",
+        },
+        href: "/",
+      },
+    ],
+    primaryCta: {
+      label: { vi: "Khám phá thêm", en: "Explore More" },
+      href: "/",
     },
   },
 };

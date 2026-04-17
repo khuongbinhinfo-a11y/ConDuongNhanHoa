@@ -7,7 +7,7 @@ export const commonI18n = {
       backToHome: "Về trang chủ",
       exploreMore: "Khám phá thêm",
       openCluster: "Xem cụm nội dung",
-      openBranch: "Vào nhánh",
+      openBranch: "Khám phá thêm",
       viewDirection: "Xem định hướng",
     },
     articles: {
@@ -28,8 +28,8 @@ export const commonI18n = {
       viewAll: "View All",
       backToHome: "Back to Home",
       exploreMore: "Explore More",
-      openCluster: "Open Cluster",
-      openBranch: "Open Branch",
+      openCluster: "Explore This Topic",
+      openBranch: "Explore More",
       viewDirection: "View Direction",
     },
     articles: {
@@ -44,4 +44,3 @@ export const commonI18n = {
     },
   },
 } as const;
-
