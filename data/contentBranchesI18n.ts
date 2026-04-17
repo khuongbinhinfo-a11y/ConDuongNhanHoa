@@ -15,6 +15,8 @@ export type BranchClusterI18n = {
   id: string;
   title: LocalizedText;
   summary: LocalizedText;
+  /** Optional open question shown below the summary to invite reflection. */
+  prompt?: LocalizedText;
   href: string;
 };
 
@@ -24,12 +26,23 @@ export type BranchDirectionI18n = {
   href: string;
 };
 
+/** A standalone documentary / perspective block that sits outside the topic cluster grid. */
+export type DocumentaryBlockI18n = {
+  title: LocalizedText;
+  description: LocalizedText;
+  /** Short axis labels the documentary block focuses on (e.g. "sữa", "chất đạm") */
+  axes: LocalizedText[];
+  href: string;
+};
+
 export type ContentBranchLandingI18n = {
   slug: ContentBranchSlug;
   title: LocalizedText;
   heroKicker: LocalizedText;
   description: LocalizedText;
   clusters: BranchClusterI18n[];
+  /** Optional documentary / external-perspective block rendered below the cluster grid. */
+  documentaryBlock?: DocumentaryBlockI18n;
   relatedDirections: BranchDirectionI18n[];
   primaryCta: {
     label: LocalizedText;
@@ -45,110 +58,137 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
       en: "Wholesome Nutrition",
     },
     heroKicker: {
-      vi: "Nhánh đi sâu giai đoạn đầu",
-      en: "Deep-focus branch in phase one",
+      vi: "Hiểu đúng trước, thay đổi sau",
+      en: "Understand first, then change",
     },
     description: {
-      vi: "Quay về với dinh dưỡng từ gốc rễ.",
-      en: "Returning to nutrition at its roots.",
+      vi: "Dinh dưỡng không bắt đầu từ chế độ ăn mà từ cách hiểu. Đây là nơi đặt lại những điều tưởng đã biết để nhìn rõ hơn trước khi chọn.",
+      en: "Nutrition doesn't begin with a diet — it begins with understanding. This is where you revisit what you thought you knew, so you can choose more clearly.",
     },
     clusters: [
-      {
-        id: "tong-quan",
-        title: { vi: "Tổng quan", en: "Overview" },
-        summary: {
-          vi: "Bản đồ tổng thể của nhánh và cách bắt đầu theo nhịp phù hợp.",
-          en: "The overall map of this branch and how to begin at a fitting pace.",
-        },
-        href: "/dinh-duong-thien-lanh#tong-quan",
-      },
       {
         id: "kien-thuc-nen-tang",
         title: { vi: "Kiến thức nền tảng", en: "Foundational Knowledge" },
         summary: {
-          vi: "Những nguyên tắc nền cần nắm trước khi áp dụng vào đời sống.",
-          en: "Core principles to understand before applying them in daily life.",
+          vi: "Có những nguyên tắc dinh dưỡng cần hiểu trước khi theo bất kỳ cách ăn nào. Không phải để học thuộc, mà để tự nhận ra điều phù hợp.",
+          en: "Some nutrition principles are worth understanding before following any eating approach — not to memorize, but to recognize what fits.",
+        },
+        prompt: {
+          vi: "Bạn đang chọn cách ăn vì ai nói, hay vì mình thực sự hiểu?",
+          en: "Are you eating a certain way because someone said to, or because you actually understand why?",
         },
         href: "/dinh-duong-thien-lanh#kien-thuc-nen-tang",
       },
       {
-        id: "phim-tai-lieu-goc-nhin",
-        title: { vi: "Phim tài liệu / Góc nhìn", en: "Documentaries / Perspectives" },
+        id: "sua-va-nhung-dieu-thuong-tin",
+        title: { vi: "Những điều thường được tin về sữa", en: "Common Beliefs About Milk" },
         summary: {
-          vi: "What The Health được đặt đúng tại cụm này như một góc nhìn để đối chiếu.",
-          en: "What The Health sits in this cluster as one perspective for comparison.",
+          vi: "Sữa là thực phẩm được bảo vệ bởi nhiều lớp thông tin. Đọc để hiểu nguồn gốc của niềm tin đó trước khi giữ hay bỏ.",
+          en: "Milk is a food protected by many layers of messaging. Read to understand where those beliefs come from before deciding what to keep.",
         },
-        href: "/dinh-duong-thien-lanh#phim-tai-lieu-goc-nhin",
+        prompt: {
+          vi: "Sữa có thật sự cần thiết như nhiều người vẫn nghĩ?",
+          en: "Is milk as essential as many people believe?",
+        },
+        href: "/dinh-duong-thien-lanh#sua-va-nhung-dieu-thuong-tin",
       },
       {
-        id: "bai-viet-chuyen-de",
-        title: { vi: "Bài viết chuyên đề", en: "Featured Topics" },
+        id: "chat-dam-hang-ngay",
+        title: { vi: "Chất đạm: hiểu sao cho đúng", en: "Protein: Understanding It Right" },
         summary: {
-          vi: "Các chuyên đề đi sâu theo vấn đề thực tế, đọc có hệ thống.",
-          en: "Deeper topic articles organized around real and practical concerns.",
+          vi: "Nỗi lo thiếu đạm xuất hiện ngay khi nhắc đến ăn ít thịt. Nhưng cơ thể thực sự cần bao nhiêu, và từ đâu?",
+          en: "Worry about protein deficiency surfaces the moment eating less meat is mentioned. But how much does the body actually need, and from where?",
         },
-        href: "/dinh-duong-thien-lanh#bai-viet-chuyen-de",
+        prompt: {
+          vi: "Vì sao nỗi lo thiếu đạm lại dễ xuất hiện đến vậy?",
+          en: "Why does protein deficiency worry appear so easily?",
+        },
+        href: "/dinh-duong-thien-lanh#chat-dam-hang-ngay",
       },
       {
-        id: "cau-hoi-thuong-gap",
-        title: { vi: "Câu hỏi thường gặp", en: "Frequently Asked Questions" },
+        id: "suc-khoe-chuyen-hoa",
+        title: { vi: "Sức khỏe chuyển hóa và bữa ăn hằng ngày", en: "Metabolic Health and Daily Eating" },
         summary: {
-          vi: "Các câu hỏi phổ biến để đối chiếu nguồn và làm rõ hiểu lầm thường gặp.",
-          en: "Common questions to compare sources and clarify recurring misconceptions.",
+          vi: "Đái tháo đường, béo phì, và rối loạn chuyển hóa không chỉ là câu chuyện của đường hay mỡ. Bữa ăn hằng ngày có liên kết chặt hơn nhiều người tưởng.",
+          en: "Diabetes, obesity, and metabolic disorders aren't just about sugar or fat. Daily eating is connected more tightly than most people realize.",
         },
-        href: "/dinh-duong-thien-lanh#cau-hoi-thuong-gap",
+        prompt: {
+          vi: "Đái tháo đường có chỉ là câu chuyện của đường?",
+          en: "Is diabetes only a story about sugar?",
+        },
+        href: "/dinh-duong-thien-lanh#suc-khoe-chuyen-hoa",
       },
       {
-        id: "hanh-trinh-thuc-hanh",
-        title: { vi: "Hành trình thực hành", en: "Practice Journey" },
+        id: "ung-thu-va-bua-an",
+        title: { vi: "Ung thư và những câu hỏi từ bàn ăn", en: "Cancer and the Questions at the Table" },
         summary: {
-          vi: "Những bước thực hành vừa sức để chuyển hiểu biết thành thay đổi bền hơn.",
-          en: "Manageable actions that turn understanding into more sustainable change.",
+          vi: "Không phải bữa ăn nào cũng gây ung thư. Nhưng có những thói quen ăn uống hằng ngày tích lũy nguy cơ lâu dài mà ít ai để ý.",
+          en: "Not every meal causes cancer. But some daily eating habits quietly accumulate long-term risk in ways most people don't notice.",
         },
-        href: "/dinh-duong-thien-lanh#hanh-trinh-thuc-hanh",
+        prompt: {
+          vi: "Bữa ăn hằng ngày có thể ảnh hưởng đến sức khỏe lâu dài ra sao?",
+          en: "How might daily eating affect long-term health?",
+        },
+        href: "/dinh-duong-thien-lanh#ung-thu-va-bua-an",
       },
     ],
+    documentaryBlock: {
+      title: {
+        vi: "Góc nhìn mở ra từ phim tài liệu",
+        en: "Perspectives Opened by Documentary Film",
+      },
+      description: {
+        vi: "Một số phim tài liệu về dinh dưỡng có thể làm thay đổi cách nhìn — và cũng có thể đơn giản hóa thái quá. Đặt trong ngữ cảnh đúng, chúng là điểm khởi đầu để đặt câu hỏi, không phải câu trả lời cuối cùng.",
+        en: "Some nutrition documentaries can shift your perspective — and some can oversimplify. Placed in the right context, they're starting points for questions, not final answers.",
+      },
+      axes: [
+        { vi: "Sữa và niềm tin phổ biến", en: "Milk and common beliefs" },
+        { vi: "Chất đạm từ nguồn nào", en: "Protein and its sources" },
+        { vi: "Đái tháo đường, béo phì và ung thư", en: "Diabetes, obesity and cancer" },
+      ],
+      href: "/dinh-duong-thien-lanh#goc-nhin-phim-tai-lieu",
+    },
     relatedDirections: [
       {
         title: {
-          vi: "Xem cụm Phim tài liệu / Góc nhìn",
-          en: "View the Documentaries / Perspectives cluster",
+          vi: "Ứng xử thiện lành",
+          en: "Wholesome Conduct",
         },
         description: {
-          vi: "Nơi tập hợp các góc nhìn tài liệu, bao gồm What The Health.",
-          en: "A curated cluster of documentary viewpoints, including What The Health.",
+          vi: "Từ bữa ăn đến cách sống — ứng xử với bản thân và người xung quanh cũng cần được nhìn lại.",
+          en: "From the table to daily life — how we treat ourselves and others also deserves a second look.",
         },
-        href: "/dinh-duong-thien-lanh#phim-tai-lieu-goc-nhin",
+        href: "/",
       },
       {
         title: {
-          vi: "Đi tiếp sang Hành động thiện lành",
-          en: "Continue to Wholesome Actions",
+          vi: "Giải trí thiện lành",
+          en: "Wholesome Entertainment",
         },
         description: {
-          vi: "Khi đã có nền, chuyển sang nhánh hành động để giữ nhịp thực hành.",
-          en: "After building foundations, move to action for steadier practice.",
+          vi: "Nội dung nhẹ nhàng, có chọn lọc — để thư giãn mà vẫn nuôi dưỡng.",
+          en: "Light, curated content — restful without being empty.",
         },
-        href: "/hanh-dong-thien-lanh",
+        href: "/giai-tri-thien-lanh",
       },
       {
         title: {
-          vi: "Xem toàn bộ 7 nhánh",
-          en: "View all seven branches",
+          vi: "Trở về trang chủ",
+          en: "Back to home",
         },
         description: {
-          vi: "Quay lại trang chủ để xem cách các nhánh liên kết thành một hệ nội dung.",
-          en: "Return home to see how all branches connect into one system.",
+          vi: "Xem lại bản đồ nội dung và chọn hướng tiếp theo phù hợp với mình.",
+          en: "Review the content map and choose your next direction.",
         },
         href: "/",
       },
     ],
     primaryCta: {
       label: {
-        vi: "Vào cụm Phim tài liệu / Góc nhìn",
-        en: "Open Documentaries / Perspectives",
+        vi: "Xem góc nhìn từ phim tài liệu",
+        en: "View documentary perspectives",
       },
-      href: "/dinh-duong-thien-lanh#phim-tai-lieu-goc-nhin",
+      href: "/dinh-duong-thien-lanh#goc-nhin-phim-tai-lieu",
     },
   },
   "y-hoc-thien-lanh": {
