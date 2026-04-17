@@ -41,8 +41,8 @@ export const footerI18n: Record<AppLocale, FooterCopy> = {
       { label: "Giới thiệu", href: "/gioi-thieu" },
       { label: "Dinh dưỡng thiện lành", href: "/dinh-duong-thien-lanh" },
     ],
-    languageLabel: "Ngôn ngữ: Tiếng Việt | English",
-    note: "Đi từ gốc rễ, giữ nhịp đều, mở rộng bền vững.",
+    languageLabel: "Ngôn ngữ",
+    note: "Đi từ điều gần gũi, giữ nhịp đều, mở rộng bền vững.",
     copyrightNotice: "Đã đăng ký mọi quyền.",
   },
   en: {
@@ -52,8 +52,8 @@ export const footerI18n: Record<AppLocale, FooterCopy> = {
       { label: "About", href: "/gioi-thieu" },
       { label: "Wholesome Nutrition", href: "/dinh-duong-thien-lanh" },
     ],
-    languageLabel: "Language: Tiếng Việt | English",
-    note: "Rooted first, steady pace, sustainable expansion.",
+    languageLabel: "Language",
+    note: "Starting close, keeping steady, expanding sustainably.",
     copyrightNotice: "All rights reserved.",
   },
 };

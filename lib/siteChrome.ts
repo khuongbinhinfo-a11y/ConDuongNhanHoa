@@ -27,11 +27,12 @@ export function getSiteChrome(locale: AppLocale) {
   };
 
   const footer = {
-    brandTagline: homepageText.brand.tagline,
+    brandTagline:
+      locale === "vi"
+        ? "Nội dung gần gũi cho đời sống tích cực và thực hành được."
+        : "Wholesome content for positive and practical living.",
     navHeading: footerText.navHeading,
     navLinks: headerLinks.map((item) => ({ label: item.label, href: item.href })),
-    supportHeading: footerText.supportHeading,
-    supportLinks: footerText.supportLinks,
     languageLabel: footerText.languageLabel,
     note: footerText.note,
     copyrightText: `© 2026 ${navigationText.brand.name}. ${footerText.copyrightNotice}`,

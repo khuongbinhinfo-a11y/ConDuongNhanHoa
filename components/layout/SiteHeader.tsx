@@ -108,15 +108,16 @@ export function SiteHeader({
     <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[linear-gradient(180deg,rgba(255,253,253,0.97),rgba(255,253,253,0.9))] backdrop-blur-md">
       <Container>
         <div className="hidden min-h-[88px] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-6 lg:grid xl:gap-8">
-          <Link href="/" aria-label={brandName} className="inline-flex shrink-0 items-center py-1 text-[var(--color-navy)]">
+          <Link href="/" aria-label={brandName} className="inline-flex shrink-0 items-center gap-2.5 py-1 text-[var(--color-navy)]">
             <Image
               src="/logo_CDTL/logo_CDTL.png"
               alt={brandAlt}
               width={1536}
               height={1024}
               priority
-              className="h-[4rem] w-auto max-w-[300px] object-contain"
+              className="h-[2rem] w-auto object-contain"
             />
+            <span className="text-[0.94rem] font-semibold tracking-[0.01em] text-[var(--color-text-strong)]">{brandName}</span>
           </Link>
 
           <nav aria-label={navAriaLabel} className="justify-self-center">
@@ -161,15 +162,16 @@ export function SiteHeader({
         </div>
 
         <div className="relative flex min-h-[70px] items-center justify-between gap-3.5 lg:hidden">
-          <Link href="/" aria-label={brandName} className="inline-flex min-w-0 items-center py-0.5 text-[var(--color-navy)]">
+          <Link href="/" aria-label={brandName} className="inline-flex min-w-0 items-center gap-2 py-0.5 text-[var(--color-navy)]">
             <Image
               src="/logo_CDTL/logo_CDTL.png"
               alt={brandAlt}
               width={1536}
               height={1024}
               priority
-              className="h-[2.75rem] w-auto max-w-[220px] object-contain"
+              className="h-[1.75rem] w-auto object-contain"
             />
+            <span className="text-[0.84rem] font-semibold tracking-[0.01em] text-[var(--color-text-strong)]">{brandName}</span>
           </Link>
 
           <div className="relative">
@@ -184,11 +186,11 @@ export function SiteHeader({
             </button>
 
             <div
-              className={`absolute right-0 top-[calc(100%+0.55rem)] z-50 w-[min(308px,calc(100vw-1.25rem))] origin-top-right rounded-[17px] border border-[var(--color-border)] bg-[linear-gradient(170deg,rgba(255,253,253,0.98),rgba(191,221,226,0.28))] p-3.5 shadow-[0_16px_30px_rgba(223,166,184,0.22)] backdrop-blur-sm transition duration-200 motion-safe:transition-[opacity,transform] ${
+              className={`absolute right-0 top-[calc(100%+0.55rem)] z-50 w-[min(308px,calc(100vw-1.25rem))] origin-top-right rounded-[17px] border border-[#F3DDE4] bg-white p-3.5 shadow-[0_12px_32px_rgba(36,52,71,0.12)] transition duration-200 motion-safe:transition-[opacity,transform] ${
                 open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"
               }`}
             >
-              <div className="mb-3 border-b border-[var(--color-border)] pb-3">
+              <div className="mb-3 border-b border-[#F3DDE4] pb-3">
                 <LocaleSwitcher
                   locale={locale}
                   onChange={(nextLocale) => onLocaleChange?.(nextLocale)}
@@ -209,8 +211,8 @@ export function SiteHeader({
                           href={item.href}
                           className={`block rounded-[11px] px-3 py-2.5 text-[0.92rem] font-medium transition-colors ${
                             isActive
-                              ? "bg-[rgba(230,175,192,0.24)] text-[var(--color-navy)]"
-                              : "text-[var(--color-text-muted)] hover:bg-[rgba(191,221,226,0.32)] hover:text-[var(--color-navy)]"
+                              ? "bg-[#F8EEF2] text-[#243447]"
+                              : "text-[#243447] hover:bg-[#F8EEF2]"
                           }`}
                           onClick={() => setOpen(false)}
                         >

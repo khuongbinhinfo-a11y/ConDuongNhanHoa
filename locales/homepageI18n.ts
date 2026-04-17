@@ -10,11 +10,11 @@ export const homepageI18n = {
     hero: {
       eyebrow: "Nền tảng nội dung thiện lành",
       title: brandI18n.vi.name,
-      subtitle: "Nơi khởi đầu cho một đời sống tích cực, đi từ điều gần gũi và thực hành được.",
-      emphasis: "Giai đoạn này tập trung vào ba hướng nội dung rõ ràng, trong đó Dinh dưỡng thiện lành được đi sâu trước.",
+      subtitle: "Nơi bắt đầu từ những điều gần gũi trong đời sống: ăn uống, ứng xử và cách giữ tinh thần nhẹ hơn mỗi ngày.",
+      emphasis: "",
       primaryCta: "Khám phá Dinh dưỡng thiện lành",
       secondaryCta: "Xem 3 hướng nội dung",
-      chatHint: "Bắt đầu từ một điều gần với mình.",
+      chatHint: "",
     },
     entrySection: {
       title: "Ba hướng nội dung chính",
@@ -144,11 +144,11 @@ export const homepageI18n = {
     hero: {
       eyebrow: "Wholesome Content Platform",
       title: brandI18n.en.name,
-      subtitle: "A grounded place to begin positive living, starting with what feels close and practical.",
-      emphasis: "This phase highlights three clear content directions, with Wholesome Nutrition as the first deep focus.",
+      subtitle: "A place to begin from what feels close in daily life: eating, relating to others, and keeping your mind lighter each day.",
+      emphasis: "",
       primaryCta: "Explore Wholesome Nutrition",
       secondaryCta: "View 3 content directions",
-      chatHint: "Begin with something that feels close to you.",
+      chatHint: "",
     },
     entrySection: {
       title: "Three primary content directions",

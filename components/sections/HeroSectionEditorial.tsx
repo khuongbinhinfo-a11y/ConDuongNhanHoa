@@ -54,10 +54,12 @@ export function HeroSectionEditorial({ content }: HeroSectionEditorialProps) {
                   {content.secondaryCtaLabel}
                 </Button>
               ) : null}
-              <p className="hero-note-hint">
-                <span className="hero-note-hint__mark" aria-hidden="true" />
-                <span>{content.noteHint}</span>
-              </p>
+              {content.noteHint ? (
+                <p className="hero-note-hint">
+                  <span className="hero-note-hint__mark" aria-hidden="true" />
+                  <span>{content.noteHint}</span>
+                </p>
+              ) : null}
             </div>
           </div>
 

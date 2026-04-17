@@ -42,8 +42,6 @@ export default function SuyNghiThienLanhPage() {
         brandTagline={siteChrome.footer.brandTagline}
         navHeading={siteChrome.footer.navHeading}
         navLinks={siteChrome.footer.navLinks}
-        supportHeading={siteChrome.footer.supportHeading}
-        supportLinks={siteChrome.footer.supportLinks}
         languageLabel={siteChrome.footer.languageLabel}
         note={siteChrome.footer.note}
         copyrightText={siteChrome.footer.copyrightText}
