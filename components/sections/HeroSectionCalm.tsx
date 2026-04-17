@@ -37,14 +37,14 @@ export function HeroSectionCalm({ content }: HeroSectionCalmProps) {
           <div className="relative isolate rounded-[24px] border border-[var(--color-border)] bg-[var(--color-card)] p-2 shadow-[0_18px_40px_rgba(36,76,99,0.10)]">
             <div className="absolute -right-10 -top-10 -z-10 h-44 w-44 rounded-full bg-[rgba(111,167,166,0.22)] blur-2xl" />
             <div className="absolute -bottom-8 -left-8 -z-10 h-36 w-36 rounded-full bg-[rgba(220,232,221,0.55)] blur-2xl" />
-            <div className="relative min-h-[320px] overflow-hidden rounded-[20px] lg:min-h-[460px]">
+            <div className="media-frame relative min-h-[320px] rounded-[20px] lg:min-h-[460px]">
               <Image
                 src={content.image.src}
                 alt={content.image.alt}
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 48vw"
-                className="object-cover"
+                className="media-img-cover"
               />
             </div>
           </div>

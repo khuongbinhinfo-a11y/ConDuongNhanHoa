@@ -743,3 +743,31 @@ p {
     transform: none;
   }
 }
+
+/* ── Shared media-frame helpers ───────────────────────────────────────────── */
+
+/* Rounded clip container — inherit or override border-radius from parent */
+.media-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: inherit;
+  background: var(--color-bg);
+}
+
+/* Fill parent, crop to centre — good when the subject is centred */
+.media-img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Preserve full image in safe area — for images that lose detail on crop */
+.media-img-safe {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 0.5rem;
+  background: rgba(255, 253, 253, 0.92);
+}

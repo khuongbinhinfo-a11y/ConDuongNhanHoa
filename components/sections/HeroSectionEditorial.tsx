@@ -64,14 +64,14 @@ export function HeroSectionEditorial({ content }: HeroSectionEditorialProps) {
           <div className="hero-editorial__media-shell relative isolate rounded-[26px] border border-[var(--color-border)] bg-[rgba(255,253,253,0.9)] p-[0.62rem] shadow-[0_18px_40px_rgba(223,166,184,0.18)]">
             <div className="absolute -right-11 -top-10 -z-10 h-44 w-44 rounded-full bg-[rgba(230,175,192,0.24)] blur-2xl" />
             <div className="absolute -bottom-10 -left-10 -z-10 h-38 w-38 rounded-full bg-[rgba(191,221,226,0.55)] blur-2xl" />
-            <div className="hero-editorial__media-frame relative min-h-[328px] overflow-hidden rounded-[20px] lg:min-h-[468px]">
+            <div className="hero-editorial__media-frame media-frame relative min-h-[328px] rounded-[20px] lg:min-h-[468px]">
               <Image
                 src={content.image.src}
                 alt={content.image.alt}
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 48vw"
-                className="object-cover"
+                className="media-img-cover"
               />
               <div className="hero-editorial__media-fade absolute inset-x-0 bottom-0 h-24" aria-hidden="true" />
             </div>

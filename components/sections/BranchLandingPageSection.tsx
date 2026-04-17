@@ -49,14 +49,14 @@ export function BranchLandingPageSection({
 
             {/* Hero image — shown only when a real image exists for this branch */}
             {resolvedHeroSrc && (
-              <div className="relative mb-6 aspect-[21/9] overflow-hidden rounded-[16px]">
+              <div className="media-frame relative mb-6 aspect-[21/9] rounded-[16px]">
                 <Image
                   src={resolvedHeroSrc}
                   alt={resolvedHeroAlt}
                   fill
                   priority
                   sizes="(max-width: 1060px) 100vw, 1060px"
-                  className="object-cover object-center"
+                  className="media-img-cover"
                 />
               </div>
             )}
@@ -90,13 +90,13 @@ export function BranchLandingPageSection({
 
                     {/* Image — only if one truly exists for this slot */}
                     {clusterImageSrc && (
-                      <div className="relative aspect-[16/9] w-full shrink-0 overflow-hidden">
+                      <div className="media-frame relative aspect-[4/3] w-full shrink-0 rounded-t-[20px]">
                         <Image
                           src={clusterImageSrc}
                           alt={cluster.title[locale]}
                           fill
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                          className="object-cover object-center"
+                          className="media-img-cover"
                         />
                       </div>
                     )}
