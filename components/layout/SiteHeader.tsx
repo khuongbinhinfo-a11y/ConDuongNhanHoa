@@ -38,16 +38,16 @@ function LocaleSwitcher({
   disabled = false,
 }: LocaleSwitcherProps) {
   const wrapperClass = compact
-    ? "inline-flex items-center rounded-[10px] border border-[rgba(30,62,82,0.12)] bg-[rgba(252,250,246,0.88)] p-[2px] shadow-[0_3px_10px_rgba(30,62,82,0.05)]"
-    : "inline-flex items-center rounded-[11px] border border-[rgba(30,62,82,0.12)] bg-[rgba(252,250,246,0.9)] p-[2px] shadow-[0_4px_12px_rgba(30,62,82,0.05)]";
+    ? "inline-flex items-center rounded-[10px] border border-[var(--color-border)] bg-[rgba(255,253,253,0.92)] p-[2px] shadow-[0_3px_10px_rgba(223,166,184,0.1)]"
+    : "inline-flex items-center rounded-[11px] border border-[var(--color-border)] bg-[rgba(255,253,253,0.94)] p-[2px] shadow-[0_4px_12px_rgba(223,166,184,0.12)]";
 
   const activeClass = compact
-    ? "bg-[rgba(30,62,82,0.11)] text-[var(--color-navy)]"
-    : "bg-[rgba(30,62,82,0.11)] text-[var(--color-navy)]";
+    ? "bg-[rgba(230,175,192,0.32)] text-[var(--color-text-strong)]"
+    : "bg-[rgba(230,175,192,0.32)] text-[var(--color-text-strong)]";
 
   const idleClass = compact
-    ? "text-[rgba(39,54,64,0.65)] hover:text-[var(--color-navy)]"
-    : "text-[rgba(39,54,64,0.66)] hover:text-[var(--color-navy)]";
+    ? "text-[var(--color-text-muted)] hover:text-[var(--color-navy)]"
+    : "text-[var(--color-text-muted)] hover:text-[var(--color-navy)]";
 
   return (
     <div className={wrapperClass} role="group" aria-label={ariaLabel}>
@@ -75,7 +75,7 @@ function LocaleSwitcher({
               {itemLocale}
             </button>
             {index === 0 ? (
-              <span className="mx-0.5 h-3 w-px bg-[rgba(30,62,82,0.16)]" aria-hidden="true" />
+              <span className="mx-0.5 h-3 w-px bg-[rgba(223,166,184,0.45)]" aria-hidden="true" />
             ) : null}
           </div>
         );
@@ -105,7 +105,7 @@ export function SiteHeader({
   }));
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[linear-gradient(180deg,rgba(248,244,236,0.95),rgba(248,244,236,0.86))] backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[linear-gradient(180deg,rgba(255,253,253,0.97),rgba(255,253,253,0.9))] backdrop-blur-md">
       <Container>
         <div className="hidden min-h-[88px] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-6 lg:grid xl:gap-8">
           <Link href="/" aria-label={brandName} className="inline-flex shrink-0 items-center py-1 text-[var(--color-navy)]">
@@ -130,8 +130,8 @@ export function SiteHeader({
                       href={item.href}
                       className={`inline-flex whitespace-nowrap rounded-[9px] px-2.5 py-1.5 text-[0.78rem] font-medium tracking-[0.01em] transition-colors xl:px-3 xl:text-[0.82rem] ${
                         isActive
-                          ? "bg-[rgba(220,232,221,0.68)] text-[var(--color-navy)]"
-                          : "text-[rgba(39,54,64,0.79)] hover:bg-[rgba(217,228,218,0.55)] hover:text-[var(--color-navy)]"
+                          ? "bg-[rgba(230,175,192,0.24)] text-[var(--color-navy)]"
+                          : "text-[var(--color-text-muted)] hover:bg-[rgba(191,221,226,0.32)] hover:text-[var(--color-navy)]"
                       }`}
                     >
                       {item.label}
@@ -153,7 +153,7 @@ export function SiteHeader({
 
             <Button
               href={cta.href}
-              className="rounded-[12px] border border-[rgba(248,244,236,0.42)] bg-[rgba(30,62,82,0.9)] px-3.5 py-[0.54rem] text-[0.76rem] font-semibold tracking-[0.02em] shadow-[0_7px_12px_rgba(30,62,82,0.12)] hover:bg-[#23495f] hover:shadow-[0_9px_15px_rgba(30,62,82,0.16)]"
+              className="rounded-[12px] border border-[rgba(223,166,184,0.55)] bg-[var(--color-primary)] px-3.5 py-[0.54rem] text-[0.76rem] font-semibold tracking-[0.02em] text-[var(--color-text-strong)] shadow-[0_7px_12px_rgba(223,166,184,0.24)] hover:bg-[var(--color-primary-strong)] hover:shadow-[0_9px_15px_rgba(223,166,184,0.32)]"
             >
               {cta.label}
             </Button>
@@ -176,7 +176,7 @@ export function SiteHeader({
             <button
               type="button"
               onClick={() => setOpen((current) => !current)}
-              className="inline-flex items-center justify-center rounded-[11px] border border-[rgba(30,62,82,0.1)] bg-[rgba(252,250,246,0.88)] px-3.5 py-[0.58rem] text-[0.82rem] font-medium text-[var(--color-navy)] shadow-[0_6px_14px_rgba(30,62,82,0.08)] backdrop-blur-sm"
+              className="inline-flex items-center justify-center rounded-[11px] border border-[var(--color-border)] bg-[rgba(255,253,253,0.92)] px-3.5 py-[0.58rem] text-[0.82rem] font-medium text-[var(--color-navy)] shadow-[0_6px_14px_rgba(223,166,184,0.18)] backdrop-blur-sm"
               aria-label={menuButtonLabel}
               aria-expanded={open}
             >
@@ -184,11 +184,11 @@ export function SiteHeader({
             </button>
 
             <div
-              className={`absolute right-0 top-[calc(100%+0.55rem)] z-50 w-[min(308px,calc(100vw-1.25rem))] origin-top-right rounded-[17px] border border-[rgba(30,62,82,0.1)] bg-[linear-gradient(170deg,rgba(252,250,246,0.98),rgba(227,236,226,0.65))] p-3.5 shadow-[0_16px_30px_rgba(30,62,82,0.12)] backdrop-blur-sm transition duration-200 motion-safe:transition-[opacity,transform] ${
+              className={`absolute right-0 top-[calc(100%+0.55rem)] z-50 w-[min(308px,calc(100vw-1.25rem))] origin-top-right rounded-[17px] border border-[var(--color-border)] bg-[linear-gradient(170deg,rgba(255,253,253,0.98),rgba(191,221,226,0.28))] p-3.5 shadow-[0_16px_30px_rgba(223,166,184,0.22)] backdrop-blur-sm transition duration-200 motion-safe:transition-[opacity,transform] ${
                 open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0"
               }`}
             >
-              <div className="mb-3 border-b border-[rgba(30,62,82,0.1)] pb-3">
+              <div className="mb-3 border-b border-[var(--color-border)] pb-3">
                 <LocaleSwitcher
                   locale={locale}
                   onChange={(nextLocale) => onLocaleChange?.(nextLocale)}
@@ -209,8 +209,8 @@ export function SiteHeader({
                           href={item.href}
                           className={`block rounded-[11px] px-3 py-2.5 text-[0.92rem] font-medium transition-colors ${
                             isActive
-                              ? "bg-[rgba(220,232,221,0.68)] text-[var(--color-navy)]"
-                              : "text-[var(--color-text-muted)] hover:bg-[rgba(217,228,218,0.55)] hover:text-[var(--color-navy)]"
+                              ? "bg-[rgba(230,175,192,0.24)] text-[var(--color-navy)]"
+                              : "text-[var(--color-text-muted)] hover:bg-[rgba(191,221,226,0.32)] hover:text-[var(--color-navy)]"
                           }`}
                           onClick={() => setOpen(false)}
                         >
@@ -224,7 +224,7 @@ export function SiteHeader({
 
               <Link
                 href={cta.href}
-                className="calm-cta calm-cta--primary mt-3 inline-flex w-full justify-center rounded-[12px] bg-[rgba(30,62,82,0.9)] px-4 py-2.5 text-sm font-semibold text-[#F8F4EC] shadow-[0_8px_16px_rgba(30,62,82,0.14)] transition-all duration-200 hover:bg-[#23495f] hover:shadow-[0_10px_18px_rgba(30,62,82,0.18)]"
+                className="calm-cta calm-cta--primary mt-3 inline-flex w-full justify-center rounded-[12px] bg-[var(--color-primary)] px-4 py-2.5 text-sm font-semibold text-[var(--color-text-strong)] shadow-[0_8px_16px_rgba(223,166,184,0.26)] transition-all duration-200 hover:bg-[var(--color-primary-strong)] hover:shadow-[0_10px_18px_rgba(223,166,184,0.32)]"
                 onClick={() => setOpen(false)}
               >
                 {cta.label}

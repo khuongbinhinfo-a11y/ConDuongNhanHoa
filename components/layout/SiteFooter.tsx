@@ -31,7 +31,7 @@ export function SiteFooter({
   copyrightText,
 }: SiteFooterProps) {
   return (
-    <footer className="mt-2 border-t border-[var(--color-border)] bg-[rgba(245,239,230,0.9)]">
+    <footer className="mt-2 border-t border-[var(--color-border)] bg-[rgba(255,253,253,0.94)]">
       <Container>
         <div className="grid gap-8 py-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)_minmax(0,1fr)] lg:gap-10">
           <div className="max-w-[360px] space-y-3">
@@ -82,7 +82,7 @@ export function SiteFooter({
           </div>
         </div>
 
-        <div className="border-t border-[rgba(31,65,88,0.1)] py-4">
+        <div className="border-t border-[var(--color-border)] py-4">
           <p className="text-xs text-[var(--color-text-muted)]">{copyrightText}</p>
         </div>
       </Container>

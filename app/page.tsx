@@ -4,14 +4,12 @@ import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { ClosingEditorialSection } from "@/components/sections/ClosingEditorialSection";
 import { EntryCardsEditorialSection } from "@/components/sections/EntryCardsEditorialSection";
-import { FeaturedPathsSectionI18n } from "@/components/sections/FeaturedPathsSectionI18n";
 import { HeroSectionEditorial } from "@/components/sections/HeroSectionEditorial";
 import { WhyWeExistSection } from "@/components/sections/WhyWeExistSection";
 import { homepageConfigI18n } from "@/data/homepageConfigI18n";
 import { whySectionI18n } from "@/data/siteContentI18n";
 import { useAppLocale } from "@/lib/useAppLocale";
 import { getSiteChrome } from "@/lib/siteChrome";
-import { commonI18n } from "@/locales/commonI18n";
 
 export default function HomePage() {
   const { locale, handleLocaleChange } = useAppLocale();
@@ -42,40 +40,8 @@ export default function HomePage() {
     title: homepageText.entrySection.cards[item.key].title,
     description: homepageText.entrySection.cards[item.key].description,
     ctaLabel: homepageText.entrySection.cards[item.key].cta,
+    subBranches: homepageText.entrySection.cards[item.key].subBranches,
   }));
-
-  const focusContent = {
-    title: homepageText.focusSection.title,
-    subtitle: homepageText.focusSection.subtitle,
-    cards: homepageConfigI18n.focusCards.map((item) => ({
-      href: item.href,
-      title: homepageText.focusSection.cards[item.key].title,
-      description: homepageText.focusSection.cards[item.key].description,
-      ctaLabel: homepageText.focusSection.cards[item.key].cta,
-    })),
-  };
-
-  const nutritionFeaturedContent = {
-    title: homepageText.nutritionFeaturedSection.title,
-    subtitle: homepageText.nutritionFeaturedSection.subtitle,
-    cards: homepageConfigI18n.nutritionFeaturedCards.map((item) => ({
-      href: item.href,
-      title: homepageText.nutritionFeaturedSection.cards[item.key].title,
-      description: homepageText.nutritionFeaturedSection.cards[item.key].description,
-      ctaLabel: homepageText.nutritionFeaturedSection.cards[item.key].cta,
-    })),
-  };
-
-  const expansionContent = {
-    title: homepageText.expansionSection.title,
-    subtitle: homepageText.expansionSection.subtitle,
-    cards: homepageConfigI18n.expansionCards.map((item) => ({
-      href: item.href,
-      title: homepageText.expansionSection.cards[item.key].title,
-      description: homepageText.expansionSection.cards[item.key].description,
-      ctaLabel: homepageText.expansionSection.cards[item.key].cta,
-    })),
-  };
 
   const closingContent = {
     title: homepageText.endingSection.title,
@@ -107,24 +73,6 @@ export default function HomePage() {
           title={homepageText.entrySection.title}
           leadLabel={homepageText.entrySection.leadLabel}
           cards={entryCards}
-        />
-        <FeaturedPathsSectionI18n
-          content={{
-            ...focusContent,
-            featuredTagLabel: commonI18n[locale].articles.featuredGuide,
-          }}
-        />
-        <FeaturedPathsSectionI18n
-          content={{
-            ...nutritionFeaturedContent,
-            featuredTagLabel: commonI18n[locale].articles.featuredGuide,
-          }}
-        />
-        <FeaturedPathsSectionI18n
-          content={{
-            ...expansionContent,
-            featuredTagLabel: commonI18n[locale].articles.featuredGuide,
-          }}
         />
         <ClosingEditorialSection content={closingContent} />
       </main>

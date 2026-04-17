@@ -10,20 +10,27 @@ export const homepageI18n = {
     hero: {
       eyebrow: "Nền tảng nội dung thiện lành",
       title: brandI18n.vi.name,
-      subtitle: "Nền tảng nội dung thiện lành cho đời sống tích cực, bắt đầu từ gốc rễ.",
-      emphasis: "Giai đoạn đầu tập trung vào Dinh dưỡng thiện lành.",
+      subtitle: "Nền tảng nội dung thiện lành cho đời sống tích cực, đi từ điều gần gũi và thực hành được.",
+      emphasis: "Hiện tại website tập trung rõ 3 cây chính, với Dinh dưỡng thiện lành là hướng đi sâu trước.",
       primaryCta: "Khám phá Dinh dưỡng thiện lành",
-      secondaryCta: "Xem các nhánh nội dung",
+      secondaryCta: "Xem 3 cây chính",
       chatHint: "Bắt đầu từ một điều gần với mình.",
     },
     entrySection: {
-      title: "Bảy nhánh nội dung thiện lành",
-      leadLabel: "Nhánh ưu tiên giai đoạn đầu",
+      title: "Ba cây nội dung chính",
+      leadLabel: "Trọng tâm giai đoạn đầu",
       cards: {
         nutrition: {
           title: "Dinh dưỡng thiện lành",
-          description: "Quay về với dinh dưỡng từ gốc rễ.",
+          description: "Quay về với dinh dưỡng từ gốc rễ, đi từ kiến thức nền đến thực hành hằng ngày.",
           cta: "Vào nhánh",
+          subBranches: [
+            "Kiến thức nền tảng",
+            "Sữa và những điều thường tin",
+            "Chất đạm hằng ngày",
+            "Đái tháo đường – béo phì – chuyển hóa",
+            "Ung thư và góc nhìn từ bữa ăn",
+          ],
         },
         medicine: {
           title: "Y học thiện lành",
@@ -31,9 +38,16 @@ export const homepageI18n = {
           cta: "Xem định hướng",
         },
         action: {
-          title: "Hành động thiện lành",
-          description: "Nuôi dưỡng những hành động tích cực, tử tế và thiết thực.",
-          cta: "Xem định hướng",
+          title: "Ứng xử thiện lành",
+          description: "Nuôi dưỡng cách ứng xử tử tế, sáng rõ và thực tế trong từng mối quan hệ.",
+          cta: "Vào nhánh",
+          subBranches: [
+            "Ứng xử với bản thân",
+            "Ứng xử trong gia đình",
+            "Lời nói và giao tiếp",
+            "Ứng xử ngoài xã hội",
+            "Tình huống thường gặp",
+          ],
         },
         speech: {
           title: "Lời nói thiện lành",
@@ -47,8 +61,17 @@ export const homepageI18n = {
         },
         entertainment: {
           title: "Giải trí thiện lành",
-          description: "Chọn lọc phim, sách, video và nội dung giải trí có giá trị tích cực.",
-          cta: "Xem định hướng",
+          description: "Chọn lọc nội dung giải trí tích cực, thư giãn lành mạnh và nuôi dưỡng cảm hứng sống.",
+          cta: "Vào nhánh",
+          subBranches: [
+            "Tin đáng chú ý",
+            "Vui cười",
+            "Kỹ thuật thời hoàng kim",
+            "Trang sức – Thời trang – Mỹ phẩm",
+            "Vẻ đẹp thiên nhiên",
+            "Xứ sở thần tiên của trẻ thơ",
+            "Tâm linh và đời sống",
+          ],
         },
         laughter: {
           title: "Cõi vui cười",
@@ -139,10 +162,11 @@ export const homepageI18n = {
       },
     },
     endingSection: {
-      title: "Bắt đầu từ một nhánh, đi sâu đến gốc rễ.",
-      subtitle: "Dinh dưỡng thiện lành là điểm tập trung của giai đoạn này.",
-      description: "Khi nền tảng đủ rõ và đủ chắc, các nhánh còn lại sẽ mở rộng cùng một tiêu chuẩn biên tập.",
-      cta: "Vào nhánh Dinh dưỡng thiện lành",
+      title: "Bắt đầu từ cây phù hợp nhất với bạn lúc này.",
+      subtitle: "Ba cây chính giúp việc đọc dễ định hướng hơn, không bị loãng.",
+      description:
+        "Các nhánh cũ vẫn được bảo toàn để mở rộng sau. Hiện tại, bạn có thể bắt đầu nhanh từ Dinh dưỡng thiện lành, Ứng xử thiện lành hoặc Giải trí thiện lành.",
+      cta: "Khám phá Dinh dưỡng thiện lành",
     },
   },
   en: {
@@ -154,20 +178,27 @@ export const homepageI18n = {
     hero: {
       eyebrow: "Wholesome Content Platform",
       title: brandI18n.en.name,
-      subtitle: "A wholesome content platform for positive living, starting from the roots.",
-      emphasis: "The first phase focuses on Wholesome Nutrition.",
+      subtitle: "A wholesome content platform for positive living, grounded in practical and humane directions.",
+      emphasis: "The current public structure highlights three main pillars, with Wholesome Nutrition as the deep-focus track.",
       primaryCta: "Explore Wholesome Nutrition",
-      secondaryCta: "View content branches",
+      secondaryCta: "View the 3 main pillars",
       chatHint: "Begin with something that feels close to you.",
     },
     entrySection: {
-      title: "Seven wholesome content branches",
-      leadLabel: "Current phase priority",
+      title: "Three main content pillars",
+      leadLabel: "Current phase focus",
       cards: {
         nutrition: {
           title: "Wholesome Nutrition",
-          description: "Returning to nutrition at its roots.",
+          description: "Returning to nutrition at its roots, from core understanding to daily practice.",
           cta: "Open branch",
+          subBranches: [
+            "Foundational Knowledge",
+            "Milk and Common Beliefs",
+            "Daily Protein",
+            "Diabetes – Obesity – Metabolism",
+            "Cancer and Meal-Based Perspectives",
+          ],
         },
         medicine: {
           title: "Wholesome Medicine",
@@ -175,9 +206,16 @@ export const homepageI18n = {
           cta: "View direction",
         },
         action: {
-          title: "Wholesome Actions",
-          description: "Cultivating positive, kind, and practical actions.",
-          cta: "View direction",
+          title: "Wholesome Conduct",
+          description: "Cultivating thoughtful and kind conduct across daily relationships and situations.",
+          cta: "Open branch",
+          subBranches: [
+            "Conduct with Yourself",
+            "Conduct in Family Life",
+            "Speech and Communication",
+            "Conduct in Society",
+            "Common Situations",
+          ],
         },
         speech: {
           title: "Wholesome Speech",
@@ -191,8 +229,17 @@ export const homepageI18n = {
         },
         entertainment: {
           title: "Wholesome Entertainment",
-          description: "Curating films, books, videos, and media with positive wholesome value.",
-          cta: "View direction",
+          description: "Curating positive entertainment, healthy relaxation, and uplifting media habits.",
+          cta: "Open branch",
+          subBranches: [
+            "Noteworthy News",
+            "Laughter",
+            "Golden Age Technology",
+            "Jewelry – Fashion – Cosmetics",
+            "Beauty of Nature",
+            "Wonderland for Children",
+            "Spirituality and Daily Life",
+          ],
         },
         laughter: {
           title: "Joyful Laughter",
@@ -283,10 +330,11 @@ export const homepageI18n = {
       },
     },
     endingSection: {
-      title: "Start with one branch, then go deeper to the roots.",
-      subtitle: "Wholesome Nutrition is the focus in this phase.",
-      description: "Once the foundation is solid, the remaining branches will expand with the same editorial quality.",
-      cta: "Enter Wholesome Nutrition",
+      title: "Begin with the pillar that feels closest to you right now.",
+      subtitle: "Three main pillars keep the journey clear and readable.",
+      description:
+        "Older branches are preserved for future phases. For now, start with Wholesome Nutrition, Wholesome Conduct, or Wholesome Entertainment.",
+      cta: "Explore Wholesome Nutrition",
     },
   },
 } as const;

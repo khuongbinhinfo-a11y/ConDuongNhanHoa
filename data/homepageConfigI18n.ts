@@ -25,12 +25,8 @@ export const homepageConfigI18n = {
   headerLinks: [
     { key: "home", href: "/" },
     { key: "nutrition", href: "/dinh-duong-thien-lanh" },
-    { key: "medicine", href: "/y-hoc-thien-lanh" },
     { key: "action", href: "/hanh-dong-thien-lanh" },
-    { key: "speech", href: "/loi-noi-thien-lanh" },
-    { key: "thought", href: "/suy-nghi-thien-lanh" },
     { key: "entertainment", href: "/giai-tri-thien-lanh" },
-    { key: "laughter", href: "/coi-vui-cuoi" },
     { key: "about", href: "/gioi-thieu" },
   ] as const satisfies ReadonlyArray<{ key: HeaderLinkI18nKey; href: string }>,
 
@@ -50,12 +46,8 @@ export const homepageConfigI18n = {
 
   entryCards: [
     { key: "nutrition", href: "/dinh-duong-thien-lanh" },
-    { key: "medicine", href: "/y-hoc-thien-lanh" },
     { key: "action", href: "/hanh-dong-thien-lanh" },
-    { key: "speech", href: "/loi-noi-thien-lanh" },
-    { key: "thought", href: "/suy-nghi-thien-lanh" },
     { key: "entertainment", href: "/giai-tri-thien-lanh" },
-    { key: "laughter", href: "/coi-vui-cuoi" },
   ] as const satisfies ReadonlyArray<{ key: EntryCardI18nKey; href: string }>,
 
   focusCards: [
