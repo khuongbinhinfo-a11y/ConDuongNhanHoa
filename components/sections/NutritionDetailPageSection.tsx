@@ -24,7 +24,14 @@ export function NutritionDetailPageSection({ content, locale }: NutritionDetailP
     <section className="pb-20 pt-10 lg:pb-24 lg:pt-14">
       <Container>
         <div className="mx-auto max-w-[1020px] space-y-14 lg:space-y-18">
-          <section>
+          {/* Breadcrumb */}
+          <nav className="text-[0.8rem] text-[var(--color-text-muted)]">
+            <Link href="/dinh-duong-thien-lanh" className="transition-colors hover:text-[var(--color-navy)]">
+              ← {locale === "vi" ? "Dinh dưỡng thiện lành" : "Wholesome Nutrition"}
+            </Link>
+          </nav>
+
+          <section className="-mt-6">
             <div className={`grid items-start gap-8 ${heroSrc ? "lg:grid-cols-[1fr_360px]" : ""}`}>
               <div className="max-w-[620px]">
                 <p className={eyebrow}>{t(content.heroBadge, locale)}</p>
@@ -60,7 +67,7 @@ export function NutritionDetailPageSection({ content, locale }: NutritionDetailP
           </section>
 
           {(content.openingNoteTitle || content.openingNoteBody) && (
-            <section className="rounded-[12px] border border-[var(--color-border)] bg-[rgba(255,255,255,0.82)] px-6 py-5">
+            <section className="rounded-[12px] border-l-[3px] border-l-[var(--color-teal)] border border-[var(--color-border)] bg-[rgba(255,255,255,0.82)] px-6 py-5 shadow-[0_1px_4px_rgba(0,0,0,0.04)]">
               {content.openingNoteTitle && (
                 <h2 className="text-[1rem] font-semibold text-[var(--color-text-strong)]">
                   {t(content.openingNoteTitle, locale)}
@@ -90,7 +97,7 @@ export function NutritionDetailPageSection({ content, locale }: NutritionDetailP
           </section>
 
           <section>
-            <p className={eyebrow}>{locale === "vi" ? "Các câu chuyện nhỏ / ý clip nhỏ" : "Small Story Angles / Clip Seeds"}</p>
+            <p className={eyebrow}>{locale === "vi" ? "Hướng triển khai nội dung" : "Content Development Directions"}</p>
             <h2 className="mt-2 text-[1.35rem] font-semibold leading-[1.22] text-[var(--color-text-strong)] lg:text-[1.5rem]">
               {t(content.storySectionTitle, locale)}
             </h2>
@@ -102,7 +109,7 @@ export function NutritionDetailPageSection({ content, locale }: NutritionDetailP
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
               {content.storyCards.map((card) => (
-                <article key={card.id} className="flex flex-col rounded-[12px] border border-[var(--color-border)] bg-white p-5">
+                <article key={card.id} className="flex flex-col rounded-[12px] border border-[var(--color-border)] bg-white p-5 shadow-[0_1px_4px_rgba(0,0,0,0.04)] transition-shadow hover:shadow-[0_2px_8px_rgba(0,0,0,0.07)]">
                   <h3 className="text-[0.96rem] font-semibold leading-[1.35] text-[var(--color-text-strong)]">
                     {t(card.title, locale)}
                   </h3>
@@ -124,7 +131,7 @@ export function NutritionDetailPageSection({ content, locale }: NutritionDetailP
 
           <section>
             <p className={eyebrow}>{t(content.quickQuestionSectionTitle, locale)}</p>
-            <dl className="mt-5 space-y-6 rounded-[12px] border border-[var(--color-border)] bg-white p-6">
+            <dl className="mt-5 space-y-6 rounded-[12px] border border-[var(--color-border)] bg-white p-6 shadow-[0_1px_4px_rgba(0,0,0,0.04)]">
               {content.quickQuestions.map((item, index) => (
                 <div key={index}>
                   <dt className="text-[0.95rem] font-semibold leading-[1.4] text-[var(--color-text-strong)]">

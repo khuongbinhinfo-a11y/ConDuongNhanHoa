@@ -42,16 +42,16 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
     slug: "sua-va-nhung-dieu-thuong-duoc-tin",
     parentTopicId: "sua-va-nhung-dieu-thuong-duoc-tin",
     title: { vi: "Những điều thường được tin về sữa", en: "Common Beliefs About Milk" },
-    heroBadge: { vi: "Trục WTH · Sữa", en: "WTH Axis · Milk" },
+    heroBadge: { vi: "Góc nhìn từ WTH · Sữa", en: "Perspective from WTH · Milk" },
     heroTitle: { vi: "Sữa và những điều thường được tin", en: "Milk and the Things Commonly Believed" },
     heroDescription: {
       vi: "Từ góc nhìn của WTH, sữa không chỉ là một thực phẩm. Nó còn là một niềm tin được lặp lại qua tuổi thơ, quảng bá, trường học và những khuyến nghị dinh dưỡng quen thuộc đến mức rất ít người còn muốn hỏi lại.",
       en: "From the perspective of WTH, milk is not only a food. It is also a belief repeated through childhood, advertising, schools, and familiar nutrition recommendations until very few people still want to question it.",
     },
     heroImageSlotId: "dinh-duong.topic.sua-va-nhung-dieu-thuong-tin",
-    openingNoteTitle: { vi: "Đọc page này theo cách nào", en: "How to read this page" },
+    openingNoteTitle: { vi: "Cách tiếp cận nội dung này", en: "How to approach this content" },
     openingNoteBody: {
-      vi: "Page này không nhằm kết luận sữa là tốt hay xấu theo một đáp án tuyệt đối. Mục tiêu là nhìn lại niềm tin quanh sữa: nó đến từ đâu, được củng cố ra sao, và vì sao nhiều người cảm thấy bất an khi phải đặt lại câu hỏi.",
+      vi: "Nội dung dưới đây không nhằm kết luận sữa là tốt hay xấu theo một đáp án tuyệt đối. Mục tiêu là nhìn lại niềm tin quanh sữa: nó đến từ đâu, được củng cố ra sao, và vì sao nhiều người cảm thấy bất an khi phải đặt lại câu hỏi.",
       en: "This page does not aim to conclude that milk is good or bad with one absolute answer. The goal is to revisit the beliefs around milk: where they come from, how they are reinforced, and why so many people feel uneasy when they have to question them.",
     },
     filmStoryTitle: { vi: "Phim đang kể gì", en: "What the film is saying" },
@@ -64,10 +64,10 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
       vi: "Niềm tin về sữa có hoàn toàn đến từ bằng chứng độc lập, hay còn được nuôi lớn bởi lợi ích ngành, thói quen xã hội và ký ức tuổi thơ? Khi một thực phẩm đã quá quen, liệu con người còn đủ khoảng cách để nhìn lại nó như một lựa chọn, thay vì một điều hiển nhiên?",
       en: "Does belief in milk come entirely from independent evidence, or is it also enlarged by industry interests, social habits, and childhood memory? When a food becomes too familiar, can people still step back enough to see it as a choice rather than as something self-evident?",
     },
-    storySectionTitle: { vi: "Những câu chuyện nhỏ có thể phát triển tiếp", en: "Small stories that can be developed next" },
+    storySectionTitle: { vi: "Hướng triển khai nội dung", en: "Content development directions" },
     storySectionDescription: {
-      vi: "Các cụm dưới đây không phải kết luận cuối cùng. Đây là những hướng nhỏ có thể mở thành clip, bài ngắn hoặc chuỗi nội dung tiếp theo.",
-      en: "The clusters below are not final conclusions. They are smaller paths that can become clips, short pieces, or follow-up content series.",
+      vi: "Các chủ đề dưới đây không phải kết luận cuối cùng. Đây là những hướng nhỏ có thể mở thành bài ngắn hoặc chuỗi nội dung tiếp theo.",
+      en: "The topics below are not final conclusions. They are smaller paths that can become short pieces or follow-up content series.",
     },
     storyCards: [
       {
@@ -185,16 +185,16 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
     slug: "chat-dam-hieu-sao-cho-dung",
     parentTopicId: "chat-dam-hang-ngay",
     title: { vi: "Chất đạm: hiểu sao cho đúng", en: "Protein: Understanding It Right" },
-    heroBadge: { vi: "Trục WTH · Chất đạm", en: "WTH Axis · Protein" },
+    heroBadge: { vi: "Góc nhìn từ WTH · Chất đạm", en: "Perspective from WTH · Protein" },
     heroTitle: { vi: "Chất đạm và nỗi lo thiếu luôn đến quá sớm", en: "Protein and the Fear That Arrives Too Early" },
     heroDescription: {
       vi: "Trong hầu hết mọi cuộc trò chuyện về thay đổi cách ăn, câu hỏi thiếu đạm thường xuất hiện đầu tiên. WTH chạm đúng nỗi sợ đó, không phải để phủ nhận vai trò của đạm, mà để hỏi lại: điều cơ thể thật sự cần đang được hiểu như thế nào?",
       en: "In most conversations about changing the way we eat, fear of protein deficiency appears first. WTH touches that fear directly, not to deny the role of protein, but to ask again: how are the body’s actual needs being understood?",
     },
     heroImageSlotId: "dinh-duong.topic.chat-dam-hang-ngay",
-    openingNoteTitle: { vi: "Đọc page này theo cách nào", en: "How to read this page" },
+    openingNoteTitle: { vi: "Cách tiếp cận nội dung này", en: "How to approach this content" },
     openingNoteBody: {
-      vi: "Page này không nhằm chứng minh một chế độ ăn là đúng tuyệt đối. Nó dùng góc nhìn từ WTH để nhìn lại nỗi sợ thiếu đạm: nỗi sợ đó đến từ cơ thể, từ thói quen, hay từ cách xã hội đã dạy mình phải lo?",
+      vi: "Nội dung dưới đây không nhằm chứng minh một chế độ ăn là đúng tuyệt đối. Góc nhìn từ WTH được dùng để nhìn lại nỗi sợ thiếu đạm: nỗi sợ đó đến từ cơ thể, từ thói quen, hay từ cách xã hội đã dạy mình phải lo?",
       en: "This page is not trying to prove one eating pattern is absolutely correct. It uses the perspective opened by WTH to revisit fear around protein: does that fear come from the body, from habit, or from the way society taught us to worry?",
     },
     filmStoryTitle: { vi: "Phim đang kể gì", en: "What the film is saying" },
@@ -207,10 +207,10 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
       vi: "Cơ thể thực sự cần bao nhiêu đạm? Nguồn thực vật có đủ đáp ứng không? Và vì sao con người lại rất dễ hoảng khi chỉ cần ai đó gợi ý ăn ít thịt hơn?",
       en: "How much protein does the body truly need? Can plant sources meet that need? And why do people become anxious so quickly when someone merely suggests eating less meat?",
     },
-    storySectionTitle: { vi: "Những câu chuyện nhỏ có thể phát triển tiếp", en: "Small stories that can be developed next" },
+    storySectionTitle: { vi: "Hướng triển khai nội dung", en: "Content development directions" },
     storySectionDescription: {
-      vi: "Các hướng dưới đây nên được nhìn như hạt giống để làm clip ngắn, bài ngắn và chuỗi giải thích dễ hiểu.",
-      en: "The directions below should be seen as seeds for short clips, short articles, and accessible explanation series.",
+      vi: "Các hướng dưới đây nên được nhìn như điểm khởi đầu để phát triển bài ngắn và chuỗi giải thích dễ hiểu.",
+      en: "The directions below should be seen as starting points for short articles and accessible explanation series.",
     },
     storyCards: [
       {
@@ -328,16 +328,16 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
     slug: "suc-khoe-chuyen-hoa-va-bua-an-hang-ngay",
     parentTopicId: "suc-khoe-chuyen-hoa",
     title: { vi: "Sức khỏe chuyển hóa và bữa ăn hằng ngày", en: "Metabolic Health and Daily Eating" },
-    heroBadge: { vi: "Trục WTH · Chuyển hóa", en: "WTH Axis · Metabolism" },
+    heroBadge: { vi: "Góc nhìn từ WTH · Chuyển hóa", en: "Perspective from WTH · Metabolism" },
     heroTitle: { vi: "Bữa ăn hằng ngày và những gì tích lũy âm thầm", en: "Daily Meals and What Quietly Accumulates" },
     heroDescription: {
       vi: "Đái tháo đường, béo phì và rối loạn chuyển hóa thường bị kể như câu chuyện của một thủ phạm duy nhất. WTH buộc người xem nhìn rộng hơn: bữa ăn, thói quen, môi trường thực phẩm và nhịp sống đang đan vào nhau như thế nào.",
       en: "Diabetes, obesity, and metabolic disorders are often told as the story of one single culprit. WTH forces the viewer to look wider: how meals, habits, the food environment, and life rhythms intertwine.",
     },
     heroImageSlotId: "dinh-duong.topic.dai-thao-duong-beo-phi-chuyen-hoa",
-    openingNoteTitle: { vi: "Đọc page này theo cách nào", en: "How to read this page" },
+    openingNoteTitle: { vi: "Cách tiếp cận nội dung này", en: "How to approach this content" },
     openingNoteBody: {
-      vi: "Page này không tìm một thủ phạm duy nhất cho bệnh chuyển hóa. Nó mở ra một cách nhìn rộng hơn: điều gì đang tích lũy quá lâu trong đời sống thường ngày mà mình ít khi nhận ra?",
+      vi: "Nội dung dưới đây không tìm một thủ phạm duy nhất cho bệnh chuyển hóa. Mục tiêu là mở ra một cách nhìn rộng hơn: điều gì đang tích lũy quá lâu trong đời sống thường ngày mà mình ít khi nhận ra?",
       en: "This page is not searching for one single culprit behind metabolic disease. It opens a wider frame: what has been accumulating too long in ordinary life without being noticed?",
     },
     filmStoryTitle: { vi: "Phim đang kể gì", en: "What the film is saying" },
@@ -350,10 +350,10 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
       vi: "Đái tháo đường, béo phì và các vấn đề chuyển hóa là câu chuyện của lựa chọn cá nhân, hay còn là hệ quả của một môi trường thực phẩm đã được định hình từ trước? Và nếu vậy, mình nên bắt đầu nhìn lại từ đâu?",
       en: "Are diabetes, obesity, and metabolic problems stories of individual choice alone, or are they also the result of a food environment shaped long before personal choice enters the picture? If so, where should we begin looking again?",
     },
-    storySectionTitle: { vi: "Những câu chuyện nhỏ có thể phát triển tiếp", en: "Small stories that can be developed next" },
+    storySectionTitle: { vi: "Hướng triển khai nội dung", en: "Content development directions" },
     storySectionDescription: {
-      vi: "Các cụm dưới đây có thể phát triển thành clip, bài ngắn hoặc chuỗi nội dung đi từ gần đến sâu.",
-      en: "The clusters below can grow into clips, short pieces, or content series that move from the familiar into the deeper layers.",
+      vi: "Các chủ đề dưới đây có thể phát triển thành bài ngắn hoặc chuỗi nội dung đi từ gần đến sâu.",
+      en: "The topics below can grow into short pieces or content series that move from the familiar into the deeper layers.",
     },
     storyCards: [
       {

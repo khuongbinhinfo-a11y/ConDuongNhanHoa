@@ -7,6 +7,7 @@ export const imageManifest: Record<string, string> = {
   "dinh-duong.topic.kien-thuc-nen-tang": "/images/dinh-duong/topics/topic-kien-thuc-nen-tang.png",
   "dinh-duong.topic.chat-dam-hang-ngay": "/images/dinh-duong/topics/topic-chat-dam-hang-ngay.webp",
   "dinh-duong.topic.dai-thao-duong-beo-phi-chuyen-hoa": "/images/dinh-duong/topics/topic-dai-thao-duong-beo-phi-chuyen-hoa.webp",
+  "dinh-duong.topic.sua-va-nhung-dieu-thuong-tin": "/images/dinh-duong/topics/topic-sua-va-nhung-dieu-thuong-tin.svg",
   "dinh-duong.topic.ung-thu-va-goc-nhin-tu-bua-an": "/images/dinh-duong/topics/topic-ung-thu-va-goc-nhin-tu-bua-an.webp",
   "ung-xu.hero": "/images/ung-xu/hero-ung-xu-thien-lanh.webp",
   "ung-xu.topic.hieu-minh-de-song-nhe-hon": "/images/ung-xu/topics/topic-hieu-minh-de-song-nhe-hon.webp",

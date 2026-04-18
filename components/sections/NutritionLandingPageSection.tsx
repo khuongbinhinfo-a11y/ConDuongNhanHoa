@@ -66,23 +66,25 @@ export function NutritionLandingPageSection({
               )}
             </div>
 
-            <div className="mt-10 flex flex-wrap items-start gap-x-10 gap-y-4 border-t border-[var(--color-border)] pt-6">
-              <p className="text-[0.82rem] font-semibold text-[var(--color-text-strong)]">
-                {t(content.introStrip.title, locale)}
-              </p>
-              <ul className="flex flex-wrap gap-x-8 gap-y-2">
-                {content.introStrip.items.map((item, index) => (
-                  <li key={index} className="flex items-center gap-2 text-[0.8rem] text-[var(--color-text-muted)]">
-                    <span className="h-1 w-1 shrink-0 rounded-full bg-[var(--color-teal)]" aria-hidden="true" />
-                    {t(item, locale)}
-                  </li>
-                ))}
-              </ul>
+            <div className="mt-10 grid gap-4 border-t border-[var(--color-border)] pt-7 sm:grid-cols-3">
+              {content.introStrip.items.map((item, index) => {
+                const icons = ["○", "◇", "→"];
+                return (
+                  <div key={index} className="flex items-start gap-3">
+                    <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[rgba(191,221,226,0.22)] text-[0.7rem] text-[var(--color-teal)]" aria-hidden="true">
+                      {icons[index] ?? "·"}
+                    </span>
+                    <span className="text-[0.82rem] leading-[1.55] text-[var(--color-text-muted)]">
+                      {t(item, locale)}
+                    </span>
+                  </div>
+                );
+              })}
             </div>
           </section>
 
           <section id="theo-chu-de">
-            <p className={eyebrow}>{locale === "vi" ? "5 cụm chủ đề chính" : "Five Main Topic Clusters"}</p>
+            <p className={eyebrow}>{locale === "vi" ? "5 chủ đề trọng tâm" : "Five Key Topics"}</p>
             <div className="mt-6 grid auto-rows-fr gap-5 md:grid-cols-2 xl:grid-cols-3">
               {content.topics.map((topic) => {
                 const topicImageSrc = topic.imageSlotId
@@ -139,7 +141,7 @@ export function NutritionLandingPageSection({
           </section>
 
           <section>
-            <p className={eyebrow}>{locale === "vi" ? "3 trục WTH" : "Three WTH Axes"}</p>
+            <p className={eyebrow}>{locale === "vi" ? "Góc nhìn từ WTH" : "Perspectives from WTH"}</p>
             <h2 className="mt-2 text-[1.35rem] font-semibold leading-[1.22] text-[var(--color-text-strong)] lg:text-[1.5rem]">
               {t(content.wthSection.title, locale)}
             </h2>
@@ -150,52 +152,41 @@ export function NutritionLandingPageSection({
             )}
 
             <div className="mt-8 grid gap-5 lg:grid-cols-3">
-              {content.wthSection.cards.map((card) => (
+              {content.wthSection.cards.map((card, cardIndex) => (
                 <article
                   key={card.id}
-                  className="flex flex-col rounded-[12px] border border-[var(--color-border)] bg-[linear-gradient(160deg,rgba(191,221,226,0.08),rgba(255,255,255,0.75))] p-6"
+                  className="flex flex-col rounded-[14px] border border-[var(--color-border)] bg-white p-6 shadow-[0_2px_12px_rgba(36,52,71,0.04)]"
                 >
-                  <h3 className="text-[0.95rem] font-semibold text-[var(--color-text-strong)]">
+                  <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-[rgba(191,221,226,0.2)] text-[0.72rem] font-bold text-[var(--color-teal)]">
+                    {String(cardIndex + 1).padStart(2, "0")}
+                  </div>
+
+                  <h3 className="text-[1rem] font-semibold leading-[1.3] text-[var(--color-text-strong)]">
                     {t(card.title, locale)}
                   </h3>
 
-                  <div className="mt-4">
-                    <p className="text-[0.64rem] font-semibold uppercase tracking-[0.12em] text-[var(--color-teal)]">
-                      {locale === "vi" ? "Phim đang kể gì" : "What the film is saying"}
-                    </p>
-                    <p className="mt-1.5 text-[0.88rem] leading-[1.7] text-[var(--color-text-strong)]">
-                      {t(card.story, locale)}
-                    </p>
-                  </div>
+                  <p className="mt-3 text-[0.86rem] leading-[1.7] text-[var(--color-text-muted)]">
+                    {t(card.story, locale)}
+                  </p>
 
-                  <div className="mt-4">
-                    <p className="text-[0.64rem] font-semibold uppercase tracking-[0.12em] text-[var(--color-text-muted)] opacity-65">
-                      {locale === "vi" ? "Phim đang đặt lại câu hỏi gì" : "What question the film reopens"}
-                    </p>
-                    <p className="mt-1.5 text-[0.86rem] italic leading-[1.65] text-[var(--color-text-muted)]">
-                      {t(card.challengeQuestion, locale)}
-                    </p>
-                  </div>
+                  <p className="mt-3 border-l-2 border-[rgba(191,221,226,0.5)] pl-3 text-[0.84rem] italic leading-[1.6] text-[var(--color-text-muted)] opacity-85">
+                    {t(card.challengeQuestion, locale)}
+                  </p>
 
-                  <div className="mt-4">
-                    <p className="text-[0.64rem] font-semibold uppercase tracking-[0.12em] text-[var(--color-teal)] opacity-75">
-                      {locale === "vi" ? "Các ý có thể phát triển tiếp" : "Ideas that can be developed next"}
-                    </p>
-                    <ul className="mt-1.5 space-y-1.5">
-                      {card.seedIdeas.map((idea, index) => (
-                        <li key={index} className="flex gap-2 text-[0.8rem] leading-[1.5] text-[var(--color-text-muted)]">
-                          <span className="mt-[2px] shrink-0 text-[var(--color-teal)]" aria-hidden="true">·</span>
-                          {t(idea, locale)}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <ul className="mt-4 space-y-1.5">
+                    {card.seedIdeas.slice(0, 3).map((idea, index) => (
+                      <li key={index} className="flex gap-2 text-[0.78rem] leading-[1.5] text-[var(--color-text-muted)]">
+                        <span className="mt-[2px] shrink-0 text-[var(--color-teal)]" aria-hidden="true">·</span>
+                        {t(idea, locale)}
+                      </li>
+                    ))}
+                  </ul>
 
                   <Link
                     href={card.href}
-                    className="mt-auto pt-5 text-[0.8rem] font-medium text-[var(--color-navy)] opacity-60 transition-opacity hover:opacity-100"
+                    className="mt-auto pt-5 text-[0.82rem] font-medium text-[var(--color-navy)] transition-opacity hover:opacity-80"
                   >
-                    {t(card.linkLabel, locale)}
+                    {t(card.linkLabel, locale)} →
                   </Link>
                 </article>
               ))}
@@ -203,7 +194,7 @@ export function NutritionLandingPageSection({
           </section>
 
           <section>
-            <p className={eyebrow}>{locale === "vi" ? "Kho ý clip / seed content" : "Clip Seed Library"}</p>
+            <p className={eyebrow}>{locale === "vi" ? "Gợi ý triển khai nội dung" : "Content Development Ideas"}</p>
             <h2 className="mt-2 text-[1.35rem] font-semibold leading-[1.22] text-[var(--color-text-strong)] lg:text-[1.5rem]">
               {t(content.seedSection.title, locale)}
             </h2>
@@ -213,18 +204,18 @@ export function NutritionLandingPageSection({
               </p>
             )}
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {content.seedSection.cards.map((card) => (
-                <article key={card.id} className="flex flex-col rounded-[10px] border border-[var(--color-border)] bg-white p-5">
-                  <h3 className="text-[0.92rem] font-semibold leading-[1.35] text-[var(--color-text-strong)]">
+                <article key={card.id} className="flex flex-col rounded-[10px] border border-[var(--color-border)] bg-white px-5 py-4">
+                  <h3 className="text-[0.88rem] font-semibold leading-[1.35] text-[var(--color-text-strong)]">
                     {t(card.title, locale)}
                   </h3>
-                  <p className="mt-2.5 text-[0.84rem] leading-[1.65] text-[var(--color-text-muted)]">
+                  <p className="mt-2 text-[0.82rem] leading-[1.6] text-[var(--color-text-muted)]">
                     {t(card.lead, locale)}
                   </p>
-                  <ul className="mt-3 space-y-1.5">
+                  <ul className="mt-2.5 space-y-1">
                     {card.prompts.map((prompt, index) => (
-                      <li key={index} className="flex gap-2 text-[0.78rem] leading-[1.5] text-[var(--color-text-muted)] opacity-85">
+                      <li key={index} className="flex gap-2 text-[0.76rem] leading-[1.5] text-[var(--color-text-muted)] opacity-80">
                         <span className="mt-[2px] shrink-0 text-[var(--color-teal)]" aria-hidden="true">·</span>
                         {t(prompt, locale)}
                       </li>
@@ -235,7 +226,7 @@ export function NutritionLandingPageSection({
                       href={card.href}
                       className="mt-auto pt-4 text-[0.78rem] font-medium text-[var(--color-navy)] opacity-65 transition-opacity hover:opacity-100"
                     >
-                      {locale === "vi" ? "Mở page liên quan" : "Open related page"}
+                      {locale === "vi" ? "Xem chuyên đề liên quan" : "View related topic"}
                     </Link>
                   )}
                 </article>

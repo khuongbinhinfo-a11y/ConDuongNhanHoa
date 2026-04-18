@@ -820,11 +820,11 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
       heroPrimaryCtaLabel: { vi: "Xem các chủ đề chính", en: "Browse the main topics" },
       heroImageSlotId: "dinh-duong.hero",
       introStrip: {
-        title: { vi: "Đọc trang này theo cách nào", en: "How to read this page" },
+        title: { vi: "Định hướng tiếp cận", en: "Reading approach" },
         items: [
           { vi: "Không kết luận tuyệt đối", en: "Do not jump to absolute conclusions" },
           { vi: "Bắt đầu từ câu hỏi gần đời sống", en: "Start from questions close to daily life" },
-          { vi: "Từ một ý có thể mở ra nhiều clip nhỏ", en: "One idea can open into many smaller clips" },
+          { vi: "Từ một ý có thể mở ra nhiều nội dung hữu ích", en: "One idea can open into many useful content pieces" },
         ],
       },
       topics: [
@@ -949,7 +949,7 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
               { vi: "Vì sao nhiều người cảm thấy thiếu an tâm nếu bỏ sữa?", en: "Why do many people feel less secure if they stop drinking milk?" },
             ],
             href: "/dinh-duong-thien-lanh/sua-va-nhung-dieu-thuong-duoc-tin",
-            linkLabel: { vi: "Mở cụm về sữa", en: "Open the milk cluster" },
+            linkLabel: { vi: "Xem chuyên đề về sữa", en: "View the milk topic" },
           },
           {
             id: "wth-chat-dam",
@@ -969,7 +969,7 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
               { vi: "Cơ thể cần đạm theo cách nào chứ không chỉ theo số lượng?", en: "How does the body need protein, not just how much?" },
             ],
             href: "/dinh-duong-thien-lanh/chat-dam-hieu-sao-cho-dung",
-            linkLabel: { vi: "Mở cụm về chất đạm", en: "Open the protein cluster" },
+            linkLabel: { vi: "Xem chuyên đề về chất đạm", en: "View the protein topic" },
           },
           {
             id: "wth-chuyen-hoa-beo-phi-ung-thu",
@@ -989,12 +989,12 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
               { vi: "Khi nói đến ung thư, vì sao người ta luôn quay lại bàn ăn?", en: "When talking about cancer, why do people keep returning to the table?" },
             ],
             href: "/dinh-duong-thien-lanh/suc-khoe-chuyen-hoa-va-bua-an-hang-ngay",
-            linkLabel: { vi: "Mở cụm về chuyển hóa", en: "Open the metabolic cluster" },
+            linkLabel: { vi: "Xem chuyên đề về chuyển hóa", en: "View the metabolic topic" },
           },
         ],
       },
       seedSection: {
-        title: { vi: "Từ một câu hỏi nhỏ để mở thành clip ngắn", en: "From a Small Question to a Short Clip" },
+        title: { vi: "Từ một câu hỏi để mở ra nội dung ngắn", en: "From a Question to Short-Form Content" },
         description: {
           vi: "Mỗi câu hỏi dưới đây có thể mở ra một video ngắn, một bài ngắn, hoặc một chuỗi nội dung nhỏ bám đúng tinh thần của phim.",
           en: "Each question below can open into a short video, a short article, or a small content series that stays close to the film’s spirit.",

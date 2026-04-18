@@ -37,7 +37,7 @@ export default function DinhDuongThienLanhPage() {
           locale={locale}
           labels={{
             backToHome: commonI18n[locale].cta.backToHome,
-            openTopic: locale === "vi" ? "Mở cụm này" : "Open this cluster",
+            openTopic: locale === "vi" ? "Xem chuyên đề" : "View topic",
           }}
         />
       </main>

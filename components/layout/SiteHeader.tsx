@@ -131,7 +131,7 @@ export function SiteHeader({
                       href={item.href}
                       className={`inline-flex whitespace-nowrap rounded-[9px] px-2.5 py-1.5 text-[0.78rem] font-medium tracking-[0.01em] transition-colors xl:px-3 xl:text-[0.82rem] ${
                         isActive
-                          ? "bg-[rgba(230,175,192,0.24)] text-[var(--color-navy)]"
+                          ? "bg-[rgba(230,175,192,0.38)] font-semibold text-[var(--color-navy)] shadow-[0_1px_3px_rgba(223,166,184,0.18)]"
                           : "text-[var(--color-text-muted)] hover:bg-[rgba(191,221,226,0.32)] hover:text-[var(--color-navy)]"
                       }`}
                     >
@@ -211,7 +211,7 @@ export function SiteHeader({
                           href={item.href}
                           className={`block rounded-[11px] px-3 py-2.5 text-[0.92rem] font-medium transition-colors ${
                             isActive
-                              ? "bg-[#F8EEF2] text-[#243447]"
+                              ? "bg-[#F8EEF2] font-semibold text-[#243447] border-l-[3px] border-l-[var(--color-teal)]"
                               : "text-[#243447] hover:bg-[#F8EEF2]"
                           }`}
                           onClick={() => setOpen(false)}
