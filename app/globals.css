@@ -12,7 +12,7 @@
   --color-card: #fffdfd;
   --color-text-strong: #243447;
   --color-text-muted: #55626f;
-  --color-border: rgba(243, 221, 228, 0.92);
+  --color-border: rgba(215, 228, 232, 0.85);
 }
 
 @theme inline {

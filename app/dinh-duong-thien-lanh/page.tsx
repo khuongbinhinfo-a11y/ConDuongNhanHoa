@@ -196,33 +196,6 @@ export default function DinhDuongThienLanhPage() {
                   {locale === "vi" ? "Xem nội dung" : "Browse content"}
                 </Link>
               </div>
-
-              {/* Reading guide strip — 3 items, inline below CTA */}
-              <div className="mt-10 border-t border-[var(--color-border)] pt-7 grid gap-6 sm:grid-cols-3">
-                {([
-                  {
-                    heading: { vi: "Không kết luận tuyệt đối", en: "No absolute conclusions" },
-                    body: { vi: "Mỗi chủ đề là không gian câu hỏi, không phải câu trả lời đóng.", en: "Each topic is a space for questions, not a closed answer." },
-                  },
-                  {
-                    heading: { vi: "Bắt đầu từ điều gần đời sống", en: "Start close to daily life" },
-                    body: { vi: "Chọn cụm gần bữa ăn của bạn nhất. Không cần đọc theo thứ tự.", en: "Pick the cluster closest to your meals. No required order." },
-                  },
-                  {
-                    heading: { vi: "Một ý mở ra nhiều clip nhỏ", en: "One idea, many short clips" },
-                    body: { vi: "Câu hỏi seed là hạt nhân nội dung — điểm khởi đầu, không phải đầy đủ.", en: "Seed questions are content nuclei — starting points, not finished pieces." },
-                  },
-                ] as { heading: L; body: L }[]).map((item, i) => (
-                  <div key={i}>
-                    <p className="text-[0.88rem] font-semibold text-[var(--color-text-strong)]">
-                      {t(item.heading, locale)}
-                    </p>
-                    <p className="mt-1 text-[0.82rem] leading-relaxed text-[var(--color-text-muted)]">
-                      {t(item.body, locale)}
-                    </p>
-                  </div>
-                ))}
-              </div>
             </section>
 
             {/* ══════════════════════════════════════════════════════════
@@ -235,25 +208,16 @@ export default function DinhDuongThienLanhPage() {
               <ol className="mt-6 divide-y divide-[var(--color-border)]" role="list">
                 {clusters.map((cluster) => (
                   <li key={cluster.id} id={cluster.id} className="py-7 group">
-                    <div className="flex items-start justify-between gap-6">
-                      <div className="min-w-0">
-                        <h2 className="text-[1.07rem] font-semibold leading-[1.3] text-[var(--color-text-strong)]">
-                          {t(cluster.title, locale)}
-                        </h2>
-                        <p className="mt-3 max-w-[60ch] text-[0.93rem] leading-[1.7] text-[var(--color-text-muted)]">
-                          {t(cluster.summary, locale)}
-                        </p>
-                        <p className="mt-3 text-[0.86rem] italic text-[var(--color-navy)] opacity-90">
-                          {t(cluster.prompt, locale)}
-                        </p>
-                      </div>
-                      <Link
-                        href={cluster.href}
-                        className="mt-1 shrink-0 text-[0.82rem] font-semibold text-[var(--color-navy)] opacity-75 transition-opacity hover:opacity-100 whitespace-nowrap"
-                        aria-label={`${locale === "vi" ? "Mở" : "Open"}: ${t(cluster.title, locale)}`}
-                      >
-                        {locale === "vi" ? "Mở →" : "Open →"}
-                      </Link>
+                    <div className="min-w-0">
+                      <h2 className="text-[1.07rem] font-semibold leading-[1.3] text-[var(--color-text-strong)]">
+                        {t(cluster.title, locale)}
+                      </h2>
+                      <p className="mt-3 max-w-[60ch] text-[0.93rem] leading-[1.7] text-[var(--color-text-muted)]">
+                        {t(cluster.summary, locale)}
+                      </p>
+                      <p className="mt-3 text-[0.86rem] italic text-[var(--color-navy)] opacity-80">
+                        {t(cluster.prompt, locale)}
+                      </p>
                     </div>
                   </li>
                 ))}
@@ -279,38 +243,42 @@ export default function DinhDuongThienLanhPage() {
                   : "Films can shift your perspective — and can also oversimplify. Use them as starting points for questions, not final answers."}
               </p>
 
-              {/* 3-column layout — dividers instead of nested cards */}
-              <div className="mt-9 grid gap-0 divide-y divide-[rgba(191,221,226,0.4)] lg:grid-cols-3 lg:divide-y-0 lg:divide-x">
-                {docLenses.map((lens, i) => (
+              {/* 3 editorial cards — full card treatment */}
+              <div className="mt-9 grid gap-4 lg:grid-cols-3">
+                {docLenses.map((lens) => (
                   <div
                     key={lens.id}
-                    className={`py-7 lg:py-0 ${i === 0 ? "lg:pr-8" : i === 1 ? "lg:px-8" : "lg:pl-8"}`}
+                    className="flex flex-col rounded-[14px] border border-[rgba(191,221,226,0.55)] bg-[rgba(255,255,255,0.7)] p-6"
                   >
-                    <p className="text-[0.84rem] font-semibold text-[var(--color-text-strong)]">
+                    {/* Card label */}
+                    <p className="text-[0.82rem] font-semibold text-[var(--color-text-strong)]">
                       {t(lens.label, locale)}
                     </p>
 
-                    <div className="mt-4">
-                      <p className="text-[0.67rem] font-semibold uppercase tracking-[0.11em] text-[var(--color-teal)]">
+                    {/* Story */}
+                    <div className="mt-5 flex-1">
+                      <p className="text-[0.64rem] font-semibold uppercase tracking-[0.12em] text-[var(--color-teal)]">
                         {locale === "vi" ? "Phim đang kể gì" : "What the film says"}
                       </p>
-                      <p className="mt-1.5 text-[0.88rem] leading-[1.65] text-[var(--color-text-strong)]">
+                      <p className="mt-2 text-[0.88rem] leading-[1.7] text-[var(--color-text-strong)]">
                         {t(lens.story, locale)}
                       </p>
                     </div>
 
-                    <div className="mt-4">
-                      <p className="text-[0.67rem] font-semibold uppercase tracking-[0.11em] text-[var(--color-text-muted)] opacity-70">
-                        {locale === "vi" ? "Câu hỏi phim đặt lại" : "The question the film raises"}
+                    {/* Question */}
+                    <div className="mt-5">
+                      <p className="text-[0.64rem] font-semibold uppercase tracking-[0.12em] text-[var(--color-text-muted)] opacity-65">
+                        {locale === "vi" ? "Câu hỏi phim đặt lại" : "The question it raises"}
                       </p>
-                      <p className="mt-1.5 text-[0.84rem] italic leading-[1.65] text-[var(--color-text-muted)]">
+                      <p className="mt-2 text-[0.85rem] italic leading-[1.65] text-[var(--color-text-muted)]">
                         {t(lens.question, locale)}
                       </p>
                     </div>
 
+                    {/* Soft link */}
                     <Link
                       href={lens.href}
-                      className="mt-5 inline-block text-[0.82rem] font-semibold text-[var(--color-navy)] opacity-80 transition-opacity hover:opacity-100"
+                      className="mt-6 text-[0.8rem] font-medium text-[var(--color-navy)] opacity-70 transition-opacity hover:opacity-100"
                     >
                       {t(lens.linkText, locale)}
                     </Link>
