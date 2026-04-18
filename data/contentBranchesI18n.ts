@@ -920,7 +920,7 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
             vi: "Bữa ăn hằng ngày có thể ảnh hưởng đến sức khỏe lâu dài ra sao?",
             en: "How can daily meals affect long-term health?",
           },
-          href: "/dinh-duong-thien-lanh#ung-thu-va-nhung-cau-hoi-tu-ban-an",
+          href: "/dinh-duong-thien-lanh/ung-thu-va-nhung-cau-hoi-tu-ban-an",
           imageSlotId: "dinh-duong.topic.ung-thu-va-goc-nhin-tu-bua-an",
         },
       ],
@@ -1040,7 +1040,7 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
               { vi: "Bữa ăn và lối sống liên kết với nhau thế nào?", en: "How are meals and lifestyle tied together?" },
               { vi: "Điều gì tích lũy âm thầm trước khi xét nghiệm lên tiếng?", en: "What accumulates quietly before a lab result finally speaks?" },
             ],
-            href: "/dinh-duong-thien-lanh/suc-khoe-chuyen-hoa-va-bua-an-hang-ngay",
+            href: "/dinh-duong-thien-lanh/ung-thu-va-nhung-cau-hoi-tu-ban-an",
           },
           {
             id: "seed-bua-an-tac-dong-lau-dai",

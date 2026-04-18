@@ -37,6 +37,11 @@ const ACCEPTED_EXT = new Set([".png", ".jpg", ".jpeg", ".webp"]);
 const IMAGE_SLOTS = [
   // Dinh dưỡng
   { id: "dinh-duong.hero",                                      targetDir: "images/dinh-duong",        targetBaseName: "hero-dinh-duong-thien-lanh" },
+  { id: "dinh-duong.hero.landing",                              targetDir: "images/dinh-duong",        targetBaseName: "hero-landing-nutrition" },
+  { id: "dinh-duong.hero.sua-wth",                              targetDir: "images/dinh-duong",        targetBaseName: "hero-sua-wth" },
+  { id: "dinh-duong.hero.chat-dam-wth",                         targetDir: "images/dinh-duong",        targetBaseName: "hero-chat-dam-wth" },
+  { id: "dinh-duong.hero.chuyen-hoa-wth",                       targetDir: "images/dinh-duong",        targetBaseName: "hero-chuyen-hoa-wth" },
+  { id: "dinh-duong.hero.ung-thu-va-bua-an-wth",                targetDir: "images/dinh-duong",        targetBaseName: "hero-ung-thu-va-bua-an-wth" },
   { id: "dinh-duong.topic.kien-thuc-nen-tang",                  targetDir: "images/dinh-duong/topics", targetBaseName: "topic-kien-thuc-nen-tang" },
   { id: "dinh-duong.topic.sua-va-nhung-dieu-thuong-tin",        targetDir: "images/dinh-duong/topics", targetBaseName: "topic-sua-va-nhung-dieu-thuong-tin" },
   { id: "dinh-duong.topic.chat-dam-hang-ngay",                  targetDir: "images/dinh-duong/topics", targetBaseName: "topic-chat-dam-hang-ngay" },

@@ -1,3 +1,11 @@
+/**
+ * Legacy snapshot only.
+ *
+ * Runtime source-of-truth for branch landing content (including nutrition)
+ * is `data/contentBranchesI18n.ts`.
+ * Keep this file only for backward reference and avoid adding new runtime usages.
+ */
+
 export type ContentBranchSlug =
   | "dinh-duong-thien-lanh"
   | "hanh-dong-thien-lanh"

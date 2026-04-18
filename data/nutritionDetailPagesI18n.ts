@@ -20,6 +20,7 @@ export type NutritionDetailPageI18n = {
   heroTitle: LocalizedText;
   heroDescription: LocalizedText;
   heroImageSlotId?: string;
+  heroFallbackSlotId?: string;
   openingNoteTitle?: LocalizedText;
   openingNoteBody?: LocalizedText;
   filmStoryTitle: LocalizedText;
@@ -38,6 +39,125 @@ export type NutritionDetailPageI18n = {
 };
 
 export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> = {
+  "kien-thuc-nen-tang": {
+    slug: "kien-thuc-nen-tang",
+    parentTopicId: "kien-thuc-nen-tang",
+    title: { vi: "Kiến thức nền tảng", en: "Foundational Knowledge" },
+    heroBadge: { vi: "Nền tảng từ WTH · Cách đọc trước khi chọn", en: "Foundational Lens · Read Before Choosing" },
+    heroTitle: { vi: "Kiến thức nền tảng: hiểu trước khi tin và lặp lại", en: "Foundational Knowledge: Understand Before Believing and Repeating" },
+    heroDescription: {
+      vi: "Phần này không đưa ra đáp án tuyệt đối cho mọi người. Mục tiêu là dựng lại khung hiểu cơ bản để khi gặp một lời khuyên dinh dưỡng, bạn biết cách đọc nó trong bối cảnh, thay vì tin theo vì quen thuộc.",
+      en: "This section does not provide one absolute answer for everyone. The goal is to rebuild a basic framework so that when you encounter nutrition advice, you can read it in context instead of accepting it only because it feels familiar.",
+    },
+    heroImageSlotId: "dinh-duong.hero",
+    heroFallbackSlotId: "dinh-duong.topic.kien-thuc-nen-tang",
+    openingNoteTitle: { vi: "Cách tiếp cận nội dung này", en: "How to approach this content" },
+    openingNoteBody: {
+      vi: "Dùng góc nhìn từ WTH như một điểm mở câu hỏi, không phải điểm đóng tranh luận. Điểm quan trọng là tách điều phim đang kể, điều phim đang hỏi, và điều mình có thể kiểm chứng thêm trước khi áp dụng vào đời sống.",
+      en: "Use the perspective from WTH as a way to open questions, not to close debate. The key is separating what the film is saying, what it is asking, and what you can still verify before applying to daily life.",
+    },
+    filmStoryTitle: { vi: "Phim đang kể gì", en: "What the film is saying" },
+    filmStoryBody: {
+      vi: "WTH kể một câu chuyện lớn: nhiều niềm tin dinh dưỡng quen thuộc không chỉ đến từ khoa học độc lập, mà còn được định hình bởi quảng bá, lợi ích ngành và thói quen xã hội lặp lại lâu năm.",
+      en: "WTH tells a broader story: many familiar nutrition beliefs are shaped not only by independent science, but also by marketing, industry incentives, and social habits repeated over years.",
+    },
+    filmQuestionTitle: { vi: "Phim đang đặt lại câu hỏi gì", en: "What question the film reopens" },
+    filmQuestionBody: {
+      vi: "Khi một thông điệp dinh dưỡng đã quá quen, mình còn đọc nó như một giả thuyết cần kiểm chứng hay đã mặc định coi đó là chân lý? Và đâu là tiêu chí để phân biệt dữ liệu đáng tin với thông điệp thuyết phục?",
+      en: "When a nutrition message becomes too familiar, do we still read it as a hypothesis to test, or do we treat it as truth by default? And what criteria help distinguish reliable evidence from persuasive messaging?",
+    },
+    storySectionTitle: { vi: "Hướng triển khai nội dung", en: "Content development directions" },
+    storySectionDescription: {
+      vi: "Từ khung nền này có thể tách ra các bài ngắn hoặc clip ngắn, đi từ câu hỏi đời sống đến cách đọc dữ liệu thận trọng hơn.",
+      en: "From this foundation, you can split into short articles or short clips, moving from everyday questions to more careful evidence reading.",
+    },
+    storyCards: [
+      {
+        id: "tu-quen-thanh-dung",
+        title: { vi: "Vì sao điều quen thường bị nhầm là điều đúng?", en: "Why Is the Familiar Often Mistaken for the Correct?" },
+        lead: {
+          vi: "Một thông điệp được lặp lại đủ lâu sẽ tạo cảm giác chắc chắn, ngay cả khi người nghe chưa từng tự kiểm chứng nguồn gốc và chất lượng dữ liệu phía sau.",
+          en: "A message repeated long enough can feel certain, even when the listener has never independently checked the source and quality of evidence behind it.",
+        },
+        bullets: [
+          { vi: "Khi nào ký ức tập thể lấn át việc đọc dữ liệu hiện tại?", en: "When does collective memory override current evidence reading?" },
+          { vi: "Vì sao lời khuyên phổ biến chưa chắc đã phù hợp cho mọi người?", en: "Why is common advice not always suitable for everyone?" },
+          { vi: "Làm sao nhận ra mình đang tin vì quen, không phải vì hiểu?", en: "How do you detect when belief comes from familiarity rather than understanding?" },
+        ],
+      },
+      {
+        id: "khung-doc-du-lieu-co-ban",
+        title: { vi: "Khung đọc dữ liệu cơ bản trước khi kết luận", en: "A Basic Evidence-Reading Frame Before Concluding" },
+        lead: {
+          vi: "Không cần là chuyên gia mới đọc được dữ liệu. Nhưng cần một trật tự tối thiểu: xem bối cảnh, mức độ khái quát, giới hạn của dữ liệu, và phần nào mới chỉ là suy diễn.",
+          en: "You do not need to be an expert to read evidence. But you do need a minimum order: context, level of generalization, data limits, and what is still inference.",
+        },
+        bullets: [
+          { vi: "Dữ liệu này nói về ai, trong bối cảnh nào?", en: "Who does this evidence describe, and in what context?" },
+          { vi: "Kết luận đang ở mức quan sát hay nhân quả?", en: "Is the conclusion observational or causal?" },
+          { vi: "Điều gì chưa đủ để áp vào đời sống cá nhân ngay?", en: "What is still insufficient for immediate personal application?" },
+        ],
+      },
+      {
+        id: "phim-la-diem-mo",
+        title: { vi: "Xem phim như điểm mở, không phải điểm chốt", en: "Use Film as an Opener, Not a Final Verdict" },
+        lead: {
+          vi: "Một bộ phim có thể giúp mình đặt lại câu hỏi đúng. Nhưng nếu dùng phim để thay thế toàn bộ quy trình đọc và kiểm chứng, mình chỉ đổi từ một cực sang cực khác.",
+          en: "A documentary can help reopen the right questions. But if you use it to replace the full process of reading and verification, you only move from one extreme to another.",
+        },
+        bullets: [
+          { vi: "Điểm nào trong phim là dữ liệu, điểm nào là diễn giải?", en: "Which parts are evidence and which parts are interpretation?" },
+          { vi: "Câu hỏi nào cần đọc thêm ngoài phim?", en: "Which questions require reading beyond the film?" },
+          { vi: "Làm sao giữ thái độ cởi mở mà không nhẹ dạ?", en: "How do we stay open-minded without becoming gullible?" },
+        ],
+      },
+      {
+        id: "tu-kien-thuc-den-thuc-hanh",
+        title: { vi: "Từ kiến thức nền đến lựa chọn hằng ngày", en: "From Foundations to Daily Choices" },
+        lead: {
+          vi: "Mục tiêu của kiến thức nền không phải tranh luận cho thắng, mà là giúp mỗi người chọn cách ăn có lý do, có theo dõi, và có điều chỉnh theo thực tế cơ thể.",
+          en: "The goal of foundational knowledge is not winning arguments, but helping each person choose an approach with reasons, tracking, and adjustment to real bodily responses.",
+        },
+        bullets: [
+          { vi: "Nên bắt đầu thay đổi bằng tiêu chí nào trước?", en: "Which criteria should guide initial changes?" },
+          { vi: "Theo dõi dấu hiệu gì để biết mình đi đúng hướng?", en: "What signals should you track to know you are moving in the right direction?" },
+          { vi: "Khi nào cần dừng lại và đọc lại dữ liệu thay vì đổi tiếp?", en: "When should you pause and reread evidence before changing further?" },
+        ],
+      },
+    ],
+    quickQuestionSectionTitle: { vi: "Câu hỏi dễ gặp", en: "Common Questions" },
+    quickQuestions: [
+      {
+        question: { vi: "Kiến thức nền tảng có phải là học thuộc lý thuyết?", en: "Does foundational knowledge mean memorizing theory?" },
+        answer: {
+          vi: "Không. Mục tiêu là có một khung đọc đủ rõ để tự đánh giá thông tin mới, hiểu giới hạn của từng kết luận và tránh chạy theo thông điệp mạnh nhưng thiếu bối cảnh.",
+          en: "No. The goal is to have a clear enough reading frame to evaluate new information, understand limits of conclusions, and avoid chasing strong but decontextualized claims.",
+        },
+      },
+      {
+        question: { vi: "Nên tin phim tài liệu đến mức nào?", en: "How far should we trust a documentary?" },
+        answer: {
+          vi: "Nên xem như một nguồn khơi mở câu hỏi và định hướng đọc thêm. Không nên xem như nguồn duy nhất để chốt quyết định dài hạn về sức khỏe.",
+          en: "Treat it as a source for opening questions and guiding further reading. Do not treat it as the only source for final long-term health decisions.",
+        },
+      },
+      {
+        question: { vi: "Nếu quá nhiều quan điểm trái chiều thì bắt đầu từ đâu?", en: "If viewpoints conflict heavily, where should we begin?" },
+        answer: {
+          vi: "Bắt đầu từ điều gần nhất với đời sống của mình, rồi đi theo trật tự: hiểu khái niệm, đọc dữ liệu nền, đối chiếu bối cảnh cá nhân, sau đó mới thay đổi từng bước nhỏ có theo dõi.",
+          en: "Start from what is closest to your own life, then follow order: understand concepts, read foundational evidence, compare with personal context, then adjust in small trackable steps.",
+        },
+      },
+    ],
+    closingTitle: { vi: "Đi tiếp từ đây", en: "Continue from here" },
+    closingBody: {
+      vi: "Khi đã có khung nền, bạn có thể đi vào các chuyên đề cụ thể để đọc sâu hơn từng trục câu hỏi trong WTH: sữa, chất đạm, chuyển hóa và ung thư.",
+      en: "Once this foundation is set, you can move into specific topics for deeper reading across WTH question axes: milk, protein, metabolism, and cancer.",
+    },
+    primaryCtaLabel: { vi: "Sang chuyên đề về sữa", en: "Continue to the Milk Topic" },
+    primaryCtaHref: "/dinh-duong-thien-lanh/sua-va-nhung-dieu-thuong-duoc-tin",
+  },
+
   "sua-va-nhung-dieu-thuong-duoc-tin": {
     slug: "sua-va-nhung-dieu-thuong-duoc-tin",
     parentTopicId: "sua-va-nhung-dieu-thuong-duoc-tin",
@@ -49,6 +169,7 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
       en: "From the perspective of WTH, milk is not only a food. It is also a belief repeated through childhood, advertising, schools, and familiar nutrition recommendations until very few people still want to question it.",
     },
     heroImageSlotId: "dinh-duong.hero.sua-wth",
+    heroFallbackSlotId: "dinh-duong.topic.sua-va-nhung-dieu-thuong-tin",
     openingNoteTitle: { vi: "Cách tiếp cận nội dung này", en: "How to approach this content" },
     openingNoteBody: {
       vi: "Nội dung dưới đây không nhằm kết luận sữa là tốt hay xấu theo một đáp án tuyệt đối. Mục tiêu là nhìn lại niềm tin quanh sữa: nó đến từ đâu, được củng cố ra sao, và vì sao nhiều người cảm thấy bất an khi phải đặt lại câu hỏi.",
@@ -191,7 +312,8 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
       vi: "Trong hầu hết mọi cuộc trò chuyện về thay đổi cách ăn, câu hỏi thiếu đạm thường xuất hiện đầu tiên. WTH chạm đúng nỗi sợ đó, không phải để phủ nhận vai trò của đạm, mà để hỏi lại: điều cơ thể thật sự cần đang được hiểu như thế nào?",
       en: "In most conversations about changing the way we eat, fear of protein deficiency appears first. WTH touches that fear directly, not to deny the role of protein, but to ask again: how are the body’s actual needs being understood?",
     },
-    heroImageSlotId: "dinh-duong.topic.chat-dam-hang-ngay",
+    heroImageSlotId: "dinh-duong.hero.chat-dam-wth",
+    heroFallbackSlotId: "dinh-duong.topic.chat-dam-hang-ngay",
     openingNoteTitle: { vi: "Cách tiếp cận nội dung này", en: "How to approach this content" },
     openingNoteBody: {
       vi: "Nội dung dưới đây không nhằm chứng minh một chế độ ăn là đúng tuyệt đối. Góc nhìn từ WTH được dùng để nhìn lại nỗi sợ thiếu đạm: nỗi sợ đó đến từ cơ thể, từ thói quen, hay từ cách xã hội đã dạy mình phải lo?",
@@ -334,7 +456,8 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
       vi: "Đái tháo đường, béo phì và rối loạn chuyển hóa thường bị kể như câu chuyện của một thủ phạm duy nhất. WTH buộc người xem nhìn rộng hơn: bữa ăn, thói quen, môi trường thực phẩm và nhịp sống đang đan vào nhau như thế nào.",
       en: "Diabetes, obesity, and metabolic disorders are often told as the story of one single culprit. WTH forces the viewer to look wider: how meals, habits, the food environment, and life rhythms intertwine.",
     },
-    heroImageSlotId: "dinh-duong.topic.dai-thao-duong-beo-phi-chuyen-hoa",
+    heroImageSlotId: "dinh-duong.hero.chuyen-hoa-wth",
+    heroFallbackSlotId: "dinh-duong.topic.dai-thao-duong-beo-phi-chuyen-hoa",
     openingNoteTitle: { vi: "Cách tiếp cận nội dung này", en: "How to approach this content" },
     openingNoteBody: {
       vi: "Nội dung dưới đây không tìm một thủ phạm duy nhất cho bệnh chuyển hóa. Mục tiêu là mở ra một cách nhìn rộng hơn: điều gì đang tích lũy quá lâu trong đời sống thường ngày mà mình ít khi nhận ra?",
@@ -477,7 +600,8 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
       vi: "Khi nói đến ung thư, con người thường muốn tìm một nguyên nhân thật rõ. Nhưng từ góc nhìn của WTH, điều đáng nhìn kỹ hơn không nằm ở một món ăn đơn lẻ, mà ở những thói quen lặp lại quá lâu, quá quen, và ít khi được đặt lại câu hỏi.",
       en: "When it comes to cancer, people usually want to find a clear cause. But from the perspective of WTH, what deserves closer attention is not a single food, but habits repeated too long, too familiar, and seldom questioned again.",
     },
-    heroImageSlotId: "dinh-duong.topic.ung-thu-va-goc-nhin-tu-bua-an",
+    heroImageSlotId: "dinh-duong.hero.ung-thu-va-bua-an-wth",
+    heroFallbackSlotId: "dinh-duong.topic.ung-thu-va-goc-nhin-tu-bua-an",
     openingNoteTitle: { vi: "Cách tiếp cận nội dung này", en: "How to approach this content" },
     openingNoteBody: {
       vi: "Nội dung dưới đây không nhằm đơn giản hóa ung thư thành câu chuyện của riêng bàn ăn. Mục tiêu là nhìn lại cách con người đặt câu hỏi về bữa ăn, thói quen và nguy cơ tích lũy lâu dài, thay vì vội tìm một thủ phạm duy nhất.",
@@ -608,7 +732,7 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
       en: "After this page, the logical next step is to return to the Foundational Knowledge section to understand why people so easily believe familiar things about food before truly understanding them.",
     },
     primaryCtaLabel: { vi: "Sang Kiến thức nền tảng", en: "Continue to Foundational Knowledge" },
-    primaryCtaHref: "/dinh-duong-thien-lanh",
+    primaryCtaHref: "/dinh-duong-thien-lanh/kien-thuc-nen-tang",
   },
 };
 

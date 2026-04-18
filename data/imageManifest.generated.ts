@@ -21,4 +21,8 @@ export const imageManifest: Record<string, string> = {
   "suy-nghi.hero": "/images/suy-nghi/hero-suy-nghi-thien-lanh.svg",
   "giai-tri.hero": "/images/giai-tri/hero-giai-tri-thien-lanh.svg",
   "coi-vui-cuoi.hero": "/images/coi-vui-cuoi/hero-coi-vui-cuoi.svg",
+  "dinh-duong.hero.chat-dam-wth": "/images/dinh-duong/hero-chat-dam-wth.png",
+  "dinh-duong.post.01": "/images/dinh-duong/posts/post-dinh-duong-01.jpg",
+  "dinh-duong.post.02": "/images/dinh-duong/posts/post-dinh-duong-02.jpg",
+  "dinh-duong.post.03": "/images/dinh-duong/posts/post-dinh-duong-03.jpg",
 };

@@ -48,6 +48,10 @@ export function NutritionDetailPageSection({ content, locale }: NutritionDetailP
   const heroSrc = content.heroImageSlotId
     ? getDirectImageForSlot(content.heroImageSlotId)
     : null;
+  const fallbackHeroSrc = content.heroFallbackSlotId
+    ? getDirectImageForSlot(content.heroFallbackSlotId)
+    : null;
+  const resolvedHeroSrc = heroSrc ?? fallbackHeroSrc ?? getDirectImageForSlot("dinh-duong.hero");
 
   const suggestedSlug = parseSlugFromHref(content.primaryCtaHref);
   const relatedSlugs = [suggestedSlug, ...DETAIL_READING_ORDER]
@@ -69,7 +73,7 @@ export function NutritionDetailPageSection({ content, locale }: NutritionDetailP
           </nav>
 
           <section className="-mt-6">
-            <div className={`grid items-start gap-8 ${heroSrc ? "lg:grid-cols-[1fr_360px]" : ""}`}>
+            <div className={`grid items-start gap-8 ${resolvedHeroSrc ? "lg:grid-cols-[1fr_360px]" : ""}`}>
               <div className="max-w-[620px]">
                 <p className={eyebrow}>{t(content.heroBadge, locale)}</p>
                 <h1 className="mt-3 text-[clamp(2rem,4vw,3rem)] font-semibold leading-[1.12] text-[var(--color-text-strong)]">
@@ -88,10 +92,10 @@ export function NutritionDetailPageSection({ content, locale }: NutritionDetailP
                 </div>
               </div>
 
-              {heroSrc && (
+              {resolvedHeroSrc && (
                 <div className="relative hidden aspect-[5/4] overflow-hidden rounded-[14px] lg:block">
                   <Image
-                    src={heroSrc}
+                    src={resolvedHeroSrc}
                     alt={t(content.heroTitle, locale)}
                     fill
                     priority
