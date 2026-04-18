@@ -65,3 +65,11 @@ export function getImageForSlotStrict(slotId: string): string | null {
 
   return null;
 }
+
+/**
+ * Returns only the exact manifest hit for a slot.
+ * No fallback chain, no branch hero, no global placeholder.
+ */
+export function getDirectImageForSlot(slotId: string): string | null {
+  return imageManifest[slotId] ?? null;
+}

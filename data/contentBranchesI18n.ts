@@ -9,7 +9,74 @@ export type ContentBranchSlug =
   | "giai-tri-thien-lanh"
   | "coi-vui-cuoi";
 
-type LocalizedText = Record<AppLocale, string>;
+export type LocalizedText = Record<AppLocale, string>;
+
+export type NutritionTopicCardI18n = {
+  id: string;
+  title: LocalizedText;
+  summary: LocalizedText;
+  bullets: LocalizedText[];
+  question: LocalizedText;
+  href: string;
+  imageSlotId?: string;
+};
+
+export type NutritionWthCardI18n = {
+  id: string;
+  title: LocalizedText;
+  story: LocalizedText;
+  challengeQuestion: LocalizedText;
+  seedIdeas: LocalizedText[];
+  href: string;
+  linkLabel: LocalizedText;
+};
+
+export type NutritionWthSectionI18n = {
+  title: LocalizedText;
+  description?: LocalizedText;
+  cards: NutritionWthCardI18n[];
+};
+
+export type NutritionSeedCardI18n = {
+  id: string;
+  title: LocalizedText;
+  lead: LocalizedText;
+  prompts: LocalizedText[];
+};
+
+export type NutritionSeedSectionI18n = {
+  title: LocalizedText;
+  description?: LocalizedText;
+  cards: NutritionSeedCardI18n[];
+};
+
+export type NutritionFaqItemI18n = {
+  question: LocalizedText;
+  answer: LocalizedText;
+};
+
+export type NutritionFaqSectionI18n = {
+  title: LocalizedText;
+  items: NutritionFaqItemI18n[];
+};
+
+export type NutritionIntroStripI18n = {
+  title: LocalizedText;
+  items: LocalizedText[];
+};
+
+export type NutritionLandingI18n = {
+  heroBadge: LocalizedText;
+  heroTitle: LocalizedText;
+  heroDescription: LocalizedText;
+  heroPrimaryCtaLabel: LocalizedText;
+  heroImageSlotId?: string;
+  introStrip: NutritionIntroStripI18n;
+  topics: NutritionTopicCardI18n[];
+  wthSection: NutritionWthSectionI18n;
+  seedSection: NutritionSeedSectionI18n;
+  faqSection: NutritionFaqSectionI18n;
+};
 
 export type BranchClusterI18n = {
   id: string;
@@ -44,6 +111,7 @@ export type ContentBranchLandingI18n = {
   /** Optional documentary / external-perspective block rendered below the cluster grid. */
   documentaryBlock?: DocumentaryBlockI18n;
   relatedDirections: BranchDirectionI18n[];
+  nutritionLanding?: NutritionLandingI18n;
   primaryCta: {
     label: LocalizedText;
     href: string;
@@ -668,95 +736,392 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
   "dinh-duong-thien-lanh": {
     slug: "dinh-duong-thien-lanh",
     title: { vi: "Dinh dưỡng thiện lành", en: "Wholesome Nutrition" },
-    heroKicker: { vi: "Hướng trọng tâm hiện tại", en: "Current focus direction" },
+    heroKicker: { vi: "Hiểu đúng trước, thay đổi sau", en: "Understand first, then change" },
     description: {
-      vi: "Quay về với dinh dưỡng từ gốc rễ, bắt đầu bằng hiểu đúng để thay đổi bền hơn.",
-      en: "Returning to nutrition at its roots, starting with clear understanding before lasting change.",
+      vi: "Dinh dưỡng không bắt đầu từ chế độ ăn mà từ cách hiểu. Đây là nơi đặt lại những điều tưởng đã biết để nhìn rõ hơn trước khi chọn, trước khi tin, và trước khi lặp lại một thói quen mỗi ngày.",
+      en: "Nutrition does not begin with a diet but with understanding. This is where familiar beliefs are revisited before choosing, believing, and repeating a daily habit.",
     },
     clusters: [
       {
         id: "kien-thuc-nen-tang",
         title: { vi: "Kiến thức nền tảng", en: "Foundational Knowledge" },
         summary: {
-          vi: "Những nguyên lý cần nắm trước để đọc đúng, hiểu đúng và áp dụng có chọn lọc.",
-          en: "Core principles to build first for better understanding and practical judgment.",
+          vi: "Có những nguyên tắc dinh dưỡng cần hiểu trước khi theo bất kỳ cách ăn nào. Không phải để học thuộc, mà để nhận ra điều gì thật sự phù hợp với cơ thể và đời sống của mình.",
+          en: "Some nutrition principles are worth understanding before following any eating approach, not to memorize them, but to recognize what truly fits your body and your life.",
         },
-        href: "/dinh-duong-thien-lanh#kien-thuc-nen-tang",
+        prompt: {
+          vi: "Bạn đang chọn cách ăn vì ai nói, hay vì mình thực sự hiểu?",
+          en: "Are you choosing the way you eat because someone said so, or because you genuinely understand it?",
+        },
+        href: "/dinh-duong-thien-lanh/kien-thuc-nen-tang",
       },
       {
-        id: "sua-va-nhung-dieu-thuong-tin",
-        title: { vi: "Sữa và những điều thường tin", en: "Milk and Common Beliefs" },
+        id: "sua-va-nhung-dieu-thuong-duoc-tin",
+        title: { vi: "Những điều thường được tin về sữa", en: "Common Beliefs About Milk" },
         summary: {
-          vi: "Sữa có thật sự cần thiết như nhiều người vẫn nghĩ? Cùng nhìn lại với dữ liệu và bối cảnh.",
-          en: "Is milk as essential as many people assume? Revisit the topic with context and evidence.",
+          vi: "Sữa là một thực phẩm đi cùng tuổi thơ, quảng bá và nhiều lớp niềm tin xã hội. Đọc để hiểu niềm tin đó hình thành ra sao trước khi giữ hay bỏ.",
+          en: "Milk is a food bound up with childhood, advertising, and layers of social belief. Read to understand how that belief formed before deciding to keep or leave it.",
         },
-        href: "/dinh-duong-thien-lanh#sua-va-nhung-dieu-thuong-tin",
+        prompt: {
+          vi: "Sữa có thật sự cần thiết như nhiều người vẫn nghĩ?",
+          en: "Is milk truly as necessary as many people think?",
+        },
+        href: "/dinh-duong-thien-lanh/sua-va-nhung-dieu-thuong-duoc-tin",
       },
       {
-        id: "chat-dam-hang-ngay",
-        title: { vi: "Chất đạm hằng ngày", en: "Daily Protein" },
+        id: "chat-dam-hieu-sao-cho-dung",
+        title: { vi: "Chất đạm: hiểu sao cho đúng", en: "Protein: Understanding It Right" },
         summary: {
-          vi: "Vì sao nỗi lo thiếu đạm luôn xuất hiện đầu tiên, và hiểu thế nào để ăn uống cân bằng hơn?",
-          en: "Why is protein deficiency often the first concern, and how can we approach it more wisely?",
+          vi: "Nỗi lo thiếu đạm thường xuất hiện rất sớm khi nói đến thay đổi cách ăn. Nhưng điều cơ thể thực sự cần và điều ta đang sợ đôi khi không phải là một.",
+          en: "Worry about protein deficiency often appears very early when people talk about changing how they eat. But what the body really needs and what we fear are not always the same thing.",
         },
-        href: "/dinh-duong-thien-lanh#chat-dam-hang-ngay",
+        prompt: {
+          vi: "Vì sao nỗi lo thiếu đạm lại dễ xuất hiện đến vậy?",
+          en: "Why does the fear of protein deficiency appear so easily?",
+        },
+        href: "/dinh-duong-thien-lanh/chat-dam-hieu-sao-cho-dung",
       },
       {
-        id: "dai-thao-duong-beo-phi-chuyen-hoa",
-        title: { vi: "Đái tháo đường – béo phì – chuyển hóa", en: "Diabetes – Obesity – Metabolism" },
+        id: "suc-khoe-chuyen-hoa-va-bua-an-hang-ngay",
+        title: { vi: "Sức khỏe chuyển hóa và bữa ăn hằng ngày", en: "Metabolic Health and Daily Eating" },
         summary: {
-          vi: "Đái tháo đường có chỉ là câu chuyện của đường? Góc nhìn chuyển hóa giúp hiểu sâu hơn.",
-          en: "Is diabetes only about sugar? A metabolic perspective opens a broader understanding.",
+          vi: "Đái tháo đường, béo phì và rối loạn chuyển hóa không chỉ là câu chuyện của đường hay mỡ. Bữa ăn hằng ngày có liên kết với sức khỏe lâu dài sâu hơn nhiều người tưởng.",
+          en: "Diabetes, obesity, and metabolic disorders are not only stories of sugar or fat. Daily eating is linked to long-term health more deeply than many people realize.",
         },
-        href: "/dinh-duong-thien-lanh#dai-thao-duong-beo-phi-chuyen-hoa",
+        prompt: {
+          vi: "Bữa ăn hằng ngày liên quan đến chuyển hóa sâu đến đâu?",
+          en: "How deeply is daily eating connected to metabolism?",
+        },
+        href: "/dinh-duong-thien-lanh/suc-khoe-chuyen-hoa-va-bua-an-hang-ngay",
       },
       {
-        id: "ung-thu-va-goc-nhin-tu-bua-an",
-        title: { vi: "Ung thư và góc nhìn từ bữa ăn", en: "Cancer and Meal-Based Perspectives" },
+        id: "ung-thu-va-nhung-cau-hoi-tu-ban-an",
+        title: { vi: "Ung thư và những câu hỏi từ bàn ăn", en: "Cancer and the Questions at the Table" },
         summary: {
-          vi: "Bữa ăn hằng ngày có thể tác động sức khỏe lâu dài ra sao? Đọc kỹ để hiểu đúng mức.",
-          en: "How can daily meals influence long-term health? A careful, grounded reading path.",
+          vi: "Không phải bữa ăn nào cũng gây ung thư. Nhưng có những thói quen ăn uống hằng ngày tích lũy nguy cơ lâu dài mà rất ít người để ý từ sớm.",
+          en: "Not every meal causes cancer. But some everyday eating habits accumulate long-term risk in ways few people notice early.",
         },
-        href: "/dinh-duong-thien-lanh#ung-thu-va-goc-nhin-tu-bua-an",
-      },
-      {
-        id: "phim-tai-lieu-goc-nhin",
-        title: { vi: "Phim tài liệu / Góc nhìn", en: "Documentaries / Perspectives" },
-        summary: {
-          vi: "Một bộ phim tài liệu có thể làm thay đổi cách nhìn về dinh dưỡng như thế nào?",
-          en: "How can one documentary shift the way we see nutrition?",
+        prompt: {
+          vi: "Bữa ăn hằng ngày có thể ảnh hưởng đến sức khỏe lâu dài ra sao?",
+          en: "How can daily meals affect long-term health?",
         },
-        href: "/dinh-duong-thien-lanh#phim-tai-lieu-goc-nhin",
+        href: "/dinh-duong-thien-lanh/ung-thu-va-nhung-cau-hoi-tu-ban-an",
       },
     ],
-    relatedDirections: [
-      {
-        title: { vi: "Sang Ứng xử thiện lành", en: "Continue to Wholesome Conduct" },
-        description: {
-          vi: "Khi nền dinh dưỡng đã rõ hơn, mở rộng sang cách ứng xử trong đời sống thường ngày.",
-          en: "After grounding nutrition, expand into practical conduct across daily life.",
-        },
-        href: "/hanh-dong-thien-lanh",
+    relatedDirections: [],
+    nutritionLanding: {
+      heroBadge: { vi: "Hiểu đúng trước, thay đổi sau", en: "Understand first, then change" },
+      heroTitle: { vi: "Dinh dưỡng thiện lành", en: "Wholesome Nutrition" },
+      heroDescription: {
+        vi: "Dinh dưỡng không bắt đầu từ chế độ ăn mà từ cách hiểu. Đây là nơi đặt lại những điều tưởng đã biết để nhìn rõ hơn trước khi chọn, trước khi tin, và trước khi lặp lại một thói quen mỗi ngày.",
+        en: "Nutrition does not begin with a diet but with understanding. This is where familiar beliefs are revisited before choosing, believing, and repeating a daily habit.",
       },
-      {
-        title: { vi: "Sang Giải trí thiện lành", en: "Continue to Wholesome Entertainment" },
-        description: {
-          vi: "Giữ nhịp sống tích cực bằng các lựa chọn giải trí lành mạnh hơn.",
-          en: "Support a healthier rhythm through positive and wholesome entertainment.",
-        },
-        href: "/giai-tri-thien-lanh",
+      heroPrimaryCtaLabel: { vi: "Xem các chủ đề chính", en: "Browse the main topics" },
+      heroImageSlotId: "dinh-duong.hero",
+      introStrip: {
+        title: { vi: "Đọc trang này theo cách nào", en: "How to read this page" },
+        items: [
+          { vi: "Không kết luận tuyệt đối", en: "Do not jump to absolute conclusions" },
+          { vi: "Bắt đầu từ câu hỏi gần đời sống", en: "Start from questions close to daily life" },
+          { vi: "Từ một ý có thể mở ra nhiều clip nhỏ", en: "One idea can open into many smaller clips" },
+        ],
       },
-      {
-        title: { vi: "Về trang chủ", en: "Back to Home" },
-        description: {
-          vi: "Quay lại trang chủ để xem toàn bộ hướng nội dung đang mở.",
-          en: "Return home to review the full set of active directions.",
+      topics: [
+        {
+          id: "kien-thuc-nen-tang",
+          title: { vi: "Kiến thức nền tảng", en: "Foundational Knowledge" },
+          summary: {
+            vi: "Có những nguyên tắc dinh dưỡng cần hiểu trước khi theo bất kỳ cách ăn nào. Không phải để học thuộc, mà để nhận ra điều gì thật sự phù hợp với cơ thể và đời sống của mình.",
+            en: "Some nutrition principles are worth understanding before following any eating approach, not to memorize them, but to recognize what truly fits your body and your life.",
+          },
+          bullets: [
+            { vi: "Vì sao con người rất dễ tin một lời khuyên dinh dưỡng nghe quen?", en: "Why do people so easily trust nutrition advice that sounds familiar?" },
+            { vi: "Một thói quen ăn uống lặp lại lâu ngày mạnh hơn kiến thức ra sao?", en: "How can a habit repeated for years outweigh knowledge?" },
+            { vi: "Khi nào nên dừng lại để hỏi: mình tin điều này từ đâu?", en: "When should you stop and ask: where did this belief come from?" },
+          ],
+          question: {
+            vi: "Bạn đang chọn cách ăn vì ai nói, hay vì mình thực sự hiểu?",
+            en: "Are you choosing the way you eat because someone said so, or because you genuinely understand it?",
+          },
+          href: "/dinh-duong-thien-lanh/kien-thuc-nen-tang",
+          imageSlotId: "dinh-duong.topic.kien-thuc-nen-tang",
         },
-        href: "/",
+        {
+          id: "sua-va-nhung-dieu-thuong-duoc-tin",
+          title: { vi: "Những điều thường được tin về sữa", en: "Common Beliefs About Milk" },
+          summary: {
+            vi: "Sữa là một thực phẩm đi cùng tuổi thơ, quảng bá và nhiều lớp niềm tin xã hội. Đọc để hiểu niềm tin đó hình thành ra sao trước khi giữ hay bỏ.",
+            en: "Milk is a food bound up with childhood, advertising, and layers of social belief. Read to understand how that belief formed before deciding to keep or leave it.",
+          },
+          bullets: [
+            { vi: "Vì sao sữa luôn được gắn với hình ảnh thiết yếu?", en: "Why is milk always attached to the idea of necessity?" },
+            { vi: "Một niềm tin tập thể về sữa được nuôi lớn bằng cách nào?", en: "How is a collective belief about milk built and sustained?" },
+            { vi: "Điều gì khiến người ta thấy bất an nếu bỏ sữa?", en: "What makes people uneasy about leaving milk behind?" },
+          ],
+          question: {
+            vi: "Sữa có thật sự cần thiết như nhiều người vẫn nghĩ?",
+            en: "Is milk truly as necessary as many people think?",
+          },
+          href: "/dinh-duong-thien-lanh/sua-va-nhung-dieu-thuong-duoc-tin",
+          imageSlotId: "dinh-duong.topic.sua-va-nhung-dieu-thuong-tin",
+        },
+        {
+          id: "chat-dam-hieu-sao-cho-dung",
+          title: { vi: "Chất đạm: hiểu sao cho đúng", en: "Protein: Understanding It Right" },
+          summary: {
+            vi: "Nỗi lo thiếu đạm thường xuất hiện rất sớm khi nói đến thay đổi cách ăn. Nhưng điều cơ thể thực sự cần và điều ta đang sợ đôi khi không phải là một.",
+            en: "Worry about protein deficiency often appears very early when people talk about changing how they eat. But what the body really needs and what we fear are not always the same thing.",
+          },
+          bullets: [
+            { vi: "Vì sao câu hỏi thiếu đạm luôn xuất hiện đầu tiên?", en: "Why does the protein deficiency question always appear first?" },
+            { vi: "Nhu cầu đạm hằng ngày đang được hiểu theo cách nào?", en: "How is daily protein need being understood right now?" },
+            { vi: "Nỗi lo thiếu đạm đến từ cơ thể hay từ thói quen suy nghĩ?", en: "Does the fear of missing protein come from the body or from habitual thinking?" },
+          ],
+          question: {
+            vi: "Vì sao nỗi lo thiếu đạm lại dễ xuất hiện đến vậy?",
+            en: "Why does the fear of protein deficiency appear so easily?",
+          },
+          href: "/dinh-duong-thien-lanh/chat-dam-hieu-sao-cho-dung",
+          imageSlotId: "dinh-duong.topic.chat-dam-hang-ngay",
+        },
+        {
+          id: "suc-khoe-chuyen-hoa-va-bua-an-hang-ngay",
+          title: { vi: "Sức khỏe chuyển hóa và bữa ăn hằng ngày", en: "Metabolic Health and Daily Eating" },
+          summary: {
+            vi: "Đái tháo đường, béo phì và rối loạn chuyển hóa không chỉ là câu chuyện của đường hay mỡ. Bữa ăn hằng ngày có liên kết với sức khỏe lâu dài sâu hơn nhiều người tưởng.",
+            en: "Diabetes, obesity, and metabolic disorders are not only stories of sugar or fat. Daily eating is linked to long-term health more deeply than many people realize.",
+          },
+          bullets: [
+            { vi: "Đái tháo đường có chỉ là câu chuyện của đường?", en: "Is diabetes only a story about sugar?" },
+            { vi: "Vì sao nhiều người chỉ nhìn vào món ăn mà quên cả lối sống?", en: "Why do so many people look only at the meal and forget the broader lifestyle?" },
+            { vi: "Điều gì tích lũy âm thầm qua nhiều năm trước khi cơ thể lên tiếng?", en: "What builds up quietly over years before the body speaks?" },
+          ],
+          question: {
+            vi: "Bữa ăn hằng ngày liên quan đến chuyển hóa sâu đến đâu?",
+            en: "How deeply is daily eating connected to metabolic health?",
+          },
+          href: "/dinh-duong-thien-lanh/suc-khoe-chuyen-hoa-va-bua-an-hang-ngay",
+          imageSlotId: "dinh-duong.topic.dai-thao-duong-beo-phi-chuyen-hoa",
+        },
+        {
+          id: "ung-thu-va-nhung-cau-hoi-tu-ban-an",
+          title: { vi: "Ung thư và những câu hỏi từ bàn ăn", en: "Cancer and the Questions at the Table" },
+          summary: {
+            vi: "Không phải bữa ăn nào cũng gây ung thư. Nhưng có những thói quen ăn uống hằng ngày tích lũy nguy cơ lâu dài mà rất ít người để ý từ sớm.",
+            en: "Not every meal causes cancer. But some everyday eating habits accumulate long-term risk in ways few people notice early.",
+          },
+          bullets: [
+            { vi: "Vì sao con người luôn muốn tìm một thủ phạm duy nhất cho bệnh nặng?", en: "Why do people always want a single culprit for serious illness?" },
+            { vi: "Một thói quen nhỏ lặp lại lâu ngày có thể ảnh hưởng đến đâu?", en: "How far can a small habit repeated for years really reach?" },
+            { vi: "Điều gì đang bị nói quá nhanh khi gắn thực phẩm với bệnh tật?", en: "What is being said too quickly when food is linked to disease?" },
+          ],
+          question: {
+            vi: "Bữa ăn hằng ngày có thể ảnh hưởng đến sức khỏe lâu dài ra sao?",
+            en: "How can daily meals affect long-term health?",
+          },
+          href: "/dinh-duong-thien-lanh/ung-thu-va-nhung-cau-hoi-tu-ban-an",
+          imageSlotId: "dinh-duong.topic.ung-thu-va-goc-nhin-tu-bua-an",
+        },
+      ],
+      wthSection: {
+        title: { vi: "Góc nhìn mở ra từ phim WTH", en: "Perspectives Opened by WTH" },
+        description: {
+          vi: "Không dùng bộ phim như một câu trả lời cuối cùng. Chỉ dùng nó như điểm khởi đầu để nhìn lại những điều đã quá quen và tách ra các ý nhỏ có thể phát triển thành clip.",
+          en: "Do not treat the film as a final answer. Use it as a starting point to revisit familiar beliefs and separate them into smaller ideas that can become clips.",
+        },
+        cards: [
+          {
+            id: "wth-sua",
+            title: { vi: "Sữa", en: "Milk" },
+            story: {
+              vi: "Phim đặt lại câu chuyện về sữa như một sản phẩm được nâng đỡ bởi giáo dục, quảng bá và các khuyến nghị dinh dưỡng lặp đi lặp lại suốt nhiều năm.",
+              en: "The film revisits milk as a product upheld by education, advertising, and nutrition recommendations repeated for years.",
+            },
+            challengeQuestion: {
+              vi: "Liệu niềm tin về sữa có hoàn toàn đến từ bằng chứng độc lập, hay còn chịu ảnh hưởng của lợi ích ngành?",
+              en: "Does belief in milk come entirely from independent evidence, or is it also shaped by industry interests?",
+            },
+            seedIdeas: [
+              { vi: "Sữa đi từ thực phẩm thành niềm tin quốc dân như thế nào?", en: "How did milk move from food to a national belief?" },
+              { vi: "Vì sao quảng bá thời thơ ấu có thể theo ta đến tuổi trưởng thành?", en: "Why can childhood advertising follow us into adulthood?" },
+              { vi: "Khi nào một khuyến nghị dinh dưỡng trở thành điều không ai dám hỏi lại?", en: "When does a nutrition recommendation become something no one dares question?" },
+              { vi: "Vì sao nhiều người cảm thấy thiếu an tâm nếu bỏ sữa?", en: "Why do many people feel less secure if they stop drinking milk?" },
+            ],
+            href: "/dinh-duong-thien-lanh/sua-va-nhung-dieu-thuong-duoc-tin",
+            linkLabel: { vi: "Mở cụm về sữa", en: "Open the milk cluster" },
+          },
+          {
+            id: "wth-chat-dam",
+            title: { vi: "Chất đạm", en: "Protein" },
+            story: {
+              vi: "Phim đi thẳng vào nỗi lo thiếu đạm khi giảm thịt, rồi dùng thực tế để đặt lại câu hỏi: điều cơ thể cần có đang bị hiểu rộng hơn mức cần thiết hay không?",
+              en: "The film goes straight into the fear of protein deficiency when reducing meat, then uses real examples to ask whether the body’s needs are being overstated.",
+            },
+            challengeQuestion: {
+              vi: "Cơ thể thực sự cần bao nhiêu đạm, và nguồn thực vật có đủ đáp ứng không?",
+              en: "How much protein does the body truly need, and can plant sources meet that need?",
+            },
+            seedIdeas: [
+              { vi: "Vì sao thiếu đạm luôn là nỗi sợ đầu tiên?", en: "Why is protein deficiency always the first fear?" },
+              { vi: "Nỗi sợ này được nuôi bởi thói quen hay khoa học?", en: "Is this fear sustained by habit or by science?" },
+              { vi: "Điều gì khiến một người khó yên tâm khi nghe về cách ăn khác số đông?", en: "What makes someone uneasy when hearing about eating differently from the majority?" },
+              { vi: "Cơ thể cần đạm theo cách nào chứ không chỉ theo số lượng?", en: "How does the body need protein, not just how much?" },
+            ],
+            href: "/dinh-duong-thien-lanh/chat-dam-hieu-sao-cho-dung",
+            linkLabel: { vi: "Mở cụm về chất đạm", en: "Open the protein cluster" },
+          },
+          {
+            id: "wth-chuyen-hoa-beo-phi-ung-thu",
+            title: { vi: "Chuyển hóa · Béo phì · Ung thư", en: "Metabolism · Obesity · Cancer" },
+            story: {
+              vi: "Phim nối bệnh mãn tính với cách con người ăn, mua, tin và sống trong một hệ thực phẩm lớn hơn từng bữa ăn riêng lẻ.",
+              en: "The film connects chronic disease with how people eat, buy, believe, and live inside a food system larger than any single meal.",
+            },
+            challengeQuestion: {
+              vi: "Bệnh chuyển hóa và ung thư là câu chuyện lựa chọn cá nhân, hay còn là hệ quả của một môi trường thực phẩm đã bị định hình từ trước?",
+              en: "Are metabolic disease and cancer only matters of personal choice, or also consequences of a food environment already shaped in advance?",
+            },
+            seedIdeas: [
+              { vi: "Đái tháo đường có chỉ là câu chuyện của đường?", en: "Is diabetes only a story about sugar?" },
+              { vi: "Vì sao béo phì thường bị nhìn như lỗi cá nhân?", en: "Why is obesity so often seen as a personal failure?" },
+              { vi: "Một thói quen nhỏ lặp lại lâu ngày có thể ảnh hưởng lớn đến đâu?", en: "How far can a small habit repeated for years really reach?" },
+              { vi: "Khi nói đến ung thư, vì sao người ta luôn quay lại bàn ăn?", en: "When talking about cancer, why do people keep returning to the table?" },
+            ],
+            href: "/dinh-duong-thien-lanh/suc-khoe-chuyen-hoa-va-bua-an-hang-ngay",
+            linkLabel: { vi: "Mở cụm về chuyển hóa", en: "Open the metabolic cluster" },
+          },
+        ],
       },
-    ],
+      seedSection: {
+        title: { vi: "Từ một câu hỏi nhỏ để mở thành clip ngắn", en: "From a Small Question to a Short Clip" },
+        description: {
+          vi: "Mỗi câu hỏi dưới đây có thể mở ra một video ngắn, một bài ngắn, hoặc một chuỗi nội dung nhỏ bám đúng tinh thần của phim.",
+          en: "Each question below can open into a short video, a short article, or a small content series that stays close to the film’s spirit.",
+        },
+        cards: [
+          {
+            id: "seed-sua-can-thiet",
+            title: { vi: "Sữa có thật sự cần thiết như nhiều người vẫn nghĩ?", en: "Is Milk Really as Necessary as Many People Think?" },
+            lead: {
+              vi: "Khi một thực phẩm đi cùng tuổi thơ và được nhắc lại suốt nhiều năm, con người rất khó tách nhu cầu thật khỏi niềm tin được tạo dựng.",
+              en: "When a food is woven into childhood and repeated for years, it becomes hard to separate real need from an inherited belief.",
+            },
+            prompts: [
+              { vi: "Sữa là nhu cầu hay thói quen văn hóa?", en: "Is milk a need or a cultural habit?" },
+              { vi: "Vì sao bỏ sữa lại làm nhiều người bất an?", en: "Why does leaving milk behind make so many people uneasy?" },
+              { vi: "Một lời khuyên quen thuộc có thể sai ở đâu?", en: "Where can a familiar recommendation go wrong?" },
+            ],
+          },
+          {
+            id: "seed-thieu-dam-dau-tien",
+            title: { vi: "Vì sao nỗi lo thiếu đạm luôn xuất hiện đầu tiên?", en: "Why Does Fear of Protein Deficiency Appear First?" },
+            lead: {
+              vi: "Hầu như mọi cuộc trò chuyện về thay đổi cách ăn đều quay lại đúng một nỗi sợ: thiếu đạm. Nhưng nỗi sợ đó đến từ đâu?",
+              en: "Nearly every conversation about changing how we eat circles back to one fear: protein deficiency. But where does that fear come from?",
+            },
+            prompts: [
+              { vi: "Nỗi lo này xuất hiện từ kiến thức hay thói quen?", en: "Does this fear come from knowledge or from habit?" },
+              { vi: "Cơ thể cần đạm theo cách nào?", en: "In what way does the body actually need protein?" },
+              { vi: "Vì sao người ta yên tâm với điều quen hơn điều đúng?", en: "Why do people feel safer with what is familiar than with what is right?" },
+            ],
+          },
+          {
+            id: "seed-dai-thao-duong-la-duong",
+            title: { vi: "Đái tháo đường có chỉ là câu chuyện của đường?", en: "Is Diabetes Only a Story About Sugar?" },
+            lead: {
+              vi: "Nhiều người nhìn bệnh chuyển hóa qua một thủ phạm duy nhất. Nhưng thực tế thường rộng hơn một món ăn hoặc một chất riêng lẻ.",
+              en: "Many people see metabolic disease through a single culprit. But reality is usually wider than one food or one isolated substance.",
+            },
+            prompts: [
+              { vi: "Vì sao người ta thích một nguyên nhân đơn giản?", en: "Why do people prefer a simple cause?" },
+              { vi: "Bữa ăn và lối sống liên kết với nhau thế nào?", en: "How are meals and lifestyle tied together?" },
+              { vi: "Điều gì tích lũy âm thầm trước khi xét nghiệm lên tiếng?", en: "What accumulates quietly before a lab result finally speaks?" },
+            ],
+          },
+          {
+            id: "seed-bua-an-tac-dong-lau-dai",
+            title: { vi: "Bữa ăn hằng ngày có thể tác động sức khỏe lâu dài ra sao?", en: "How Can Daily Meals Shape Long-Term Health?" },
+            lead: {
+              vi: "Sức khỏe dài hạn hiếm khi đổi bởi một bữa ăn. Nó thường được tạo bởi những điều lặp đi lặp lại quá lâu mà ta thấy là bình thường.",
+              en: "Long-term health is rarely changed by one meal. It is usually shaped by things repeated for so long that they start to feel normal.",
+            },
+            prompts: [
+              { vi: "Thói quen nhỏ tích lũy thành điều lớn ra sao?", en: "How do small habits accumulate into something much larger?" },
+              { vi: "Vì sao cái quen lại dễ được xem là vô hại?", en: "Why is the familiar so easily seen as harmless?" },
+              { vi: "Khi nào nên bắt đầu nhìn lại nhịp ăn mỗi ngày?", en: "When should someone begin to look again at their daily eating rhythm?" },
+            ],
+          },
+          {
+            id: "seed-ung-thu-ban-an",
+            title: { vi: "Khi nói về ung thư, vì sao người ta luôn quay lại bàn ăn?", en: "Why Do People Return to the Table When Talking About Cancer?" },
+            lead: {
+              vi: "Khi đối diện bệnh nặng, con người thường tìm một điểm gần gũi nhất để đặt câu hỏi. Bàn ăn là nơi gần nhất, lặp lại nhất, và cũng khó nhìn rõ nhất.",
+              en: "When facing a serious illness, people often look for the nearest point to question. The table is the nearest, the most repeated, and also the hardest to see clearly.",
+            },
+            prompts: [
+              { vi: "Vì sao ai cũng muốn tìm một thủ phạm cụ thể?", en: "Why does everyone want a specific culprit?" },
+              { vi: "Một thói quen lâu dài có thể ảnh hưởng thế nào?", en: "How can a long-term habit affect health?" },
+              { vi: "Điều gì đang bị nói quá nhanh về thực phẩm và bệnh tật?", en: "What is being said too quickly about food and disease?" },
+            ],
+          },
+          {
+            id: "seed-phim-thay-doi-goc-nhin",
+            title: { vi: "Một bộ phim tài liệu có thể làm thay đổi góc nhìn về dinh dưỡng như thế nào?", en: "How Can a Documentary Change the Way You See Nutrition?" },
+            lead: {
+              vi: "Phim không nhất thiết cho ta câu trả lời cuối cùng. Nhưng nó có thể buộc ta nhìn lại những điều mình đã tin quá lâu mà không hề kiểm tra.",
+              en: "A film does not have to give a final answer. But it can force us to revisit beliefs we have held for too long without examining them.",
+            },
+            prompts: [
+              { vi: "Khi nào phim là điểm khởi đầu tốt?", en: "When is a film a good starting point?" },
+              { vi: "Khi nào người xem bị cuốn vào kết luận quá nhanh?", en: "When does a viewer get pulled into a conclusion too quickly?" },
+              { vi: "Làm sao biến một luận điểm phim thành clip gần đời sống?", en: "How can a film argument become a short clip close to daily life?" },
+            ],
+          },
+        ],
+      },
+      faqSection: {
+        title: { vi: "Câu hỏi dễ gặp", en: "Common Questions" },
+        items: [
+          {
+            question: { vi: "Có phải bỏ sữa là tốt hơn?", en: "Is stopping milk automatically better?" },
+            answer: {
+              vi: "Không nên biến câu hỏi này thành đúng hoặc sai tuyệt đối. Điều cần nhìn trước là cơ thể, thói quen, mục đích và cách mình đang hiểu về vai trò của sữa trong đời sống hằng ngày.",
+              en: "This question should not be turned into an absolute right-or-wrong answer. What matters first is the body, the habit, the purpose, and how you currently understand the role of milk in daily life.",
+            },
+          },
+          {
+            question: { vi: "Ăn ít thịt có dễ thiếu đạm không?", en: "Does eating less meat easily lead to protein deficiency?" },
+            answer: {
+              vi: "Nỗi lo thiếu đạm là điều rất thường gặp, nhưng không phải cứ giảm thịt là thiếu ngay. Cần nhìn cách ăn tổng thể, nhu cầu thực tế của cơ thể và sự đa dạng của nguồn thực phẩm.",
+              en: "Fear of protein deficiency is common, but eating less meat does not automatically mean you become deficient. The whole eating pattern, real bodily needs, and food diversity matter more.",
+            },
+          },
+          {
+            question: { vi: "Người có đường huyết cao nên bắt đầu nhìn từ đâu?", en: "Where should someone with high blood sugar begin looking?" },
+            answer: {
+              vi: "Không nên chỉ nhìn vào một món ăn hay một chất duy nhất. Cần nhìn rộng hơn vào nhịp ăn, thói quen lặp lại, vận động, giấc ngủ và những gì đang diễn ra mỗi ngày.",
+              en: "It is not enough to look at one food or one isolated substance. A wider view of eating rhythm, repeated habits, movement, sleep, and everyday life is needed.",
+            },
+          },
+          {
+            question: { vi: "Bữa ăn ảnh hưởng nguy cơ lâu dài theo cách nào?", en: "How do meals influence long-term risk?" },
+            answer: {
+              vi: "Ảnh hưởng dài hạn thường không đến từ một bữa đơn lẻ mà từ điều lặp lại quá lâu. Khi một thói quen trở thành bình thường, nó cũng dễ trở thành thứ ít bị đặt lại câu hỏi nhất.",
+              en: "Long-term impact usually does not come from a single meal but from what is repeated for too long. Once a habit becomes normal, it also becomes the thing least likely to be questioned.",
+            },
+          },
+          {
+            question: { vi: "Khi xem phim tài liệu về dinh dưỡng, nên tin đến mức nào?", en: "How far should you trust a nutrition documentary?" },
+            answer: {
+              vi: "Phim có thể là điểm khởi đầu tốt để mở ra câu hỏi mới, nhưng không nên biến nó thành kết luận cuối cùng. Cách tốt hơn là dùng phim để soi lại điều mình tin và tiếp tục đọc chậm hơn.",
+              en: "A documentary can be a good starting point for new questions, but it should not become the final conclusion. It works better as a way to re-examine beliefs and then keep reading more carefully.",
+            },
+          },
+        ],
+      },
+    },
     primaryCta: {
-      label: { vi: "Mở ra từ đây", en: "Begin Here" },
+      label: { vi: "Xem các chủ đề chính", en: "Browse the main topics" },
       href: "/dinh-duong-thien-lanh#kien-thuc-nen-tang",
     },
   },

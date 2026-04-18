@@ -1,0 +1,266 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { Container } from "@/components/ui/Container";
+import type { NutritionLandingI18n } from "@/data/contentBranchesI18n";
+import type { AppLocale } from "@/lib/locale";
+import { getDirectImageForSlot } from "@/lib/getImageForSlot";
+
+type NutritionLandingPageSectionProps = {
+  content: NutritionLandingI18n;
+  locale: AppLocale;
+  labels: {
+    backToHome: string;
+    openTopic: string;
+  };
+};
+
+const t = (text: Record<AppLocale, string>, locale: AppLocale) => text[locale];
+const eyebrow = "text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-teal)]";
+
+export function NutritionLandingPageSection({
+  content,
+  locale,
+  labels,
+}: NutritionLandingPageSectionProps) {
+  const heroSrc = content.heroImageSlotId
+    ? getDirectImageForSlot(content.heroImageSlotId)
+    : null;
+
+  return (
+    <section className="pb-20 pt-10 lg:pb-24 lg:pt-14">
+      <Container>
+        <div className="mx-auto max-w-[1060px] space-y-16 lg:space-y-20">
+          <section>
+            <div className={`grid items-center gap-8 ${heroSrc ? "lg:grid-cols-[1fr_340px]" : ""}`}>
+              <div className="max-w-[620px]">
+                <p className={eyebrow}>{t(content.heroBadge, locale)}</p>
+                <h1 className="mt-3 text-[clamp(2.1rem,4.2vw,3.2rem)] font-semibold leading-[1.12] text-[var(--color-text-strong)]">
+                  {t(content.heroTitle, locale)}
+                </h1>
+                <p className="mt-5 text-[1.02rem] leading-[1.75] text-[var(--color-text-muted)]">
+                  {t(content.heroDescription, locale)}
+                </p>
+                <div className="mt-7">
+                  <Link
+                    href="#theo-chu-de"
+                    className="inline-flex items-center justify-center rounded-full bg-[var(--color-primary)] px-6 py-2.5 text-[0.88rem] font-semibold text-[var(--color-text-strong)] transition-colors hover:bg-[var(--color-primary-strong)]"
+                  >
+                    {t(content.heroPrimaryCtaLabel, locale)}
+                  </Link>
+                </div>
+              </div>
+
+              {heroSrc && (
+                <div className="relative hidden aspect-[4/3] overflow-hidden rounded-[14px] lg:block">
+                  <Image
+                    src={heroSrc}
+                    alt={t(content.heroTitle, locale)}
+                    fill
+                    priority
+                    sizes="340px"
+                    className="object-cover"
+                  />
+                </div>
+              )}
+            </div>
+
+            <div className="mt-10 flex flex-wrap items-start gap-x-10 gap-y-4 border-t border-[var(--color-border)] pt-6">
+              <p className="text-[0.82rem] font-semibold text-[var(--color-text-strong)]">
+                {t(content.introStrip.title, locale)}
+              </p>
+              <ul className="flex flex-wrap gap-x-8 gap-y-2">
+                {content.introStrip.items.map((item, index) => (
+                  <li key={index} className="flex items-center gap-2 text-[0.8rem] text-[var(--color-text-muted)]">
+                    <span className="h-1 w-1 shrink-0 rounded-full bg-[var(--color-teal)]" aria-hidden="true" />
+                    {t(item, locale)}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+
+          <section id="theo-chu-de">
+            <p className={eyebrow}>{locale === "vi" ? "5 cụm chủ đề chính" : "Five Main Topic Clusters"}</p>
+            <div className="mt-6 grid auto-rows-fr gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {content.topics.map((topic) => {
+                const topicImageSrc = topic.imageSlotId
+                  ? getDirectImageForSlot(topic.imageSlotId)
+                  : null;
+
+                return (
+                  <article
+                    key={topic.id}
+                    id={topic.id}
+                    className="flex h-full flex-col overflow-hidden rounded-[12px] border border-[var(--color-border)] bg-white"
+                  >
+                    {topicImageSrc && (
+                      <div className="relative aspect-[16/10] w-full shrink-0">
+                        <Image
+                          src={topicImageSrc}
+                          alt={t(topic.title, locale)}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                          className="object-cover"
+                        />
+                      </div>
+                    )}
+
+                    <div className="flex flex-1 flex-col p-5">
+                      <h2 className="text-[1.02rem] font-semibold leading-[1.3] text-[var(--color-text-strong)]">
+                        {t(topic.title, locale)}
+                      </h2>
+                      <p className="mt-3 text-[0.9rem] leading-[1.7] text-[var(--color-text-muted)]">
+                        {t(topic.summary, locale)}
+                      </p>
+                      <ul className="mt-4 space-y-2">
+                        {topic.bullets.map((bullet, index) => (
+                          <li key={index} className="flex gap-2.5 text-[0.82rem] leading-[1.55] text-[var(--color-text-muted)]">
+                            <span className="mt-[3px] shrink-0 text-[var(--color-teal)]" aria-hidden="true">·</span>
+                            {t(bullet, locale)}
+                          </li>
+                        ))}
+                      </ul>
+                      <p className="mt-5 text-[0.84rem] italic text-[var(--color-navy)] opacity-75">
+                        {t(topic.question, locale)}
+                      </p>
+                      <Link
+                        href={topic.href}
+                        className="mt-auto pt-5 text-[0.8rem] font-medium text-[var(--color-navy)] opacity-65 transition-opacity hover:opacity-100"
+                      >
+                        {labels.openTopic}
+                      </Link>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </section>
+
+          <section>
+            <p className={eyebrow}>{locale === "vi" ? "3 trục WTH" : "Three WTH Axes"}</p>
+            <h2 className="mt-2 text-[1.35rem] font-semibold leading-[1.22] text-[var(--color-text-strong)] lg:text-[1.5rem]">
+              {t(content.wthSection.title, locale)}
+            </h2>
+            {content.wthSection.description && (
+              <p className="mt-3 max-w-[68ch] text-[0.9rem] leading-[1.7] text-[var(--color-text-muted)]">
+                {t(content.wthSection.description, locale)}
+              </p>
+            )}
+
+            <div className="mt-8 grid gap-5 lg:grid-cols-3">
+              {content.wthSection.cards.map((card) => (
+                <article
+                  key={card.id}
+                  className="flex flex-col rounded-[12px] border border-[var(--color-border)] bg-[linear-gradient(160deg,rgba(191,221,226,0.08),rgba(255,255,255,0.75))] p-6"
+                >
+                  <h3 className="text-[0.95rem] font-semibold text-[var(--color-text-strong)]">
+                    {t(card.title, locale)}
+                  </h3>
+
+                  <div className="mt-4">
+                    <p className="text-[0.64rem] font-semibold uppercase tracking-[0.12em] text-[var(--color-teal)]">
+                      {locale === "vi" ? "Phim đang kể gì" : "What the film is saying"}
+                    </p>
+                    <p className="mt-1.5 text-[0.88rem] leading-[1.7] text-[var(--color-text-strong)]">
+                      {t(card.story, locale)}
+                    </p>
+                  </div>
+
+                  <div className="mt-4">
+                    <p className="text-[0.64rem] font-semibold uppercase tracking-[0.12em] text-[var(--color-text-muted)] opacity-65">
+                      {locale === "vi" ? "Phim đang đặt lại câu hỏi gì" : "What question the film reopens"}
+                    </p>
+                    <p className="mt-1.5 text-[0.86rem] italic leading-[1.65] text-[var(--color-text-muted)]">
+                      {t(card.challengeQuestion, locale)}
+                    </p>
+                  </div>
+
+                  <div className="mt-4">
+                    <p className="text-[0.64rem] font-semibold uppercase tracking-[0.12em] text-[var(--color-teal)] opacity-75">
+                      {locale === "vi" ? "Các ý có thể phát triển tiếp" : "Ideas that can be developed next"}
+                    </p>
+                    <ul className="mt-1.5 space-y-1.5">
+                      {card.seedIdeas.map((idea, index) => (
+                        <li key={index} className="flex gap-2 text-[0.8rem] leading-[1.5] text-[var(--color-text-muted)]">
+                          <span className="mt-[2px] shrink-0 text-[var(--color-teal)]" aria-hidden="true">·</span>
+                          {t(idea, locale)}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <Link
+                    href={card.href}
+                    className="mt-auto pt-5 text-[0.8rem] font-medium text-[var(--color-navy)] opacity-60 transition-opacity hover:opacity-100"
+                  >
+                    {t(card.linkLabel, locale)}
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <p className={eyebrow}>{locale === "vi" ? "Kho ý clip / seed content" : "Clip Seed Library"}</p>
+            <h2 className="mt-2 text-[1.35rem] font-semibold leading-[1.22] text-[var(--color-text-strong)] lg:text-[1.5rem]">
+              {t(content.seedSection.title, locale)}
+            </h2>
+            {content.seedSection.description && (
+              <p className="mt-3 max-w-[68ch] text-[0.9rem] leading-[1.7] text-[var(--color-text-muted)]">
+                {t(content.seedSection.description, locale)}
+              </p>
+            )}
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {content.seedSection.cards.map((card) => (
+                <article key={card.id} className="flex flex-col rounded-[10px] border border-[var(--color-border)] bg-white p-5">
+                  <h3 className="text-[0.92rem] font-semibold leading-[1.35] text-[var(--color-text-strong)]">
+                    {t(card.title, locale)}
+                  </h3>
+                  <p className="mt-2.5 text-[0.84rem] leading-[1.65] text-[var(--color-text-muted)]">
+                    {t(card.lead, locale)}
+                  </p>
+                  <ul className="mt-3 space-y-1.5">
+                    {card.prompts.map((prompt, index) => (
+                      <li key={index} className="flex gap-2 text-[0.78rem] leading-[1.5] text-[var(--color-text-muted)] opacity-85">
+                        <span className="mt-[2px] shrink-0 text-[var(--color-teal)]" aria-hidden="true">·</span>
+                        {t(prompt, locale)}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <p className={eyebrow}>{t(content.faqSection.title, locale)}</p>
+            <dl className="mt-5 space-y-6">
+              {content.faqSection.items.map((item, index) => (
+                <div key={index}>
+                  <dt className="text-[0.94rem] font-semibold leading-[1.4] text-[var(--color-text-strong)]">
+                    {t(item.question, locale)}
+                  </dt>
+                  <dd className="mt-1.5 max-w-[62ch] text-[0.88rem] leading-[1.7] text-[var(--color-text-muted)]">
+                    {t(item.answer, locale)}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+
+            <div className="mt-12 border-t border-[var(--color-border)] pt-7">
+              <Link
+                href="/"
+                className="text-[0.86rem] text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-navy)]"
+              >
+                ← {labels.backToHome}
+              </Link>
+            </div>
+          </section>
+        </div>
+      </Container>
+    </section>
+  );
+}
