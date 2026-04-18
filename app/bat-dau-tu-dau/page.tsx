@@ -31,7 +31,7 @@ const nextMoves = [
   },
   {
     title: "Bắt đầu bằng một thay đổi nhỏ",
-    description: "Nếu muốn hành động ngay, vào thẳng cụm nội dung thay đổi nhỏ.",
+    description: "Nếu muốn hành động ngay, vào thẳng chuyên đề thay đổi nhỏ.",
     href: "/thay-doi-nho",
   },
   {

@@ -6,7 +6,7 @@ export const commonI18n = {
       viewAll: "Xem tất cả",
       backToHome: "Về trang chủ",
       exploreMore: "Khám phá thêm",
-      openCluster: "Xem cụm nội dung",
+      openCluster: "Xem chuyên đề",
       openBranch: "Khám phá thêm",
       viewDirection: "Xem định hướng",
     },

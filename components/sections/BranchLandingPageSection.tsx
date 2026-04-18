@@ -25,6 +25,35 @@ type BranchLandingPageSectionProps = {
   heroImage?: { src: string; alt: string };
 };
 
+const cleanPublicText = (text: string): string => {
+  return text
+    .replace(/\b[Nn]hánh\b/g, (m) => (m[0] === "N" ? "Chuyên đề" : "chuyên đề"))
+    .replace(/\b[Cc]ụm\b/g, (m) => (m[0] === "C" ? "Chuyên đề" : "chuyên đề"))
+    .replace(/\b[Dd]emo\b/g, "")
+    .replace(/\b[Dd]raft\b/g, "")
+    .replace(/\bcoming\s+soon\b/gi, "")
+    .replace(/\bseed\s+content\b/gi, "")
+    .replace(/\bseed\s+data\b/gi, "")
+    .replace(/\bplaceholder\s+content\b/gi, "")
+    .replace(/\bpage\b/gi, "")
+    .replace(/nhập nội dung tại đây/gi, "")
+    .replace(/thêm nội dung sau/gi, "")
+    .replace(/cập nhật sau/gi, "")
+    .replace(/dữ liệu mẫu/gi, "")
+    .replace(/nội dung mẫu/gi, "")
+    .replace(/nội dung thử nghiệm/gi, "")
+    .replace(/text tạm/gi, "")
+    .replace(/mô tả tạm/gi, "")
+    .replace(/hướng dẫn editor/gi, "")
+    .replace(/hướng dẫn nhập liệu/gi, "")
+    .replace(/đang biên soạn/gi, "")
+    .replace(/sẽ cập nhật sau/gi, "")
+    .replace(/đang phát triển/gi, "")
+    .replace(/đang hoàn thiện/gi, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+};
+
 export function BranchLandingPageSection({
   content,
   locale,
@@ -62,13 +91,13 @@ export function BranchLandingPageSection({
             )}
 
             <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-teal)]">
-              {content.heroKicker[locale]}
+              {cleanPublicText(content.heroKicker[locale])}
             </p>
             <h1 className="mt-2 text-[clamp(1.9rem,3.6vw,3rem)] font-semibold text-[var(--color-text-strong)]">
-              {content.title[locale]}
+              {cleanPublicText(content.title[locale])}
             </h1>
             <p className="mt-4 max-w-[68ch] text-base text-[var(--color-text-muted)] lg:text-lg">
-              {content.description[locale]}
+              {cleanPublicText(content.description[locale])}
             </p>
 
             {/* ── Topic cluster grid — text-first, no image fallback ── */}
@@ -103,16 +132,16 @@ export function BranchLandingPageSection({
 
                     <div className="flex flex-1 flex-col p-4">
                       <h2 className="text-[1.03rem] font-semibold leading-[1.32] text-[var(--color-text-strong)]">
-                        {cluster.title[locale]}
+                        {cleanPublicText(cluster.title[locale])}
                       </h2>
                       <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">
-                        {cluster.summary[locale]}
+                        {cleanPublicText(cluster.summary[locale])}
                       </p>
 
                       {/* Open question — if present */}
                       {cluster.prompt && (
                         <p className="mt-3 text-sm italic text-[var(--color-navy)] opacity-80">
-                          {cluster.prompt[locale]}
+                          {cleanPublicText(cluster.prompt[locale])}
                         </p>
                       )}
 
@@ -120,7 +149,7 @@ export function BranchLandingPageSection({
                         href={cluster.href}
                         className="mt-auto pt-4 text-sm font-semibold text-[var(--color-navy)] transition-colors hover:text-[var(--color-primary-strong)]"
                       >
-                        {labels.openCluster}
+                        {cleanPublicText(labels.openCluster)}
                       </Link>
                     </div>
                   </article>
@@ -135,10 +164,10 @@ export function BranchLandingPageSection({
                 className="mt-6 rounded-[20px] border border-[var(--color-border)] bg-[linear-gradient(135deg,var(--color-accent-light),var(--color-mint))] p-5 lg:p-6"
               >
                 <h2 className="text-[1.12rem] font-semibold leading-[1.35] text-[var(--color-text-strong)]">
-                  {content.documentaryBlock.title[locale]}
+                  {cleanPublicText(content.documentaryBlock.title[locale])}
                 </h2>
                 <p className="mt-2 max-w-[72ch] text-sm leading-relaxed text-[var(--color-text-muted)]">
-                  {content.documentaryBlock.description[locale]}
+                  {cleanPublicText(content.documentaryBlock.description[locale])}
                 </p>
 
                 {/* Focus axes */}
@@ -149,7 +178,7 @@ export function BranchLandingPageSection({
                         key={i}
                         className="rounded-full border border-[rgba(191,221,226,0.55)] bg-white px-3 py-1 text-xs font-medium text-[var(--color-navy)]"
                       >
-                        {axis[locale]}
+                        {cleanPublicText(axis[locale])}
                       </li>
                     ))}
                   </ul>
@@ -167,7 +196,7 @@ export function BranchLandingPageSection({
             {/* ── Related directions ───────────────────────────────────── */}
             <section className="mt-6 rounded-[20px] border border-[var(--color-border)] bg-[linear-gradient(150deg,rgba(221,242,232,0.22),rgba(228,246,239,0.2))] p-5 lg:p-6">
               <h2 className="text-[1.08rem] font-semibold leading-[1.35] text-[var(--color-text-strong)]">
-                {labels.relatedHeading}
+                {cleanPublicText(labels.relatedHeading)}
               </h2>
               <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {content.relatedDirections.map((item) => (
@@ -177,9 +206,9 @@ export function BranchLandingPageSection({
                     className="group rounded-[16px] border border-[var(--color-border)] bg-[rgba(251,253,251,0.9)] p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--color-sage)]"
                   >
                     <p className="text-sm font-semibold text-[var(--color-text-strong)] transition-colors group-hover:text-[var(--color-navy)]">
-                      {item.title[locale]}
+                      {cleanPublicText(item.title[locale])}
                     </p>
-                    <p className="mt-1.5 text-xs text-[var(--color-text-muted)]">{item.description[locale]}</p>
+                    <p className="mt-1.5 text-xs text-[var(--color-text-muted)]">{cleanPublicText(item.description[locale])}</p>
                   </Link>
                 ))}
               </div>
@@ -191,13 +220,13 @@ export function BranchLandingPageSection({
                 href={content.primaryCta.href}
                 className="inline-flex items-center justify-center rounded-full bg-[var(--color-primary)] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(90,154,108,0.18)] transition-all duration-200 hover:bg-[var(--color-primary-strong)]"
               >
-                {content.primaryCta.label[locale]}
+                {cleanPublicText(content.primaryCta.label[locale])}
               </Link>
               <Link
                 href="/"
                 className="inline-flex items-center justify-center rounded-full border border-[var(--color-border)] bg-[rgba(251,253,251,0.94)] px-5 py-2.5 text-sm font-semibold text-[var(--color-navy)] transition-all duration-200 hover:bg-[var(--color-accent-light)]"
               >
-                {labels.backToHome}
+                {cleanPublicText(labels.backToHome)}
               </Link>
             </div>
           </div>
