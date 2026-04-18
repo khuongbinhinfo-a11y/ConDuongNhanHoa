@@ -107,7 +107,7 @@ export function SiteHeader({
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[linear-gradient(180deg,rgba(252,254,251,0.97),rgba(248,252,248,0.92))] backdrop-blur-md">
       <Container>
-        <div className="hidden min-h-[88px] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-6 lg:grid xl:gap-8">
+        <div className="hidden min-h-[110px] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-6 lg:grid xl:gap-8">
           <Link href="/" aria-label={brandName} className="inline-flex shrink-0 items-center gap-2.5 py-1 text-[var(--color-navy)]">
             <Image
               src="/logo_CDTL/logo_CDTL.png"
@@ -115,9 +115,9 @@ export function SiteHeader({
               width={1536}
               height={1024}
               priority
-              className="h-[5.5rem] w-auto object-contain"
+              className="h-[8rem] w-auto object-contain"
             />
-            <span className="text-[1.14rem] font-semibold tracking-[0.01em] text-[var(--color-text-strong)]">{brandName}</span>
+            <span className="text-[1.18rem] font-semibold tracking-[0.01em] text-[var(--color-text-strong)]">{brandName}</span>
           </Link>
 
           <nav aria-label={navAriaLabel} className="justify-self-center">
@@ -161,7 +161,7 @@ export function SiteHeader({
           </div>
         </div>
 
-        <div className="relative flex min-h-[70px] items-center justify-between gap-3.5 lg:hidden">
+        <div className="relative flex min-h-[82px] items-center justify-between gap-3.5 lg:hidden">
           <Link href="/" aria-label={brandName} className="inline-flex min-w-0 items-center gap-2 py-0.5 text-[var(--color-navy)]">
             <Image
               src="/logo_CDTL/logo_CDTL.png"
@@ -169,9 +169,9 @@ export function SiteHeader({
               width={1536}
               height={1024}
               priority
-              className="h-[4.5rem] w-auto object-contain"
+              className="h-[6rem] w-auto object-contain"
             />
-            <span className="text-[1.04rem] font-semibold tracking-[0.01em] text-[var(--color-text-strong)]">{brandName}</span>
+            <span className="text-[1.08rem] font-semibold tracking-[0.01em] text-[var(--color-text-strong)]">{brandName}</span>
           </Link>
 
           <div className="relative">

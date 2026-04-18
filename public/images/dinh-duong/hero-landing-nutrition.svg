@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="960" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F6FAF7"/>
+      <stop offset="50%" stop-color="#FAFDFB"/>
+      <stop offset="100%" stop-color="#EFF7F2"/>
+    </linearGradient>
+    <linearGradient id="tableGrad" x1="200" y1="380" x2="760" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F0EDE8"/>
+      <stop offset="100%" stop-color="#F5F2ED"/>
+    </linearGradient>
+    <linearGradient id="bowlGrad" x1="380" y1="220" x2="580" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F5F5F0"/>
+    </linearGradient>
+    <linearGradient id="leafGrad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6BBF7B"/>
+      <stop offset="100%" stop-color="#4A9E5C"/>
+    </linearGradient>
+    <linearGradient id="leafGrad2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7EC88D"/>
+      <stop offset="100%" stop-color="#5AAF6A"/>
+    </linearGradient>
+    <linearGradient id="grainGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8D5A3"/>
+      <stop offset="100%" stop-color="#D4BF8A"/>
+    </linearGradient>
+    <linearGradient id="chickpeaGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8D8A8"/>
+      <stop offset="100%" stop-color="#D9C48E"/>
+    </linearGradient>
+    <linearGradient id="tofuGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF8E8"/>
+      <stop offset="100%" stop-color="#F0E8D0"/>
+    </linearGradient>
+    <linearGradient id="plateGrad" x1="200" y1="260" x2="350" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FAFAFA"/>
+      <stop offset="100%" stop-color="#F0F0EC"/>
+    </linearGradient>
+    <linearGradient id="avocadoGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7CB87A"/>
+      <stop offset="100%" stop-color="#5A9A58"/>
+    </linearGradient>
+    <linearGradient id="avocadoInner" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C8E6A0"/>
+      <stop offset="100%" stop-color="#A8D080"/>
+    </linearGradient>
+    <radialGradient id="softGlow" cx="480" cy="300" r="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E4F5EA" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#F6FAF7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="8" flood-color="#2A4A30" flood-opacity="0.08"/>
+    </filter>
+    <filter id="lightShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#2A4A30" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="600" fill="url(#bgGrad)"/>
+  <rect width="960" height="600" fill="url(#softGlow)"/>
+
+  <!-- Table surface -->
+  <ellipse cx="480" cy="470" rx="380" ry="90" fill="url(#tableGrad)" opacity="0.7"/>
+
+  <!-- Main bowl — center -->
+  <g filter="url(#softShadow)">
+    <ellipse cx="480" cy="330" rx="160" ry="50" fill="#E8E4DE" opacity="0.4"/>
+    <ellipse cx="480" cy="310" rx="155" ry="115" fill="url(#bowlGrad)"/>
+    <ellipse cx="480" cy="260" rx="148" ry="75" fill="#FAFAF6"/>
+    <!-- Bowl rim highlight -->
+    <ellipse cx="480" cy="260" rx="148" ry="75" fill="none" stroke="#E8E4DE" stroke-width="1.5"/>
+  </g>
+
+  <!-- Bowl contents — salad greens base -->
+  <g>
+    <!-- Lettuce / mixed greens bed -->
+    <ellipse cx="480" cy="258" rx="130" ry="55" fill="#8BC89C" opacity="0.35"/>
+    <!-- Leafy curls -->
+    <path d="M390 255c10-18 30-25 50-20s25 20 10 28-35 5-45-2-20-4-15-6z" fill="#6BBF7B" opacity="0.7"/>
+    <path d="M420 240c12-15 35-18 48-8s8 22-8 26-30 0-38-8-10-6-2-10z" fill="#7EC88D" opacity="0.65"/>
+    <path d="M500 245c15-12 35-10 42 2s-2 20-18 22-28-2-32-12 0-8 8-12z" fill="#6BBF7B" opacity="0.6"/>
+    <path d="M530 260c10-15 28-18 38-8s4 18-10 22-25 2-30-6-5-5 2-8z" fill="#5AAF6A" opacity="0.55"/>
+    <path d="M450 248c8-14 22-20 35-14s12 18 0 24-24 4-32-2-8-4-3-8z" fill="#8BD49E" opacity="0.5"/>
+
+    <!-- Spinach leaves -->
+    <path d="M410 265c-5-12 5-22 18-24s22 8 18 18-14 16-24 14-10-4-12-8z" fill="url(#leafGrad1)" opacity="0.8"/>
+    <path d="M540 252c-3-10 8-20 20-20s18 10 12 18-12 12-22 10-8-4-10-8z" fill="url(#leafGrad2)" opacity="0.75"/>
+    <!-- Leaf veins -->
+    <path d="M418 260c4-8 10-14 16-16" fill="none" stroke="#4A9E5C" stroke-width="0.5" opacity="0.4"/>
+    <path d="M548 248c3-6 8-12 14-14" fill="none" stroke="#4A9E5C" stroke-width="0.5" opacity="0.4"/>
+  </g>
+
+  <!-- Quinoa/grain scattered -->
+  <g fill="url(#grainGrad)" opacity="0.85">
+    <circle cx="445" cy="268" r="3.5"/>
+    <circle cx="455" cy="275" r="3"/>
+    <circle cx="462" cy="265" r="3.2"/>
+    <circle cx="470" cy="272" r="2.8"/>
+    <circle cx="478" cy="262" r="3.3"/>
+    <circle cx="488" cy="270" r="3"/>
+    <circle cx="496" cy="264" r="3.5"/>
+    <circle cx="505" cy="272" r="2.8"/>
+    <circle cx="512" cy="266" r="3.2"/>
+    <circle cx="452" cy="258" r="2.5"/>
+    <circle cx="500" cy="258" r="2.8"/>
+    <circle cx="485" cy="255" r="2.5"/>
+  </g>
+
+  <!-- Chickpeas cluster -->
+  <g>
+    <circle cx="435" cy="282" r="8" fill="url(#chickpeaGrad)"/>
+    <circle cx="450" cy="288" r="7.5" fill="url(#chickpeaGrad)"/>
+    <circle cx="442" cy="295" r="7" fill="url(#chickpeaGrad)"/>
+    <circle cx="428" cy="290" r="7.5" fill="url(#chickpeaGrad)"/>
+    <circle cx="458" cy="280" r="6.5" fill="url(#chickpeaGrad)"/>
+    <!-- Chickpea details — little lines -->
+    <path d="M432 280c2-1 4 0 4 2" fill="none" stroke="#C4AA70" stroke-width="0.6" opacity="0.5"/>
+    <path d="M448 286c2-1 3 0 3 2" fill="none" stroke="#C4AA70" stroke-width="0.6" opacity="0.5"/>
+    <path d="M440 293c1.5-1 3.5 0 3.5 1.5" fill="none" stroke="#C4AA70" stroke-width="0.6" opacity="0.5"/>
+  </g>
+
+  <!-- Tofu cubes -->
+  <g filter="url(#lightShadow)">
+    <rect x="502" y="275" width="22" height="22" rx="3" fill="url(#tofuGrad)" transform="rotate(-8 513 286)"/>
+    <rect x="518" y="280" width="20" height="20" rx="3" fill="url(#tofuGrad)" transform="rotate(5 528 290)"/>
+    <rect x="508" y="292" width="18" height="18" rx="3" fill="url(#tofuGrad)" transform="rotate(-3 517 301)"/>
+    <!-- Tofu surface marks -->
+    <line x1="507" y1="282" x2="520" y2="280" stroke="#E0D8C0" stroke-width="0.4" opacity="0.5"/>
+    <line x1="523" y1="287" x2="534" y2="286" stroke="#E0D8C0" stroke-width="0.4" opacity="0.5"/>
+  </g>
+
+  <!-- Cherry tomato halves -->
+  <g>
+    <circle cx="472" cy="290" r="9" fill="#E87461" opacity="0.85"/>
+    <circle cx="472" cy="290" r="5" fill="#F09888" opacity="0.5"/>
+    <circle cx="490" cy="296" r="7.5" fill="#E87461" opacity="0.8"/>
+    <circle cx="490" cy="296" r="4" fill="#F09888" opacity="0.45"/>
+  </g>
+
+  <!-- Small plate left — with avocado half -->
+  <g filter="url(#lightShadow)">
+    <ellipse cx="260" cy="340" rx="75" ry="55" fill="url(#plateGrad)"/>
+    <ellipse cx="260" cy="335" rx="70" ry="50" fill="#FEFEFE"/>
+    <ellipse cx="260" cy="335" rx="70" ry="50" fill="none" stroke="#EAE6E0" stroke-width="1"/>
+  </g>
+  <!-- Avocado half -->
+  <g transform="translate(230, 310)">
+    <ellipse cx="30" cy="28" rx="35" ry="28" fill="url(#avocadoGrad)"/>
+    <ellipse cx="30" cy="26" rx="28" ry="22" fill="url(#avocadoInner)"/>
+    <circle cx="30" cy="26" r="10" fill="#8B6E4E" opacity="0.6"/>
+    <circle cx="30" cy="26" r="10" fill="none" stroke="#7A5F3E" stroke-width="0.8" opacity="0.4"/>
+    <ellipse cx="28" cy="23" rx="3" ry="2" fill="#A08060" opacity="0.3"/>
+  </g>
+
+  <!-- Small wooden board right — with grain bread -->
+  <g filter="url(#lightShadow)">
+    <rect x="650" y="285" width="120" height="80" rx="12" fill="#D4C4A8" opacity="0.6"/>
+    <rect x="653" y="288" width="114" height="74" rx="10" fill="#E0D4BC" opacity="0.7"/>
+  </g>
+  <!-- Grain bread slices -->
+  <g>
+    <rect x="665" y="298" width="40" height="50" rx="8" fill="#D4B87A" opacity="0.85" transform="rotate(-5 685 323)"/>
+    <rect x="668" y="301" width="36" height="46" rx="6" fill="#DABA6B" opacity="0.4" transform="rotate(-5 686 324)"/>
+    <!-- Seed specks on bread -->
+    <circle cx="675" cy="312" r="1.5" fill="#B89E60" opacity="0.6"/>
+    <circle cx="682" cy="320" r="1.2" fill="#B89E60" opacity="0.5"/>
+    <circle cx="678" cy="330" r="1.3" fill="#B89E60" opacity="0.55"/>
+    <circle cx="688" cy="315" r="1" fill="#B89E60" opacity="0.5"/>
+    
+    <rect x="700" y="295" width="38" height="48" rx="8" fill="#D4B87A" opacity="0.8" transform="rotate(3 719 319)"/>
+    <rect x="703" y="298" width="34" height="44" rx="6" fill="#DABA6B" opacity="0.35" transform="rotate(3 720 320)"/>
+    <circle cx="712" cy="310" r="1.3" fill="#B89E60" opacity="0.5"/>
+    <circle cx="718" cy="322" r="1.5" fill="#B89E60" opacity="0.55"/>
+    <circle cx="709" cy="328" r="1.1" fill="#B89E60" opacity="0.5"/>
+  </g>
+
+  <!-- Decorative herbs/leaves scattered -->
+  <!-- Top left leaf -->
+  <g transform="translate(145, 170) rotate(-25)">
+    <path d="M0 20C5 5 20-5 35 0S40 25 30 35 10 35 0 20z" fill="#7EC88D" opacity="0.5"/>
+    <path d="M5 18C10 10 20 5 30 8" fill="none" stroke="#5AAF6A" stroke-width="0.7" opacity="0.4"/>
+  </g>
+  <!-- Top right leaf -->
+  <g transform="translate(760, 145) rotate(15)">
+    <path d="M0 18C3 4 16-4 28 0S35 22 26 30 8 30 0 18z" fill="#6BBF7B" opacity="0.45"/>
+    <path d="M4 16C8 9 16 5 24 7" fill="none" stroke="#4A9E5C" stroke-width="0.6" opacity="0.35"/>
+  </g>
+  <!-- Bottom left small leaf -->
+  <g transform="translate(180, 420) rotate(40)">
+    <path d="M0 12C2 3 10-2 18 0S22 14 16 20 6 18 0 12z" fill="#8BD49E" opacity="0.4"/>
+  </g>
+  <!-- Bottom right small leaf -->
+  <g transform="translate(740, 400) rotate(-30)">
+    <path d="M0 14C3 4 12-3 22 0S26 16 18 22 6 22 0 14z" fill="#7EC88D" opacity="0.4"/>
+  </g>
+
+  <!-- Small lemon slice accent -->
+  <g transform="translate(340, 340)">
+    <circle cx="0" cy="0" r="14" fill="#F5E6A0" opacity="0.7"/>
+    <circle cx="0" cy="0" r="11" fill="#FAEFA8" opacity="0.6"/>
+    <line x1="-8" y1="0" x2="8" y2="0" stroke="#E8D480" stroke-width="0.6" opacity="0.4"/>
+    <line x1="0" y1="-8" x2="0" y2="8" stroke="#E8D480" stroke-width="0.6" opacity="0.4"/>
+    <line x1="-6" y1="-6" x2="6" y2="6" stroke="#E8D480" stroke-width="0.5" opacity="0.3"/>
+    <line x1="-6" y1="6" x2="6" y2="-6" stroke="#E8D480" stroke-width="0.5" opacity="0.3"/>
+  </g>
+
+  <!-- Glass of water with mint -->
+  <g filter="url(#lightShadow)" transform="translate(160, 195)">
+    <path d="M10 0h40l-5 70c0 5-3 8-8 8H23c-5 0-8-3-8-8L10 0z" fill="#E8F4F8" opacity="0.55"/>
+    <path d="M10 0h40l-5 70c0 5-3 8-8 8H23c-5 0-8-3-8-8L10 0z" fill="none" stroke="#C8E0E8" stroke-width="0.8" opacity="0.5"/>
+    <!-- Water level -->
+    <path d="M14 18h32l-4 50c0 4-2.5 6.5-6.5 6.5h-11c-4 0-6.5-2.5-6.5-6.5L14 18z" fill="#D0EAF0" opacity="0.35"/>
+    <!-- Mint leaf on glass -->
+    <path d="M35 12c3-8 12-10 18-5s4 12-3 15-13 2-16-4 0-4 1-6z" fill="#6BBF7B" opacity="0.7"/>
+    <path d="M38 14c3-4 8-5 12-3" fill="none" stroke="#4A9E5C" stroke-width="0.5" opacity="0.5"/>
+  </g>
+
+  <!-- Napkin / cloth subtle -->
+  <g opacity="0.3">
+    <path d="M620 380c20-5 60-8 80 0s10 25-10 30-60 5-75-5-10-20 5-25z" fill="#E8E0D4"/>
+  </g>
+
+  <!-- Subtle fork -->
+  <g transform="translate(600, 250) rotate(25)" opacity="0.25">
+    <rect x="0" y="0" width="3" height="90" rx="1.5" fill="#C0B8A8"/>
+    <rect x="-4" y="-12" width="3" height="16" rx="1" fill="#C0B8A8"/>
+    <rect x="0" y="-12" width="3" height="16" rx="1" fill="#C0B8A8"/>
+    <rect x="4" y="-12" width="3" height="16" rx="1" fill="#C0B8A8"/>
+  </g>
+</svg>

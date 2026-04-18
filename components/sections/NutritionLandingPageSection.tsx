@@ -34,58 +34,69 @@ export function NutritionLandingPageSection({
     ? getDirectImageForSlot(content.heroImageSlotId)
     : null;
 
+  /* Resolve the dedicated landing hero SVG */
+  const landingHeroSrc = getDirectImageForSlot("dinh-duong.hero.landing") ?? heroSrc;
+
   return (
-    <section className="pb-20 pt-10 lg:pb-24 lg:pt-14">
+    <section className="pb-20 pt-6 lg:pb-24 lg:pt-8">
       <Container>
-        <div className="mx-auto max-w-[1060px] space-y-16 lg:space-y-20">
+        <div className="mx-auto max-w-[1120px] space-y-16 lg:space-y-20">
+          {/* ═══ HERO — 2-column layout ═══ */}
           <section>
-            <div className={`grid items-center gap-8 ${heroSrc ? "lg:grid-cols-[1fr_340px]" : ""}`}>
-              <div className="max-w-[620px]">
+            <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
+              {/* Left column — text */}
+              <div className="order-2 max-w-[540px] lg:order-1">
                 <p className={eyebrow}>{t(content.heroBadge, locale)}</p>
-                <h1 className="mt-3 text-[clamp(2.1rem,4.2vw,3.2rem)] font-semibold leading-[1.12] text-[var(--color-text-strong)]">
+                <h1 className="mt-3 text-[clamp(2rem,4vw,2.9rem)] font-semibold leading-[1.14] text-[var(--color-text-strong)]">
                   {t(content.heroTitle, locale)}
                 </h1>
-                <p className="mt-5 text-[1.02rem] leading-[1.75] text-[var(--color-text-muted)]">
+                <p className="mt-4 text-[1rem] leading-[1.75] text-[var(--color-text-muted)]">
                   {t(content.heroDescription, locale)}
                 </p>
-                <div className="mt-7">
+                <div className="mt-6">
                   <Link
                     href="#theo-chu-de"
-                    className="inline-flex items-center justify-center rounded-full bg-[var(--color-primary)] px-6 py-2.5 text-[0.88rem] font-semibold text-white transition-colors hover:bg-[var(--color-primary-strong)]"
+                    className="inline-flex items-center justify-center rounded-full bg-[var(--color-primary)] px-7 py-2.5 text-[0.88rem] font-semibold text-white shadow-[0_2px_8px_rgba(90,154,108,0.18)] transition-all hover:bg-[var(--color-primary-strong)] hover:shadow-[0_4px_14px_rgba(90,154,108,0.22)]"
                   >
                     {t(content.heroPrimaryCtaLabel, locale)}
                   </Link>
                 </div>
               </div>
 
-              {heroSrc && (
-                <div className="relative hidden aspect-[4/3] overflow-hidden rounded-[14px] lg:block">
-                  <Image
-                    src={heroSrc}
-                    alt={t(content.heroTitle, locale)}
-                    fill
-                    priority
-                    sizes="340px"
-                    className="object-cover"
-                  />
+              {/* Right column — hero image */}
+              {landingHeroSrc && (
+                <div className="order-1 lg:order-2">
+                  <div className="relative mx-auto aspect-[16/10] w-full max-w-[520px] overflow-hidden rounded-2xl bg-[var(--color-accent-light)] shadow-[0_4px_24px_rgba(36,58,47,0.07)]">
+                    <Image
+                      src={landingHeroSrc}
+                      alt={t(content.heroTitle, locale)}
+                      fill
+                      priority
+                      sizes="(max-width: 1024px) 92vw, 520px"
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
               )}
             </div>
 
-            <div className="mt-10 grid gap-4 border-t border-[var(--color-border)] pt-7 sm:grid-cols-3">
-              {content.introStrip.items.map((item, index) => {
-                const icons = ["○", "◇", "→"];
-                return (
-                  <div key={index} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--color-mint)] text-[0.7rem] text-[var(--color-teal)]" aria-hidden="true">
-                      {icons[index] ?? "·"}
-                    </span>
-                    <span className="text-[0.82rem] leading-[1.55] text-[var(--color-text-muted)]">
-                      {t(item, locale)}
-                    </span>
-                  </div>
-                );
-              })}
+            {/* ─── Reading principles strip ─── */}
+            <div className="mt-8 rounded-xl bg-[var(--color-accent-light)] px-5 py-4 sm:mt-10 sm:px-6 sm:py-5">
+              <div className="grid gap-3 sm:grid-cols-3 sm:gap-5">
+                {content.introStrip.items.map((item, index) => {
+                  const icons = ["✦", "◎", "→"];
+                  return (
+                    <div key={index} className="flex items-start gap-2.5">
+                      <span className="mt-[2px] flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white text-[0.65rem] text-[var(--color-primary)] shadow-[0_1px_3px_rgba(90,154,108,0.1)]" aria-hidden="true">
+                        {icons[index] ?? "·"}
+                      </span>
+                      <span className="text-[0.8rem] leading-[1.55] text-[var(--color-text-muted)]">
+                        {t(item, locale)}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </section>
 
