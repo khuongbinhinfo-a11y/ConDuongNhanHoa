@@ -191,7 +191,7 @@ export function NutritionLandingPageSection({
                   </p>
 
                   <ul className="mt-4 space-y-1.5">
-                    {card.seedIdeas.slice(0, 3).map((idea, index) => (
+                    {card.seedIdeas.map((idea, index) => (
                       <li key={index} className="flex gap-2 text-[0.78rem] leading-[1.5] text-[var(--color-text-muted)]">
                         <span className="mt-[2px] shrink-0 text-[var(--color-teal)]" aria-hidden="true">·</span>
                         {t(idea, locale)}

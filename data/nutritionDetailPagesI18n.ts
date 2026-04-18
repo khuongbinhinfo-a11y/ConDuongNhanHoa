@@ -461,10 +461,153 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
     ],
     closingTitle: { vi: "Đi tiếp từ đây", en: "Continue from here" },
     closingBody: {
-      vi: "Ba chuyên đề đầu tiên này là điểm bắt đầu. Từ đây có thể tiếp tục mở rộng sang các chủ đề về ung thư và bàn ăn, kiến thức nền tảng, hoặc các bài viết ngắn đi sâu từng khía cạnh trong mỗi hướng.",
-      en: "These first three pages are only a beginning. From here, more pages can open on cancer and the table, foundational knowledge, or short pieces that dive into each smaller idea within every axis.",
+      vi: "Khi đã nhìn lại sức khỏe chuyển hóa, bước tiếp theo là quay sang câu chuyện rộng hơn: ung thư và những nguy cơ tích lũy lâu dài còn gắn với những thói quen ăn uống nào khác ngoài đường và mỡ.",
+      en: "Once metabolic health has been revisited, the next step is a wider story: cancer and what other eating habits are linked to long-term accumulated risk beyond sugar and fat.",
     },
-    primaryCtaLabel: { vi: "Quay lại Dinh dưỡng thiện lành", en: "Back to Wholesome Nutrition" },
+    primaryCtaLabel: { vi: "Sang Ung thư và bàn ăn", en: "Continue to Cancer and the Table" },
+    primaryCtaHref: "/dinh-duong-thien-lanh/ung-thu-va-nhung-cau-hoi-tu-ban-an",
+  },
+  "ung-thu-va-nhung-cau-hoi-tu-ban-an": {
+    slug: "ung-thu-va-nhung-cau-hoi-tu-ban-an",
+    parentTopicId: "ung-thu-va-nhung-cau-hoi-tu-ban-an",
+    title: { vi: "Ung thư và những câu hỏi từ bàn ăn", en: "Cancer and the Questions at the Table" },
+    heroBadge: { vi: "Góc nhìn từ WTH · Bàn ăn và nguy cơ dài hạn", en: "Perspective from WTH · The Table and Long-Term Risk" },
+    heroTitle: { vi: "Ung thư và những câu hỏi bắt đầu từ bữa ăn hằng ngày", en: "Cancer and the Questions That Begin with Daily Meals" },
+    heroDescription: {
+      vi: "Khi nói đến ung thư, con người thường muốn tìm một nguyên nhân thật rõ. Nhưng từ góc nhìn của WTH, điều đáng nhìn kỹ hơn không nằm ở một món ăn đơn lẻ, mà ở những thói quen lặp lại quá lâu, quá quen, và ít khi được đặt lại câu hỏi.",
+      en: "When it comes to cancer, people usually want to find a clear cause. But from the perspective of WTH, what deserves closer attention is not a single food, but habits repeated too long, too familiar, and seldom questioned again.",
+    },
+    heroImageSlotId: "dinh-duong.topic.ung-thu-va-goc-nhin-tu-bua-an",
+    openingNoteTitle: { vi: "Cách tiếp cận nội dung này", en: "How to approach this content" },
+    openingNoteBody: {
+      vi: "Nội dung dưới đây không nhằm đơn giản hóa ung thư thành câu chuyện của riêng bàn ăn. Mục tiêu là nhìn lại cách con người đặt câu hỏi về bữa ăn, thói quen và nguy cơ tích lũy lâu dài, thay vì vội tìm một thủ phạm duy nhất.",
+      en: "This content does not aim to reduce cancer to a story only about food. The goal is to revisit how people ask questions about meals, habits, and accumulated long-term risk, rather than rush to find a single culprit.",
+    },
+    filmStoryTitle: { vi: "Phim đang kể gì", en: "What the film is saying" },
+    filmStoryBody: {
+      vi: "WTH không kể ung thư như hệ quả của một bữa ăn duy nhất. Điều bộ phim làm là nối câu chuyện bệnh nặng với lối sống, hệ thực phẩm, thói quen tiêu dùng và những điều con người lặp lại đủ lâu để xem chúng là bình thường.",
+      en: "WTH does not tell cancer as the result of a single meal. What the film does is connect serious disease with lifestyle, the food system, consumption habits, and things people repeat long enough to see as normal.",
+    },
+    filmQuestionTitle: { vi: "Phim đang đặt lại câu hỏi gì", en: "What question the film reopens" },
+    filmQuestionBody: {
+      vi: "Khi nói đến ung thư, vì sao con người luôn muốn chốt vào một nguyên nhân thật cụ thể? Và nếu nguy cơ dài hạn thường hình thành từ những điều tích lũy âm thầm, thì mình nên bắt đầu nhìn lại từ đâu trong chính bữa ăn hằng ngày?",
+      en: "When it comes to cancer, why do people always want to fix on one specific cause? And if long-term risk usually forms from quietly accumulating things, where should we begin looking again in our own daily meals?",
+    },
+    storySectionTitle: { vi: "Hướng triển khai nội dung", en: "Content development directions" },
+    storySectionDescription: {
+      vi: "Các hướng dưới đây phù hợp để phát triển thành video ngắn, bài ngắn hoặc chuỗi nội dung tiếp theo, đi từ câu hỏi gần gũi đến góc nhìn dài hạn hơn.",
+      en: "The directions below are suitable for developing into short videos, short articles, or follow-up content series, moving from familiar questions to a longer view.",
+    },
+    storyCards: [
+      {
+        id: "tim-thu-pham-duy-nhat",
+        title: { vi: "Vì sao con người luôn muốn tìm một thủ phạm duy nhất?", en: "Why Do People Always Want to Find One Single Culprit?" },
+        lead: {
+          vi: "Khi đối diện bệnh nặng, con người thường cảm thấy dễ chịu hơn nếu có thể chỉ vào một nguyên nhân rõ ràng. Nhưng chính nhu cầu muốn chốt nhanh ấy đôi khi lại làm mình nhìn sai bức tranh lớn hơn.",
+          en: "When facing serious illness, people usually feel more comfortable if they can point to one clear cause. But the very need to settle quickly sometimes makes people miss the bigger picture.",
+        },
+        bullets: [
+          { vi: "Vì sao một nguyên nhân đơn giản luôn hấp dẫn hơn một quá trình tích lũy dài?", en: "Why is a simple cause always more attractive than a long accumulation process?" },
+          { vi: "Điều gì bị bỏ sót khi mọi câu hỏi đều dồn vào một món ăn hoặc một chất?", en: "What is overlooked when every question narrows down to one food or one substance?" },
+          { vi: "Khi nào sự đơn giản hóa làm mình hiểu sai câu chuyện sức khỏe?", en: "When does oversimplification lead to misunderstanding health?" },
+        ],
+      },
+      {
+        id: "thoi-quen-lap-lai-lau-ngay",
+        title: { vi: "Một thói quen nhỏ lặp lại lâu ngày có thể ảnh hưởng đến đâu?", en: "How Far Can a Small Habit Repeated for Years Really Reach?" },
+        lead: {
+          vi: "Điều tạo ra nguy cơ dài hạn thường không gây ồn ào ngay từ đầu. Chính những điều lặp lại đủ lâu và quá quen thuộc mới là thứ khó nhìn ra nhất.",
+          en: "What creates long-term risk usually makes no noise at first. It is the things repeated long enough and become too familiar that are hardest to see.",
+        },
+        bullets: [
+          { vi: "Vì sao cái quen lại dễ được xem là vô hại?", en: "Why does familiarity so easily look harmless?" },
+          { vi: "Một hành vi nhỏ cộng dồn theo năm tháng thay đổi điều gì?", en: "What does a small behavior accumulate into over months and years?" },
+          { vi: "Khi nào nên nhìn bữa ăn như một nhịp sống, không chỉ là từng bữa riêng lẻ?", en: "When should meals be seen as a life rhythm, not just as isolated events?" },
+        ],
+      },
+      {
+        id: "ban-an-la-noi-gan-nhat",
+        title: { vi: "Vì sao bàn ăn luôn là nơi đầu tiên bị đặt câu hỏi?", en: "Why Is the Table Always the First Place Questions Land?" },
+        lead: {
+          vi: "Bàn ăn gần nhất, lặp lại nhiều nhất, và vì thế cũng là nơi con người dễ quay lại nhất khi muốn tìm lời giải cho sức khỏe lâu dài.",
+          en: "The table is nearest, repeated most often, and so it is also where people most easily turn when looking for solutions to long-term health.",
+        },
+        bullets: [
+          { vi: "Điều gì khiến bữa ăn trở thành nơi gánh nhiều nghi ngờ nhất?", en: "What makes meals shoulder so much suspicion?" },
+          { vi: "Gần gũi có đồng nghĩa với quyết định tất cả không?", en: "Does closeness mean having all the answers?" },
+          { vi: "Làm sao nhìn bàn ăn đúng vai trò của nó mà không phóng đại?", en: "How can we see its actual role without overdoing it?" },
+        ],
+      },
+      {
+        id: "noi-qua-nhanh-ve-thuc-pham",
+        title: { vi: "Điều gì đang bị nói quá nhanh khi gắn thực phẩm với bệnh tật?", en: "What Is Being Said Too Quickly When Food Gets Linked to Disease?" },
+        lead: {
+          vi: "Khi một thông điệp được kể theo kiểu dứt khoát, nó rất dễ lan đi. Nhưng với những vấn đề dài hạn, sự dứt khoát quá nhanh thường làm mất đi phần cần được đọc chậm hơn.",
+          en: "When a message is told with finality, it spreads easily. But for long-term issues, too-quick certainty often loses the part that needs to be read more slowly.",
+        },
+        bullets: [
+          { vi: "Vì sao thông điệp mạnh thường dễ được nhớ hơn thông điệp thận trọng?", en: "Why is a strong message easier to remember than a careful one?" },
+          { vi: "Khi nào cách nói chắc nịch làm người nghe hiểu sai?", en: "When does certainty cause listeners to misunderstand?" },
+          { vi: "Làm sao giữ được sự cẩn trọng mà nội dung vẫn đủ rõ để tiếp cận?", en: "How do we stay careful while keeping ideas clear enough to reach people?" },
+        ],
+      },
+      {
+        id: "he-thuc-pham-va-nguy-co",
+        title: { vi: "Nguy cơ dài hạn chỉ đến từ lựa chọn cá nhân hay còn từ môi trường thực phẩm?", en: "Does Long-Term Risk Come Only from Personal Choice or Also from the Food Environment?" },
+        lead: {
+          vi: "Một người không ăn trong khoảng trống. Họ ăn trong quảng bá, trong nhịp sống, trong sự tiện lợi, trong giá cả và trong những gì đã được bình thường hóa.",
+          en: "A person does not eat in a void. They eat inside advertising, inside daily rhythm, inside convenience, inside pricing, and inside what has been made normal.",
+        },
+        bullets: [
+          { vi: "Môi trường thực phẩm đang dẫn dắt lựa chọn hằng ngày ra sao?", en: "How does the food environment shape everyday choice?" },
+          { vi: "Khi nào một lựa chọn cá nhân thực ra đã bị định hình từ trước?", en: "When is a personal choice already shaped in advance?" },
+          { vi: "Vì sao câu chuyện nguy cơ dài hạn cần được nhìn rộng hơn từng món ăn?", en: "Why must the long-term risk story be wider than any single dish?" },
+        ],
+      },
+      {
+        id: "doc-wth-de-mo-rong-cau-hoi",
+        title: { vi: "Đọc WTH để mở rộng câu hỏi, không để chốt vội câu trả lời", en: "Read WTH to Widen Questions, Not to Settle Answers Too Fast" },
+        lead: {
+          vi: "Giá trị lớn nhất của WTH không nằm ở chỗ cho một kết luận cuối cùng. Nó nằm ở chỗ buộc người xem chậm lại để kiểm tra xem những niềm tin đó có thực sự được hiểu đúng hay chưa.",
+          en: "The film's greatest value is not giving a final answer. It lies in forcing viewers to slow down and check whether these beliefs have been truly understood.",
+        },
+        bullets: [
+          { vi: "Khi nào phim là điểm khởi đầu tốt cho nội dung sức khỏe?", en: "When is a film a good starting point for health content?" },
+          { vi: "Khi nào người xem bị cuốn vào kết luận quá nhanh?", en: "When does a viewer get pulled into conclusions too quickly?" },
+          { vi: "Làm sao biến một góc nhìn từ phim thành nội dung gần đời sống mà vẫn thận trọng?", en: "How can we turn a film perspective into life-close content while staying careful?" },
+        ],
+      },
+    ],
+    quickQuestionSectionTitle: { vi: "Câu hỏi dễ gặp", en: "Common Questions" },
+    quickQuestions: [
+      {
+        question: { vi: "Có phải cứ nói đến ung thư là phải quay lại bàn ăn?", en: "Do we always have to return to the table when talking about cancer?" },
+        answer: {
+          vi: "Bàn ăn là một nơi rất gần với đời sống nên thường bị hỏi đầu tiên. Nhưng cách nhìn đúng là xem nó như một phần của lối sống và thói quen tích lũy lâu dài, không phải một lời giải đơn độc cho mọi câu hỏi.",
+          en: "The table is so close to daily life that it is usually asked first. But the right way is to see it as part of lifestyle and accumulated habits over time, not as the sole solution to every question.",
+        },
+      },
+      {
+        question: { vi: "Một món ăn riêng lẻ có quyết định nguy cơ ung thư không?", en: "Does One Food Solely Determine Cancer Risk?" },
+        answer: {
+          vi: "Rất hiếm khi câu chuyện bệnh nặng nằm trọn trong một món ăn đơn lẻ. Điều cần nhìn hơn là nhịp ăn, thói quen lặp lại và môi trường sống đang tạo ra những lựa chọn ấy như thế nào.",
+          en: "Very rarely does a serious disease story fit entirely into one food. What matters more is the eating rhythm, repeated habits, and how the living environment creates those choices.",
+        },
+      },
+      {
+        question: { vi: "Khi đọc nội dung về ung thư và thực phẩm, nên giữ thái độ nào?", en: "What Attitude Should We Have When Reading About Cancer and Food?" },
+        answer: {
+          vi: "Nên giữ sự cẩn trọng và tránh nhu cầu chốt quá nhanh vào một thủ phạm. Cách đọc tốt hơn là đi chậm, nhìn rộng và kiểm tra xem điều gì đang được nói quá chắc tay.",
+          en: "Keep care and avoid rushing to blame one culprit. A better way is to go slowly, look widely, and check what is being said too confidently.",
+        },
+      },
+    ],
+    closingTitle: { vi: "Đi tiếp từ đây", en: "Continue from here" },
+    closingBody: {
+      vi: "Sau chuyên đề này, hướng hợp lý tiếp theo là quay lại phần Kiến thức nền tảng để làm rõ vì sao con người rất dễ tin vào những điều quen thuộc về ăn uống trước cả khi thật sự hiểu chúng.",
+      en: "After this page, the logical next step is to return to the Foundational Knowledge section to understand why people so easily believe familiar things about food before truly understanding them.",
+    },
+    primaryCtaLabel: { vi: "Sang Kiến thức nền tảng", en: "Continue to Foundational Knowledge" },
     primaryCtaHref: "/dinh-duong-thien-lanh",
   },
 };
