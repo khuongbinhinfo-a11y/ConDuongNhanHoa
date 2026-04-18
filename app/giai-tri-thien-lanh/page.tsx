@@ -28,7 +28,8 @@ export default function GiaiTriThienLanhPage() {
       />
       <main>
         <BranchLandingPageSection
-          content={contentBranchesI18n["giai-tri-thien-lanh"]}
+           branchId="giai-tri"
+           content={contentBranchesI18n["giai-tri-thien-lanh"]}
           locale={locale}
           labels={{
             relatedHeading: commonI18n[locale].articles.suggestedDirection,

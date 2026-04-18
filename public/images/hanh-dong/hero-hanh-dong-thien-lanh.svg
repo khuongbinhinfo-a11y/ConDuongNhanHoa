@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDF4E7"/>
+      <stop offset="55%" stop-color="#FEFAF3"/>
+      <stop offset="100%" stop-color="#FBF1E4"/>
+    </linearGradient>
+    <linearGradient id="sunGrad" cx="50%" cy="50%" r="50%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#FFDF5A"/>
+      <stop offset="100%" stop-color="#FFAA22"/>
+    </linearGradient>
+    <linearGradient id="stemGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#52AE6E"/>
+      <stop offset="100%" stop-color="#378A50"/>
+    </linearGradient>
+    <linearGradient id="leaf1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#68C285"/>
+      <stop offset="100%" stop-color="#449E60"/>
+    </linearGradient>
+    <linearGradient id="handGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD4A8"/>
+      <stop offset="100%" stop-color="#F4B87A"/>
+    </linearGradient>
+    <linearGradient id="pathGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F0C46A"/>
+      <stop offset="100%" stop-color="#E8A840"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="600" fill="url(#bg)"/>
+
+  <!-- Warm ambient glows -->
+  <circle cx="480" cy="280" r="240" fill="#FFECB0" opacity="0.22"/>
+  <circle cx="740" cy="160" r="120" fill="#FFE88A" opacity="0.18"/>
+  <circle cx="200" cy="450" r="140" fill="#FFE4B0" opacity="0.16"/>
+
+  <!-- Sun / radiant circle (top right) -->
+  <circle cx="760" cy="130" r="70" fill="#FFE44A" opacity="0.4"/>
+  <circle cx="760" cy="130" r="52" fill="#FFD524" opacity="0.55"/>
+  <circle cx="760" cy="130" r="36" fill="#FFC900" opacity="0.75"/>
+  <!-- Sun rays -->
+  <line x1="760" y1="52" x2="760" y2="38" stroke="#FFCB00" stroke-width="3" stroke-linecap="round" opacity="0.65"/>
+  <line x1="760" y1="208" x2="760" y2="222" stroke="#FFCB00" stroke-width="3" stroke-linecap="round" opacity="0.65"/>
+  <line x1="682" y1="130" x2="668" y2="130" stroke="#FFCB00" stroke-width="3" stroke-linecap="round" opacity="0.65"/>
+  <line x1="838" y1="130" x2="852" y2="130" stroke="#FFCB00" stroke-width="3" stroke-linecap="round" opacity="0.65"/>
+  <line x1="705" y1="75" x2="695" y2="65" stroke="#FFCB00" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="815" y1="75" x2="825" y2="65" stroke="#FFCB00" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="705" y1="185" x2="695" y2="195" stroke="#FFCB00" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="815" y1="185" x2="825" y2="195" stroke="#FFCB00" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Ground line -->
+  <rect x="100" y="390" width="760" height="6" rx="3" fill="#D8C28A" opacity="0.4"/>
+
+  <!-- Path / road leading forward -->
+  <path d="M350 600 Q400 510 430 440 Q450 400 480 390 Q510 400 530 440 Q560 510 610 600Z" fill="url(#pathGrad)" opacity="0.2"/>
+  <path d="M400 600 Q435 520 450 460 Q462 420 480 410 Q498 420 510 460 Q525 520 560 600Z" fill="#E8A840" opacity="0.12"/>
+
+  <!-- Growing plant (center, tall and vibrant) -->
+  <!-- Main stem -->
+  <path d="M480 390 Q478 340 472 300 Q468 255 480 210" stroke="url(#stemGrad)" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- Stem branches -->
+  <path d="M475 310 Q445 290 425 300 Q442 315 475 310Z" fill="url(#leaf1)" opacity="0.9"/>
+  <path d="M474 285 Q504 265 524 275 Q508 292 474 285Z" fill="#68C285" opacity="0.85"/>
+  <path d="M476 340 Q446 325 430 338 Q447 350 476 340Z" fill="url(#leaf1)" opacity="0.8"/>
+  <path d="M478 260 Q508 240 526 250 Q510 266 478 260Z" fill="#5BBB7A" opacity="0.85"/>
+  <path d="M473 360 Q443 350 432 362 Q447 372 473 360Z" fill="#68C285" opacity="0.76"/>
+  <!-- Flower at top -->
+  <circle cx="480" cy="210" r="20" fill="#FFD63C" opacity="0.95"/>
+  <circle cx="480" cy="210" r="11" fill="#FFC000" opacity="1"/>
+  <circle cx="464" cy="205" r="11" fill="#FFE070" opacity="0.8"/>
+  <circle cx="496" cy="205" r="11" fill="#FFE070" opacity="0.8"/>
+  <circle cx="480" cy="194" r="11" fill="#FFE070" opacity="0.8"/>
+  <circle cx="480" cy="226" r="11" fill="#FFE070" opacity="0.8"/>
+
+  <!-- Left hand reaching out / cupped hands -->
+  <path d="M310 340 Q288 330 268 335 Q255 340 252 352 Q250 364 265 368 Q282 372 310 365Z" fill="url(#handGrad)" stroke="#E8A070" stroke-width="1"/>
+  <!-- Fingers -->
+  <path d="M310 340 Q308 322 316 318 Q322 318 322 330 Q320 338 310 340Z" fill="url(#handGrad)" stroke="#E8A070" stroke-width="0.8"/>
+  <path d="M302 338 Q300 318 308 314 Q314 315 314 328 Q312 336 302 338Z" fill="url(#handGrad)" stroke="#E8A070" stroke-width="0.8"/>
+  <path d="M293 340 Q290 322 297 318 Q303 319 304 332 Q302 340 293 340Z" fill="url(#handGrad)" stroke="#E8A070" stroke-width="0.8"/>
+  <!-- Seed in hand -->
+  <ellipse cx="282" cy="355" rx="10" ry="6" fill="#A8D890" opacity="0.85"/>
+  <ellipse cx="282" cy="355" rx="6" ry="3.5" fill="#6EC880" opacity="0.9"/>
+
+  <!-- Right hand (slightly higher, contributing) -->
+  <path d="M650 300 Q672 290 692 295 Q705 300 708 312 Q710 324 695 328 Q678 332 650 325Z" fill="url(#handGrad)" stroke="#E8A070" stroke-width="1"/>
+  <path d="M650 300 Q652 282 644 278 Q638 278 638 290 Q640 298 650 300Z" fill="url(#handGrad)" stroke="#E8A070" stroke-width="0.8"/>
+  <path d="M658 298 Q660 278 652 274 Q646 275 646 288 Q648 296 658 298Z" fill="url(#handGrad)" stroke="#E8A070" stroke-width="0.8"/>
+  <path d="M667 296 Q670 278 663 274 Q657 275 657 287 Q660 296 667 296Z" fill="url(#handGrad)" stroke="#E8A070" stroke-width="0.8"/>
+  <!-- Sprout in hand -->
+  <path d="M680 315 Q680 300 678 290" stroke="#52AE6E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M678 300 Q668 292 660 296 Q666 306 678 300Z" fill="#68C285" opacity="0.9"/>
+  <path d="M678 296 Q688 288 696 292 Q690 302 678 296Z" fill="#52AE6E" opacity="0.85"/>
+
+  <!-- Small scattered seeds/dots on ground -->
+  <circle cx="360" cy="394" r="4" fill="#A0C860" opacity="0.5"/>
+  <circle cx="378" cy="388" r="3" fill="#88B840" opacity="0.45"/>
+  <circle cx="595" cy="391" r="4" fill="#A0C860" opacity="0.5"/>
+  <circle cx="612" cy="386" r="3" fill="#88B840" opacity="0.45"/>
+  <circle cx="420" cy="395" r="3.5" fill="#C8A860" opacity="0.4"/>
+  <circle cx="548" cy="393" r="3.5" fill="#C8A860" opacity="0.4"/>
+
+  <!-- Small flying birds (distant - simple V shapes) -->
+  <path d="M200 180 Q206 175 212 180" stroke="#B8A880" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.45"/>
+  <path d="M218 168 Q225 163 232 168" stroke="#B8A880" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.38"/>
+  <path d="M228 182 Q234 178 240 182" stroke="#B8A880" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.40"/>
+
+  <!-- Warm accent bar at top -->
+  <rect x="0" y="0" width="960" height="5" rx="0" fill="url(#pathGrad)" opacity="0.4"/>
+</svg>

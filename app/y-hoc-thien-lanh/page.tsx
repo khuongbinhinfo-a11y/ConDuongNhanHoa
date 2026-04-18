@@ -28,6 +28,7 @@ export default function YHocThienLanhPage() {
       />
       <main>
         <BranchLandingPageSection
+          branchId="y-hoc"
           content={contentBranchesI18n["y-hoc-thien-lanh"]}
           locale={locale}
           labels={{

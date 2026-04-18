@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EFF3FC"/>
+      <stop offset="50%" stop-color="#F5F7FD"/>
+      <stop offset="100%" stop-color="#EAF0FB"/>
+    </linearGradient>
+    <linearGradient id="bookCoverGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6B9FE8"/>
+      <stop offset="100%" stop-color="#4878CC"/>
+    </linearGradient>
+    <linearGradient id="pageGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F6F8FF"/>
+    </linearGradient>
+    <linearGradient id="bubbleGrad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E8EFFF"/>
+    </linearGradient>
+    <linearGradient id="bubbleGrad2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EBF0FF"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#68B8A0"/>
+      <stop offset="100%" stop-color="#449880"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7EB0F0"/>
+      <stop offset="100%" stop-color="#A090DC"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="600" fill="url(#bg)"/>
+
+  <!-- Soft ambient glows -->
+  <circle cx="480" cy="300" r="230" fill="#D8E4FC" opacity="0.22"/>
+  <circle cx="220" cy="200" r="150" fill="#DCE8FF" opacity="0.16"/>
+  <circle cx="780" cy="420" r="120" fill="#D8E0FC" opacity="0.18"/>
+
+  <!-- Open book (center) -->
+  <!-- Book shadow -->
+  <ellipse cx="480" cy="400" rx="165" ry="18" fill="#C0CCDC" opacity="0.22"/>
+  <!-- Left page -->
+  <path d="M310 230 Q312 375 320 395 Q395 405 480 400 Q480 255 480 235 Q395 225 310 230Z" fill="url(#pageGrad)" stroke="#D0DAEC" stroke-width="1.5"/>
+  <!-- Right page -->
+  <path d="M650 230 Q648 375 640 395 Q565 405 480 400 Q480 255 480 235 Q565 225 650 230Z" fill="url(#pageGrad)" stroke="#D0DAEC" stroke-width="1.5"/>
+  <!-- Spine -->
+  <rect x="474" y="233" width="12" height="168" rx="4" fill="#D8E2F0" stroke="#C8D4E8" stroke-width="1"/>
+  <!-- Book cover (left, back) -->
+  <path d="M304 228 Q306 375 314 397 Q310 400 305 398 Q297 375 297 228Z" fill="url(#bookCoverGrad)" opacity="0.7"/>
+  <!-- Left page lines (representing text) -->
+  <line x1="336" y1="260" x2="460" y2="258" stroke="#B8C8E0" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+  <line x1="336" y1="274" x2="460" y2="272" stroke="#B8C8E0" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="336" y1="288" x2="455" y2="286" stroke="#B8C8E0" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
+  <line x1="336" y1="302" x2="460" y2="300" stroke="#B8C8E0" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="336" y1="316" x2="450" y2="314" stroke="#B8C8E0" stroke-width="1.3" stroke-linecap="round" opacity="0.4"/>
+  <line x1="336" y1="330" x2="460" y2="328" stroke="#B8C8E0" stroke-width="1.3" stroke-linecap="round" opacity="0.45"/>
+  <line x1="336" y1="344" x2="445" y2="342" stroke="#B8C8E0" stroke-width="1.3" stroke-linecap="round" opacity="0.4"/>
+  <line x1="336" y1="358" x2="460" y2="356" stroke="#B8C8E0" stroke-width="1.3" stroke-linecap="round" opacity="0.4"/>
+  <!-- Right page lines -->
+  <line x1="500" y1="260" x2="626" y2="258" stroke="#B8C8E0" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+  <line x1="500" y1="274" x2="626" y2="272" stroke="#B8C8E0" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="500" y1="288" x2="618" y2="286" stroke="#B8C8E0" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
+  <line x1="500" y1="302" x2="626" y2="300" stroke="#B8C8E0" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="500" y1="316" x2="620" y2="314" stroke="#B8C8E0" stroke-width="1.3" stroke-linecap="round" opacity="0.4"/>
+  <line x1="500" y1="330" x2="626" y2="328" stroke="#B8C8E0" stroke-width="1.3" stroke-linecap="round" opacity="0.45"/>
+  <line x1="500" y1="344" x2="614" y2="342" stroke="#B8C8E0" stroke-width="1.3" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Speech bubble 1 (upper left, larger) -->
+  <path d="M165 130 Q165 90 205 90 L420 90 Q460 90 460 130 L460 200 Q460 240 420 240 L270 240 L240 270 L248 240 L205 240 Q165 240 165 200 Z" fill="url(#bubbleGrad1)" stroke="#C0CCEC" stroke-width="1.8" opacity="0.92"/>
+  <!-- Dots inside bubble 1 -->
+  <circle cx="240" cy="165" r="7" fill="#8BAAD8" opacity="0.5"/>
+  <circle cx="270" cy="165" r="7" fill="#8BAAD8" opacity="0.5"/>
+  <circle cx="300" cy="165" r="7" fill="#8BAAD8" opacity="0.5"/>
+
+  <!-- Speech bubble 2 (upper right) -->
+  <path d="M540 80 Q540 48 572 48 L760 48 Q792 48 792 80 L792 144 Q792 176 760 176 L610 176 L638 208 L630 176 L572 176 Q540 176 540 144 Z" fill="url(#bubbleGrad2)" stroke="#C0CCEC" stroke-width="1.8" opacity="0.9"/>
+  <!-- Dots inside bubble 2 -->
+  <circle cx="636" cy="112" r="6" fill="#8BAAD8" opacity="0.5"/>
+  <circle cx="660" cy="112" r="6" fill="#8BAAD8" opacity="0.5"/>
+  <circle cx="684" cy="112" r="6" fill="#8BAAD8" opacity="0.5"/>
+
+  <!-- Small floating bubble (lower right) -->
+  <path d="M690 320 Q690 296 706 296 L800 296 Q816 296 816 320 L816 360 Q816 384 800 384 L720 384 L716 408 L712 384 L706 384 Q690 384 690 360 Z" fill="url(#bubbleGrad1)" stroke="#C0CCEC" stroke-width="1.5" opacity="0.85"/>
+  <circle cx="735" cy="340" r="5" fill="#8BAAD8" opacity="0.45"/>
+  <circle cx="753" cy="340" r="5" fill="#8BAAD8" opacity="0.45"/>
+
+  <!-- Quill / pen accent (resting on book) -->
+  <path d="M625 398 Q660 340 700 300 Q720 280 730 290 Q735 298 722 310 Q695 335 668 388Z" fill="#F0E8C8" stroke="#C8B880" stroke-width="1.5"/>
+  <!-- Quill tip -->
+  <path d="M625 398 Q620 408 622 418 Q630 415 635 405 Z" fill="#D0BB70" opacity="0.8"/>
+  <!-- Quill vane lines -->
+  <line x1="685" y1="305" x2="658" y2="362" stroke="#D0C898" stroke-width="1" opacity="0.5"/>
+  <line x1="692" y1="308" x2="665" y2="365" stroke="#D0C898" stroke-width="1" opacity="0.5"/>
+
+  <!-- Green leafy branches (left side) -->
+  <path d="M150 380 Q148 320 155 275 Q160 240 148 200" stroke="#44988A" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M155 275 Q125 255 108 265 Q122 278 155 275Z" fill="url(#leafGrad)" opacity="0.8"/>
+  <path d="M153 248 Q178 232 194 242 Q180 255 153 248Z" fill="#68B8A0" opacity="0.78"/>
+  <path d="M154 305 Q126 292 112 303 Q128 314 154 305Z" fill="url(#leafGrad)" opacity="0.75"/>
+  <path d="M150 222 Q124 210 112 220 Q126 230 150 222Z" fill="#68B8A0" opacity="0.72"/>
+
+  <!-- Right leaf accent -->
+  <path d="M820 330 Q822 270 815 232 Q810 205 822 172" stroke="#44988A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M815 260 Q840 242 856 252 Q842 265 815 260Z" fill="url(#leafGrad)" opacity="0.78"/>
+  <path d="M817 232 Q795 220 784 230 Q797 240 817 232Z" fill="#68B8A0" opacity="0.75"/>
+  <path d="M816 290 Q840 278 856 288 Q842 300 816 290Z" fill="url(#leafGrad)" opacity="0.72"/>
+
+  <!-- Accent stripe -->
+  <rect x="0" y="0" width="960" height="5" rx="0" fill="url(#accentGrad)" opacity="0.45"/>
+
+  <!-- Small floating dots -->
+  <circle cx="190" cy="430" r="4.5" fill="#8AAAD8" opacity="0.28"/>
+  <circle cx="208" cy="418" r="3" fill="#A090DC" opacity="0.25"/>
+  <circle cx="780" cy="180" r="4.5" fill="#8AAAD8" opacity="0.25"/>
+  <circle cx="795" cy="168" r="3" fill="#A090DC" opacity="0.22"/>
+</svg>

@@ -28,7 +28,8 @@ export default function SuyNghiThienLanhPage() {
       />
       <main>
         <BranchLandingPageSection
-          content={contentBranchesI18n["suy-nghi-thien-lanh"]}
+           branchId="suy-nghi"
+           content={contentBranchesI18n["suy-nghi-thien-lanh"]}
           locale={locale}
           labels={{
             relatedHeading: commonI18n[locale].articles.suggestedDirection,

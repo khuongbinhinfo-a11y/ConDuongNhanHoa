@@ -28,6 +28,7 @@ export default function LoiNoiThienLanhPage() {
       />
       <main>
         <BranchLandingPageSection
+          branchId="loi-noi"
           content={contentBranchesI18n["loi-noi-thien-lanh"]}
           locale={locale}
           labels={{

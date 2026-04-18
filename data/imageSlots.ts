@@ -1,14 +1,22 @@
-export type SlotKind = "hero" | "topic" | "post";
-export type SlotBranch = "dinh-duong" | "ung-xu";
+﻿export type SlotKind = "hero" | "topic" | "post";
+export type SlotBranch =
+  | "dinh-duong"
+  | "ung-xu"
+  | "y-hoc"
+  | "hanh-dong"
+  | "loi-noi"
+  | "suy-nghi"
+  | "giai-tri"
+  | "coi-vui-cuoi";
 
 export type ImageSlot = {
   /** Unique identifier used as the key in imageManifest.generated.ts */
   id: string;
   branch: SlotBranch;
   kind: SlotKind;
-  /** Path relative to /public — e.g. "images/dinh-duong/topics" */
+  /** Path relative to /public â€” e.g. "images/dinh-duong/topics" */
   targetDir: string;
-  /** Filename without extension — extension is preserved from the source file */
+  /** Filename without extension â€” extension is preserved from the source file */
   targetBaseName: string;
   /**
    * The slot to try next when this slot has no image.
@@ -19,10 +27,10 @@ export type ImageSlot = {
 
 /**
  * Master list of image slots, in the order the auto-assign script fills them.
- * Do NOT change the order — it determines which unassigned image gets which slot.
+ * Do NOT change the order â€” it determines which unassigned image gets which slot.
  */
 export const imageSlots: ImageSlot[] = [
-  // ─── Dinh dưỡng ──────────────────────────────────────────────────────────
+  // â”€â”€â”€ Dinh dÆ°á»¡ng â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   {
     id: "dinh-duong.hero",
     branch: "dinh-duong",
@@ -96,7 +104,7 @@ export const imageSlots: ImageSlot[] = [
     fallbackSlotId: "dinh-duong.hero",
   },
 
-  // ─── Ứng xử ──────────────────────────────────────────────────────────────
+  // â”€â”€â”€ á»¨ng xá»­ â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   {
     id: "ung-xu.hero",
     branch: "ung-xu",
@@ -168,5 +176,65 @@ export const imageSlots: ImageSlot[] = [
     targetDir: "images/ung-xu/posts",
     targetBaseName: "post-ung-xu-03",
     fallbackSlotId: "ung-xu.hero",
+  },
+
+  // \u2500\u2500\u2500 Y h\u1ecdc thi\u1ec7n l\u00e0nh \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+  {
+    id: "y-hoc.hero",
+    branch: "y-hoc",
+    kind: "hero",
+    targetDir: "images/y-hoc",
+    targetBaseName: "hero-y-hoc-thien-lanh",
+    fallbackSlotId: "",
+  },
+
+  // \u2500\u2500\u2500 H\u00e0nh \u0111\u1ed9ng thi\u1ec7n l\u00e0nh \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+  {
+    id: "hanh-dong.hero",
+    branch: "hanh-dong",
+    kind: "hero",
+    targetDir: "images/hanh-dong",
+    targetBaseName: "hero-hanh-dong-thien-lanh",
+    fallbackSlotId: "",
+  },
+
+  // \u2500\u2500\u2500 L\u1eddi n\u00f3i thi\u1ec7n l\u00e0nh \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+  {
+    id: "loi-noi.hero",
+    branch: "loi-noi",
+    kind: "hero",
+    targetDir: "images/loi-noi",
+    targetBaseName: "hero-loi-noi-thien-lanh",
+    fallbackSlotId: "",
+  },
+
+  // \u2500\u2500\u2500 Suy ngh\u0129 thi\u1ec7n l\u00e0nh \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+  {
+    id: "suy-nghi.hero",
+    branch: "suy-nghi",
+    kind: "hero",
+    targetDir: "images/suy-nghi",
+    targetBaseName: "hero-suy-nghi-thien-lanh",
+    fallbackSlotId: "",
+  },
+
+  // \u2500\u2500\u2500 Gi\u1ea3i tr\u00ed thi\u1ec7n l\u00e0nh \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+  {
+    id: "giai-tri.hero",
+    branch: "giai-tri",
+    kind: "hero",
+    targetDir: "images/giai-tri",
+    targetBaseName: "hero-giai-tri-thien-lanh",
+    fallbackSlotId: "",
+  },
+
+  // \u2500\u2500\u2500 C\u01b0\u1eddi vui c\u01b0\u1eddi \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+  {
+    id: "coi-vui-cuoi.hero",
+    branch: "coi-vui-cuoi",
+    kind: "hero",
+    targetDir: "images/coi-vui-cuoi",
+    targetBaseName: "hero-coi-vui-cuoi",
+    fallbackSlotId: "",
   },
 ];

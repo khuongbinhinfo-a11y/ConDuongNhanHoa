@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFBE6"/>
+      <stop offset="45%" stop-color="#FFF3C0"/>
+      <stop offset="100%" stop-color="#FFE490"/>
+    </linearGradient>
+    <linearGradient id="sun" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#FFF8C0"/>
+      <stop offset="100%" stop-color="#FFD840"/>
+    </linearGradient>
+    <radialGradient id="sunR" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFBE0"/>
+      <stop offset="60%" stop-color="#FFE050"/>
+      <stop offset="100%" stop-color="#FFB820" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowPink" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFB0CC" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FFB0CC" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#72C870"/>
+      <stop offset="100%" stop-color="#4A9848"/>
+    </linearGradient>
+    <linearGradient id="stem1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#78BE70"/>
+      <stop offset="100%" stop-color="#509048"/>
+    </linearGradient>
+    <linearGradient id="petal1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF6888"/>
+      <stop offset="100%" stop-color="#E84870"/>
+    </linearGradient>
+    <linearGradient id="petal2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFBA40"/>
+      <stop offset="100%" stop-color="#F09020"/>
+    </linearGradient>
+    <linearGradient id="petal3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF8880"/>
+      <stop offset="100%" stop-color="#E86060"/>
+    </linearGradient>
+    <linearGradient id="meadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A0D878"/>
+      <stop offset="100%" stop-color="#68B048"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="960" height="600" fill="url(#sky)"/>
+
+  <!-- Background glow circles -->
+  <circle cx="480" cy="220" r="320" fill="url(#sunR)" opacity="0.55"/>
+  <circle cx="240" cy="420" r="180" fill="url(#glowPink)" opacity="0.8"/>
+  <circle cx="720" cy="400" r="180" fill="#FFE0A0" opacity="0.18"/>
+
+  <!-- Sun center -->
+  <circle cx="480" cy="218" r="68" fill="#FFE858" opacity="0.95"/>
+  <circle cx="480" cy="218" r="52" fill="#FFF5A0"/>
+
+  <!-- Sun rays (rotating spokes) -->
+  <g opacity="0.5">
+    <rect x="477" y="115" width="6" height="35" rx="3" fill="#FFD020"/>
+    <rect x="477" y="285" width="6" height="35" rx="3" fill="#FFD020"/>
+    <rect x="343" y="215" width="35" height="6" rx="3" fill="#FFD020"/>
+    <rect x="582" y="215" width="35" height="6" rx="3" fill="#FFD020"/>
+    <!-- Diagonal rays -->
+    <rect x="399" y="138" width="6" height="35" rx="3" fill="#FFD020" transform="rotate(45 402 155)"/>
+    <rect x="559" y="138" width="6" height="35" rx="3" fill="#FFD020" transform="rotate(-45 562 155)"/>
+    <rect x="399" y="278" width="6" height="35" rx="3" fill="#FFD020" transform="rotate(-45 402 295)"/>
+    <rect x="557" y="278" width="6" height="35" rx="3" fill="#FFD020" transform="rotate(45 560 295)"/>
+  </g>
+
+  <!-- Ground meadow -->
+  <path d="M0 460 Q240 430 480 455 Q720 480 960 448 L960 600 L0 600Z" fill="url(#meadow)"/>
+  <path d="M0 480 Q200 460 400 472 Q600 484 800 468 Q880 462 960 470 L960 600 L0 600Z" fill="#58A848" opacity="0.7"/>
+
+  <!-- LEFT FLOWER (tall, pink) -->
+  <path d="M235 462 Q240 390 236 330" stroke="url(#stem1)" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <!-- Leaf left -->
+  <path d="M237 380 Q212 368 204 350 Q222 352 237 370Z" fill="#68BA60" opacity="0.85"/>
+  <!-- Petals pink -->
+  <ellipse cx="235" cy="324" rx="18" ry="28" fill="url(#petal1)" transform="rotate(-18 235 324)"/>
+  <ellipse cx="235" cy="324" rx="18" ry="28" fill="url(#petal1)" transform="rotate(18 235 324)"/>
+  <ellipse cx="235" cy="324" rx="18" ry="28" fill="url(#petal1)" transform="rotate(-54 235 324)"/>
+  <ellipse cx="235" cy="324" rx="18" ry="28" fill="url(#petal1)" transform="rotate(54 235 324)"/>
+  <ellipse cx="235" cy="324" rx="18" ry="28" fill="url(#petal1)" transform="rotate(90 235 324)"/>
+  <ellipse cx="235" cy="324" rx="18" ry="28" fill="url(#petal1)" transform="rotate(-90 235 324)"/>
+  <circle cx="235" cy="324" r="18" fill="#FFE060"/>
+
+  <!-- MID-LEFT FLOWER (shorter, yellow-orange) -->
+  <path d="M370 462 Q373 415 370 375" stroke="#70BA60" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M371 418 Q394 403 402 388 Q386 392 371 410Z" fill="#68BA60" opacity="0.85"/>
+  <ellipse cx="370" cy="370" rx="16" ry="24" fill="url(#petal2)" transform="rotate(0 370 370)"/>
+  <ellipse cx="370" cy="370" rx="16" ry="24" fill="url(#petal2)" transform="rotate(30 370 370)"/>
+  <ellipse cx="370" cy="370" rx="16" ry="24" fill="url(#petal2)" transform="rotate(60 370 370)"/>
+  <ellipse cx="370" cy="370" rx="16" ry="24" fill="url(#petal2)" transform="rotate(90 370 370)"/>
+  <ellipse cx="370" cy="370" rx="16" ry="24" fill="url(#petal2)" transform="rotate(120 370 370)"/>
+  <ellipse cx="370" cy="370" rx="16" ry="24" fill="url(#petal2)" transform="rotate(150 370 370)"/>
+  <circle cx="370" cy="370" r="15" fill="#FF8830"/>
+
+  <!-- CENTER FLOWER (tallest, coral) -->
+  <path d="M480 468 Q485 380 480 300" stroke="#60B050" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <path d="M481 360 Q506 344 516 324 Q498 330 481 352Z" fill="#60B050" opacity="0.85"/>
+  <path d="M480 380 Q456 368 446 348 Q462 354 480 372Z" fill="#78C068" opacity="0.85"/>
+  <ellipse cx="480" cy="294" rx="22" ry="32" fill="url(#petal3)" transform="rotate(0 480 294)"/>
+  <ellipse cx="480" cy="294" rx="22" ry="32" fill="url(#petal3)" transform="rotate(25 480 294)"/>
+  <ellipse cx="480" cy="294" rx="22" ry="32" fill="url(#petal3)" transform="rotate(50 480 294)"/>
+  <ellipse cx="480" cy="294" rx="22" ry="32" fill="url(#petal3)" transform="rotate(75 480 294)"/>
+  <ellipse cx="480" cy="294" rx="22" ry="32" fill="url(#petal3)" transform="rotate(-25 480 294)"/>
+  <ellipse cx="480" cy="294" rx="22" ry="32" fill="url(#petal3)" transform="rotate(-50 480 294)"/>
+  <ellipse cx="480" cy="294" rx="22" ry="32" fill="url(#petal3)" transform="rotate(-75 480 294)"/>
+  <circle cx="480" cy="294" r="22" fill="#FFD840"/>
+
+  <!-- RIGHT-MID FLOWER (medium, pink) -->
+  <path d="M610 462 Q614 410 610 362" stroke="url(#stem1)" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M610 405 Q588 392 580 374 Q596 378 610 396Z" fill="#60B050" opacity="0.85"/>
+  <ellipse cx="610" cy="356" rx="17" ry="25" fill="#FF78A0" transform="rotate(0 610 356)"/>
+  <ellipse cx="610" cy="356" rx="17" ry="25" fill="#FF78A0" transform="rotate(36 610 356)"/>
+  <ellipse cx="610" cy="356" rx="17" ry="25" fill="#FF78A0" transform="rotate(72 610 356)"/>
+  <ellipse cx="610" cy="356" rx="17" ry="25" fill="#FF78A0" transform="rotate(108 610 356)"/>
+  <ellipse cx="610" cy="356" rx="17" ry="25" fill="#FF78A0" transform="rotate(144 610 356)"/>
+  <circle cx="610" cy="356" r="16" fill="#FFEE60"/>
+
+  <!-- RIGHT FLOWER (tall orange) -->
+  <path d="M730 462 Q733 385 728 315" stroke="#70BA60" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M729 368 Q754 352 762 332 Q744 340 729 360Z" fill="#60B850" opacity="0.85"/>
+  <ellipse cx="729" cy="308" rx="20" ry="29" fill="#FFA040" transform="rotate(0 729 308)"/>
+  <ellipse cx="729" cy="308" rx="20" ry="29" fill="#FFA040" transform="rotate(30 729 308)"/>
+  <ellipse cx="729" cy="308" rx="20" ry="29" fill="#FFA040" transform="rotate(60 729 308)"/>
+  <ellipse cx="729" cy="308" rx="20" ry="29" fill="#FFA040" transform="rotate(90 729 308)"/>
+  <ellipse cx="729" cy="308" rx="20" ry="29" fill="#FFA040" transform="rotate(120 729 308)"/>
+  <ellipse cx="729" cy="308" rx="20" ry="29" fill="#FFA040" transform="rotate(150 729 308)"/>
+  <circle cx="729" cy="308" r="19" fill="#FF5860"/>
+
+  <!-- Small wildflowers in grass (scattered) -->
+  <circle cx="160" cy="468" r="6" fill="#FF8870" opacity="0.7"/>
+  <circle cx="175" cy="456" r="5" fill="#FFB840" opacity="0.7"/>
+  <circle cx="820" cy="464" r="6" fill="#FF78A0" opacity="0.7"/>
+  <circle cx="840" cy="452" r="5" fill="#FFA840" opacity="0.65"/>
+  <circle cx="310" cy="472" r="4" fill="#FF6870" opacity="0.65"/>
+  <circle cx="540" cy="474" r="4" fill="#FFB040" opacity="0.65"/>
+  <circle cx="680" cy="470" r="4.5" fill="#FF8870" opacity="0.68"/>
+
+  <!-- Floating sparkles -->
+  <g opacity="0.55">
+    <circle cx="340" cy="260" r="3.5" fill="#FFE060"/>
+    <circle cx="355" cy="248" r="2" fill="#FFD040"/>
+    <circle cx="328" cy="248" r="2" fill="#FFD040"/>
+    <circle cx="342" cy="242" r="2" fill="#FFD040"/>
+    <circle cx="341" cy="273" r="2" fill="#FFD040"/>
+  </g>
+  <g opacity="0.5">
+    <circle cx="624" cy="285" r="3" fill="#FF88B0"/>
+    <circle cx="632" cy="278" r="1.8" fill="#FF68A0"/>
+    <circle cx="616" cy="278" r="1.8" fill="#FF68A0"/>
+  </g>
+  <g opacity="0.45">
+    <circle cx="196" cy="345" r="3" fill="#FFD040"/>
+    <circle cx="202" cy="338" r="1.8" fill="#FFB820"/>
+    <circle cx="190" cy="338" r="1.8" fill="#FFB820"/>
+  </g>
+
+  <!-- Butterflies (simple abstract) -->
+  <!-- Butterfly left -->
+  <ellipse cx="295" cy="308" rx="14" ry="9" fill="#FF90B0" opacity="0.72" transform="rotate(-20 295 308)"/>
+  <ellipse cx="318" cy="305" rx="12" ry="7" fill="#FFB8D0" opacity="0.68" transform="rotate(20 318 305)"/>
+  <line x1="305" y1="308" x2="310" y2="304" stroke="#C04868" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  <!-- Butterfly right -->
+  <ellipse cx="645" cy="248" rx="13" ry="8" fill="#FFD050" opacity="0.70" transform="rotate(15 645 248)"/>
+  <ellipse cx="665" cy="245" rx="11" ry="7" fill="#FFE880" opacity="0.65" transform="rotate(-15 665 245)"/>
+  <line x1="653" y1="248" x2="657" y2="244" stroke="#C08820" stroke-width="1.5" stroke-linecap="round" opacity="0.68"/>
+
+  <!-- Soft cloud puffs top corners -->
+  <ellipse cx="140" cy="120" rx="70" ry="30" fill="white" opacity="0.4"/>
+  <ellipse cx="175" cy="110" rx="50" ry="25" fill="white" opacity="0.35"/>
+  <ellipse cx="820" cy="130" rx="65" ry="28" fill="white" opacity="0.4"/>
+  <ellipse cx="855" cy="118" rx="48" ry="23" fill="white" opacity="0.35"/>
+</svg>

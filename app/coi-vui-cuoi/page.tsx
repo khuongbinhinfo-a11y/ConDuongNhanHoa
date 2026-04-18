@@ -28,7 +28,8 @@ export default function CoiVuiCuoiPage() {
       />
       <main>
         <BranchLandingPageSection
-          content={contentBranchesI18n["coi-vui-cuoi"]}
+           branchId="coi-vui-cuoi"
+           content={contentBranchesI18n["coi-vui-cuoi"]}
           locale={locale}
           labels={{
             relatedHeading: commonI18n[locale].articles.suggestedDirection,

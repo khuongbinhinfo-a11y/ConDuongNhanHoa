@@ -1,83 +1,160 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" fill="none">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="960" y2="420" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#F0F8F3"/>
-      <stop offset="50%" stop-color="#FAFDFB"/>
-      <stop offset="100%" stop-color="#EFF7F2"/>
+      <stop offset="0%" stop-color="#FFFEF8"/>
+      <stop offset="50%" stop-color="#FEF9EC"/>
+      <stop offset="100%" stop-color="#FAF2E0"/>
     </linearGradient>
-    <linearGradient id="glass" x1="410" y1="110" x2="410" y2="320" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#F2F8F4"/>
+    <radialGradient id="warmGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFAE8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FFFAE8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tableGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EDE0C8"/>
+      <stop offset="100%" stop-color="#D8CCBA"/>
     </linearGradient>
-    <linearGradient id="milk" x1="410" y1="170" x2="410" y2="300" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FDFDFD"/>
-      <stop offset="100%" stop-color="#F5FAF7"/>
+    <linearGradient id="tableTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F5EDD8"/>
+      <stop offset="100%" stop-color="#E8DCCA"/>
     </linearGradient>
-    <linearGradient id="bottle" x1="580" y1="90" x2="580" y2="310" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#F8FBF9"/>
-      <stop offset="100%" stop-color="#EAF3EC"/>
+    <linearGradient id="glassBody" x1="390" y1="100" x2="460" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#F0EDE8" stop-opacity="0.9"/>
     </linearGradient>
-    <linearGradient id="leaf1" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#7DBB92"/>
-      <stop offset="100%" stop-color="#5A9A6C"/>
+    <linearGradient id="milkFill" x1="390" y1="170" x2="460" y2="170" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFEF8"/>
+      <stop offset="100%" stop-color="#F5EDD5"/>
     </linearGradient>
-    <linearGradient id="leaf2" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#86C4A0"/>
-      <stop offset="100%" stop-color="#6BAF80"/>
+    <linearGradient id="pitcherGrad" x1="570" y1="80" x2="650" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.98"/>
+      <stop offset="50%" stop-color="#FDFAF2" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#EDE6D8" stop-opacity="0.95"/>
     </linearGradient>
+    <linearGradient id="leafG1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#82C490"/>
+      <stop offset="100%" stop-color="#58A068"/>
+    </linearGradient>
+    <linearGradient id="leafG2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#A0CCA8"/>
+      <stop offset="100%" stop-color="#70AE80"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#C0A878" flood-opacity="0.15"/>
+    </filter>
   </defs>
 
   <!-- Background -->
-  <rect width="960" height="420" rx="16" fill="url(#bg)"/>
+  <rect width="960" height="420" fill="url(#bg)"/>
+  <!-- Warm ambient glow -->
+  <circle cx="480" cy="210" r="280" fill="url(#warmGlow)"/>
+  <circle cx="700" cy="100" r="120" fill="#FFF6E0" opacity="0.22"/>
+  <circle cx="240" cy="320" r="100" fill="#F0ECD8" opacity="0.18"/>
 
-  <!-- Subtle circular accent -->
-  <circle cx="480" cy="210" r="180" fill="#E4F6EF" opacity="0.35"/>
-  <circle cx="320" cy="310" r="80" fill="#DDF2E8" opacity="0.25"/>
-  <circle cx="660" cy="130" r="60" fill="#DCEFEB" opacity="0.2"/>
+  <!-- Table / countertop -->
+  <rect x="160" y="305" width="640" height="80" rx="4" fill="url(#tableTop)"/>
+  <rect x="160" y="305" width="640" height="8" rx="3" fill="#F0E4CC" opacity="0.6"/>
+  <!-- Table edge shadow -->
+  <rect x="160" y="313" width="640" height="4" rx="0" fill="#C8B890" opacity="0.25"/>
 
-  <!-- Table surface -->
-  <rect x="220" y="300" width="520" height="6" rx="3" fill="#D7E8DD" opacity="0.5"/>
+  <!-- === MAIN GLASS OF MILK === -->
+  <!-- Glass highlight left -->
+  <rect x="387" y="102" width="8" height="195" rx="4" fill="white" opacity="0.55"/>
+  <!-- Glass body -->
+  <path d="M390 100 L382 295 Q382 307 392 307 L450 307 Q460 307 460 295 L452 100 Z" fill="url(#glassBody)" stroke="#E0D8CC" stroke-width="1.2" filter="url(#softShadow)"/>
+  <!-- Milk inside -->
+  <path d="M394 170 L386 293 Q386 305 396 305 L446 305 Q456 305 456 293 L448 170 Z" fill="url(#milkFill)"/>
+  <!-- Milk surface -->
+  <ellipse cx="421" cy="172" rx="27" ry="7" fill="white" opacity="0.9"/>
+  <ellipse cx="418" cy="171" rx="14" ry="3.5" fill="white" opacity="0.6"/>
+  <!-- Condensation drops on glass -->
+  <ellipse cx="396" cy="195" rx="2" ry="4" fill="white" opacity="0.5"/>
+  <ellipse cx="400" cy="218" rx="1.5" ry="3.5" fill="white" opacity="0.4"/>
+  <ellipse cx="448" cy="230" rx="1.8" ry="3.2" fill="white" opacity="0.42"/>
+  <ellipse cx="444" cy="208" rx="1.5" ry="3" fill="white" opacity="0.4"/>
+  <!-- Glass rim ellipse -->
+  <ellipse cx="421" cy="101" rx="31" ry="8" fill="white" opacity="0.7" stroke="#E0D8CC" stroke-width="1"/>
 
-  <!-- Glass of milk -->
-  <rect x="380" y="130" width="60" height="170" rx="6" fill="url(#glass)" stroke="#DCEADF" stroke-width="1.5"/>
-  <rect x="384" y="180" width="52" height="116" rx="4" fill="url(#milk)"/>
-  <!-- Glass rim -->
-  <ellipse cx="410" cy="132" rx="30" ry="6" fill="#FFFFFF" stroke="#DCEADF" stroke-width="1"/>
+  <!-- === MILK PITCHER === -->
+  <!-- Pitcher body -->
+  <path d="M570 115 Q566 280 568 300 Q568 310 580 310 L645 310 Q657 310 657 300 Q659 280 656 115 Z" fill="url(#pitcherGrad)" stroke="#DDD6C8" stroke-width="1.2" filter="url(#softShadow)"/>
+  <!-- Pitcher neck + rim -->
+  <rect x="580" y="88" width="55" height="32" rx="8" fill="#FFFEF8" stroke="#DDD6C8" stroke-width="1.2"/>
+  <ellipse cx="607" cy="88" rx="27" ry="7" fill="#FFFEF8" stroke="#DDD6C8" stroke-width="1"/>
+  <!-- Pitcher spout -->
+  <path d="M626 92 Q650 82 656 70 Q646 78 624 90" fill="#FFFEF8" stroke="#DDD6C8" stroke-width="1.2"/>
+  <!-- Pitcher handle -->
+  <path d="M656 148 Q690 148 690 190 Q690 232 656 232" stroke="#DED6C8" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M656 148 Q686 150 686 190 Q686 228 656 232" stroke="#FFFEF8" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <!-- Milk inside pitcher (just visible through top) -->
+  <rect x="572" y="120" width="82" height="14" rx="4" fill="#FFFEF2" opacity="0.6"/>
+  <!-- Pitcher highlight -->
+  <rect x="575" y="120" width="7" height="175" rx="3.5" fill="white" opacity="0.35"/>
+  <!-- Pitcher label blob -->
+  <rect x="578" y="180" width="62" height="50" rx="6" fill="#EAF5EE" opacity="0.55"/>
+  <ellipse cx="609" cy="198" rx="16" ry="5" fill="#7DBB92" opacity="0.3"/>
+  <rect x="586" y="210" width="46" height="3" rx="1.5" fill="#86C4A0" opacity="0.25"/>
+  <rect x="590" y="217" width="36" height="2.5" rx="1.5" fill="#86C4A0" opacity="0.18"/>
 
-  <!-- Milk bottle -->
-  <rect x="555" y="120" width="50" height="180" rx="8" fill="url(#bottle)" stroke="#DCEADF" stroke-width="1.5"/>
-  <rect x="565" y="100" width="30" height="30" rx="4" fill="#F8FBF9" stroke="#DCEADF" stroke-width="1.2"/>
-  <rect x="559" y="170" width="42" height="120" rx="4" fill="#FDFDFD"/>
-  <!-- Label on bottle -->
-  <rect x="563" y="200" width="34" height="18" rx="3" fill="#E4F6EF"/>
-  <line x1="567" y1="206" x2="593" y2="206" stroke="#86C4A0" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="567" y1="212" x2="587" y2="212" stroke="#86C4A0" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+  <!-- === SCATTERED DAIRY INGREDIENTS === -->
+  <!-- Almonds left cluster -->
+  <ellipse cx="288" cy="272" rx="20" ry="11" fill="#D8B888" transform="rotate(-25 288 272)"/>
+  <ellipse cx="310" cy="282" rx="18" ry="10" fill="#CC9A60" transform="rotate(12 310 282)"/>
+  <ellipse cx="296" cy="262" rx="16" ry="9" fill="#D4A870" transform="rotate(-40 296 262)"/>
+  <ellipse cx="320" cy="268" rx="15" ry="8" fill="#C88E50" transform="rotate(30 320 268)"/>
+  <!-- Almond highlights -->
+  <ellipse cx="286" cy="269" rx="8" ry="4" fill="#E8D0A8" transform="rotate(-25 286 269)" opacity="0.5"/>
+  <ellipse cx="308" cy="279" rx="7" ry="3" fill="#DEC080" transform="rotate(12 308 279)" opacity="0.45"/>
 
-  <!-- Almonds cluster -->
-  <ellipse cx="310" cy="280" rx="18" ry="10" fill="#E8D8C4" transform="rotate(-20 310 280)"/>
-  <ellipse cx="330" cy="288" rx="16" ry="9" fill="#E2D0B8" transform="rotate(15 330 288)"/>
-  <ellipse cx="318" cy="272" rx="14" ry="8" fill="#DCC8A8" transform="rotate(-35 318 272)"/>
+  <!-- Soy beans right cluster -->
+  <circle cx="696" cy="270" r="10" fill="#D8D890" stroke="#C0C078" stroke-width="1"/>
+  <circle cx="714" cy="279" r="9" fill="#D4D488" stroke="#BCBC70" stroke-width="1"/>
+  <circle cx="702" cy="258" r="8.5" fill="#DCE084" stroke="#C4C86C" stroke-width="1"/>
+  <circle cx="720" cy="264" r="7.5" fill="#D0D080" stroke="#B8B868" stroke-width="1"/>
+  <circle cx="686" cy="280" r="7" fill="#D8DC88" stroke="#C0C070" stroke-width="1"/>
+  <!-- Soy pod curves -->
+  <path d="M698 268 Q702 260 706 268" stroke="#98A840" stroke-width="1.2" fill="none" opacity="0.35"/>
+  <path d="M712 279 Q716 271 720 279" stroke="#949E3C" stroke-width="1.2" fill="none" opacity="0.35"/>
 
-  <!-- Soybeans -->
-  <circle cx="680" cy="275" r="8" fill="#D4DCA0"/>
-  <circle cx="695" cy="282" r="7" fill="#D9E0A8"/>
-  <circle cx="688" cy="268" r="6.5" fill="#CED6A0"/>
-  <circle cx="702" cy="272" r="5.5" fill="#D6DDA4"/>
+  <!-- Oats / grains near glass base -->
+  <ellipse cx="466" cy="292" rx="6" ry="12" fill="#E0D0A8" transform="rotate(8 466 292)"/>
+  <ellipse cx="480" cy="287" rx="5.5" ry="11" fill="#D8C898" transform="rotate(-18 480 287)"/>
+  <ellipse cx="474" cy="296" rx="5" ry="10" fill="#DDD0A8" transform="rotate(28 474 296)"/>
+  <ellipse cx="489" cy="293" rx="4.5" ry="9" fill="#D4C490" transform="rotate(-5 489 293)"/>
+  <!-- Grain highlights -->
+  <ellipse cx="464" cy="289" rx="2" ry="5" fill="#F0E0C0" transform="rotate(8 464 289)" opacity="0.45"/>
 
-  <!-- Oat grains -->
-  <ellipse cx="470" cy="290" rx="5" ry="10" fill="#E0D5B8" transform="rotate(10 470 290)"/>
-  <ellipse cx="482" cy="285" rx="4.5" ry="9" fill="#DDD0B2" transform="rotate(-15 482 285)"/>
-  <ellipse cx="476" cy="295" rx="4" ry="8" fill="#D8CBB0" transform="rotate(25 476 295)"/>
+  <!-- === LEAVES & BRANCHES === -->
+  <!-- Left large branch -->
+  <path d="M218 340 Q224 280 220 200 Q216 150 224 100" stroke="#8AB898" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <!-- Leaves on left branch -->
+  <path d="M221 230 Q196 206 184 180 Q206 188 222 218Z" fill="url(#leafG1)" opacity="0.6"/>
+  <path d="M220 200 Q248 182 260 158 Q240 168 220 192Z" fill="url(#leafG2)" opacity="0.55"/>
+  <path d="M220 265 Q194 254 184 234 Q204 240 220 258Z" fill="#78B888" opacity="0.55"/>
+  <!-- Leaf veins -->
+  <path d="M200 205 Q210 214 222 224" stroke="#6AAA78" stroke-width="0.8" fill="none" opacity="0.4"/>
+  <path d="M244 168 Q234 179 222 196" stroke="#7AB888" stroke-width="0.8" fill="none" opacity="0.38"/>
 
-  <!-- Decorative leaves -->
-  <path d="M250 180 Q270 150 260 120 Q240 145 250 180Z" fill="url(#leaf1)" opacity="0.5"/>
-  <path d="M255 175 Q280 160 275 135" stroke="#7DBB92" stroke-width="1" fill="none" opacity="0.4"/>
+  <!-- Right large branch -->
+  <path d="M755 340 Q750 280 754 210 Q758 160 750 110" stroke="#88B898" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Right leaves -->
+  <path d="M752 220 Q778 200 792 176 Q772 184 752 212Z" fill="url(#leafG1)" opacity="0.58"/>
+  <path d="M753 258 Q776 244 786 222 Q768 228 753 250Z" fill="url(#leafG2)" opacity="0.55"/>
+  <path d="M752 190 Q726 178 714 155 Q734 162 752 183Z" fill="#82C090" opacity="0.52"/>
 
-  <path d="M720 200 Q735 170 725 145 Q710 168 720 200Z" fill="url(#leaf2)" opacity="0.45"/>
-  <path d="M723 195 Q740 178 737 158" stroke="#86C4A0" stroke-width="1" fill="none" opacity="0.35"/>
+  <!-- Small herb sprigs near milk glass -->
+  <path d="M508 304 Q512 275 510 250" stroke="#7BAE88" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M510 268 Q524 258 530 245 Q518 252 510 264Z" fill="#88BB98" opacity="0.58"/>
+  <path d="M510 250 Q496 242 490 230 Q502 238 510 248Z" fill="#80B490" opacity="0.55"/>
 
-  <!-- Small leaf accent near glass -->
-  <path d="M440 155 Q452 140 448 125 Q436 138 440 155Z" fill="#7DBB92" opacity="0.35"/>
+  <!-- Splash drops from milk glass (stylized) -->
+  <ellipse cx="362" cy="130" rx="4" ry="7" fill="white" opacity="0.55" transform="rotate(-20 362 130)"/>
+  <ellipse cx="474" cy="122" rx="3.5" ry="6" fill="white" opacity="0.5" transform="rotate(15 474 122)"/>
+  <circle cx="350" cy="118" r="3" fill="white" opacity="0.4"/>
+  <circle cx="490" cy="115" r="2.5" fill="white" opacity="0.38"/>
+
+  <!-- Sunlight shaft (upper left) -->
+  <rect x="120" y="0" width="120" height="350" rx="60" fill="#FFFDE0" opacity="0.07" transform="rotate(12 180 175)"/>
 
   <!-- Tiny dots decoration -->
   <circle cx="350" cy="200" r="2" fill="#86C4A0" opacity="0.3"/>

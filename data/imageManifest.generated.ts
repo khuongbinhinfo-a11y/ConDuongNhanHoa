@@ -15,4 +15,10 @@ export const imageManifest: Record<string, string> = {
   "ung-xu.topic.hieu-minh-de-song-nhe-hon": "/images/ung-xu/topics/topic-hieu-minh-de-song-nhe-hon.webp",
   "ung-xu.topic.loi-noi-va-giao-tiep": "/images/ung-xu/topics/topic-loi-noi-va-giao-tiep.webp",
   "ung-xu.topic.nhung-tinh-huong-de-gap-trong-doi-song": "/images/ung-xu/topics/topic-nhung-tinh-huong-de-gap-trong-doi-song.webp",
+  "y-hoc.hero": "/images/y-hoc/hero-y-hoc-thien-lanh.svg",
+  "hanh-dong.hero": "/images/hanh-dong/hero-hanh-dong-thien-lanh.svg",
+  "loi-noi.hero": "/images/loi-noi/hero-loi-noi-thien-lanh.svg",
+  "suy-nghi.hero": "/images/suy-nghi/hero-suy-nghi-thien-lanh.svg",
+  "giai-tri.hero": "/images/giai-tri/hero-giai-tri-thien-lanh.svg",
+  "coi-vui-cuoi.hero": "/images/coi-vui-cuoi/hero-coi-vui-cuoi.svg",
 };
