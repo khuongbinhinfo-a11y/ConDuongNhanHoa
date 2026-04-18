@@ -38,7 +38,7 @@ export function SiteFooter({
                 alt={brandName}
                 width={1536}
                 height={1024}
-                className="h-[1.75rem] w-auto object-contain"
+                className="h-[4rem] w-auto object-contain"
               />
               <span className="text-[1.02rem] font-semibold text-[var(--color-text-strong)]">{brandName}</span>
             </Link>

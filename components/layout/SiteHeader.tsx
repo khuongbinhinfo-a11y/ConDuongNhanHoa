@@ -115,7 +115,7 @@ export function SiteHeader({
               width={1536}
               height={1024}
               priority
-              className="h-[4rem] w-auto object-contain"
+              className="h-[5.5rem] w-auto object-contain"
             />
             <span className="text-[1.14rem] font-semibold tracking-[0.01em] text-[var(--color-text-strong)]">{brandName}</span>
           </Link>
@@ -169,7 +169,7 @@ export function SiteHeader({
               width={1536}
               height={1024}
               priority
-              className="h-[3.5rem] w-auto object-contain"
+              className="h-[4.5rem] w-auto object-contain"
             />
             <span className="text-[1.04rem] font-semibold tracking-[0.01em] text-[var(--color-text-strong)]">{brandName}</span>
           </Link>
