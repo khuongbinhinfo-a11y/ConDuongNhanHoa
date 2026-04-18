@@ -29,7 +29,7 @@ export function SiteFooter({
   return (
     <footer className="mt-2 border-t border-[var(--color-border)] bg-[rgba(255,253,253,0.94)]">
       <Container>
-        <div className="grid gap-8 py-10 sm:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)_minmax(0,0.8fr)] lg:gap-10">
+        <div className="grid gap-8 py-10 sm:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:gap-10">
           {/* Brand column */}
           <div className="max-w-[340px] space-y-2.5">
             <Link href="/" aria-label={brandName} className="inline-flex items-center gap-2 text-[var(--color-navy)]">
@@ -40,7 +40,7 @@ export function SiteFooter({
                 height={1024}
                 className="h-[1.75rem] w-auto object-contain"
               />
-              <span className="text-[0.88rem] font-semibold text-[var(--color-text-strong)]">{brandName}</span>
+              <span className="text-[1.02rem] font-semibold text-[var(--color-text-strong)]">{brandName}</span>
             </Link>
             <p className="text-sm leading-relaxed text-[var(--color-text-muted)]">{brandTagline}</p>
           </div>
@@ -62,10 +62,7 @@ export function SiteFooter({
             </ul>
           </div>
 
-          {/* Language column */}
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-teal)]">{languageLabel}</p>
-          </div>
+
         </div>
 
         <div className="border-t border-[var(--color-border)] py-4">

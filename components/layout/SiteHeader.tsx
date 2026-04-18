@@ -117,7 +117,7 @@ export function SiteHeader({
               priority
               className="h-[2rem] w-auto object-contain"
             />
-            <span className="text-[0.94rem] font-semibold tracking-[0.01em] text-[var(--color-text-strong)]">{brandName}</span>
+            <span className="text-[1.08rem] font-semibold tracking-[0.01em] text-[var(--color-text-strong)]">{brandName}</span>
           </Link>
 
           <nav aria-label={navAriaLabel} className="justify-self-center">
@@ -171,7 +171,7 @@ export function SiteHeader({
               priority
               className="h-[1.75rem] w-auto object-contain"
             />
-            <span className="text-[0.84rem] font-semibold tracking-[0.01em] text-[var(--color-text-strong)]">{brandName}</span>
+            <span className="text-[0.98rem] font-semibold tracking-[0.01em] text-[var(--color-text-strong)]">{brandName}</span>
           </Link>
 
           <div className="relative">
