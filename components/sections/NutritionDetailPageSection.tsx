@@ -12,7 +12,10 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import type { AppLocale } from "@/lib/locale";
 import { getDirectImageForSlot } from "@/lib/getImageForSlot";
-import type { NutritionDetailPageI18n } from "@/data/nutritionDetailPagesI18n";
+import {
+  nutritionDetailPagesI18n,
+  type NutritionDetailPageI18n,
+} from "@/data/nutritionDetailPagesI18n";
 
 type NutritionDetailPageSectionProps = {
   content: NutritionDetailPageI18n;
@@ -22,10 +25,37 @@ type NutritionDetailPageSectionProps = {
 const t = (text: Record<AppLocale, string>, locale: AppLocale) => text[locale];
 const eyebrow = "text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-teal)]";
 
+const DETAIL_READING_ORDER = [
+  "sua-va-nhung-dieu-thuong-duoc-tin",
+  "chat-dam-hieu-sao-cho-dung",
+  "suc-khoe-chuyen-hoa-va-bua-an-hang-ngay",
+  "ung-thu-va-nhung-cau-hoi-tu-ban-an",
+] as const;
+
+const parseSlugFromHref = (href: string): string | null => {
+  const match = href.match(/\/dinh-duong-thien-lanh\/([^/?#]+)/);
+  return match?.[1] ?? null;
+};
+
+const shorten = (text: string, max = 130): string => {
+  if (text.length <= max) {
+    return text;
+  }
+  return `${text.slice(0, max - 1).trimEnd()}...`;
+};
+
 export function NutritionDetailPageSection({ content, locale }: NutritionDetailPageSectionProps) {
   const heroSrc = content.heroImageSlotId
     ? getDirectImageForSlot(content.heroImageSlotId)
     : null;
+
+  const suggestedSlug = parseSlugFromHref(content.primaryCtaHref);
+  const relatedSlugs = [suggestedSlug, ...DETAIL_READING_ORDER]
+    .filter((slug, index, list): slug is string => Boolean(slug) && list.indexOf(slug) === index)
+    .filter((slug) => slug !== content.slug && nutritionDetailPagesI18n[slug])
+    .slice(0, 3);
+
+  const relatedItems = relatedSlugs.map((slug) => nutritionDetailPagesI18n[slug]);
 
   return (
     <section className="pb-20 pt-10 lg:pb-24 lg:pt-14">
@@ -168,6 +198,38 @@ export function NutritionDetailPageSection({ content, locale }: NutritionDetailP
               </Link>
             </div>
           </section>
+
+          {relatedItems.length > 0 && (
+            <section className="border-t border-[var(--color-border)] pt-8">
+              <p className={eyebrow}>{locale === "vi" ? "Đọc tiếp" : "Continue Reading"}</p>
+              <h2 className="mt-2 text-[1.2rem] font-semibold leading-[1.28] text-[var(--color-text-strong)]">
+                {locale === "vi"
+                  ? "Các bài viết liên quan"
+                  : "Related Nutrition Articles"}
+              </h2>
+              <div className="mt-5 grid gap-4 lg:grid-cols-3">
+                {relatedItems.map((item) => (
+                  <article
+                    key={item.slug}
+                    className="flex h-full flex-col rounded-[12px] border border-[var(--color-border)] bg-white p-5 shadow-[0_1px_4px_rgba(0,0,0,0.04)]"
+                  >
+                    <h3 className="text-[0.96rem] font-semibold leading-[1.35] text-[var(--color-text-strong)]">
+                      {t(item.heroTitle, locale)}
+                    </h3>
+                    <p className="mt-2 text-[0.84rem] leading-[1.65] text-[var(--color-text-muted)]">
+                      {shorten(t(item.heroDescription, locale))}
+                    </p>
+                    <Link
+                      href={`/dinh-duong-thien-lanh/${item.slug}`}
+                      className="mt-auto pt-4 text-[0.82rem] font-medium text-[var(--color-navy)] opacity-80 transition-opacity hover:opacity-100"
+                    >
+                      {locale === "vi" ? "Mở bài viết" : "Open article"} →
+                    </Link>
+                  </article>
+                ))}
+              </div>
+            </section>
+          )}
         </div>
       </Container>
     </section>
