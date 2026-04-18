@@ -230,6 +230,14 @@ export function NutritionLandingPageSection({
                       </li>
                     ))}
                   </ul>
+                  {card.href && (
+                    <Link
+                      href={card.href}
+                      className="mt-auto pt-4 text-[0.78rem] font-medium text-[var(--color-navy)] opacity-65 transition-opacity hover:opacity-100"
+                    >
+                      {locale === "vi" ? "Mở page liên quan" : "Open related page"}
+                    </Link>
+                  )}
                 </article>
               ))}
             </div>

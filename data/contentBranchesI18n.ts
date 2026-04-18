@@ -42,6 +42,7 @@ export type NutritionSeedCardI18n = {
   title: LocalizedText;
   lead: LocalizedText;
   prompts: LocalizedText[];
+  href?: string;
 };
 
 export type NutritionSeedSectionI18n = {
@@ -843,7 +844,7 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
             vi: "Bạn đang chọn cách ăn vì ai nói, hay vì mình thực sự hiểu?",
             en: "Are you choosing the way you eat because someone said so, or because you genuinely understand it?",
           },
-          href: "/dinh-duong-thien-lanh/kien-thuc-nen-tang",
+          href: "/dinh-duong-thien-lanh#kien-thuc-nen-tang",
           imageSlotId: "dinh-duong.topic.kien-thuc-nen-tang",
         },
         {
@@ -919,7 +920,7 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
             vi: "Bữa ăn hằng ngày có thể ảnh hưởng đến sức khỏe lâu dài ra sao?",
             en: "How can daily meals affect long-term health?",
           },
-          href: "/dinh-duong-thien-lanh/ung-thu-va-nhung-cau-hoi-tu-ban-an",
+          href: "/dinh-duong-thien-lanh#ung-thu-va-nhung-cau-hoi-tu-ban-an",
           imageSlotId: "dinh-duong.topic.ung-thu-va-goc-nhin-tu-bua-an",
         },
       ],
@@ -1011,6 +1012,7 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
               { vi: "Vì sao bỏ sữa lại làm nhiều người bất an?", en: "Why does leaving milk behind make so many people uneasy?" },
               { vi: "Một lời khuyên quen thuộc có thể sai ở đâu?", en: "Where can a familiar recommendation go wrong?" },
             ],
+            href: "/dinh-duong-thien-lanh/sua-va-nhung-dieu-thuong-duoc-tin",
           },
           {
             id: "seed-thieu-dam-dau-tien",
@@ -1024,6 +1026,7 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
               { vi: "Cơ thể cần đạm theo cách nào?", en: "In what way does the body actually need protein?" },
               { vi: "Vì sao người ta yên tâm với điều quen hơn điều đúng?", en: "Why do people feel safer with what is familiar than with what is right?" },
             ],
+            href: "/dinh-duong-thien-lanh/chat-dam-hieu-sao-cho-dung",
           },
           {
             id: "seed-dai-thao-duong-la-duong",
@@ -1037,6 +1040,7 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
               { vi: "Bữa ăn và lối sống liên kết với nhau thế nào?", en: "How are meals and lifestyle tied together?" },
               { vi: "Điều gì tích lũy âm thầm trước khi xét nghiệm lên tiếng?", en: "What accumulates quietly before a lab result finally speaks?" },
             ],
+            href: "/dinh-duong-thien-lanh/suc-khoe-chuyen-hoa-va-bua-an-hang-ngay",
           },
           {
             id: "seed-bua-an-tac-dong-lau-dai",
@@ -1050,6 +1054,7 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
               { vi: "Vì sao cái quen lại dễ được xem là vô hại?", en: "Why is the familiar so easily seen as harmless?" },
               { vi: "Khi nào nên bắt đầu nhìn lại nhịp ăn mỗi ngày?", en: "When should someone begin to look again at their daily eating rhythm?" },
             ],
+            href: "/dinh-duong-thien-lanh/suc-khoe-chuyen-hoa-va-bua-an-hang-ngay",
           },
           {
             id: "seed-ung-thu-ban-an",
@@ -1063,6 +1068,7 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
               { vi: "Một thói quen lâu dài có thể ảnh hưởng thế nào?", en: "How can a long-term habit affect health?" },
               { vi: "Điều gì đang bị nói quá nhanh về thực phẩm và bệnh tật?", en: "What is being said too quickly about food and disease?" },
             ],
+            href: "/dinh-duong-thien-lanh/suc-khoe-chuyen-hoa-va-bua-an-hang-ngay",
           },
           {
             id: "seed-phim-thay-doi-goc-nhin",
