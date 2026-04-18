@@ -30,7 +30,7 @@ function OrganicIcon({ index }: { index: number }) {
 
   return (
     <span
-      className={`relative inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-border)] bg-[linear-gradient(155deg,rgba(255,253,253,0.94),rgba(191,221,226,0.34),rgba(233,183,195,0.2))] before:absolute before:h-4 before:w-2 before:rounded-full before:border before:border-[rgba(36,52,71,0.42)] before:border-b-0 before:border-l-0 after:absolute after:h-3 after:w-2 after:rounded-full after:bg-[rgba(216,159,177,0.72)] ${shape}`}
+      className={`relative inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-border)] bg-[linear-gradient(155deg,rgba(252,254,251,0.94),rgba(221,242,232,0.34),rgba(228,246,239,0.2))] before:absolute before:h-4 before:w-2 before:rounded-full before:border before:border-[rgba(36,52,71,0.42)] before:border-b-0 before:border-l-0 after:absolute after:h-3 after:w-2 after:rounded-full after:bg-[rgba(125,187,146,0.55)] ${shape}`}
       aria-hidden="true"
     />
   );
@@ -52,15 +52,15 @@ export function EntryCardsEditorialSection({ title, eyebrow, leadLabel, cards }:
                 key={card.title}
                 className={`flex h-full flex-col overflow-hidden ${
                   isLead
-                    ? "md:col-span-2 xl:col-span-6 bg-[linear-gradient(155deg,rgba(230,175,192,0.22),rgba(255,253,253,0.96),rgba(191,221,226,0.2))] p-7 lg:p-8"
-                    : `${cards.length <= 3 ? "md:col-span-1 xl:col-span-4" : "xl:col-span-3"} bg-[linear-gradient(165deg,rgba(255,253,253,0.94),rgba(191,221,226,0.2),rgba(233,183,195,0.14))] p-6`
-                } transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_18px_34px_rgba(223,166,184,0.18)]`}
+                    ? "md:col-span-2 xl:col-span-6 bg-[linear-gradient(155deg,rgba(221,242,232,0.22),rgba(252,254,251,0.96),rgba(228,246,239,0.2))] p-7 lg:p-8"
+                    : `${cards.length <= 3 ? "md:col-span-1 xl:col-span-4" : "xl:col-span-3"} bg-[linear-gradient(165deg,rgba(252,254,251,0.94),rgba(221,242,232,0.2),rgba(228,246,239,0.14))] p-6`
+                } transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_rgba(90,154,108,0.12)]`}
               >
                 <div
                   className={`pointer-events-none absolute -right-12 -top-10 h-36 w-36 rounded-[42%_58%_50%_50%] ${
                     isLead
-                      ? "bg-[radial-gradient(circle_at_35%_35%,rgba(230,175,192,0.34),rgba(230,175,192,0.08))]"
-                      : "bg-[radial-gradient(circle_at_35%_35%,rgba(191,221,226,0.44),rgba(191,221,226,0.14))]"
+                      ? "bg-[radial-gradient(circle_at_35%_35%,rgba(125,187,146,0.2),rgba(125,187,146,0.04))]"
+                      : "bg-[radial-gradient(circle_at_35%_35%,rgba(221,242,232,0.44),rgba(221,242,232,0.14))]"
                   }`}
                 />
 
@@ -87,7 +87,7 @@ export function EntryCardsEditorialSection({ title, eyebrow, leadLabel, cards }:
                     {card.suggestions.map((suggestion) => (
                       <li
                         key={`${card.title}-${suggestion.title}`}
-                        className="rounded-[14px] border border-[var(--color-border)] bg-[rgba(255,253,253,0.78)] p-3"
+                        className="rounded-[14px] border border-[var(--color-border)] bg-[rgba(252,254,251,0.78)] p-3"
                       >
                         <p className="text-sm font-medium leading-[1.35] text-[var(--color-text-strong)]">{suggestion.title}</p>
                         <p className="mt-1 text-xs leading-relaxed text-[var(--color-text-muted)]">{suggestion.hint}</p>

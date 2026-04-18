@@ -14,10 +14,10 @@ export function WhyWeExistSection({ content }: WhyWeExistSectionProps) {
   return (
     <section className="pb-16 lg:pb-20">
       <Container>
-        <div className="relative overflow-hidden rounded-[26px] border border-[var(--color-border)] bg-[linear-gradient(155deg,rgba(255,253,253,0.98),rgba(233,183,195,0.2),rgba(191,221,226,0.28))] px-6 py-10 shadow-[0_20px_38px_rgba(223,166,184,0.16)] lg:px-10 lg:py-12">
-          <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[rgba(230,175,192,0.24)] blur-3xl" />
+        <div className="relative overflow-hidden rounded-[26px] border border-[var(--color-border)] bg-[linear-gradient(155deg,rgba(252,254,251,0.98),rgba(221,242,232,0.2),rgba(228,246,239,0.28))] px-6 py-10 shadow-[0_14px_32px_rgba(90,154,108,0.1)] lg:px-10 lg:py-12">
+          <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[rgba(125,187,146,0.14)] blur-3xl" />
           <div className="pointer-events-none absolute -left-24 bottom-0 h-52 w-[420px] rounded-[100%] border border-[rgba(191,221,226,0.5)] opacity-55" />
-          <div className="pointer-events-none absolute -left-4 bottom-3 h-40 w-[360px] rounded-[100%] border border-[rgba(230,175,192,0.36)] opacity-50" />
+          <div className="pointer-events-none absolute -left-4 bottom-3 h-40 w-[360px] rounded-[100%] border border-[rgba(125,187,146,0.2)] opacity-50" />
 
           <div className="relative z-10 mx-auto max-w-[760px] text-center">
             {content.eyebrow ? (

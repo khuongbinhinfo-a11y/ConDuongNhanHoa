@@ -1,5 +1,12 @@
 "use client";
 
+/**
+ * SOURCE-OF-TRUTH for detail pages under /dinh-duong-thien-lanh/*
+ * Data: nutritionDetailPagesI18n[slug]
+ * Renders: sua-va-nhung-dieu-thuong-duoc-tin, chat-dam-hieu-sao-cho-dung,
+ *          suc-khoe-chuyen-hoa-va-bua-an-hang-ngay
+ */
+
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
@@ -44,7 +51,7 @@ export function NutritionDetailPageSection({ content, locale }: NutritionDetailP
                 <div className="mt-7">
                   <Link
                     href={content.primaryCtaHref}
-                    className="inline-flex items-center justify-center rounded-full bg-[var(--color-primary)] px-6 py-2.5 text-[0.88rem] font-semibold text-[var(--color-text-strong)] transition-colors hover:bg-[var(--color-primary-strong)]"
+                    className="inline-flex items-center justify-center rounded-full bg-[var(--color-primary)] px-6 py-2.5 text-[0.88rem] font-semibold text-white transition-colors hover:bg-[var(--color-primary-strong)]"
                   >
                     {t(content.primaryCtaLabel, locale)}
                   </Link>
@@ -67,7 +74,7 @@ export function NutritionDetailPageSection({ content, locale }: NutritionDetailP
           </section>
 
           {(content.openingNoteTitle || content.openingNoteBody) && (
-            <section className="rounded-[12px] border-l-[3px] border-l-[var(--color-teal)] border border-[var(--color-border)] bg-[rgba(255,255,255,0.82)] px-6 py-5 shadow-[0_1px_4px_rgba(0,0,0,0.04)]">
+            <section className="rounded-[12px] border-l-[3px] border-l-[var(--color-teal)] border border-[var(--color-border)] bg-[var(--color-accent-light)] px-6 py-5 shadow-[0_1px_4px_rgba(0,0,0,0.04)]">
               {content.openingNoteTitle && (
                 <h2 className="text-[1rem] font-semibold text-[var(--color-text-strong)]">
                   {t(content.openingNoteTitle, locale)}
@@ -88,7 +95,7 @@ export function NutritionDetailPageSection({ content, locale }: NutritionDetailP
                 {t(content.filmStoryBody, locale)}
               </p>
             </article>
-            <article className="rounded-[12px] border border-[var(--color-border)] bg-[rgba(191,221,226,0.08)] p-6">
+            <article className="rounded-[12px] border border-[var(--color-border)] bg-[var(--color-mint)] p-6">
               <p className={eyebrow}>{t(content.filmQuestionTitle, locale)}</p>
               <p className="mt-3 text-[0.94rem] leading-[1.75] text-[var(--color-text-muted)] italic">
                 {t(content.filmQuestionBody, locale)}
@@ -155,7 +162,7 @@ export function NutritionDetailPageSection({ content, locale }: NutritionDetailP
             <div className="mt-6">
               <Link
                 href={content.primaryCtaHref}
-                className="inline-flex items-center justify-center rounded-full bg-[var(--color-primary)] px-6 py-2.5 text-[0.88rem] font-semibold text-[var(--color-text-strong)] transition-colors hover:bg-[var(--color-primary-strong)]"
+                className="inline-flex items-center justify-center rounded-full bg-[var(--color-primary)] px-6 py-2.5 text-[0.88rem] font-semibold text-white transition-colors hover:bg-[var(--color-primary-strong)]"
               >
                 {t(content.primaryCtaLabel, locale)}
               </Link>

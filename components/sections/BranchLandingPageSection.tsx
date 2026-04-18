@@ -45,7 +45,7 @@ export function BranchLandingPageSection({
         <div className="mx-auto max-w-[1060px] space-y-5">
 
           {/* ── Main card ─────────────────────────────────────────────── */}
-          <div className="rounded-[24px] border border-[var(--color-border)] bg-[var(--color-card)] p-6 shadow-[0_16px_34px_rgba(223,166,184,0.14)] lg:p-8">
+          <div className="rounded-[24px] border border-[var(--color-border)] bg-[var(--color-card)] p-6 shadow-[0_12px_28px_rgba(90,154,108,0.08)] lg:p-8">
 
             {/* Hero image — shown only when a real image exists for this branch */}
             {resolvedHeroSrc && (
@@ -83,10 +83,10 @@ export function BranchLandingPageSection({
                   <article
                     key={cluster.id}
                     id={cluster.id}
-                    className="group relative flex flex-col overflow-hidden rounded-[20px] border border-[rgba(223,166,184,0.38)] bg-white"
+                    className="group relative flex flex-col overflow-hidden rounded-[20px] border border-[var(--color-border)] bg-white"
                   >
                     {/* Pastel accent line at top */}
-                    <div className="h-[3px] w-full bg-[linear-gradient(90deg,rgba(230,175,192,0.7),rgba(191,221,226,0.5))]" aria-hidden="true" />
+                    <div className="h-[3px] w-full bg-[linear-gradient(90deg,var(--color-sage),var(--color-mint))]" aria-hidden="true" />
 
                     {/* Image — only if one truly exists for this slot */}
                     {clusterImageSrc && (
@@ -132,7 +132,7 @@ export function BranchLandingPageSection({
             {content.documentaryBlock && (
               <div
                 id={content.documentaryBlock.href.split("#")[1] ?? "goc-nhin-phim-tai-lieu"}
-                className="mt-6 rounded-[20px] border border-[rgba(191,221,226,0.55)] bg-[linear-gradient(135deg,rgba(191,221,226,0.18),rgba(230,175,192,0.14))] p-5 lg:p-6"
+                className="mt-6 rounded-[20px] border border-[var(--color-border)] bg-[linear-gradient(135deg,var(--color-accent-light),var(--color-mint))] p-5 lg:p-6"
               >
                 <h2 className="text-[1.12rem] font-semibold leading-[1.35] text-[var(--color-text-strong)]">
                   {content.documentaryBlock.title[locale]}
@@ -165,7 +165,7 @@ export function BranchLandingPageSection({
             )}
 
             {/* ── Related directions ───────────────────────────────────── */}
-            <section className="mt-6 rounded-[20px] border border-[var(--color-border)] bg-[linear-gradient(150deg,rgba(191,221,226,0.22),rgba(230,175,192,0.2))] p-5 lg:p-6">
+            <section className="mt-6 rounded-[20px] border border-[var(--color-border)] bg-[linear-gradient(150deg,rgba(221,242,232,0.22),rgba(228,246,239,0.2))] p-5 lg:p-6">
               <h2 className="text-[1.08rem] font-semibold leading-[1.35] text-[var(--color-text-strong)]">
                 {labels.relatedHeading}
               </h2>
@@ -174,7 +174,7 @@ export function BranchLandingPageSection({
                   <Link
                     key={`${content.slug}-${item.href}`}
                     href={item.href}
-                    className="group rounded-[16px] border border-[var(--color-border)] bg-[rgba(255,253,253,0.9)] p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-[rgba(223,166,184,0.68)]"
+                    className="group rounded-[16px] border border-[var(--color-border)] bg-[rgba(251,253,251,0.9)] p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--color-sage)]"
                   >
                     <p className="text-sm font-semibold text-[var(--color-text-strong)] transition-colors group-hover:text-[var(--color-navy)]">
                       {item.title[locale]}
@@ -189,13 +189,13 @@ export function BranchLandingPageSection({
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
                 href={content.primaryCta.href}
-                className="inline-flex items-center justify-center rounded-full bg-[var(--color-primary)] px-5 py-2.5 text-sm font-semibold text-[var(--color-text-strong)] shadow-[0_12px_26px_rgba(223,166,184,0.24)] transition-all duration-200 hover:bg-[var(--color-primary-strong)]"
+                className="inline-flex items-center justify-center rounded-full bg-[var(--color-primary)] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(90,154,108,0.18)] transition-all duration-200 hover:bg-[var(--color-primary-strong)]"
               >
                 {content.primaryCta.label[locale]}
               </Link>
               <Link
                 href="/"
-                className="inline-flex items-center justify-center rounded-full border border-[var(--color-border)] bg-[rgba(255,253,253,0.94)] px-5 py-2.5 text-sm font-semibold text-[var(--color-navy)] transition-all duration-200 hover:bg-[rgba(191,221,226,0.3)]"
+                className="inline-flex items-center justify-center rounded-full border border-[var(--color-border)] bg-[rgba(251,253,251,0.94)] px-5 py-2.5 text-sm font-semibold text-[var(--color-navy)] transition-all duration-200 hover:bg-[var(--color-accent-light)]"
               >
                 {labels.backToHome}
               </Link>

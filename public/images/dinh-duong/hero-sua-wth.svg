@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F0F8F3"/>
+      <stop offset="50%" stop-color="#FAFDFB"/>
+      <stop offset="100%" stop-color="#EFF7F2"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="410" y1="110" x2="410" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F2F8F4"/>
+    </linearGradient>
+    <linearGradient id="milk" x1="410" y1="170" x2="410" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDFDFD"/>
+      <stop offset="100%" stop-color="#F5FAF7"/>
+    </linearGradient>
+    <linearGradient id="bottle" x1="580" y1="90" x2="580" y2="310" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F8FBF9"/>
+      <stop offset="100%" stop-color="#EAF3EC"/>
+    </linearGradient>
+    <linearGradient id="leaf1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7DBB92"/>
+      <stop offset="100%" stop-color="#5A9A6C"/>
+    </linearGradient>
+    <linearGradient id="leaf2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#86C4A0"/>
+      <stop offset="100%" stop-color="#6BAF80"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="420" rx="16" fill="url(#bg)"/>
+
+  <!-- Subtle circular accent -->
+  <circle cx="480" cy="210" r="180" fill="#E4F6EF" opacity="0.35"/>
+  <circle cx="320" cy="310" r="80" fill="#DDF2E8" opacity="0.25"/>
+  <circle cx="660" cy="130" r="60" fill="#DCEFEB" opacity="0.2"/>
+
+  <!-- Table surface -->
+  <rect x="220" y="300" width="520" height="6" rx="3" fill="#D7E8DD" opacity="0.5"/>
+
+  <!-- Glass of milk -->
+  <rect x="380" y="130" width="60" height="170" rx="6" fill="url(#glass)" stroke="#DCEADF" stroke-width="1.5"/>
+  <rect x="384" y="180" width="52" height="116" rx="4" fill="url(#milk)"/>
+  <!-- Glass rim -->
+  <ellipse cx="410" cy="132" rx="30" ry="6" fill="#FFFFFF" stroke="#DCEADF" stroke-width="1"/>
+
+  <!-- Milk bottle -->
+  <rect x="555" y="120" width="50" height="180" rx="8" fill="url(#bottle)" stroke="#DCEADF" stroke-width="1.5"/>
+  <rect x="565" y="100" width="30" height="30" rx="4" fill="#F8FBF9" stroke="#DCEADF" stroke-width="1.2"/>
+  <rect x="559" y="170" width="42" height="120" rx="4" fill="#FDFDFD"/>
+  <!-- Label on bottle -->
+  <rect x="563" y="200" width="34" height="18" rx="3" fill="#E4F6EF"/>
+  <line x1="567" y1="206" x2="593" y2="206" stroke="#86C4A0" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="567" y1="212" x2="587" y2="212" stroke="#86C4A0" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Almonds cluster -->
+  <ellipse cx="310" cy="280" rx="18" ry="10" fill="#E8D8C4" transform="rotate(-20 310 280)"/>
+  <ellipse cx="330" cy="288" rx="16" ry="9" fill="#E2D0B8" transform="rotate(15 330 288)"/>
+  <ellipse cx="318" cy="272" rx="14" ry="8" fill="#DCC8A8" transform="rotate(-35 318 272)"/>
+
+  <!-- Soybeans -->
+  <circle cx="680" cy="275" r="8" fill="#D4DCA0"/>
+  <circle cx="695" cy="282" r="7" fill="#D9E0A8"/>
+  <circle cx="688" cy="268" r="6.5" fill="#CED6A0"/>
+  <circle cx="702" cy="272" r="5.5" fill="#D6DDA4"/>
+
+  <!-- Oat grains -->
+  <ellipse cx="470" cy="290" rx="5" ry="10" fill="#E0D5B8" transform="rotate(10 470 290)"/>
+  <ellipse cx="482" cy="285" rx="4.5" ry="9" fill="#DDD0B2" transform="rotate(-15 482 285)"/>
+  <ellipse cx="476" cy="295" rx="4" ry="8" fill="#D8CBB0" transform="rotate(25 476 295)"/>
+
+  <!-- Decorative leaves -->
+  <path d="M250 180 Q270 150 260 120 Q240 145 250 180Z" fill="url(#leaf1)" opacity="0.5"/>
+  <path d="M255 175 Q280 160 275 135" stroke="#7DBB92" stroke-width="1" fill="none" opacity="0.4"/>
+
+  <path d="M720 200 Q735 170 725 145 Q710 168 720 200Z" fill="url(#leaf2)" opacity="0.45"/>
+  <path d="M723 195 Q740 178 737 158" stroke="#86C4A0" stroke-width="1" fill="none" opacity="0.35"/>
+
+  <!-- Small leaf accent near glass -->
+  <path d="M440 155 Q452 140 448 125 Q436 138 440 155Z" fill="#7DBB92" opacity="0.35"/>
+
+  <!-- Tiny dots decoration -->
+  <circle cx="350" cy="200" r="2" fill="#86C4A0" opacity="0.3"/>
+  <circle cx="640" cy="180" r="2.5" fill="#7DBB92" opacity="0.25"/>
+  <circle cx="500" cy="140" r="1.5" fill="#86C4A0" opacity="0.2"/>
+</svg>

@@ -20,11 +20,11 @@ export function ClosingEditorialSection({ content }: ClosingEditorialSectionProp
   return (
     <section className="pb-20 lg:pb-28">
       <Container>
-        <div className="relative overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-[linear-gradient(150deg,rgba(255,253,253,0.98),rgba(230,175,192,0.2),rgba(191,221,226,0.26))] px-6 py-12 shadow-[0_22px_42px_rgba(223,166,184,0.2)] lg:px-12 lg:py-16">
-          <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-[rgba(230,175,192,0.26)] blur-3xl" />
+        <div className="relative overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-[linear-gradient(150deg,rgba(252,254,251,0.98),rgba(221,242,232,0.2),rgba(228,246,239,0.26))] px-6 py-12 shadow-[0_16px_36px_rgba(90,154,108,0.1)] lg:px-12 lg:py-16">
+          <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-[rgba(125,187,146,0.15)] blur-3xl" />
           <div className="pointer-events-none absolute -left-10 bottom-4 h-52 w-[440px] rounded-[100%] border border-[rgba(191,221,226,0.44)] opacity-55" />
-          <div className="pointer-events-none absolute -left-3 bottom-0 h-44 w-[420px] rounded-[100%] border border-[rgba(230,175,192,0.32)] opacity-45" />
-          <div className="pointer-events-none absolute right-8 top-8 h-36 w-36 rounded-[58%_42%_65%_35%] bg-[radial-gradient(circle_at_30%_30%,rgba(230,175,192,0.26),rgba(230,175,192,0.04))]" />
+          <div className="pointer-events-none absolute -left-3 bottom-0 h-44 w-[420px] rounded-[100%] border border-[rgba(125,187,146,0.2)] opacity-45" />
+          <div className="pointer-events-none absolute right-8 top-8 h-36 w-36 rounded-[58%_42%_65%_35%] bg-[radial-gradient(circle_at_30%_30%,rgba(125,187,146,0.18),rgba(125,187,146,0.04))]" />
 
           <div className="relative z-10 mx-auto max-w-[760px] text-center">
             {content.kicker ? (

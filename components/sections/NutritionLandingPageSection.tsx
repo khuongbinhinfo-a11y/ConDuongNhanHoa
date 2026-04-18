@@ -1,5 +1,11 @@
 "use client";
 
+/**
+ * SOURCE-OF-TRUTH for landing page /dinh-duong-thien-lanh
+ * Data: contentBranchesI18n["dinh-duong-thien-lanh"].nutritionLanding
+ * Do NOT use BranchLandingPageSection for this branch.
+ */
+
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
@@ -45,7 +51,7 @@ export function NutritionLandingPageSection({
                 <div className="mt-7">
                   <Link
                     href="#theo-chu-de"
-                    className="inline-flex items-center justify-center rounded-full bg-[var(--color-primary)] px-6 py-2.5 text-[0.88rem] font-semibold text-[var(--color-text-strong)] transition-colors hover:bg-[var(--color-primary-strong)]"
+                    className="inline-flex items-center justify-center rounded-full bg-[var(--color-primary)] px-6 py-2.5 text-[0.88rem] font-semibold text-white transition-colors hover:bg-[var(--color-primary-strong)]"
                   >
                     {t(content.heroPrimaryCtaLabel, locale)}
                   </Link>
@@ -71,7 +77,7 @@ export function NutritionLandingPageSection({
                 const icons = ["○", "◇", "→"];
                 return (
                   <div key={index} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[rgba(191,221,226,0.22)] text-[0.7rem] text-[var(--color-teal)]" aria-hidden="true">
+                    <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--color-mint)] text-[0.7rem] text-[var(--color-teal)]" aria-hidden="true">
                       {icons[index] ?? "·"}
                     </span>
                     <span className="text-[0.82rem] leading-[1.55] text-[var(--color-text-muted)]">
@@ -157,7 +163,7 @@ export function NutritionLandingPageSection({
                   key={card.id}
                   className="flex flex-col rounded-[14px] border border-[var(--color-border)] bg-white p-6 shadow-[0_2px_12px_rgba(36,52,71,0.04)]"
                 >
-                  <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-[rgba(191,221,226,0.2)] text-[0.72rem] font-bold text-[var(--color-teal)]">
+                  <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-[var(--color-mint)] text-[0.72rem] font-bold text-[var(--color-teal)]">
                     {String(cardIndex + 1).padStart(2, "0")}
                   </div>
 
@@ -169,7 +175,7 @@ export function NutritionLandingPageSection({
                     {t(card.story, locale)}
                   </p>
 
-                  <p className="mt-3 border-l-2 border-[rgba(191,221,226,0.5)] pl-3 text-[0.84rem] italic leading-[1.6] text-[var(--color-text-muted)] opacity-85">
+                  <p className="mt-3 border-l-2 border-[var(--color-sage)] pl-3 text-[0.84rem] italic leading-[1.6] text-[var(--color-text-muted)] opacity-85">
                     {t(card.challengeQuestion, locale)}
                   </p>
 

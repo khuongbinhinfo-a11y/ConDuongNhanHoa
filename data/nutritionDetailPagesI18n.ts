@@ -48,7 +48,7 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
       vi: "Từ góc nhìn của WTH, sữa không chỉ là một thực phẩm. Nó còn là một niềm tin được lặp lại qua tuổi thơ, quảng bá, trường học và những khuyến nghị dinh dưỡng quen thuộc đến mức rất ít người còn muốn hỏi lại.",
       en: "From the perspective of WTH, milk is not only a food. It is also a belief repeated through childhood, advertising, schools, and familiar nutrition recommendations until very few people still want to question it.",
     },
-    heroImageSlotId: "dinh-duong.topic.sua-va-nhung-dieu-thuong-tin",
+    heroImageSlotId: "dinh-duong.hero.sua-wth",
     openingNoteTitle: { vi: "Cách tiếp cận nội dung này", en: "How to approach this content" },
     openingNoteBody: {
       vi: "Nội dung dưới đây không nhằm kết luận sữa là tốt hay xấu theo một đáp án tuyệt đối. Mục tiêu là nhìn lại niềm tin quanh sữa: nó đến từ đâu, được củng cố ra sao, và vì sao nhiều người cảm thấy bất an khi phải đặt lại câu hỏi.",
@@ -461,7 +461,7 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
     ],
     closingTitle: { vi: "Đi tiếp từ đây", en: "Continue from here" },
     closingBody: {
-      vi: "Ba page đầu tiên này là điểm bắt đầu. Từ đây có thể tiếp tục mở thêm các page con về ung thư và bàn ăn, kiến thức nền tảng, hoặc các bài/clip ngắn đi sâu từng ý nhỏ trong mỗi trục.",
+      vi: "Ba chuyên đề đầu tiên này là điểm bắt đầu. Từ đây có thể tiếp tục mở rộng sang các chủ đề về ung thư và bàn ăn, kiến thức nền tảng, hoặc các bài viết ngắn đi sâu từng khía cạnh trong mỗi hướng.",
       en: "These first three pages are only a beginning. From here, more pages can open on cancer and the table, foundational knowledge, or short pieces that dive into each smaller idea within every axis.",
     },
     primaryCtaLabel: { vi: "Quay lại Dinh dưỡng thiện lành", en: "Back to Wholesome Nutrition" },

@@ -27,7 +27,7 @@ export function SiteFooter({
   copyrightText,
 }: SiteFooterProps) {
   return (
-    <footer className="mt-2 border-t border-[var(--color-border)] bg-[rgba(255,253,253,0.94)]">
+    <footer className="mt-2 border-t border-[var(--color-border)] bg-[rgba(252,254,251,0.94)]">
       <Container>
         <div className="grid gap-8 py-10 sm:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:gap-10">
           {/* Brand column */}

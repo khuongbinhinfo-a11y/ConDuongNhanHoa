@@ -18,9 +18,9 @@ const variantTokens: Record<ButtonVariant, string> = {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-[var(--color-primary)] text-[#243447] shadow-[0_12px_24px_rgba(223,166,184,0.26)] hover:bg-[var(--color-primary-strong)] hover:shadow-[0_16px_28px_rgba(223,166,184,0.32)]",
+    "bg-[var(--color-primary)] text-white shadow-[0_8px_20px_rgba(90,154,108,0.2)] hover:bg-[var(--color-primary-strong)] hover:shadow-[0_10px_24px_rgba(90,154,108,0.26)]",
   ghost:
-    "border border-[var(--color-border)] bg-[rgba(255,253,253,0.92)] text-[var(--color-navy)] hover:bg-[rgba(191,221,226,0.3)]",
+    "border border-[var(--color-border)] bg-[rgba(251,253,251,0.92)] text-[var(--color-navy)] hover:bg-[var(--color-accent-light)]",
   text: "bg-transparent text-[var(--color-navy)] hover:text-[var(--color-primary-strong)]",
 };
 

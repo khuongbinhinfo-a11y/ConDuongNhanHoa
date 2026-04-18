@@ -15,9 +15,9 @@ type ThreeBranchesSectionProps = {
 };
 
 const accentColors = [
-  "bg-[rgba(230,175,192,0.55)]",
-  "bg-[rgba(191,221,226,0.6)]",
-  "bg-[rgba(199,227,232,0.55)]",
+  "bg-[rgba(125,187,146,0.35)]",
+  "bg-[rgba(221,242,232,0.6)]",
+  "bg-[rgba(228,246,239,0.55)]",
 ];
 
 export function ThreeBranchesSection({ heading, cards }: ThreeBranchesSectionProps) {
@@ -32,7 +32,7 @@ export function ThreeBranchesSection({ heading, cards }: ThreeBranchesSectionPro
           {cards.map((card, index) => (
             <article
               key={card.title}
-              className="relative flex flex-col overflow-hidden rounded-[22px] border border-[var(--color-border)] bg-[var(--color-card)] p-6 shadow-[0_10px_26px_rgba(223,166,184,0.12)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_16px_32px_rgba(223,166,184,0.18)]"
+              className="relative flex flex-col overflow-hidden rounded-[22px] border border-[var(--color-border)] bg-[var(--color-card)] p-6 shadow-[0_8px_22px_rgba(90,154,108,0.08)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(90,154,108,0.14)]"
             >
               {/* Accent bar */}
               <div className={`absolute inset-x-0 top-0 h-[3px] ${accentColors[index % 3]}`} aria-hidden="true" />

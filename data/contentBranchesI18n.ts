@@ -531,7 +531,7 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
         id: "huong-mo-rong",
         title: { vi: "Hướng mở rộng", en: "Expansion Direction" },
         summary: {
-          vi: "Định hướng triển khai sâu hơn cho các cụm nội dung nội tâm.",
+          vi: "Định hướng triển khai sâu hơn cho các chủ đề nội dung nội tâm.",
           en: "Future directions for deeper inner-life content clusters.",
         },
         href: "/suy-nghi-thien-lanh#huong-mo-rong",

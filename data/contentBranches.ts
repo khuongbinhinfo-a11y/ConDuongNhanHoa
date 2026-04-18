@@ -54,7 +54,7 @@ export const contentBranches: Record<ContentBranchSlug, ContentBranchLanding> = 
       {
         id: "phim-tai-lieu-goc-nhin",
         title: "Phim tài liệu / Góc nhìn",
-        summary: "Cụm nội dung tài liệu, trong đó What The Health được đặt đúng ngữ cảnh thuộc nhánh Dinh dưỡng.",
+        summary: "Nội dung tài liệu, trong đó What The Health được đặt đúng ngữ cảnh thuộc nhánh Dinh dưỡng.",
         href: "/dinh-duong-thien-lanh#phim-tai-lieu-goc-nhin",
       },
       {
@@ -78,7 +78,7 @@ export const contentBranches: Record<ContentBranchSlug, ContentBranchLanding> = 
     ],
     relatedDirections: [
       {
-        title: "What The Health trong cụm tài liệu",
+        title: "What The Health trong phần Phim tài liệu",
         description: "Xem bộ phim như một góc nhìn để đối chiếu, không phải trục trung tâm của toàn site.",
         href: "/dinh-duong-thien-lanh#phim-tai-lieu-goc-nhin",
       },
@@ -94,7 +94,7 @@ export const contentBranches: Record<ContentBranchSlug, ContentBranchLanding> = 
       },
     ],
     primaryCta: {
-      label: "Xem cụm Phim tài liệu / Góc nhìn",
+      label: "Xem Phim tài liệu / Góc nhìn",
       href: "/dinh-duong-thien-lanh#phim-tai-lieu-goc-nhin",
     },
   },
