@@ -38,7 +38,7 @@ const clusters: {
     },
     points: [
       { vi: "Vì sao con người rất dễ tin một lời khuyên dinh dưỡng nghe quen?", en: "Why do people easily trust a nutrition tip that sounds familiar?" },
-      { vi: "Một thói quen ăn uống được lặp lại lâu ngày mạnh hơn kiến thức ra sao?", en: "How does a long-repeated eating habit become stronger than knowledge?" },
+      { vi: "Một thói quen ăn uống lặp lại lâu ngày mạnh hơn kiến thức ra sao?", en: "How does a long-repeated eating habit become stronger than knowledge?" },
       { vi: "Khi nào nên dừng lại để hỏi: mình tin điều này từ đâu?", en: "When should you stop and ask: where did this belief come from?" },
     ],
     question: {
@@ -147,6 +147,7 @@ const docCards: {
       { vi: "Sữa đi từ thực phẩm thành niềm tin quốc dân như thế nào?", en: "How did milk go from food to national belief?" },
       { vi: "Vì sao quảng bá thời thơ ấu có thể theo ta đến tuổi trưởng thành?", en: "Why can childhood advertising follow us into adulthood?" },
       { vi: "Khi nào một khuyến nghị dinh dưỡng trở thành điều không ai dám hỏi lại?", en: "When does a nutrition recommendation become something no one dares question?" },
+      { vi: "Vì sao nhiều người cảm thấy thiếu an tâm nếu bỏ sữa?", en: "Why do many people feel uneasy about giving up milk?" },
     ],
     href: "/dinh-duong-thien-lanh#sua-va-nhung-dieu-thuong-tin",
     linkText: { vi: "Mở cụm về sữa", en: "Open the milk cluster" },
@@ -166,6 +167,7 @@ const docCards: {
       { vi: "Vì sao thiếu đạm luôn là nỗi sợ đầu tiên?", en: "Why is protein deficiency always the first fear?" },
       { vi: "Nỗi sợ này được nuôi bởi thói quen hay khoa học?", en: "Is this fear nurtured by habit or science?" },
       { vi: "Điều gì khiến một người khó yên tâm khi nghe về cách ăn khác số đông?", en: "What makes people uneasy about eating differently from the majority?" },
+      { vi: "Cơ thể cần đạm theo cách nào chứ không chỉ theo số lượng?", en: "How does the body need protein — in what way, not just how much?" },
     ],
     href: "/dinh-duong-thien-lanh#chat-dam-hang-ngay",
     linkText: { vi: "Mở cụm về chất đạm", en: "Open the protein cluster" },
@@ -184,6 +186,7 @@ const docCards: {
     clipSeeds: [
       { vi: "Đái tháo đường có chỉ là câu chuyện của đường?", en: "Is diabetes only a story about sugar?" },
       { vi: "Vì sao béo phì thường bị nhìn như lỗi cá nhân?", en: "Why is obesity often seen as a personal failure?" },
+      { vi: "Một thói quen nhỏ lặp lại lâu ngày ảnh hưởng lớn đến đâu?", en: "How far-reaching can a small habit repeated over time become?" },
       { vi: "Khi nói đến ung thư, vì sao người ta luôn quay lại bàn ăn?", en: "When talking about cancer, why do people always return to the table?" },
     ],
     href: "/dinh-duong-thien-lanh#suc-khoe-chuyen-hoa",
