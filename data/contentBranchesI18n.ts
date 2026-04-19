@@ -146,7 +146,7 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
           vi: "Bạn đang chọn cách ăn vì ai nói, hay vì mình thực sự hiểu?",
           en: "Are you eating a certain way because someone said to, or because you actually understand why?",
         },
-        href: "/dinh-duong-thien-lanh#kien-thuc-nen-tang",
+        href: "/dinh-duong-thien-lanh/kien-thuc-nen-tang",
       },
       {
         id: "sua-va-nhung-dieu-thuong-tin",
@@ -159,7 +159,7 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
           vi: "Sữa có thật sự cần thiết như nhiều người vẫn nghĩ?",
           en: "Is milk as essential as many people believe?",
         },
-        href: "/dinh-duong-thien-lanh#sua-va-nhung-dieu-thuong-tin",
+        href: "/dinh-duong-thien-lanh/sua-va-nhung-dieu-thuong-duoc-tin",
       },
       {
         id: "chat-dam-hang-ngay",
@@ -172,7 +172,7 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
           vi: "Vì sao nỗi lo thiếu đạm lại dễ xuất hiện đến vậy?",
           en: "Why does protein deficiency worry appear so easily?",
         },
-        href: "/dinh-duong-thien-lanh#chat-dam-hang-ngay",
+        href: "/dinh-duong-thien-lanh/chat-dam-hieu-sao-cho-dung",
       },
       {
         id: "suc-khoe-chuyen-hoa",
@@ -185,7 +185,7 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
           vi: "Đái tháo đường có chỉ là câu chuyện của đường?",
           en: "Is diabetes only a story about sugar?",
         },
-        href: "/dinh-duong-thien-lanh#suc-khoe-chuyen-hoa",
+        href: "/dinh-duong-thien-lanh/suc-khoe-chuyen-hoa-va-bua-an-hang-ngay",
       },
       {
         id: "ung-thu-va-bua-an",
@@ -198,7 +198,7 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
           vi: "Bữa ăn hằng ngày có thể ảnh hưởng đến sức khỏe lâu dài ra sao?",
           en: "How might daily eating affect long-term health?",
         },
-        href: "/dinh-duong-thien-lanh#ung-thu-va-bua-an",
+        href: "/dinh-duong-thien-lanh/ung-thu-va-nhung-cau-hoi-tu-ban-an",
       },
     ],
     documentaryBlock: {
@@ -844,7 +844,7 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
             vi: "Bạn đang chọn cách ăn vì ai nói, hay vì mình thực sự hiểu?",
             en: "Are you choosing the way you eat because someone said so, or because you genuinely understand it?",
           },
-          href: "/dinh-duong-thien-lanh#kien-thuc-nen-tang",
+          href: "/dinh-duong-thien-lanh/kien-thuc-nen-tang",
           imageSlotId: "dinh-duong.topic.kien-thuc-nen-tang",
         },
         {
@@ -1168,7 +1168,7 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
     },
     primaryCta: {
       label: { vi: "Xem các chủ đề chính", en: "Browse the main topics" },
-      href: "/dinh-duong-thien-lanh#kien-thuc-nen-tang",
+      href: "/dinh-duong-thien-lanh/kien-thuc-nen-tang",
     },
   },
   "hanh-dong-thien-lanh": {
@@ -1635,4 +1635,6 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
   },
 };
 
+// Runtime canonical branch content is applied here.
+// For nutrition, this override block is the single source-of-truth used by the app.
 Object.assign(contentBranchesI18n, primaryBranchOverrides);

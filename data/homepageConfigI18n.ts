@@ -51,13 +51,13 @@ export const homepageConfigI18n = {
   ] as const satisfies ReadonlyArray<{ key: EntryCardI18nKey; href: string }>,
 
   focusCards: [
-    { key: "foundation", href: "/dinh-duong-thien-lanh#kien-thuc-nen-tang" },
+    { key: "foundation", href: "/dinh-duong-thien-lanh/kien-thuc-nen-tang" },
     { key: "documentary", href: "/dinh-duong-thien-lanh#phim-tai-lieu-goc-nhin" },
     { key: "practice", href: "/dinh-duong-thien-lanh#hanh-trinh-thuc-hanh" },
   ] as const satisfies ReadonlyArray<{ key: FocusCardI18nKey; href: string }>,
 
   nutritionFeaturedCards: [
-    { key: "foundationalReads", href: "/dinh-duong-thien-lanh#kien-thuc-nen-tang" },
+    { key: "foundationalReads", href: "/dinh-duong-thien-lanh/kien-thuc-nen-tang" },
     { key: "documentaryViews", href: "/dinh-duong-thien-lanh#phim-tai-lieu-goc-nhin" },
     { key: "specializedTopics", href: "/dinh-duong-thien-lanh#bai-viet-chuyen-de" },
   ] as const satisfies ReadonlyArray<{ key: NutritionFeaturedCardI18nKey; href: string }>,
