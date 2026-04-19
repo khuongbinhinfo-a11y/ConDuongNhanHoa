@@ -30,7 +30,7 @@ const PUBLIC_DIR = join(ROOT, "public");
 const MANIFEST_PATH = join(ROOT, "data", "imageManifest.generated.ts");
 
 const REPORT_ONLY = process.argv.includes("--report");
-const ACCEPTED_EXT = new Set([".png", ".jpg", ".jpeg", ".webp"]);
+const ACCEPTED_EXT = new Set([".png", ".jpg", ".jpeg", ".webp", ".svg"]);
 
 // ─── Slot definitions (mirrors data/imageSlots.ts) ───────────────────────────
 // Kept in sync manually — order determines assignment priority.
@@ -100,7 +100,7 @@ function listUnassignedImages() {
 function findExistingFileOnDisk(slot) {
   const dir = join(PUBLIC_DIR, slot.targetDir);
   if (!existsSync(dir)) return null;
-  for (const ext of [".webp", ".jpg", ".jpeg", ".png"]) {
+  for (const ext of [".webp", ".jpg", ".jpeg", ".png", ".svg"]) {
     const candidate = join(dir, slot.targetBaseName + ext);
     if (existsSync(candidate)) {
       return `/${slot.targetDir}/${slot.targetBaseName}${ext}`;

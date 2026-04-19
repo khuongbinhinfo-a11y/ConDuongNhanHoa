@@ -1,0 +1,54 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Ung thư và những câu hỏi từ bàn ăn</title>
+  <desc id="desc">Minh họa bàn ăn và lăng kính phản tư về nguy cơ dài hạn từ thói quen thường ngày.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7efe8"/>
+      <stop offset="45%" stop-color="#f2dfd3"/>
+      <stop offset="100%" stop-color="#e7c7b6"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#af5f44"/>
+      <stop offset="100%" stop-color="#874c36"/>
+    </linearGradient>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="11"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <circle cx="1350" cy="170" r="160" fill="#fff" opacity="0.33" filter="url(#blur)"/>
+  <circle cx="250" cy="1060" r="210" fill="#fff" opacity="0.30" filter="url(#blur)"/>
+
+  <g transform="translate(880,460)">
+    <ellipse cx="310" cy="285" rx="370" ry="110" fill="#d7a68f" opacity="0.4"/>
+    <ellipse cx="290" cy="250" rx="330" ry="95" fill="#f7eee9" stroke="#b7765e" stroke-width="8"/>
+    <circle cx="180" cy="220" r="34" fill="#cb7457"/>
+    <circle cx="300" cy="210" r="26" fill="#d38a5c"/>
+    <circle cx="380" cy="245" r="30" fill="#bf6a51"/>
+    <circle cx="470" cy="210" r="24" fill="#cd7b56"/>
+    <path d="M100 180 C170 110, 280 130, 340 175" stroke="#9f5f47" stroke-width="7" fill="none"/>
+    <path d="M220 275 C320 325, 420 310, 510 270" stroke="#9f5f47" stroke-width="6" fill="none"/>
+  </g>
+
+  <g transform="translate(120,450)">
+    <rect x="0" y="0" width="300" height="250" rx="20" fill="#ffffff" opacity="0.86"/>
+    <circle cx="86" cy="84" r="36" fill="none" stroke="#a35a42" stroke-width="7"/>
+    <line x1="110" y1="110" x2="150" y2="150" stroke="#a35a42" stroke-width="8" stroke-linecap="round"/>
+    <path d="M73 82 L86 96 L111 68" stroke="#9a563f" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <text x="42" y="198" font-size="30" fill="#6d3f30" font-family="Georgia, 'Times New Roman', serif">Đặt lại câu hỏi</text>
+  </g>
+
+  <path d="M100 315 H1510" stroke="url(#accent)" stroke-width="5" opacity="0.65"/>
+
+  <g transform="translate(140,185)">
+    <text x="0" y="0" font-size="28" letter-spacing="4" fill="#8e4e38" font-family="Arial, sans-serif">WHAT THE HEALTH · UNG THƯ</text>
+    <text x="0" y="90" font-size="82" font-weight="700" fill="#5a3428" font-family="Georgia, 'Times New Roman', serif">Ung thư và những câu hỏi</text>
+    <text x="0" y="176" font-size="82" font-weight="700" fill="#5a3428" font-family="Georgia, 'Times New Roman', serif">từ bàn ăn hằng ngày</text>
+    <text x="0" y="246" font-size="35" fill="#6f4132" font-family="Georgia, 'Times New Roman', serif">Nhìn thói quen nhỏ bằng lăng kính dài hạn và bình tĩnh</text>
+  </g>
+
+  <g transform="translate(1080,1030)">
+    <text x="0" y="0" font-size="30" fill="#7b4737" font-family="Georgia, 'Times New Roman', serif">Con Duong Nhan Hoa</text>
+  </g>
+</svg>

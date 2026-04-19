@@ -10,6 +10,8 @@ export const imageManifest: Record<string, string> = {
   "dinh-duong.topic.dai-thao-duong-beo-phi-chuyen-hoa": "/images/dinh-duong/topics/topic-dai-thao-duong-beo-phi-chuyen-hoa.jpg",
   "dinh-duong.topic.sua-va-nhung-dieu-thuong-tin": "/images/dinh-duong/topics/topic-sua-va-nhung-dieu-thuong-tin.jpg",
   "dinh-duong.hero.sua-wth": "/images/dinh-duong/hero-sua-wth.jpg",
+  "dinh-duong.hero.chuyen-hoa-wth": "/images/dinh-duong/hero-chuyen-hoa-wth.svg",
+  "dinh-duong.hero.ung-thu-va-bua-an-wth": "/images/dinh-duong/hero-ung-thu-va-bua-an-wth.svg",
   "dinh-duong.topic.ung-thu-va-goc-nhin-tu-bua-an": "/images/dinh-duong/topics/topic-ung-thu-va-goc-nhin-tu-bua-an.jpg",
   "ung-xu.hero": "/images/ung-xu/hero-ung-xu-thien-lanh.webp",
   "ung-xu.topic.hieu-minh-de-song-nhe-hon": "/images/ung-xu/topics/topic-hieu-minh-de-song-nhe-hon.webp",
