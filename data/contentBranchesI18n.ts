@@ -651,9 +651,9 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
   "y-hoc-thien-lanh": {
     slug: "y-hoc-thien-lanh",
     title: { vi: "Y học thiện lành", en: "Wholesome Medicine" },
-    heroKicker: { vi: "Nhánh mở rộng ưu tiên", en: "Guided expansion branch" },
+    heroKicker: { vi: "Nhánh Y học", en: "Medicine Branch" },
     description: {
-      vi: "Góc nhìn sức khỏe lành mạnh, phòng ngừa và chăm sóc từ nền tảng.",
+      vi: "Cách tiếp cận sức khỏe lành mạnh, phòng ngừa và chăm sóc toàn diện.",
       en: "A grounded approach to health, prevention, and well-being.",
     },
     clusters: [
@@ -755,7 +755,7 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
   "hanh-dong-thien-lanh": {
     slug: "hanh-dong-thien-lanh",
     title: { vi: "Hành động thiện lành", en: "Wholesome Actions" },
-    heroKicker: { vi: "Nhánh mở rộng", en: "Expansion branch" },
+    heroKicker: { vi: "Nhánh tiếp theo", en: "Next Step Branch" },
     description: {
       vi: "Nuôi dưỡng những hành động tích cực, tử tế và thiết thực.",
       en: "Cultivating positive, kind, and practical actions.",
@@ -823,7 +823,7 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
   "loi-noi-thien-lanh": {
     slug: "loi-noi-thien-lanh",
     title: { vi: "Lời nói thiện lành", en: "Wholesome Speech" },
-    heroKicker: { vi: "Nhánh mở rộng", en: "Expansion branch" },
+    heroKicker: { vi: "Nhánh tiếp theo", en: "Next Step Branch" },
     description: {
       vi: "Xây dựng giao tiếp tích cực, chân thành và có trách nhiệm.",
       en: "Building communication that is constructive, sincere, and responsible.",
@@ -891,7 +891,7 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
   "suy-nghi-thien-lanh": {
     slug: "suy-nghi-thien-lanh",
     title: { vi: "Suy nghĩ thiện lành", en: "Wholesome Thoughts" },
-    heroKicker: { vi: "Nhánh mở rộng", en: "Expansion branch" },
+    heroKicker: { vi: "Nhánh tiếp theo", en: "Next Step Branch" },
     description: {
       vi: "Nuôi dưỡng nhận thức sáng rõ và đời sống nội tâm cân bằng.",
       en: "Cultivating clarity, balance, and healthy inner awareness.",
@@ -959,7 +959,7 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
   "giai-tri-thien-lanh": {
     slug: "giai-tri-thien-lanh",
     title: { vi: "Giải trí thiện lành", en: "Wholesome Entertainment" },
-    heroKicker: { vi: "Nhánh mở rộng", en: "Expansion branch" },
+    heroKicker: { vi: "Nhánh tiếp theo", en: "Next Step Branch" },
     description: {
       vi: "Chọn lọc nội dung giải trí có giá trị tích cực và lành mạnh.",
       en: "Curating entertainment with positive and wholesome value.",
@@ -1027,7 +1027,7 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
   "coi-vui-cuoi": {
     slug: "coi-vui-cuoi",
     title: { vi: "Cõi vui cười", en: "Joyful Laughter" },
-    heroKicker: { vi: "Nhánh mở rộng", en: "Expansion branch" },
+    heroKicker: { vi: "Nhánh tiếp theo", en: "Next Step Branch" },
     description: {
       vi: "Không gian tiếng cười nhẹ nhàng, tích cực và không độc hại.",
       en: "A space for light, positive, and wholesome humor.",
