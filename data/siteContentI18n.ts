@@ -42,7 +42,7 @@ export const footerI18n: Record<AppLocale, FooterCopy> = {
       { label: "Dinh dưỡng thiện lành", href: "/dinh-duong-thien-lanh" },
     ],
     languageLabel: "Ngôn ngữ",
-    note: "Đi từ điều gần gũi, giữ nhịp đều, mở rộng bền vững.",
+    note: "Đi từ điều gần gũi, giữ nhịp đều và sống lành mỗi ngày.",
     copyrightNotice: "Đã đăng ký mọi quyền.",
   },
   en: {
@@ -53,7 +53,7 @@ export const footerI18n: Record<AppLocale, FooterCopy> = {
       { label: "Wholesome Nutrition", href: "/dinh-duong-thien-lanh" },
     ],
     languageLabel: "Language",
-    note: "Starting close, keeping steady, expanding sustainably.",
+    note: "Start close to daily life, keep a steady rhythm, and live well each day.",
     copyrightNotice: "All rights reserved.",
   },
 };

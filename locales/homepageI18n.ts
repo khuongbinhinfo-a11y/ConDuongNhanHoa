@@ -5,10 +5,10 @@ export const homepageI18n = {
     brand: {
       name: brandI18n.vi.name,
       shortName: brandI18n.vi.shortName,
-      tagline: "Nền tảng nội dung thiện lành cho đời sống tích cực.",
+      tagline: "Nội dung thiện lành cho đời sống tích cực.",
     },
     hero: {
-      eyebrow: "Nền tảng nội dung thiện lành",
+      eyebrow: "Con đường thiện lành mỗi ngày",
       title: brandI18n.vi.name,
       subtitle: "Nơi bắt đầu từ những điều gần gũi trong đời sống: ăn uống, ứng xử và cách giữ tinh thần nhẹ hơn mỗi ngày.",
       emphasis: "",
@@ -139,10 +139,10 @@ export const homepageI18n = {
     brand: {
       name: brandI18n.en.name,
       shortName: brandI18n.en.shortName,
-      tagline: "A wholesome content platform for positive living.",
+      tagline: "Wholesome content for positive living.",
     },
     hero: {
-      eyebrow: "Wholesome Content Platform",
+      eyebrow: "A wholesome path for everyday life",
       title: brandI18n.en.name,
       subtitle: "A place to begin from what feels close in daily life: eating, relating to others, and keeping your mind lighter each day.",
       emphasis: "",

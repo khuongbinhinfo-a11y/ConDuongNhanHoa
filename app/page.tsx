@@ -119,7 +119,7 @@ export default function HomePage() {
   const nutritionSpotlight =
     locale === "vi"
       ? {
-          title: "Đi sâu trước với Dinh dưỡng thiện lành",
+          title: "Nhìn rõ hơn cùng Dinh dưỡng thiện lành",
           description:
             "Một hướng nội dung gần gũi nhưng dễ bị chi phối bởi thói quen, quảng bá và những điều được lặp lại quá lâu.",
           topics: [
@@ -132,7 +132,7 @@ export default function HomePage() {
           ctaHref: "/dinh-duong-thien-lanh",
         }
       : {
-          title: "Going deeper with Wholesome Nutrition",
+          title: "Seeing more clearly with Wholesome Nutrition",
           description:
             "A topic close to daily life, yet easily influenced by habits, marketing, and ideas repeated for too long.",
           topics: [
