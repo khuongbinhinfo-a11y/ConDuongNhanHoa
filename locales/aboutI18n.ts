@@ -3,62 +3,62 @@ import { brandI18n } from "@/locales/brandI18n";
 export const aboutI18n = {
   vi: {
     hero: {
-      eyebrow: "Giới thiệu nền tảng",
+      eyebrow: "Giới thiệu",
       title: brandI18n.vi.name,
       description:
-        "Đây là nền tảng nội dung thiện lành cho đời sống tích cực. Chúng tôi chọn cách phát triển bền: đi sâu một hướng trước, rồi mở rộng dần những hướng còn lại.",
+        "Con Đường Thiện Lành là nơi gom những nội dung gần với đời sống: ăn uống, ứng xử và cách giữ tinh thần nhẹ hơn mỗi ngày.",
     },
     principlesTitle: "Định hướng vận hành",
     principles: [
       {
-        title: "Đi hẹp trước, đi sâu trước",
+        title: "Bắt đầu từ điều gần đời sống",
         description:
-          "Con Đường Thiện Lành tập trung ba hướng chính để người đọc dễ bắt đầu và đi sâu theo lộ trình rõ ràng.",
+          "Chúng tôi chọn những chủ đề sát với điều người đọc gặp mỗi ngày để việc bắt đầu tự nhiên hơn và bớt áp lực hơn.",
       },
       {
-        title: "Xây nền từ gốc rễ",
+        title: "Đi từ hiểu đúng đến thực hành",
         description:
-          "Nội dung ưu tiên nền tảng hiểu biết, góc nhìn tài liệu, chuyên đề rõ nguồn và thực hành vừa sức thay vì theo trào lưu ngắn hạn.",
+          "Nội dung được viết theo hướng rõ ràng, có căn cứ và đủ gần để người đọc thử áp dụng theo nhịp riêng của mình.",
       },
       {
-        title: "Mở rộng có trật tự",
+        title: "Giữ nhịp đọc mạch lạc",
         description:
-          "Mỗi hướng nội dung được phát triển theo cấu trúc nhất quán để người đọc theo dõi thuận tiện qua từng chặng.",
+          "Mỗi hướng nội dung được sắp lại theo cấu trúc dễ theo dõi để người đọc chọn đúng phần phù hợp với lúc này.",
       },
     ],
     startTitle: "Bắt đầu ở đâu?",
     startDescription:
-      "Bạn có thể bắt đầu từ Dinh dưỡng thiện lành để nắm nền rõ nhất, rồi mở rộng sang các hướng phù hợp với nhu cầu của mình.",
+      "Bạn có thể bắt đầu từ Dinh dưỡng thiện lành nếu muốn nhìn rõ hơn những điều gần với đời sống hằng ngày, rồi đi tiếp sang hướng phù hợp với nhu cầu của mình.",
     primaryCta: "Vào Dinh dưỡng thiện lành",
   },
   en: {
     hero: {
-      eyebrow: "About the Platform",
+      eyebrow: "About",
       title: brandI18n.en.name,
       description:
-        "This is a wholesome content platform for positive living. We grow sustainably: go deep into one direction first, then expand the rest.",
+        "The Wholesome Path brings together content rooted in daily life: how we eat, how we relate, and how we keep a lighter inner rhythm.",
     },
     principlesTitle: "Operating Direction",
     principles: [
       {
-        title: "Go narrow first, go deep first",
+        title: "Begin close to daily life",
         description:
-          "The Wholesome Path focuses on three clear pillars so readers can begin easily and go deeper with a clear progression.",
+          "We choose subjects that stay close to everyday life so readers can begin more naturally and with less pressure.",
       },
       {
-        title: "Build from the roots",
+        title: "Move from understanding to practice",
         description:
-          "Content prioritizes foundational understanding, documentary perspectives, source-grounded topics, and practical routines over short trends.",
+          "The writing aims to stay clear, grounded, and practical enough for readers to try in their own rhythm.",
       },
       {
-        title: "Expand with structure",
+        title: "Keep the reading flow clear",
         description:
-          "Each direction is developed with a consistent structure so readers can follow the journey with less friction.",
+          "Each direction is arranged with a consistent structure so readers can find the part that fits their present need.",
       },
     ],
     startTitle: "Where should you begin?",
     startDescription:
-      "You can begin with Wholesome Nutrition to build a clear foundation, then continue into the directions that fit your needs.",
+      "You can begin with Wholesome Nutrition if you want a clearer view of everyday habits first, then continue into the direction that fits your needs.",
     primaryCta: "Enter Wholesome Nutrition",
   },
 } as const;

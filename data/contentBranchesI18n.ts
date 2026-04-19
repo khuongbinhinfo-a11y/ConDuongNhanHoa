@@ -22,8 +22,8 @@ export type NutritionTopicCardI18n = {
 };
 
 export type NutritionWthCardI18n = {
-  id: string;
-  title: LocalizedText;
+          vi: "Giữ Dinh dưỡng thiện lành như một điểm tựa gần đời sống để nhìn sức khỏe rõ hơn.",
+          en: "Keep Wholesome Nutrition as a daily-life anchor for seeing health more clearly.",
   story: LocalizedText;
   challengeQuestion: LocalizedText;
   seedIdeas: LocalizedText[];
@@ -725,8 +725,8 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
       {
         title: { vi: "Bắt đầu từ Dinh dưỡng thiện lành", en: "Begin with Wholesome Nutrition" },
         description: {
-          vi: "Giữ nhánh Dinh dưỡng là điểm tựa nền trước khi mở rộng góc nhìn y học.",
-          en: "Keep Nutrition as the foundational anchor before expanding into medicine.",
+          vi: "Giữ Dinh dưỡng thiện lành như một điểm tựa gần đời sống để nhìn sức khỏe rõ hơn.",
+          en: "Keep Wholesome Nutrition as a daily-life anchor for seeing health more clearly.",
         },
         href: "/dinh-duong-thien-lanh",
       },
@@ -781,10 +781,10 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
       },
       {
         id: "huong-mo-rong",
-        title: { vi: "Hướng mở rộng", en: "Expansion Direction" },
+        title: { vi: "Đi tiếp từ đây", en: "Continue from Here" },
         summary: {
-          vi: "Định hướng phát triển sâu hơn cho các nhóm hành động theo bối cảnh sống.",
-          en: "Future deep-dive directions for action pathways across life contexts.",
+          vi: "Gợi ý những hướng thực hành tiếp theo theo từng bối cảnh sống.",
+          en: "Suggested next practices for different life contexts.",
         },
         href: "/hanh-dong-thien-lanh#huong-mo-rong",
       },
@@ -793,24 +793,24 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
       {
         title: { vi: "Bắt đầu từ Dinh dưỡng thiện lành", en: "Begin with Wholesome Nutrition" },
         description: {
-          vi: "Nhánh trọng tâm hiện tại để xây nền hiểu biết trước.",
-          en: "The current focus branch to build your foundation first.",
+          vi: "Một điểm bắt đầu gần đời sống khi bạn muốn nhìn mọi thứ rõ hơn.",
+          en: "A close-to-daily-life starting point when you want to see things more clearly.",
         },
         href: "/dinh-duong-thien-lanh",
       },
       {
         title: { vi: "Sang Lời nói thiện lành", en: "Continue to Wholesome Speech" },
         description: {
-          vi: "Mở rộng từ hành động sang giao tiếp để giữ nhịp sống nhất quán.",
-          en: "Expand from action into communication for a more coherent rhythm.",
+          vi: "Đi tiếp sang giao tiếp để giữ nhịp sống nhất quán hơn.",
+          en: "Continue into communication to keep a more coherent daily rhythm.",
         },
         href: "/loi-noi-thien-lanh",
       },
       {
         title: { vi: "Về trang chủ", en: "Back to Home" },
         description: {
-          vi: "Xem toàn bộ cấu trúc 7 nhánh để chọn hướng phù hợp.",
-          en: "Review the five-branch structure to choose your direction.",
+          vi: "Xem toàn bộ các hướng nội dung để chọn phần phù hợp với mình.",
+          en: "Review the available content directions and choose what fits you best.",
         },
         href: "/",
       },
@@ -849,10 +849,10 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
       },
       {
         id: "huong-mo-rong",
-        title: { vi: "Hướng mở rộng", en: "Expansion Direction" },
+        title: { vi: "Đi tiếp từ đây", en: "Continue from Here" },
         summary: {
-          vi: "Khung phát triển sâu hơn theo từng bối cảnh quan hệ.",
-          en: "Future deepening paths for different relationship contexts.",
+          vi: "Gợi ý những hướng đọc tiếp theo theo từng bối cảnh quan hệ.",
+          en: "Suggested next reading paths for different relationship contexts.",
         },
         href: "/loi-noi-thien-lanh#huong-mo-rong",
       },
@@ -861,8 +861,8 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
       {
         title: { vi: "Bắt đầu từ Dinh dưỡng thiện lành", en: "Begin with Wholesome Nutrition" },
         description: {
-          vi: "Đi từ nhánh trọng tâm để có nền trước khi mở rộng.",
-          en: "Start from the focus branch to build foundations before expanding.",
+          vi: "Bắt đầu từ Dinh dưỡng thiện lành nếu bạn muốn có một điểm tựa gần đời sống.",
+          en: "Begin with Wholesome Nutrition if you want a starting point close to daily life.",
         },
         href: "/dinh-duong-thien-lanh",
       },
@@ -917,10 +917,10 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
       },
       {
         id: "huong-mo-rong",
-        title: { vi: "Hướng mở rộng", en: "Expansion Direction" },
+        title: { vi: "Đi tiếp từ đây", en: "Continue from Here" },
         summary: {
-          vi: "Định hướng triển khai sâu hơn cho các chủ đề nội dung nội tâm.",
-          en: "Future directions for deeper inner-life content clusters.",
+          vi: "Gợi ý những chủ đề có thể đọc tiếp để nuôi đời sống nội tâm.",
+          en: "Suggested themes to keep reading and nourish inner life.",
         },
         href: "/suy-nghi-thien-lanh#huong-mo-rong",
       },
@@ -929,16 +929,16 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
       {
         title: { vi: "Bắt đầu từ Dinh dưỡng thiện lành", en: "Begin with Wholesome Nutrition" },
         description: {
-          vi: "Xây nền từ nhánh trọng tâm trước khi mở rộng.",
-          en: "Build from the focus branch before expanding outward.",
+          vi: "Dinh dưỡng thiện lành có thể là điểm bắt đầu gần đời sống để giữ nhịp rõ hơn.",
+          en: "Wholesome Nutrition can be a daily-life starting point for a clearer rhythm.",
         },
         href: "/dinh-duong-thien-lanh",
       },
       {
         title: { vi: "Sang Giải trí thiện lành", en: "Continue to Wholesome Entertainment" },
         description: {
-          vi: "Mở rộng sang thói quen tiêu thụ nội dung tích cực hơn.",
-          en: "Extend into healthier media and entertainment habits.",
+          vi: "Đi tiếp sang những thói quen tiêu thụ nội dung tích cực hơn.",
+          en: "Continue into healthier media and entertainment habits.",
         },
         href: "/giai-tri-thien-lanh",
       },
@@ -985,10 +985,10 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
       },
       {
         id: "huong-mo-rong",
-        title: { vi: "Hướng mở rộng", en: "Expansion Direction" },
+        title: { vi: "Đi tiếp từ đây", en: "Continue from Here" },
         summary: {
-          vi: "Định hướng mở rộng sâu hơn theo từng nhóm nội dung giải trí.",
-          en: "Future deep-dive directions across curated entertainment groups.",
+          vi: "Gợi ý các nhóm nội dung giải trí có thể đọc tiếp theo nhu cầu thư giãn.",
+          en: "Suggested entertainment groups to continue with based on your need for rest.",
         },
         href: "/giai-tri-thien-lanh#huong-mo-rong",
       },
@@ -997,8 +997,8 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
       {
         title: { vi: "Bắt đầu từ Dinh dưỡng thiện lành", en: "Begin with Wholesome Nutrition" },
         description: {
-          vi: "Đi từ nhánh trọng tâm để có nền trước khi mở rộng thói quen giải trí.",
-          en: "Start from the focus branch before expanding entertainment habits.",
+          vi: "Dinh dưỡng thiện lành giúp giữ một điểm tựa rõ ràng cho nhịp sống và lựa chọn giải trí.",
+          en: "Wholesome Nutrition helps keep a clear anchor for daily rhythm and entertainment choices.",
         },
         href: "/dinh-duong-thien-lanh",
       },
@@ -1092,16 +1092,16 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
       {
         title: { vi: "Sang nhánh Giải trí thiện lành", en: "Continue to Wholesome Entertainment" },
         description: {
-          vi: "Mở rộng từ tiếng cười sang các lựa chọn giải trí tích cực rộng hơn.",
-          en: "Expand from wholesome laughter into broader positive media choices.",
+          vi: "Đi tiếp từ tiếng cười sang các lựa chọn giải trí tích cực rộng hơn.",
+          en: "Continue from wholesome laughter into broader positive media choices.",
         },
         href: "/giai-tri-thien-lanh",
       },
       {
         title: { vi: "Giữ nền bằng Dinh dưỡng thiện lành", en: "Keep your base in Wholesome Nutrition" },
         description: {
-          vi: "Nhánh trọng tâm giúp giữ nhịp nền vững khi mở rộng sang nội dung thư giãn.",
-          en: "The current focus branch helps keep your foundation steady while you expand.",
+          vi: "Dinh dưỡng thiện lành giúp giữ nhịp sống ổn định khi tìm nội dung thư giãn.",
+          en: "Wholesome Nutrition helps keep your daily rhythm steadier while choosing relaxing content.",
         },
         href: "/dinh-duong-thien-lanh",
       },
@@ -1189,8 +1189,8 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
       {
         title: { vi: "Sang Giải trí thiện lành", en: "Continue to Wholesome Entertainment" },
         description: {
-          vi: "Mở rộng sang cách chọn nội dung giải trí giúp giữ tinh thần sáng và lành.",
-          en: "Extend into media choices that keep your attention clear and healthy.",
+          vi: "Đi tiếp sang cách chọn nội dung giải trí giúp giữ tinh thần sáng và lành.",
+          en: "Continue into media choices that keep your attention clear and healthy.",
         },
         href: "/giai-tri-thien-lanh",
       },
@@ -1315,9 +1315,9 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
   "y-hoc-thien-lanh": {
     slug: "y-hoc-thien-lanh",
     title: { vi: "Y học thiện lành", en: "Wholesome Medicine" },
-    heroKicker: { vi: "Hướng mở rộng", en: "Expansion direction" },
+    heroKicker: { vi: "Nhánh Y học", en: "Medicine Branch" },
     description: {
-      vi: "Góc nhìn sức khỏe nền tảng, đi từ phòng ngừa đến chăm sóc với tinh thần nhân văn.",
+      vi: "Góc nhìn sức khỏe gần đời sống, đi từ phòng ngừa đến chăm sóc với tinh thần nhân văn.",
       en: "A humane health perspective, from prevention to practical care.",
     },
     clusters: [
@@ -1353,8 +1353,8 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
       {
         title: { vi: "Bắt đầu từ Dinh dưỡng thiện lành", en: "Begin with Wholesome Nutrition" },
         description: {
-          vi: "Giữ nền dinh dưỡng rõ ràng trước khi mở rộng thêm góc nhìn sức khỏe.",
-          en: "Keep a clear nutrition base before broadening into wider health perspectives.",
+          vi: "Giữ Dinh dưỡng thiện lành như một điểm tựa gần đời sống để nhìn sức khỏe rõ hơn.",
+          en: "Keep Wholesome Nutrition as a daily-life anchor for seeing health more clearly.",
         },
         href: "/dinh-duong-thien-lanh",
       },
@@ -1369,8 +1369,8 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
       {
         title: { vi: "Về trang chủ", en: "Back to Home" },
         description: {
-          vi: "Quay lại trang chủ để xem các hướng nội dung đang được ưu tiên.",
-          en: "Return home to review the content directions currently prioritized.",
+          vi: "Quay lại trang chủ để xem toàn bộ các hướng nội dung hiện có.",
+          en: "Return home to review the available content directions.",
         },
         href: "/",
       },
@@ -1383,7 +1383,7 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
   "loi-noi-thien-lanh": {
     slug: "loi-noi-thien-lanh",
     title: { vi: "Lời nói thiện lành", en: "Wholesome Speech" },
-    heroKicker: { vi: "Hướng mở rộng", en: "Expansion direction" },
+    heroKicker: { vi: "Nhánh tiếp theo", en: "Next Step Branch" },
     description: {
       vi: "Giữ lời nói rõ ràng, tử tế và có trách nhiệm để giảm tổn thương trong giao tiếp.",
       en: "A communication direction centered on clarity, kindness, and responsibility.",
@@ -1451,7 +1451,7 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
   "suy-nghi-thien-lanh": {
     slug: "suy-nghi-thien-lanh",
     title: { vi: "Suy nghĩ thiện lành", en: "Wholesome Thoughts" },
-    heroKicker: { vi: "Hướng mở rộng", en: "Expansion direction" },
+    heroKicker: { vi: "Nhánh tiếp theo", en: "Next Step Branch" },
     description: {
       vi: "Nuôi dưỡng nhận thức sáng rõ để giữ đời sống nội tâm cân bằng hơn mỗi ngày.",
       en: "Cultivating clearer awareness for a steadier and more balanced inner life.",
@@ -1505,8 +1505,8 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
       {
         title: { vi: "Về trang chủ", en: "Back to Home" },
         description: {
-          vi: "Quay lại trang chủ để xem các hướng nội dung đang mở.",
-          en: "Return home to review the currently active content directions.",
+          vi: "Quay lại trang chủ để xem toàn bộ các hướng nội dung hiện có.",
+          en: "Return home to review the available content directions.",
         },
         href: "/",
       },
@@ -1519,7 +1519,7 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
   "coi-vui-cuoi": {
     slug: "coi-vui-cuoi",
     title: { vi: "Cõi vui cười", en: "Joyful Laughter" },
-    heroKicker: { vi: "Hướng mở rộng", en: "Expansion direction" },
+    heroKicker: { vi: "Nhánh tiếp theo", en: "Next Step Branch" },
     description: {
       vi: "Một không gian tiếng cười nhẹ, tích cực và không độc hại.",
       en: "A space for light, positive, and wholesome laughter.",
@@ -1557,8 +1557,8 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
       {
         title: { vi: "Sang Giải trí thiện lành", en: "Continue to Wholesome Entertainment" },
         description: {
-          vi: "Mở rộng từ tiếng cười sang các lựa chọn giải trí tích cực khác.",
-          en: "Expand from laughter into broader wholesome entertainment choices.",
+          vi: "Đi tiếp từ tiếng cười sang các lựa chọn giải trí tích cực khác.",
+          en: "Continue from laughter into broader wholesome entertainment choices.",
         },
         href: "/giai-tri-thien-lanh",
       },
