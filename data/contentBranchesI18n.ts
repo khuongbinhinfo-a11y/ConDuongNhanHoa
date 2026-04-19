@@ -933,103 +933,193 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
         cards: [
           {
             id: "wth-kien-thuc-nen-tang",
-            title: { vi: "Kiến thức nền tảng", en: "Foundational Knowledge" },
+            title: {
+              vi: "Kiến thức nền tảng",
+              en: "Foundational Knowledge",
+            },
             story: {
-              vi: "Bộ phim thường được xem như một điểm khởi phát để đặt lại câu hỏi: điều ta gọi là \"đúng\" trong dinh dưỡng đến từ bằng chứng, từ thói quen xã hội, hay từ cách thông tin được lặp lại qua thời gian.",
-              en: "The film is often used as a starting point to revisit a basic question: what we call \"right\" in nutrition comes from evidence, social habits, or information repeated over time.",
+              vi: "Phim không chỉ bàn về món ăn nào nên hay không nên ăn. Nó đặt lại cách con người tin vào một lời khuyên dinh dưỡng: niềm tin đó đến từ khoa học độc lập, thói quen xã hội, hay ảnh hưởng của quảng bá lặp lại nhiều năm?",
+              en: "The film is not only about which foods should or should not be eaten. It reopens the question of how people come to trust nutrition advice: does that trust come from independent science, social habit, or years of repeated messaging?",
             },
             challengeQuestion: {
-              vi: "Khi tiếp nhận một khuyến nghị dinh dưỡng phổ biến, đâu là ranh giới giữa dữ liệu khoa học, diễn giải truyền thông và thói quen cá nhân?",
-              en: "When we accept a common nutrition recommendation, where is the boundary between scientific data, media interpretation, and personal habit?",
+              vi: "Khi nghe một lời khuyên dinh dưỡng, điều gì giúp ta phân biệt giữa điều quen thuộc và điều thực sự đáng tin?",
+              en: "When hearing nutrition advice, what helps us tell apart what is merely familiar from what is truly trustworthy?",
             },
             seedIdeas: [
-              { vi: "Vì sao cùng một dữ liệu nhưng các nhóm có thể đưa ra thông điệp khác nhau?", en: "Why can different groups derive different messages from similar data?" },
-              { vi: "Một niềm tin dinh dưỡng hình thành qua những lớp ảnh hưởng nào?", en: "Through which layers of influence does a nutrition belief take shape?" },
-              { vi: "Khi nào câu nói \"ai cũng biết\" cần được xem lại?", en: "When should a statement like \"everyone knows\" be re-examined?" },
-              { vi: "Làm sao đọc thông tin dinh dưỡng mà không rơi vào khẳng định tuyệt đối?", en: "How can we read nutrition information without falling into absolute claims?" },
+              {
+                vi: "Vì sao điều được lặp lại nhiều năm thường dễ bị xem là đúng?",
+                en: "Why are ideas repeated for years so easily treated as true?",
+              },
+              {
+                vi: "Một khuyến nghị dinh dưỡng phổ biến được hình thành như thế nào?",
+                en: "How does a common nutrition recommendation take shape?",
+              },
+              {
+                vi: "Khi nào thói quen xã hội đi trước bằng chứng?",
+                en: "When does social habit run ahead of evidence?",
+              },
+              {
+                vi: "Đọc một nội dung dinh dưỡng thì nên nhìn vào câu hỏi nào trước?",
+                en: "What question should come first when reading a piece of nutrition content?",
+              },
             ],
             href: "/dinh-duong-thien-lanh/kien-thuc-nen-tang",
-            linkLabel: { vi: "Xem chuyên đề kiến thức nền tảng", en: "View the foundational topic" },
+            linkLabel: {
+              vi: "Xem chuyên đề nền tảng",
+              en: "View the foundational topic",
+            },
           },
           {
             id: "wth-sua",
-            title: { vi: "Sữa", en: "Milk" },
+            title: {
+              vi: "Sữa",
+              en: "Milk",
+            },
             story: {
-              vi: "Phim gợi mở cách nhìn rằng vị trí của sữa trong khẩu phần không chỉ được định hình bởi nhu cầu sinh học, mà còn bởi lịch sử truyền thông, chính sách và thói quen gia đình.",
-              en: "The film opens a view that milk's place in the diet is shaped not only by biological needs, but also by media history, policy choices, and family habits.",
+              vi: "Phim đặt lại câu chuyện về sữa như một sản phẩm không chỉ được tiêu thụ vì giá trị dinh dưỡng, mà còn vì nó được nâng đỡ bởi giáo dục, quảng bá và các thông điệp quen thuộc từ rất sớm.",
+              en: "The film revisits milk as a product consumed not only for its nutritional value, but also because it has long been upheld by education, promotion, and familiar messaging from an early age.",
             },
             challengeQuestion: {
-              vi: "Khi bàn về sữa, chúng ta đang cân nhắc lợi ích và giới hạn dựa trên bối cảnh cá nhân, hay dựa trên một chuẩn chung áp cho mọi người?",
-              en: "When discussing milk, are we weighing benefits and limits in personal context, or applying a single standard to everyone?",
+              vi: "Niềm tin về sữa đang đến từ nhu cầu thực sự của cơ thể, hay từ một hệ thông tin đã quá quen thuộc?",
+              en: "Does belief in milk come from the body’s actual needs, or from an information system that has become overly familiar?",
             },
             seedIdeas: [
-              { vi: "Sữa được nhìn như thực phẩm thiết yếu trong những bối cảnh nào?", en: "In which contexts is milk viewed as essential?" },
-              { vi: "Độ tuổi, khả năng dung nạp và văn hóa ăn uống ảnh hưởng quyết định ra sao?", en: "How do age, tolerance, and food culture affect decisions?" },
-              { vi: "Khi thông điệp truyền thông mạnh hơn dữ kiện, người đọc nên đặt câu hỏi gì?", en: "When messaging is stronger than data, what questions should readers ask?" },
-              { vi: "Có cách nào nói về sữa theo hướng linh hoạt thay vì hai cực đúng-sai?", en: "Can we discuss milk in a flexible way rather than a strict right-wrong frame?" },
+              {
+                vi: "Sữa đi từ thực phẩm thành niềm tin phổ biến bằng cách nào?",
+                en: "How did milk move from being a food to becoming a widespread belief?",
+              },
+              {
+                vi: "Vì sao quảng bá từ nhỏ có thể đi theo một người rất lâu?",
+                en: "Why can early-life messaging stay with a person for so long?",
+              },
+              {
+                vi: "Khi nào “uống sữa cho chắc” trở thành phản xạ thay vì lựa chọn có hiểu biết?",
+                en: "When does “drink milk just to be safe” become a reflex instead of an informed choice?",
+              },
+              {
+                vi: "Nếu bỏ sữa, điều gì làm nhiều người thấy thiếu an tâm?",
+                en: "If someone stops drinking milk, what makes so many people feel uneasy?",
+              },
             ],
             href: "/dinh-duong-thien-lanh/sua-va-nhung-dieu-thuong-duoc-tin",
-            linkLabel: { vi: "Xem chuyên đề về sữa", en: "View the milk topic" },
+            linkLabel: {
+              vi: "Xem chuyên đề về sữa",
+              en: "View the milk topic",
+            },
           },
           {
             id: "wth-chat-dam",
-            title: { vi: "Chất đạm", en: "Protein" },
+            title: {
+              vi: "Chất đạm",
+              en: "Protein",
+            },
             story: {
-              vi: "Từ góc nhìn của phim, nỗi lo thiếu đạm thường xuất hiện rất sớm khi nói đến thay đổi bữa ăn. Điều đó mở ra câu hỏi về cách chúng ta ước lượng nhu cầu thật và cách nhu cầu ấy được truyền thông.",
-              en: "From the film's perspective, fear of protein deficiency appears early when discussing dietary change. This opens questions about how real needs are estimated and communicated.",
+              vi: "Phim đi thẳng vào nỗi lo thiếu đạm mỗi khi giảm thịt, rồi dùng chính nỗi lo đó để đặt lại câu hỏi: cơ thể thật sự cần gì, và vì sao con người lại dễ sợ thiếu đạm hơn sợ mất cân bằng toàn bộ bữa ăn?",
+              en: "The film goes straight to the fear of protein deficiency whenever meat is reduced, then uses that fear to reopen the question: what does the body truly need, and why are people quicker to fear low protein than an unbalanced overall diet?",
             },
             challengeQuestion: {
-              vi: "Trong thực hành hằng ngày, làm sao phân biệt giữa nhu cầu đạm phù hợp với từng người và nỗi lo được khuếch đại bởi thói quen thông tin?",
-              en: "In daily practice, how can we distinguish person-specific protein needs from fears amplified by common narratives?",
+              vi: "Điều cơ thể cần là “rất nhiều đạm”, hay là một cách ăn đủ và cân đối mà ta đang hiểu chưa đúng?",
+              en: "Does the body need “a lot of protein,” or does it need a balanced way of eating that we may still misunderstand?",
             },
             seedIdeas: [
-              { vi: "Vì sao câu hỏi thiếu đạm thường đến trước mọi câu hỏi khác?", en: "Why does the protein question often come before all others?" },
-              { vi: "Chất lượng, nguồn đạm và bối cảnh bữa ăn nên được đọc cùng nhau thế nào?", en: "How should quality, source, and meal context be considered together?" },
-              { vi: "Khi nào nên rà lại giả định về \"đạm đủ\" trong tư vấn dinh dưỡng?", en: "When should assumptions about \"enough protein\" be revisited?" },
-              { vi: "Nguồn đạm thực vật được đánh giá công bằng chưa trong thảo luận phổ biến?", en: "Are plant protein sources evaluated fairly in mainstream discussion?" },
+              {
+                vi: "Vì sao thiếu đạm luôn là nỗi sợ bật ra đầu tiên?",
+                en: "Why is protein deficiency the first fear that appears?",
+              },
+              {
+                vi: "Nỗi sợ này đến từ khoa học, marketing, hay thói quen văn hóa ăn uống?",
+                en: "Does this fear come from science, marketing, or food culture?",
+              },
+              {
+                vi: "Cơ thể cần đạm theo chất lượng, bối cảnh, hay chỉ theo con số?",
+                en: "Does the body need protein by quality and context, or only by numbers?",
+              },
+              {
+                vi: "Vì sao nguồn thực vật thường bị nghi ngờ trước khi được hiểu đúng?",
+                en: "Why are plant sources so often doubted before they are properly understood?",
+              },
             ],
             href: "/dinh-duong-thien-lanh/chat-dam-hieu-sao-cho-dung",
-            linkLabel: { vi: "Xem chuyên đề về chất đạm", en: "View the protein topic" },
+            linkLabel: {
+              vi: "Xem chuyên đề về chất đạm",
+              en: "View the protein topic",
+            },
           },
           {
             id: "wth-suc-khoe-chuyen-hoa",
-            title: { vi: "Sức khỏe chuyển hóa", en: "Metabolic Health" },
+            title: {
+              vi: "Sức khỏe chuyển hóa",
+              en: "Metabolic Health",
+            },
             story: {
-              vi: "Phim gợi ý rằng các vấn đề chuyển hóa không chỉ liên quan đến một chất dinh dưỡng riêng lẻ mà còn gắn với nhịp sống, môi trường thực phẩm và kiểu ăn lặp lại theo thời gian.",
-              en: "The film suggests metabolic issues are linked not only to single nutrients, but also to lifestyle rhythm, food environment, and repeated eating patterns over time.",
+              vi: "Phim nối các rối loạn chuyển hóa với cách con người ăn, mua thực phẩm, và sống trong một môi trường mà lựa chọn hằng ngày đã bị định hình từ trước nhiều hơn người ta tưởng.",
+              en: "The film connects metabolic disorders with how people eat, buy food, and live within an environment where daily choices are shaped more in advance than most people realize.",
             },
             challengeQuestion: {
-              vi: "Khi nhìn vào đái tháo đường và béo phì, đâu là phần do lựa chọn cá nhân và đâu là phần chịu tác động của bối cảnh sống?",
-              en: "When looking at diabetes and obesity, what portion comes from personal choice and what from living context?",
+              vi: "Đái tháo đường, béo phì và rối loạn chuyển hóa có chỉ là lỗi lựa chọn cá nhân, hay còn là kết quả của cả một môi trường thực phẩm?",
+              en: "Are diabetes, obesity, and metabolic disorders only personal-choice problems, or also the result of a larger food environment?",
             },
             seedIdeas: [
-              { vi: "Đường huyết, giấc ngủ và mức vận động liên hệ nhau ra sao?", en: "How are blood glucose, sleep, and activity levels connected?" },
-              { vi: "Vì sao cùng một thực đơn có thể cho kết quả khác nhau ở từng người?", en: "Why can the same menu lead to different outcomes across individuals?" },
-              { vi: "Môi trường mua sắm và quảng bá thực phẩm ảnh hưởng lựa chọn mỗi ngày thế nào?", en: "How do shopping environments and food marketing shape daily choices?" },
-              { vi: "Những tín hiệu sớm nào nên được chú ý trước khi rối loạn chuyển hóa rõ rệt?", en: "Which early signals should be noticed before metabolic disruption becomes obvious?" },
+              {
+                vi: "Đái tháo đường có chỉ là câu chuyện của đường?",
+                en: "Is diabetes only a story about sugar?",
+              },
+              {
+                vi: "Vì sao béo phì thường bị nhìn như lỗi của cá nhân?",
+                en: "Why is obesity so often seen as an individual failure?",
+              },
+              {
+                vi: "Một thói quen nhỏ lặp lại lâu năm có thể tạo tác động lớn đến đâu?",
+                en: "How much impact can a small habit repeated over years really create?",
+              },
+              {
+                vi: "Khi nói “ăn lành mạnh”, vì sao nhiều người vẫn rất khó làm thật?",
+                en: "When people say “eat healthy,” why is it still so hard to do in practice?",
+              },
             ],
             href: "/dinh-duong-thien-lanh/suc-khoe-chuyen-hoa-va-bua-an-hang-ngay",
-            linkLabel: { vi: "Xem chuyên đề về chuyển hóa", en: "View the metabolic topic" },
+            linkLabel: {
+              vi: "Xem chuyên đề về chuyển hóa",
+              en: "View the metabolic topic",
+            },
           },
           {
             id: "wth-ung-thu-va-ban-an",
-            title: { vi: "Ung thư và bàn ăn", en: "Cancer and the Table" },
+            title: {
+              vi: "Ung thư và bàn ăn",
+              en: "Cancer and the Table",
+            },
             story: {
-              vi: "Bộ phim khơi lại một chủ đề nhạy cảm: mối liên hệ giữa mô hình ăn uống dài hạn và nguy cơ ung thư. Đây là điểm mở để đọc thêm bằng chứng thay vì rút gọn thành một nguyên nhân duy nhất.",
-              en: "The film reopens a sensitive topic: links between long-term eating patterns and cancer risk. It is a starting point to read evidence further rather than reduce everything to one cause.",
+              vi: "Phim không biến ung thư thành một câu chuyện đơn giản của riêng thức ăn. Điều đáng giữ lại là cách nó buộc người xem nhìn lại mối liên hệ giữa thói quen ăn uống lâu dài, môi trường thực phẩm, và suy nghĩ “phải có một thủ phạm duy nhất”.",
+              en: "The film does not reduce cancer to a simple story about food alone. What matters is how it pushes viewers to rethink the relationship between long-term eating habits, the food environment, and the urge to find a single culprit.",
             },
             challengeQuestion: {
-              vi: "Khi thảo luận nguy cơ ung thư từ bàn ăn, làm sao giữ được cân bằng giữa cảnh báo cần thiết và kết luận quá mức?",
-              en: "When discussing cancer risk at the table, how can we balance necessary caution with overreach?",
+              vi: "Khi nói về ung thư, vì sao con người thường muốn tìm một món ăn để đổ lỗi thay vì nhìn vào nguy cơ tích lũy dài hạn?",
+              en: "When talking about cancer, why do people often want a single food to blame instead of looking at long-term accumulated risk?",
             },
             seedIdeas: [
-              { vi: "Khác biệt giữa yếu tố nguy cơ và nguyên nhân trực tiếp nên được hiểu thế nào?", en: "How should we distinguish risk factors from direct causes?" },
-              { vi: "Thói quen ăn uống nào nên được xem trong bức tranh dài hạn thay vì từng bữa lẻ?", en: "Which eating habits should be viewed in a long-term pattern rather than isolated meals?" },
-              { vi: "Khi đọc tin về thực phẩm và ung thư, đâu là dấu hiệu của diễn giải quá nhanh?", en: "When reading food-and-cancer headlines, what signals suggest overly quick interpretation?" },
-              { vi: "Vai trò của dự phòng sớm từ bữa ăn nên được truyền đạt ra sao để không gây hoang mang?", en: "How should prevention messages about meals be conveyed without creating unnecessary fear?" },
+              {
+                vi: "Vì sao con người luôn muốn một thủ phạm duy nhất cho bệnh nặng?",
+                en: "Why do people always want one single culprit for serious illness?",
+              },
+              {
+                vi: "Một thói quen ăn uống nhỏ nhưng kéo dài nhiều năm có thể để lại điều gì?",
+                en: "What can a small eating habit leave behind when it lasts for years?",
+              },
+              {
+                vi: "Điều gì đang bị nói quá nhanh khi gắn thực phẩm với ung thư?",
+                en: "What is being said too quickly when food is linked to cancer?",
+              },
+              {
+                vi: "Vì sao cần nói về bàn ăn theo hướng nguy cơ tích lũy, không phải kết luận tuyệt đối?",
+                en: "Why should the table be discussed through accumulated risk, not absolute conclusions?",
+              },
             ],
             href: "/dinh-duong-thien-lanh/ung-thu-va-nhung-cau-hoi-tu-ban-an",
-            linkLabel: { vi: "Xem chuyên đề ung thư và bàn ăn", en: "View the cancer and table topic" },
+            linkLabel: {
+              vi: "Xem chuyên đề về ung thư",
+              en: "View the cancer topic",
+            },
           },
         ],
       },

@@ -39,6 +39,10 @@ export type ContentBranchLanding = {
   };
 };
 
+/**
+ * @deprecated Legacy snapshot only. Do not use for runtime UI.
+ * Runtime source-of-truth is `contentBranchesI18n` in `data/contentBranchesI18n.ts`.
+ */
 export const contentBranches: Record<ContentBranchSlug, ContentBranchLanding> = {
   "dinh-duong-thien-lanh": {
     slug: "dinh-duong-thien-lanh",
