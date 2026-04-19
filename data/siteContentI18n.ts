@@ -23,13 +23,13 @@ export const whySectionI18n: Record<AppLocale, WhySectionCopy> = {
     eyebrow: "Tinh thần nền tảng",
     title: "Con Đường Thiện Lành được sắp lại theo ba hướng chính để người đọc dễ bắt đầu hơn.",
     description:
-      "Trang chủ hiện tập trung vào Dinh dưỡng thiện lành, Ứng xử thiện lành và Giải trí thiện lành. Những phần đã chuẩn bị trước đó vẫn được giữ nguyên đường dẫn và nội dung, chỉ tạm ẩn khỏi menu để giữ trải nghiệm gọn hơn.",
+      "Trang chủ tập trung vào Dinh dưỡng thiện lành, Ứng xử thiện lành và Giải trí thiện lành. Cấu trúc này giúp việc bắt đầu rõ ràng hơn và theo dõi nội dung mạch lạc hơn.",
   },
   en: {
     eyebrow: "Platform Spirit",
     title: "The Wholesome Path now presents three clear pillars for easier guidance.",
     description:
-      "The public structure now highlights three pillars: Wholesome Nutrition, Wholesome Conduct, and Wholesome Entertainment. Other prepared areas are still preserved with their routes and content, but kept out of the main entry flow for now.",
+      "The public structure highlights three pillars: Wholesome Nutrition, Wholesome Conduct, and Wholesome Entertainment. This arrangement makes it easier to begin and follow the reading flow with clarity.",
   },
 };
 

@@ -13,7 +13,7 @@ export const aboutI18n = {
       {
         title: "Đi hẹp trước, đi sâu trước",
         description:
-          "Con Đường Thiện Lành hiện tập trung ba hướng chính để người đọc dễ bắt đầu, đồng thời vẫn giữ nguyên các phần đã chuẩn bị trước đó.",
+          "Con Đường Thiện Lành tập trung ba hướng chính để người đọc dễ bắt đầu và đi sâu theo lộ trình rõ ràng.",
       },
       {
         title: "Xây nền từ gốc rễ",
@@ -23,12 +23,12 @@ export const aboutI18n = {
       {
         title: "Mở rộng có trật tự",
         description:
-          "Các phần đang ẩn khỏi menu vẫn được bảo toàn đầy đủ route, nội dung và locale để mở lại theo từng giai đoạn.",
+          "Mỗi hướng nội dung được phát triển theo cấu trúc nhất quán để người đọc theo dõi thuận tiện qua từng chặng.",
       },
     ],
     startTitle: "Bắt đầu ở đâu?",
     startDescription:
-      "Giai đoạn này bạn nên bắt đầu từ Dinh dưỡng thiện lành để nắm nền rõ nhất, rồi mở rộng dần sang các hướng khác.",
+      "Bạn có thể bắt đầu từ Dinh dưỡng thiện lành để nắm nền rõ nhất, rồi mở rộng sang các hướng phù hợp với nhu cầu của mình.",
     primaryCta: "Vào Dinh dưỡng thiện lành",
   },
   en: {
@@ -43,7 +43,7 @@ export const aboutI18n = {
       {
         title: "Go narrow first, go deep first",
         description:
-          "The Wholesome Path currently highlights three clear pillars, while preserving previously prepared areas in hidden mode.",
+          "The Wholesome Path focuses on three clear pillars so readers can begin easily and go deeper with a clear progression.",
       },
       {
         title: "Build from the roots",
@@ -53,12 +53,12 @@ export const aboutI18n = {
       {
         title: "Expand with structure",
         description:
-          "Hidden areas remain fully preserved with their routes, content, and locale keys so they can be brought back in later phases.",
+          "Each direction is developed with a consistent structure so readers can follow the journey with less friction.",
       },
     ],
     startTitle: "Where should you begin?",
     startDescription:
-      "In this phase, begin with Wholesome Nutrition to build a clear foundation before moving into the next directions.",
+      "You can begin with Wholesome Nutrition to build a clear foundation, then continue into the directions that fit your needs.",
     primaryCta: "Enter Wholesome Nutrition",
   },
 } as const;

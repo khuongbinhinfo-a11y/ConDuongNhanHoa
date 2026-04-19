@@ -131,7 +131,7 @@ export const homepageI18n = {
       title: "Bắt đầu từ điều gần nhất với mình lúc này.",
       subtitle: "Ba hướng nội dung chính giúp việc tìm đọc rõ ràng và dễ đi hơn.",
       description:
-        "Những phần đã chuẩn bị từ trước vẫn được bảo toàn để mở dần theo từng giai đoạn. Trước mắt, bạn có thể bắt đầu từ Dinh dưỡng thiện lành, Ứng xử thiện lành hoặc Giải trí thiện lành.",
+        "Ba hướng chính được sắp xếp để bạn bắt đầu nhanh, đọc mạch lạc và chọn hướng phù hợp với nhu cầu hiện tại.",
       cta: "Khám phá Dinh dưỡng thiện lành",
     },
   },
@@ -265,7 +265,7 @@ export const homepageI18n = {
       title: "Begin with what feels closest to you right now.",
       subtitle: "Three clear directions make your reading journey lighter and easier to follow.",
       description:
-        "Other prepared areas are still preserved and can be opened in later phases. For now, you can begin with Wholesome Nutrition, Wholesome Conduct, or Wholesome Entertainment.",
+        "These three directions are arranged to help you start quickly, read more clearly, and choose what fits your current needs.",
       cta: "Explore Wholesome Nutrition",
     },
   },
