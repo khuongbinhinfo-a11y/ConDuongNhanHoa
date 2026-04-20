@@ -1245,17 +1245,38 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
     sevenDayPlan: {
       title: { vi: "Bắt đầu trong 7 ngày", en: "Start in 7 Days" },
       intro: {
-        vi: "Không cần thay đổi mọi thứ trong một lúc. Chỉ cần đi từng bước nhỏ, đủ rõ để làm được, đủ nhẹ để không bỏ giữa chừng.",
-        en: "No need to change everything at once. Just take it one clear, light step at a time — clear enough to do, light enough to keep going.",
+        vi: "Không cần đổi hết mọi thứ trong một lúc. Chỉ cần 7 ngày, mỗi ngày một bước đủ nhỏ để làm được và đủ nhẹ để giữ nhịp.",
+        en: "No need to change everything at once. Just 7 days, one small step each day — clear enough to do and light enough to sustain.",
       },
       days: [
-        { vi: "Ngày 1 — Quan sát một phản xạ quen thuộc của mình khi khó chịu.", en: "Day 1 — Notice one familiar reflex you have when feeling uncomfortable." },
-        { vi: "Ngày 2 — Gọi tên cảm xúc trước khi trả lời một việc làm mình bực.", en: "Day 2 — Name the emotion before you respond to something that frustrates you." },
-        { vi: "Ngày 3 — Đổi một câu nói trong gia đình theo hướng bớt đổ lỗi.", en: "Day 3 — Rephrase one sentence at home to reduce blame." },
-        { vi: "Ngày 4 — Thử một lần nghe hết ý người thân trước khi phản hồi.", en: "Day 4 — Let a family member finish before you respond." },
-        { vi: "Ngày 5 — Luyện trước một câu giao tiếp khó bằng mẫu: Quan sát → Cảm nhận → Nhu cầu.", en: "Day 5 — Rehearse one difficult sentence using: Observe → Feel → Need." },
-        { vi: "Ngày 6 — Làm một hành động tử tế nhỏ ngoài xã hội mà không cần ai ghi nhận.", en: "Day 6 — Do one small public act of kindness without needing recognition." },
-        { vi: "Ngày 7 — Nhìn lại 3 điều bạn đã làm được và chọn 1 điều tiếp tục tuần sau.", en: "Day 7 — Review 3 things you did well and choose 1 to continue next week." },
+        {
+          vi: "Ngày 1 — Việc làm: ghi lại 1 lần bạn phản ứng vội. Tự hỏi: lúc đó mình đang mệt, sợ hay bị chạm tự ái?",
+          en: "Day 1 — Action: write down one moment you reacted too quickly. Ask: was I tired, afraid, or feeling attacked?",
+        },
+        {
+          vi: "Ngày 2 — Việc làm: gọi tên cảm xúc trong 5 giây trước khi trả lời. Tự hỏi: cảm xúc thật của mình là gì ngoài cơn tức?",
+          en: "Day 2 — Action: name your feeling for 5 seconds before replying. Ask: what am I truly feeling beyond irritation?",
+        },
+        {
+          vi: "Ngày 3 — Việc làm: đổi 1 câu đổ lỗi trong gia đình sang câu nói nhu cầu. Tự hỏi: mình muốn được hiểu điều gì?",
+          en: "Day 3 — Action: replace one blaming sentence at home with a need-based sentence. Ask: what do I want others to understand?",
+        },
+        {
+          vi: "Ngày 4 — Việc làm: nghe hết ý người thân trước khi phản hồi. Tự hỏi: khi nghe trọn vẹn, mình hiểu thêm được gì?",
+          en: "Day 4 — Action: let a family member finish before responding. Ask: what did I understand better by listening fully?",
+        },
+        {
+          vi: "Ngày 5 — Việc làm: luyện 1 câu giao tiếp khó theo mẫu Quan sát → Cảm nhận → Nhu cầu. Tự hỏi: câu này đã rõ mà vẫn tôn trọng chưa?",
+          en: "Day 5 — Action: rehearse one difficult line using Observe → Feel → Need. Ask: is it clear while still respectful?",
+        },
+        {
+          vi: "Ngày 6 — Việc làm: làm 1 hành động tử tế nhỏ nơi công cộng mà không cần ai ghi nhận. Tự hỏi: môi trường quanh mình nhẹ hơn ở điểm nào?",
+          en: "Day 6 — Action: do one small public act of kindness without recognition. Ask: what became lighter around me?",
+        },
+        {
+          vi: "Ngày 7 — Việc làm: ghi lại 3 điều đã làm được và 1 điều muốn tiếp tục tuần sau. Tự hỏi: bước nhỏ nào tạo thay đổi rõ nhất?",
+          en: "Day 7 — Action: note 3 things you did well and 1 thing to continue next week. Ask: which small step changed the most?",
+        },
       ],
       cta: { vi: "Bắt đầu hôm nay", en: "Start today" },
     },
