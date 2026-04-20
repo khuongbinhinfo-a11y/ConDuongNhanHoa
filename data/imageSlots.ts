@@ -1,4 +1,4 @@
-﻿export type SlotKind = "hero" | "topic" | "post";
+﻿export type SlotKind = "hero" | "topic" | "post" | "section";
 export type SlotBranch =
   | "dinh-duong"
   | "ung-xu"
@@ -24,7 +24,6 @@ export type ImageSlot = {
    */
   fallbackSlotId: string;
 };
-
 /**
  * Master list of image slots, in the order the auto-assign script fills them.
  * Do NOT change the order â€” it determines which unassigned image gets which slot.
@@ -235,7 +234,63 @@ export const imageSlots: ImageSlot[] = [
     kind: "hero",
     targetDir: "images/hanh-dong",
     targetBaseName: "hero-hanh-dong-thien-lanh",
-    fallbackSlotId: "",
+    fallbackSlotId: "ung-xu.hero",
+  },
+  {
+    id: "hanh-dong.fallback",
+    branch: "hanh-dong",
+    kind: "hero",
+    targetDir: "images/hanh-dong",
+    targetBaseName: "fallback-hanh-dong-thien-lanh",
+    fallbackSlotId: "ung-xu.hero",
+  },
+  {
+    id: "hanh-dong.topic.hieu-minh-de-song-nhe-hon",
+    branch: "hanh-dong",
+    kind: "topic",
+    targetDir: "images/hanh-dong/topics",
+    targetBaseName: "topic-hieu-minh-song-nhe",
+    fallbackSlotId: "ung-xu.topic.hieu-minh-de-song-nhe-hon",
+  },
+  {
+    id: "hanh-dong.topic.ung-xu-trong-gia-dinh",
+    branch: "hanh-dong",
+    kind: "topic",
+    targetDir: "images/hanh-dong/topics",
+    targetBaseName: "topic-ung-xu-trong-gia-dinh",
+    fallbackSlotId: "ung-xu.hero",
+  },
+  {
+    id: "hanh-dong.topic.loi-noi-va-giao-tiep",
+    branch: "hanh-dong",
+    kind: "topic",
+    targetDir: "images/hanh-dong/topics",
+    targetBaseName: "topic-loi-noi-va-giao-tiep",
+    fallbackSlotId: "ung-xu.topic.loi-noi-va-giao-tiep",
+  },
+  {
+    id: "hanh-dong.topic.ra-ngoai-xa-hoi-voi-su-tu-te",
+    branch: "hanh-dong",
+    kind: "topic",
+    targetDir: "images/hanh-dong/topics",
+    targetBaseName: "topic-tu-te-ngoai-xa-hoi",
+    fallbackSlotId: "ung-xu.hero",
+  },
+  {
+    id: "hanh-dong.topic.nhung-tinh-huong-de-gap-trong-doi-song",
+    branch: "hanh-dong",
+    kind: "topic",
+    targetDir: "images/hanh-dong/topics",
+    targetBaseName: "topic-tinh-huong-thuong-gap",
+    fallbackSlotId: "ung-xu.topic.nhung-tinh-huong-de-gap-trong-doi-song",
+  },
+  {
+    id: "hanh-dong.section.bat-dau-trong-7-ngay",
+    branch: "hanh-dong",
+    kind: "section",
+    targetDir: "images/hanh-dong/sections",
+    targetBaseName: "section-bat-dau-trong-7-ngay",
+    fallbackSlotId: "hanh-dong.hero",
   },
 
   // \u2500\u2500\u2500 L\u1eddi n\u00f3i thi\u1ec7n l\u00e0nh \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500

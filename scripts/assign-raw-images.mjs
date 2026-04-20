@@ -60,6 +60,15 @@ const IMAGE_SLOTS = [
   { id: "ung-xu.post.01",                                       targetDir: "images/ung-xu/posts",      targetBaseName: "post-ung-xu-01" },
   { id: "ung-xu.post.02",                                       targetDir: "images/ung-xu/posts",      targetBaseName: "post-ung-xu-02" },
   { id: "ung-xu.post.03",                                       targetDir: "images/ung-xu/posts",      targetBaseName: "post-ung-xu-03" },
+  // Hành động / Ứng xử hiển thị ngoài mặt theo route kỹ thuật hanh-dong
+  { id: "hanh-dong.hero",                                       targetDir: "images/hanh-dong",         targetBaseName: "hero-hanh-dong-thien-lanh" },
+  { id: "hanh-dong.fallback",                                   targetDir: "images/hanh-dong",         targetBaseName: "fallback-hanh-dong-thien-lanh" },
+  { id: "hanh-dong.topic.hieu-minh-de-song-nhe-hon",            targetDir: "images/hanh-dong/topics",  targetBaseName: "topic-hieu-minh-song-nhe" },
+  { id: "hanh-dong.topic.ung-xu-trong-gia-dinh",                targetDir: "images/hanh-dong/topics",  targetBaseName: "topic-ung-xu-trong-gia-dinh" },
+  { id: "hanh-dong.topic.loi-noi-va-giao-tiep",                 targetDir: "images/hanh-dong/topics",  targetBaseName: "topic-loi-noi-va-giao-tiep" },
+  { id: "hanh-dong.topic.ra-ngoai-xa-hoi-voi-su-tu-te",         targetDir: "images/hanh-dong/topics",  targetBaseName: "topic-tu-te-ngoai-xa-hoi" },
+  { id: "hanh-dong.topic.nhung-tinh-huong-de-gap-trong-doi-song", targetDir: "images/hanh-dong/topics", targetBaseName: "topic-tinh-huong-thuong-gap" },
+  { id: "hanh-dong.section.bat-dau-trong-7-ngay",               targetDir: "images/hanh-dong/sections", targetBaseName: "section-bat-dau-trong-7-ngay" },
 ];
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────

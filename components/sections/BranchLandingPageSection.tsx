@@ -74,6 +74,12 @@ export function BranchLandingPageSection({
     heroImageProp?.src ??
     (branchId ? getImageForSlotStrict(`${branchId}.hero`) : null);
   const resolvedHeroAlt = heroImageProp?.alt ?? content.title[locale];
+  const resolvedSevenDayImageSrc =
+    content.sevenDayPlan && branchId
+      ? getImageForSlotStrict(`${branchId}.section.bat-dau-trong-7-ngay`)
+      : null;
+  const resolvedSevenDayAlt =
+    locale === "vi" ? "Lộ trình bắt đầu trong 7 ngày" : "7-day starter plan";
 
   return (
     <section className="py-10 lg:py-14">
@@ -218,6 +224,17 @@ export function BranchLandingPageSection({
                 id="bat-dau-trong-7-ngay"
                 className="mt-6 rounded-[20px] border border-[var(--color-border)] bg-[linear-gradient(150deg,rgba(228,246,239,0.35),rgba(221,242,232,0.25))] p-5 lg:p-6"
               >
+                {resolvedSevenDayImageSrc && (
+                  <div className="media-frame relative mb-5 aspect-[21/9] rounded-[16px]">
+                    <Image
+                      src={resolvedSevenDayImageSrc}
+                      alt={resolvedSevenDayAlt}
+                      fill
+                      sizes="(max-width: 1060px) 100vw, 1060px"
+                      className={useSafeImageFit ? "media-img-safe" : "media-img-cover"}
+                    />
+                  </div>
+                )}
                 <h2 className="text-[1.12rem] font-semibold leading-[1.35] text-[var(--color-text-strong)]">
                   {cleanPublicText(content.sevenDayPlan.title[locale])}
                 </h2>
@@ -284,6 +301,14 @@ export function BranchLandingPageSection({
               >
                 {cleanPublicText(content.primaryCta.label[locale])}
               </Link>
+              {content.secondaryCta && (
+                <Link
+                  href={content.secondaryCta.href}
+                  className="inline-flex items-center justify-center rounded-full border border-[var(--color-sage)] bg-[rgba(251,253,251,0.98)] px-5 py-2.5 text-sm font-semibold text-[var(--color-navy)] transition-all duration-200 hover:bg-[var(--color-accent-light)]"
+                >
+                  {cleanPublicText(content.secondaryCta.label[locale])}
+                </Link>
+              )}
               <Link
                 href="/"
                 className="inline-flex items-center justify-center rounded-full border border-[var(--color-border)] bg-[rgba(251,253,251,0.94)] px-5 py-2.5 text-sm font-semibold text-[var(--color-navy)] transition-all duration-200 hover:bg-[var(--color-accent-light)]"
