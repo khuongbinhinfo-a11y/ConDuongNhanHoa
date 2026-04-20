@@ -35,7 +35,11 @@ const cleanPublicText = (text: string): string => {
     .replace(/\bseed\s+content\b/gi, "")
     .replace(/\bseed\s+data\b/gi, "")
     .replace(/\bplaceholder\s+content\b/gi, "")
-    .replace(/\bpage\b/gi, "")
+    .replace(/\bplaceholder\b/gi, "")
+    .replace(/\btext\s*m[ẫa]u\b/gi, "")
+    .replace(/\bn[ộo]i\s*dung\s*c[ầa]n\s*nh[ậa]p\b/gi, "")
+    .replace(/\bđ[âa]y\s*l[àa]\s*ph[ầa]n\s*n[ộo]i\s*dung\s*c[ầa]n\s*nh[ậa]p\b/gi, "")
+    .replace(/\bnh[ậa]p\s*n[ộo]i\s*dung\b/gi, "")
     .replace(/nhập nội dung tại đây/gi, "")
     .replace(/thêm nội dung sau/gi, "")
     .replace(/cập nhật sau/gi, "")
@@ -50,6 +54,7 @@ const cleanPublicText = (text: string): string => {
     .replace(/sẽ cập nhật sau/gi, "")
     .replace(/đang phát triển/gi, "")
     .replace(/đang hoàn thiện/gi, "")
+    .replace(/mục này sẽ bổ sung sau/gi, "")
     .replace(/\s{2,}/g, " ")
     .trim();
 };
@@ -61,6 +66,8 @@ export function BranchLandingPageSection({
   branchId,
   heroImage: heroImageProp,
 }: BranchLandingPageSectionProps) {
+  const useSafeImageFit = content.slug === "hanh-dong-thien-lanh";
+
   // Resolve hero image: explicit prop > manifest > null.
   // No fallback to wellness placeholder — show nothing if no real image exists.
   const resolvedHeroSrc =
@@ -85,7 +92,7 @@ export function BranchLandingPageSection({
                   fill
                   priority
                   sizes="(max-width: 1060px) 100vw, 1060px"
-                  className="media-img-cover"
+                  className={useSafeImageFit ? "media-img-safe" : "media-img-cover"}
                 />
               </div>
             )}
@@ -125,7 +132,7 @@ export function BranchLandingPageSection({
                           alt={cluster.title[locale]}
                           fill
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                          className="media-img-cover"
+                          className={useSafeImageFit ? "media-img-safe" : "media-img-cover"}
                         />
                       </div>
                     )}

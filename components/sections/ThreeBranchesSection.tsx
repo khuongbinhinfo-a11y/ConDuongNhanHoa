@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 
@@ -7,6 +8,10 @@ export type BranchCard = {
   highlights: string[];
   href: string;
   ctaLabel: string;
+  titleBadgeImage?: {
+    src: string;
+    alt: string;
+  };
 };
 
 type ThreeBranchesSectionProps = {
@@ -37,9 +42,27 @@ export function ThreeBranchesSection({ heading, cards }: ThreeBranchesSectionPro
               {/* Accent bar */}
               <div className={`absolute inset-x-0 top-0 h-[3px] ${accentColors[index % 3]}`} aria-hidden="true" />
 
-              <h3 className="mt-1 text-[1.15rem] font-semibold leading-[1.3] text-[var(--color-text-strong)]">
-                {card.title}
-              </h3>
+              <div className="mt-1 flex items-center gap-2.5">
+                {card.titleBadgeImage?.src ? (
+                  <span className="media-frame relative h-9 w-9 shrink-0 rounded-full border border-[var(--color-border)]">
+                    <Image
+                      src={card.titleBadgeImage.src}
+                      alt={card.titleBadgeImage.alt}
+                      fill
+                      sizes="36px"
+                      className="media-img-cover"
+                    />
+                  </span>
+                ) : (
+                  <span
+                    className="inline-block h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-primary)]"
+                    aria-hidden="true"
+                  />
+                )}
+                <h3 className="text-[1.15rem] font-semibold leading-[1.3] text-[var(--color-text-strong)]">
+                  {card.title}
+                </h3>
+              </div>
               <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">
                 {card.description}
               </p>

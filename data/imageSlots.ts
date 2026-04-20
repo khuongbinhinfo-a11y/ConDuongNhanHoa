@@ -1,4 +1,4 @@
-﻿export type SlotKind = "hero" | "topic" | "post" | "section";
+﻿export type SlotKind = "hero" | "topic" | "post";
 export type SlotBranch =
   | "dinh-duong"
   | "ung-xu"
@@ -237,55 +237,6 @@ export const imageSlots: ImageSlot[] = [
     targetBaseName: "hero-hanh-dong-thien-lanh",
     fallbackSlotId: "",
   },
-  {
-    id: "hanh-dong.topic.ung-xu-voi-ban-than",
-    branch: "hanh-dong",
-    kind: "topic",
-    targetDir: "images/hanh-dong/topics",
-    targetBaseName: "topic-hieu-minh-song-nhe",
-    fallbackSlotId: "",
-  },
-  {
-    id: "hanh-dong.topic.ung-xu-trong-gia-dinh",
-    branch: "hanh-dong",
-    kind: "topic",
-    targetDir: "images/hanh-dong/topics",
-    targetBaseName: "topic-ung-xu-trong-gia-dinh",
-    fallbackSlotId: "",
-  },
-  {
-    id: "hanh-dong.topic.loi-noi-va-giao-tiep",
-    branch: "hanh-dong",
-    kind: "topic",
-    targetDir: "images/hanh-dong/topics",
-    targetBaseName: "topic-loi-noi-va-giao-tiep",
-    fallbackSlotId: "",
-  },
-  {
-    id: "hanh-dong.topic.ung-xu-ngoai-xa-hoi",
-    branch: "hanh-dong",
-    kind: "topic",
-    targetDir: "images/hanh-dong/topics",
-    targetBaseName: "topic-tu-te-ngoai-xa-hoi",
-    fallbackSlotId: "",
-  },
-  {
-    id: "hanh-dong.topic.tinh-huong-thuong-gap",
-    branch: "hanh-dong",
-    kind: "topic",
-    targetDir: "images/hanh-dong/topics",
-    targetBaseName: "topic-tinh-huong-thuong-gap",
-    fallbackSlotId: "",
-  },
-  {
-    id: "hanh-dong.section.bat-dau-trong-7-ngay",
-    branch: "hanh-dong",
-    kind: "section",
-    targetDir: "images/hanh-dong/sections",
-    targetBaseName: "section-bat-dau-trong-7-ngay",
-    fallbackSlotId: "",
-  },
-
 
   // \u2500\u2500\u2500 L\u1eddi n\u00f3i thi\u1ec7n l\u00e0nh \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
   {

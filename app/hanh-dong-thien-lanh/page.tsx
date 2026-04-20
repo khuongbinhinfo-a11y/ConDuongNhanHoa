@@ -28,7 +28,7 @@ export default function HanhDongThienLanhPage() {
       />
       <main>
         <BranchLandingPageSection
-          branchId="hanh-dong"
+          branchId="ung-xu"
           content={contentBranchesI18n["hanh-dong-thien-lanh"]}
           locale={locale}
           labels={{

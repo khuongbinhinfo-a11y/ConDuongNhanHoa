@@ -50,6 +50,10 @@ export default function HomePage() {
             ],
             href: "/dinh-duong-thien-lanh",
             ctaLabel: "Khám phá thêm",
+            titleBadgeImage: {
+              src: getImageForSlot("dinh-duong.hero") ?? "/images/dinh-duong/hero-dinh-duong-thien-lanh.webp",
+              alt: "Dinh dưỡng thiện lành",
+            },
           },
           {
             title: "Ứng xử thiện lành",
@@ -62,6 +66,10 @@ export default function HomePage() {
             ],
             href: "/hanh-dong-thien-lanh",
             ctaLabel: "Khám phá thêm",
+            titleBadgeImage: {
+              src: getImageForSlot("ung-xu.hero") ?? "/images/ung-xu/hero-ung-xu-thien-lanh.webp",
+              alt: "Ứng xử thiện lành",
+            },
           },
           {
             title: "Giải trí thiện lành",
@@ -74,6 +82,10 @@ export default function HomePage() {
             ],
             href: "/giai-tri-thien-lanh",
             ctaLabel: "Khám phá thêm",
+            titleBadgeImage: {
+              src: getImageForSlot("giai-tri.hero") ?? "/images/giai-tri/hero-giai-tri-thien-lanh.webp",
+              alt: "Giải trí thiện lành",
+            },
           },
         ]
       : [
@@ -88,6 +100,10 @@ export default function HomePage() {
             ],
             href: "/dinh-duong-thien-lanh",
             ctaLabel: "Explore more",
+            titleBadgeImage: {
+              src: getImageForSlot("dinh-duong.hero") ?? "/images/dinh-duong/hero-dinh-duong-thien-lanh.webp",
+              alt: "Wholesome Nutrition",
+            },
           },
           {
             title: "Wholesome Conduct",
@@ -100,6 +116,10 @@ export default function HomePage() {
             ],
             href: "/hanh-dong-thien-lanh",
             ctaLabel: "Explore more",
+            titleBadgeImage: {
+              src: getImageForSlot("ung-xu.hero") ?? "/images/ung-xu/hero-ung-xu-thien-lanh.webp",
+              alt: "Wholesome Conduct",
+            },
           },
           {
             title: "Wholesome Entertainment",
@@ -112,6 +132,10 @@ export default function HomePage() {
             ],
             href: "/giai-tri-thien-lanh",
             ctaLabel: "Explore more",
+            titleBadgeImage: {
+              src: getImageForSlot("giai-tri.hero") ?? "/images/giai-tri/hero-giai-tri-thien-lanh.webp",
+              alt: "Wholesome Entertainment",
+            },
           },
         ];
 
