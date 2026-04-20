@@ -145,11 +145,23 @@ export function BranchLandingPageSection({
                         </p>
                       )}
 
+                      {/* Micro-action — "1 việc làm ngay" */}
+                      {cluster.microAction && (
+                        <div className="mt-3 rounded-[12px] bg-[linear-gradient(135deg,rgba(221,242,232,0.55),rgba(228,246,239,0.5))] px-4 py-3">
+                          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.08em] text-[var(--color-teal)]">
+                            {locale === "vi" ? "1 việc làm ngay" : "Do this now"}
+                          </p>
+                          <p className="mt-1 text-sm leading-relaxed text-[var(--color-navy)]">
+                            {cleanPublicText(cluster.microAction[locale])}
+                          </p>
+                        </div>
+                      )}
+
                       <Link
                         href={cluster.href}
                         className="mt-auto pt-4 text-sm font-semibold text-[var(--color-navy)] transition-colors hover:text-[var(--color-primary-strong)]"
                       >
-                        {cleanPublicText(labels.openCluster)}
+                        {cleanPublicText(cluster.ctaLabel?.[locale] ?? labels.openCluster)}
                       </Link>
                     </div>
                   </article>
@@ -190,6 +202,49 @@ export function BranchLandingPageSection({
                 >
                   {locale === "vi" ? "Xem góc nhìn này" : "Explore this perspective"} →
                 </Link>
+              </div>
+            )}
+
+            {/* ── 7-day starter plan ──────────────────────────────────── */}
+            {content.sevenDayPlan && (
+              <div
+                id="bat-dau-trong-7-ngay"
+                className="mt-6 rounded-[20px] border border-[var(--color-border)] bg-[linear-gradient(150deg,rgba(228,246,239,0.35),rgba(221,242,232,0.25))] p-5 lg:p-6"
+              >
+                <h2 className="text-[1.12rem] font-semibold leading-[1.35] text-[var(--color-text-strong)]">
+                  {cleanPublicText(content.sevenDayPlan.title[locale])}
+                </h2>
+                <p className="mt-2 max-w-[72ch] text-sm leading-relaxed text-[var(--color-text-muted)]">
+                  {cleanPublicText(content.sevenDayPlan.intro[locale])}
+                </p>
+                <ol className="mt-4 space-y-2" role="list">
+                  {content.sevenDayPlan.days.map((day, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm text-[var(--color-navy)]">
+                      <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--color-primary)] text-[0.65rem] font-bold text-white">
+                        {i + 1}
+                      </span>
+                      <span className="leading-relaxed">{cleanPublicText(day[locale])}</span>
+                    </li>
+                  ))}
+                </ol>
+                <Link
+                  href={content.primaryCta.href}
+                  className="mt-5 inline-flex items-center justify-center rounded-full bg-[var(--color-primary)] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(90,154,108,0.18)] transition-all duration-200 hover:bg-[var(--color-primary-strong)]"
+                >
+                  {cleanPublicText(content.sevenDayPlan.cta[locale])}
+                </Link>
+              </div>
+            )}
+
+            {/* ── Self-tracking nudge ──────────────────────────────────── */}
+            {content.selfTrackingBlock && (
+              <div className="mt-4 rounded-[20px] border border-[var(--color-border)] bg-white p-5 lg:p-6">
+                <h2 className="text-[1.05rem] font-semibold leading-[1.35] text-[var(--color-text-strong)]">
+                  {cleanPublicText(content.selfTrackingBlock.title[locale])}
+                </h2>
+                <p className="mt-2 max-w-[72ch] text-sm leading-relaxed text-[var(--color-text-muted)]">
+                  {cleanPublicText(content.selfTrackingBlock.text[locale])}
+                </p>
               </div>
             )}
 

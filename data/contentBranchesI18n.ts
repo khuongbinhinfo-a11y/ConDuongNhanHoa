@@ -22,8 +22,8 @@ export type NutritionTopicCardI18n = {
 };
 
 export type NutritionWthCardI18n = {
-          vi: "Giữ Dinh dưỡng thiện lành như một điểm tựa gần đời sống để nhìn sức khỏe rõ hơn.",
-          en: "Keep Wholesome Nutrition as a daily-life anchor for seeing health more clearly.",
+  id: string;
+  title: LocalizedText;
   story: LocalizedText;
   challengeQuestion: LocalizedText;
   seedIdeas: LocalizedText[];
@@ -85,7 +85,23 @@ export type BranchClusterI18n = {
   summary: LocalizedText;
   /** Optional open question shown below the summary to invite reflection. */
   prompt?: LocalizedText;
+  /** One small action the reader can do right now. */
+  microAction?: LocalizedText;
+  /** Per-cluster CTA label (overrides global openCluster label). */
+  ctaLabel?: LocalizedText;
   href: string;
+};
+
+export type SevenDayPlanI18n = {
+  title: LocalizedText;
+  intro: LocalizedText;
+  days: LocalizedText[];
+  cta: LocalizedText;
+};
+
+export type SelfTrackingBlockI18n = {
+  title: LocalizedText;
+  text: LocalizedText;
 };
 
 export type BranchDirectionI18n = {
@@ -111,6 +127,10 @@ export type ContentBranchLandingI18n = {
   clusters: BranchClusterI18n[];
   /** Optional documentary / external-perspective block rendered below the cluster grid. */
   documentaryBlock?: DocumentaryBlockI18n;
+  /** Optional 7-day starter plan block. */
+  sevenDayPlan?: SevenDayPlanI18n;
+  /** Optional lightweight self-tracking nudge block. */
+  selfTrackingBlock?: SelfTrackingBlockI18n;
   relatedDirections: BranchDirectionI18n[];
   nutritionLanding?: NutritionLandingI18n;
   primaryCta: {
@@ -1124,59 +1144,108 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
 const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLandingI18n>> = {
   "hanh-dong-thien-lanh": {
     slug: "hanh-dong-thien-lanh",
-    title: { vi: "Ứng xử thiện lành", en: "Wholesome Conduct" },
-    heroKicker: { vi: "Hướng nội dung chính", en: "Primary direction" },
+    title: { vi: "Sống tử tế hơn từ những điều rất nhỏ, bắt đầu ngay trong hôm nay", en: "Kinder Living, One Small Step at a Time" },
+    heroKicker: { vi: "Ứng xử thiện lành", en: "Wholesome Conduct" },
     description: {
-      vi: "Một lối đi giúp ứng xử tử tế với bản thân, gia đình và xã hội theo nhịp sống thực tế.",
-      en: "A reading path for kinder conduct with yourself, family, and society.",
+      vi: "Ứng xử thiện lành không bắt đầu từ những lời nói lớn, mà từ cách ta dừng lại, hiểu mình rõ hơn, và chọn một phản hồi bớt làm đau người khác. Nhánh nội dung này đi theo hướng thực hành: mỗi chủ đề đều có một bước nhỏ có thể làm ngay, để sự tử tế không chỉ là điều đáng nghĩ mà là điều có thể sống được.",
+      en: "Wholesome conduct does not begin with grand words, but with the moment we pause, understand ourselves more clearly, and choose a response that is a little less hurtful. Each topic here carries one small step you can take today — so that kindness is not just something to think about, but something to live.",
     },
     clusters: [
       {
         id: "ung-xu-voi-ban-than",
         title: { vi: "Hiểu mình để sống nhẹ hơn", en: "Understand Yourself More Gently" },
         summary: {
-          vi: "Nếu hôm nay hơi mệt, điều gì có thể làm lòng nhẹ hơn một chút?",
-          en: "When today feels heavy, what can make your inner pace a little lighter?",
+          vi: "Không phải lúc nào ta cũng phản ứng vì chuyện đang xảy ra. Nhiều khi ta phản ứng từ mệt mỏi, tổn thương cũ, hoặc thói quen phòng vệ đã đi theo quá lâu. Hiểu mình không làm ta yếu đi; nó giúp ta bớt làm khó người khác khi chính mình đang nặng.",
+          en: "We do not always react to what is happening — often it is old fatigue, old hurt, or an old defensive habit. Understanding yourself does not make you weaker; it helps you be less hard on others when you are already carrying something heavy.",
         },
+        microAction: {
+          vi: "Dừng 90 giây, gọi tên cảm xúc đang có, rồi tự chốt một điều mình sẽ không làm khi đang mệt.",
+          en: "Pause for 90 seconds, name what you are feeling, then decide one thing you will not do when you are tired.",
+        },
+        ctaLabel: { vi: "Thử bước này", en: "Try this step" },
         href: "/hanh-dong-thien-lanh#ung-xu-voi-ban-than",
       },
       {
         id: "ung-xu-trong-gia-dinh",
         title: { vi: "Ứng xử trong gia đình", en: "Conduct in Family Life" },
         summary: {
-          vi: "Trong gia đình, điều gì dễ làm tổn thương nhau nhất và có thể làm khác đi ra sao?",
-          en: "In family life, what hurts most often, and how can we respond differently?",
+          vi: "Gia đình là nơi người ta dễ buông lời hơn bất cứ đâu, vì quá gần nên cũng dễ làm nhau đau. Ứng xử thiện lành trong gia đình không nằm ở việc lúc nào cũng mềm mỏng, mà ở chỗ biết nói thật mà không đổ lỗi, biết giữ ranh giới mà không hạ thấp nhau.",
+          en: "Families are where we tend to say things we would not say anywhere else — closeness makes it easier to hurt. Wholesome conduct at home is not about always being soft, but about knowing how to speak honestly without blame, and how to hold a boundary without putting each other down.",
         },
+        microAction: {
+          vi: "Đổi một câu phản xạ trong hôm nay sang một câu không buộc tội, không dằn mặt.",
+          en: "Replace one reflexive comment today with one that does not assign blame or put anyone on edge.",
+        },
+        ctaLabel: { vi: "Áp dụng hôm nay", en: "Apply today" },
         href: "/hanh-dong-thien-lanh#ung-xu-trong-gia-dinh",
       },
       {
         id: "loi-noi-va-giao-tiep",
         title: { vi: "Lời nói và cách giao tiếp", en: "Speech and Communication" },
         summary: {
-          vi: "Làm sao để nói điều đúng mà không làm người khác đau?",
-          en: "How can we speak truthfully without causing unnecessary pain?",
+          vi: "Không ít xung đột đến từ việc điều muốn nói và điều được nghe là hai thứ rất khác nhau. Học nói rõ hơn, chậm hơn, và ít phán xét hơn là một kỹ năng sống quan trọng. Một câu nói đúng lúc có thể giữ lại một mối quan hệ; một câu nói vội có thể phá hỏng nhiều ngày.",
+          en: "A lot of conflict comes from the gap between what we mean and what gets heard. Learning to speak more clearly, more slowly, and with less judgment is a real life skill. The right word at the right moment can save a relationship; a careless one can cost many days.",
         },
+        microAction: {
+          vi: "Dùng mẫu câu 3 bước: Quan sát → Cảm nhận → Nhu cầu khi nói về một việc dễ va chạm.",
+          en: "Use the 3-step format — Observe → Feel → Need — when raising something that tends to create friction.",
+        },
+        ctaLabel: { vi: "Xem cách làm", en: "See how it works" },
         href: "/hanh-dong-thien-lanh#loi-noi-va-giao-tiep",
       },
       {
         id: "ung-xu-ngoai-xa-hoi",
         title: { vi: "Ra ngoài xã hội với sự tử tế", en: "Bringing Kindness into Society" },
         summary: {
-          vi: "Sự tử tế ngoài xã hội bắt đầu từ những việc rất nhỏ nào?",
-          en: "Which small actions can make public life kinder every day?",
+          vi: "Ứng xử thiện lành không chỉ dành cho người thân. Nó hiện ra trong cách ta xếp hàng, phản hồi người phục vụ, nói chuyện với người lạ, và giữ sự tôn trọng khi không ai biết mình là ai. Tử tế ngoài xã hội không phải để được khen, mà để không làm môi trường sống chung thêm nặng nề.",
+          en: "Wholesome conduct is not only for those close to us. It shows up in how we queue, respond to a server, talk to a stranger, and stay respectful when no one knows who we are. Being kind in public is not for recognition — it is to keep shared life from becoming heavier than it needs to be.",
         },
+        microAction: {
+          vi: "Làm một hành động tử tế nhỏ trong ngày mà không cần ai ghi nhận.",
+          en: "Do one small act of kindness today that does not need to be noticed by anyone.",
+        },
+        ctaLabel: { vi: "Làm trong 5 phút", en: "Do it in 5 minutes" },
         href: "/hanh-dong-thien-lanh#ung-xu-ngoai-xa-hoi",
       },
       {
         id: "tinh-huong-thuong-gap",
         title: { vi: "Những tình huống thường gặp", en: "Common Everyday Situations" },
         summary: {
-          vi: "Gợi ý cách xử lý cho các tình huống quen thuộc, để giữ bình tĩnh và tôn trọng nhau.",
-          en: "Practical prompts for familiar situations, with calm and mutual respect.",
+          vi: "Ai cũng có lúc rơi vào những tình huống khó: bị hiểu lầm, bị nói nặng, bị chen lấn ranh giới, hoặc phải từ chối điều mình không muốn. Điều quan trọng không phải là lúc nào cũng xử lý đẹp, mà là có sẵn một vài kịch bản lành mạnh để không phản ứng theo quán tính cũ.",
+          en: "Everyone runs into hard situations: being misunderstood, hearing something sharp, having a boundary pushed, or needing to say no. What matters is not handling it perfectly every time — it is having a few healthy responses ready so you do not fall back on old reflexes.",
         },
+        microAction: {
+          vi: "Chọn một tình huống tuần này và tập trước một kịch bản phản hồi ngắn, rõ, không công kích.",
+          en: "Pick a situation you faced this week and rehearse a short, clear, non-attacking response for next time.",
+        },
+        ctaLabel: { vi: "Thử tình huống này", en: "Try this situation" },
         href: "/hanh-dong-thien-lanh#tinh-huong-thuong-gap",
       },
     ],
+    sevenDayPlan: {
+      title: { vi: "Bắt đầu trong 7 ngày", en: "Start in 7 Days" },
+      intro: {
+        vi: "Không cần thay đổi mọi thứ trong một lúc. Chỉ cần đi từng bước nhỏ, đủ rõ để làm được, đủ nhẹ để không bỏ giữa chừng.",
+        en: "No need to change everything at once. Just take it one clear, light step at a time — clear enough to do, light enough to keep going.",
+      },
+      days: [
+        { vi: "Ngày 1 — Quan sát một phản xạ quen thuộc của mình khi khó chịu.", en: "Day 1 — Notice one familiar reflex you have when feeling uncomfortable." },
+        { vi: "Ngày 2 — Gọi tên cảm xúc trước khi trả lời một việc làm mình bực.", en: "Day 2 — Name the emotion before you respond to something that frustrates you." },
+        { vi: "Ngày 3 — Đổi một câu nói trong gia đình theo hướng bớt đổ lỗi.", en: "Day 3 — Rephrase one comment at home to place less blame." },
+        { vi: "Ngày 4 — Luyện nói một điều khó bằng mẫu câu: Quan sát → Cảm nhận → Nhu cầu.", en: "Day 4 — Practice saying something difficult using: Observe → Feel → Need." },
+        { vi: "Ngày 5 — Thử giữ bình tĩnh trong một tình huống xã hội nhỏ: chờ đợi, xếp hàng, va chạm nhẹ.", en: "Day 5 — Stay calm in one small social situation: waiting, queueing, a minor friction." },
+        { vi: "Ngày 6 — Làm một hành động tử tế không cần người khác biết.", en: "Day 6 — Do one kind act without needing anyone to know." },
+        { vi: "Ngày 7 — Tổng kết 3 điều mình đã làm được và 1 điều cần làm tốt hơn vào tuần sau.", en: "Day 7 — Note 3 things you did well and 1 thing to improve next week." },
+      ],
+      cta: { vi: "Bắt đầu hôm nay", en: "Start today" },
+    },
+    selfTrackingBlock: {
+      title: { vi: "Tự theo dõi rất nhẹ, không tự gây áp lực", en: "Track Gently, Without Pressure" },
+      text: {
+        vi: "Tuần này bạn đã giữ được bao nhiêu lần không phản ứng vội? Mục tiêu không phải là hoàn hảo, mà là tăng dần số lần bạn chọn được một cách ứng xử lành hơn.",
+        en: "How many times this week did you manage not to react in haste? The goal is not perfection — it is gradually increasing the moments when you choose a kinder response.",
+      },
+    },
     relatedDirections: [
       {
         title: { vi: "Giữ nền từ Dinh dưỡng thiện lành", en: "Keep your base in Wholesome Nutrition" },
@@ -1195,16 +1264,16 @@ const primaryBranchOverrides: Partial<Record<ContentBranchSlug, ContentBranchLan
         href: "/giai-tri-thien-lanh",
       },
       {
-        title: { vi: "Về trang chủ", en: "Back to Home" },
+        title: { vi: "Đi tiếp bằng những bước nhỏ, không cần gấp", en: "Continue at Your Own Pace" },
         description: {
-          vi: "Xem lại 3 cây chính để chọn hướng phù hợp nhất hiện tại.",
-          en: "Return to the three main pillars and choose what fits now.",
+          vi: "Nếu bạn muốn đi sâu hơn, hãy chọn một hướng gần nhất với điều mình đang vướng.",
+          en: "If you want to go deeper, pick whichever direction is closest to what you are working through.",
         },
         href: "/",
       },
     ],
     primaryCta: {
-      label: { vi: "Mở ra từ đây", en: "Begin Here" },
+      label: { vi: "Áp dụng hôm nay", en: "Apply Today" },
       href: "/hanh-dong-thien-lanh#ung-xu-voi-ban-than",
     },
   },
