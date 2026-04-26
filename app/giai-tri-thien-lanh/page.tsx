@@ -30,6 +30,7 @@ export default function GiaiTriThienLanhPage() {
         <BranchLandingPageSection
            branchId="giai-tri"
            content={contentBranchesI18n["giai-tri-thien-lanh"]}
+            heroVideoSrc="/video/hero/hero-giai-tri-thien-lanh-16s.mp4"
           locale={locale}
           labels={{
             relatedHeading: commonI18n[locale].articles.suggestedDirection,

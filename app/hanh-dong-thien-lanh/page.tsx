@@ -30,6 +30,7 @@ export default function HanhDongThienLanhPage() {
         <BranchLandingPageSection
           branchId="hanh-dong"
           content={contentBranchesI18n["hanh-dong-thien-lanh"]}
+          heroVideoSrc="/video/hero/hero-ung-xu-thien-lanh-16s.mp4"
           locale={locale}
           labels={{
             relatedHeading: commonI18n[locale].articles.suggestedDirection,

@@ -23,6 +23,10 @@ type BranchLandingPageSectionProps = {
    * Explicit hero image override (takes precedence over manifest resolution).
    */
   heroImage?: { src: string; alt: string };
+  /**
+   * Optional hero video source in /public.
+   */
+  heroVideoSrc?: string;
 };
 
 const cleanPublicText = (text: string): string => {
@@ -65,6 +69,7 @@ export function BranchLandingPageSection({
   labels,
   branchId,
   heroImage: heroImageProp,
+  heroVideoSrc,
 }: BranchLandingPageSectionProps) {
   const useSafeImageFit = content.slug === "hanh-dong-thien-lanh";
 
@@ -89,17 +94,32 @@ export function BranchLandingPageSection({
           {/* ── Main card ─────────────────────────────────────────────── */}
           <div className="rounded-[24px] border border-[var(--color-border)] bg-[var(--color-card)] p-6 shadow-[0_12px_28px_rgba(90,154,108,0.08)] lg:p-8">
 
-            {/* Hero image — shown only when a real image exists for this branch */}
-            {resolvedHeroSrc && (
-              <div className="media-frame relative mb-6 aspect-[21/9] rounded-[16px]">
-                <Image
-                  src={resolvedHeroSrc}
-                  alt={resolvedHeroAlt}
-                  fill
-                  priority
-                  sizes="(max-width: 1060px) 100vw, 1060px"
-                  className={useSafeImageFit ? "media-img-safe" : "media-img-cover"}
-                />
+            {/* Hero media — prefer video if provided; fallback to branch image */}
+            {(heroVideoSrc || resolvedHeroSrc) && (
+              <div className="media-frame relative mb-6 aspect-[21/9] rounded-[16px] overflow-hidden bg-[var(--color-accent-light)]">
+                {heroVideoSrc ? (
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                    poster={resolvedHeroSrc ?? undefined}
+                    className="h-full w-full object-cover"
+                    aria-label={resolvedHeroAlt}
+                  >
+                    <source src={heroVideoSrc} type="video/mp4" />
+                  </video>
+                ) : (
+                  <Image
+                    src={resolvedHeroSrc!}
+                    alt={resolvedHeroAlt}
+                    fill
+                    priority
+                    sizes="(max-width: 1060px) 100vw, 1060px"
+                    className={useSafeImageFit ? "media-img-safe" : "media-img-cover"}
+                  />
+                )}
               </div>
             )}
 

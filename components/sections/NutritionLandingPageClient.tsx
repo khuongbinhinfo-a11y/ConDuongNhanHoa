@@ -34,6 +34,7 @@ export function NutritionLandingPageClient() {
       <main>
         <NutritionLandingPageSection
           content={nutritionLanding}
+          heroVideoSrc="/video/hero/hero-dinh-duong-thien-lanh-16s.mp4"
           locale={locale}
           labels={{
             backToHome: commonI18n[locale].cta.backToHome,

@@ -20,6 +20,7 @@ type NutritionLandingPageSectionProps = {
     backToHome: string;
     openTopic: string;
   };
+  heroVideoSrc?: string;
 };
 
 const t = (text: Record<AppLocale, string>, locale: AppLocale) => text[locale];
@@ -29,6 +30,7 @@ export function NutritionLandingPageSection({
   content,
   locale,
   labels,
+  heroVideoSrc,
 }: NutritionLandingPageSectionProps) {
   const heroSrc = content.heroImageSlotId
     ? getDirectImageForSlot(content.heroImageSlotId)
@@ -63,18 +65,33 @@ export function NutritionLandingPageSection({
                 </div>
               </div>
 
-              {/* Right column — hero image */}
-              {landingHeroSrc && (
+              {/* Right column — hero media */}
+              {(heroVideoSrc || landingHeroSrc) && (
                 <div className="order-1 lg:order-2">
                   <div className="relative mx-auto aspect-[16/10] w-full max-w-[520px] overflow-hidden rounded-2xl bg-[var(--color-accent-light)] shadow-[0_4px_24px_rgba(36,58,47,0.07)]">
-                    <Image
-                      src={landingHeroSrc}
-                      alt={t(content.heroTitle, locale)}
-                      fill
-                      priority
-                      sizes="(max-width: 1024px) 92vw, 520px"
-                      className="object-cover"
-                    />
+                    {heroVideoSrc ? (
+                      <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        preload="metadata"
+                        poster={landingHeroSrc ?? undefined}
+                        className="h-full w-full object-cover"
+                        aria-label={t(content.heroTitle, locale)}
+                      >
+                        <source src={heroVideoSrc} type="video/mp4" />
+                      </video>
+                    ) : (
+                      <Image
+                        src={landingHeroSrc!}
+                        alt={t(content.heroTitle, locale)}
+                        fill
+                        priority
+                        sizes="(max-width: 1024px) 92vw, 520px"
+                        className="object-cover"
+                      />
+                    )}
                   </div>
                 </div>
               )}
