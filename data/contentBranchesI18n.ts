@@ -585,7 +585,7 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
               { vi: "Bữa ăn và lối sống liên kết với nhau thế nào?", en: "How are meals and lifestyle tied together?" },
               { vi: "Điều gì tích lũy âm thầm trước khi xét nghiệm lên tiếng?", en: "What accumulates quietly before a lab result finally speaks?" },
             ],
-            href: "/dinh-duong-thien-lanh/ung-thu-va-nhung-cau-hoi-tu-ban-an",
+            href: "/dinh-duong-thien-lanh/suc-khoe-chuyen-hoa-va-bua-an-hang-ngay",
           },
           {
             id: "seed-bua-an-tac-dong-lau-dai",
@@ -613,7 +613,7 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
               { vi: "Một thói quen lâu dài có thể ảnh hưởng thế nào?", en: "How can a long-term habit affect health?" },
               { vi: "Điều gì đang bị nói quá nhanh về thực phẩm và bệnh tật?", en: "What is being said too quickly about food and disease?" },
             ],
-            href: "/dinh-duong-thien-lanh/suc-khoe-chuyen-hoa-va-bua-an-hang-ngay",
+            href: "/dinh-duong-thien-lanh/ung-thu-va-nhung-cau-hoi-tu-ban-an",
           },
           {
             id: "seed-phim-thay-doi-goc-nhin",
@@ -1152,7 +1152,7 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
       ],
     },
     seedSection: {
-      title: { vi: "Gợi ý triển khai nội dung", en: "Content Development Ideas" },
+      title: { vi: "7 góc khai thác từ đời sống giao tiếp hằng ngày", en: "7 Content Angles from Everyday Communication Life" },
       description: {
         vi: "Mỗi câu hỏi dưới đây có thể mở ra một video ngắn, bài ngắn hoặc chuỗi nội dung bám sát những tình huống giao tiếp thực trong đời sống.",
         en: "Each question below can open into a short video, short article, or series of content tied closely to real communication situations in daily life.",
