@@ -292,6 +292,72 @@ export function BranchLandingPageSection({
               </div>
             )}
 
+            {/* ── Seed / content-development ideas ─────────────────────── */}
+            {content.seedSection && (
+              <div className="mt-6 rounded-[20px] border border-[var(--color-border)] bg-white p-5 lg:p-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-teal)]">
+                  {locale === "vi" ? "Gợi ý triển khai nội dung" : "Content Development Ideas"}
+                </p>
+                <h2 className="mt-2 text-[1.08rem] font-semibold leading-[1.35] text-[var(--color-text-strong)]">
+                  {cleanPublicText(content.seedSection.title[locale])}
+                </h2>
+                {content.seedSection.description && (
+                  <p className="mt-2 max-w-[72ch] text-sm leading-relaxed text-[var(--color-text-muted)]">
+                    {cleanPublicText(content.seedSection.description[locale])}
+                  </p>
+                )}
+                <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  {content.seedSection.cards.map((card) => (
+                    <article key={card.id} className="flex flex-col rounded-[14px] border border-[var(--color-border)] bg-[rgba(251,253,251,0.9)] p-4">
+                      <h3 className="text-[0.86rem] font-semibold leading-[1.35] text-[var(--color-text-strong)]">
+                        {cleanPublicText(card.title[locale])}
+                      </h3>
+                      <p className="mt-1.5 text-[0.8rem] leading-[1.6] text-[var(--color-text-muted)]">
+                        {cleanPublicText(card.lead[locale])}
+                      </p>
+                      <ul className="mt-2 space-y-1">
+                        {card.prompts.map((prompt, i) => (
+                          <li key={i} className="flex gap-2 text-[0.75rem] leading-[1.5] text-[var(--color-text-muted)] opacity-80">
+                            <span className="mt-[2px] shrink-0 text-[var(--color-teal)]" aria-hidden="true">·</span>
+                            {cleanPublicText(prompt[locale])}
+                          </li>
+                        ))}
+                      </ul>
+                      {card.href && (
+                        <Link
+                          href={card.href}
+                          className="mt-auto pt-3 text-[0.76rem] font-medium text-[var(--color-navy)] opacity-65 transition-opacity hover:opacity-100"
+                        >
+                          {locale === "vi" ? "Xem chuyên đề liên quan" : "View related topic"}
+                        </Link>
+                      )}
+                    </article>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* ── FAQ section ──────────────────────────────────────────── */}
+            {content.faqSection && (
+              <div className="mt-4 rounded-[20px] border border-[var(--color-border)] bg-white p-5 lg:p-6">
+                <h2 className="text-[1.05rem] font-semibold leading-[1.35] text-[var(--color-text-strong)]">
+                  {cleanPublicText(content.faqSection.title[locale])}
+                </h2>
+                <dl className="mt-4 space-y-5">
+                  {content.faqSection.items.map((item, index) => (
+                    <div key={index}>
+                      <dt className="text-[0.92rem] font-semibold leading-[1.4] text-[var(--color-text-strong)]">
+                        {cleanPublicText(item.question[locale])}
+                      </dt>
+                      <dd className="mt-1.5 max-w-[65ch] text-[0.86rem] leading-[1.7] text-[var(--color-text-muted)]">
+                        {cleanPublicText(item.answer[locale])}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            )}
+
             {/* ── Related directions ───────────────────────────────────── */}
             <section className="mt-6 rounded-[20px] border border-[var(--color-border)] bg-[linear-gradient(150deg,rgba(221,242,232,0.22),rgba(228,246,239,0.2))] p-5 lg:p-6">
               <h2 className="text-[1.08rem] font-semibold leading-[1.35] text-[var(--color-text-strong)]">

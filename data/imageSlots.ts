@@ -292,6 +292,30 @@ export const imageSlots: ImageSlot[] = [
     targetBaseName: "section-bat-dau-trong-7-ngay",
     fallbackSlotId: "hanh-dong.hero",
   },
+  {
+    id: "hanh-dong.topic.giu-ket-noi-khi-bat-dong",
+    branch: "hanh-dong",
+    kind: "topic",
+    targetDir: "images/hanh-dong/topics",
+    targetBaseName: "topic-giu-ket-noi-khi-bat-dong",
+    fallbackSlotId: "hanh-dong.fallback",
+  },
+  {
+    id: "hanh-dong.topic.biet-khi-nao-lui-buoc",
+    branch: "hanh-dong",
+    kind: "topic",
+    targetDir: "images/hanh-dong/topics",
+    targetBaseName: "topic-biet-khi-nao-lui-buoc",
+    fallbackSlotId: "hanh-dong.fallback",
+  },
+  {
+    id: "hanh-dong.topic.cam-on-va-noi-nho-dung-luc",
+    branch: "hanh-dong",
+    kind: "topic",
+    targetDir: "images/hanh-dong/topics",
+    targetBaseName: "topic-cam-on-va-noi-nho-dung-luc",
+    fallbackSlotId: "hanh-dong.fallback",
+  },
 
   // \u2500\u2500\u2500 L\u1eddi n\u00f3i thi\u1ec7n l\u00e0nh \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
   {

@@ -124,6 +124,32 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
           { vi: "Khi nào cần dừng lại và đọc lại dữ liệu thay vì đổi tiếp?", en: "When should you pause and reread evidence before changing further?" },
         ],
       },
+      {
+        id: "tu-nghi-ngo-den-tim-hieu",
+        title: { vi: "Từ nghi ngờ thông tin đến cách tìm hiểu thêm", en: "From Doubting Information to Learning More" },
+        lead: {
+          vi: "Nghi ngờ không phải điểm kết. Khi nghi ngờ được theo sau bởi hành động tìm hiểu có chủ đích, nó trở thành bước đầu tiên của một người đọc thực sự.",
+          en: "Doubt is not a dead end. When doubt is followed by intentional inquiry, it becomes the first step of a genuine reader.",
+        },
+        bullets: [
+          { vi: "Nghi ngờ mà không hành động dẫn đến đâu?", en: "Where does doubt without action lead?" },
+          { vi: "Cách tìm nguồn bổ sung mà không bị lạc vào bẫy thông tin?", en: "How do you find additional sources without falling into information traps?" },
+          { vi: "Dấu hiệu nào cho thấy mình đang đi theo dấu vết hợp lý?", en: "What signs indicate you are following a reasonable trail?" },
+        ],
+      },
+      {
+        id: "hat-giong-tu-duy-can-trong",
+        title: { vi: "Hạt giống tư duy cẩn trọng — nhỏ nhưng đủ để bắt đầu", en: "A Seed of Careful Thinking — Small but Enough to Start" },
+        lead: {
+          vi: "Tư duy cẩn trọng không cần bắt đầu bằng khóa học hay sách giáo khoa. Nó có thể bắt đầu bằng một thói quen nhỏ: hỏi một câu trước khi chia sẻ, dừng lại một nhịp trước khi tin.",
+          en: "Careful thinking does not need to begin with a course or a textbook. It can start with one small habit: ask one question before sharing, pause one beat before believing.",
+        },
+        bullets: [
+          { vi: "Thói quen nhỏ nào có thể bắt đầu ngay trong hôm nay?", en: "Which small habit can you begin today?" },
+          { vi: "Khi nào dừng lại trước khi tin lại dễ hơn mình tưởng?", en: "When does pausing before believing turn out to be easier than expected?" },
+          { vi: "Một câu hỏi nhỏ đặt trước khi chia sẻ có thể thay đổi gì?", en: "What can one small question before sharing change?" },
+        ],
+      },
     ],
     quickQuestionSectionTitle: { vi: "Câu hỏi dễ gặp", en: "Common Questions" },
     quickQuestions: [
@@ -146,6 +172,13 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
         answer: {
           vi: "Bắt đầu từ điều gần nhất với đời sống của mình, rồi đi theo trật tự: hiểu khái niệm, đọc dữ liệu nền, đối chiếu bối cảnh cá nhân, sau đó mới thay đổi từng bước nhỏ có theo dõi.",
           en: "Start from what is closest to your own life, then follow order: understand concepts, read foundational evidence, compare with personal context, then adjust in small trackable steps.",
+        },
+      },
+      {
+        question: { vi: "Làm thế nào để bắt đầu đọc thông tin dinh dưỡng một cách thận trọng hơn?", en: "How can someone start reading nutrition information more carefully?" },
+        answer: {
+          vi: "Bắt đầu bằng cách hỏi: ai nói điều này, dựa trên dữ liệu gì, và trong bối cảnh nào? Không cần tìm đáp án cuối cùng ngay từ đầu. Chỉ cần tạo thói quen đặt câu hỏi trước khi nhận định — điều đó đã tạo ra đủ khoảng cách để đọc chậm hơn và ít bị cuốn theo hơn.",
+          en: "Begin by asking: who said this, based on what evidence, and in what context? You do not need a final answer right away. Simply building the habit of questioning before concluding creates enough distance to read more slowly and get swept along less easily.",
         },
       },
     ],
@@ -293,6 +326,13 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
           en: "The film should be used as a starting point for revisiting older beliefs, not as a final conclusion. Its real value is to open questions, not to close them.",
         },
       },
+      {
+        question: { vi: "Bước đầu tiên để xem lại niềm tin của mình về sữa là gì?", en: "What is the first step for revisiting your own belief about milk?" },
+        answer: {
+          vi: "Không cần bắt đầu bằng việc quyết định bỏ hay giữ ngay. Bước đầu tiên có thể chỉ là hỏi: niềm tin này của mình đến từ đâu? Từ ký ức tuổi thơ, từ quảng bá, từ bác sĩ, hay từ nghiên cứu mình tự đọc? Nhận ra nguồn gốc của niềm tin là bước quan trọng trước mọi thay đổi.",
+          en: "You do not need to start by deciding to quit or keep right away. The first step can simply be asking: where did this belief of mine come from? From childhood memory, from advertising, from a doctor, or from research I actually read myself? Recognizing the origin of a belief is the important step that precedes any change.",
+        },
+      },
     ],
     closingTitle: { vi: "Đi tiếp từ đây", en: "Continue from here" },
     closingBody: {
@@ -437,6 +477,13 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
           en: "A good place to begin is with the simplest question: does the fear come from the body, or from an anxiety repeated for too long?",
         },
       },
+      {
+        question: { vi: "Đạm từ thực vật có khác gì đạm từ thịt và điều đó quan trọng đến mức nào?", en: "How does plant protein differ from meat protein and how much does it matter?" },
+        answer: {
+          vi: "Đạm từ thực vật và từ thịt đều là đạm, nhưng đến kèm với bối cảnh thực phẩm rất khác nhau. Câu hỏi quan trọng hơn không phải nguồn nào tốt hơn tuyệt đối, mà là toàn bộ cách ăn đang cung cấp gì, và bối cảnh sống đang cho phép điều gì là bền vững.",
+          en: "Plant protein and meat protein are both protein, but they come in very different food contexts. The more important question is not which source is absolutely better, but what the whole eating pattern is providing, and what your living context makes sustainable.",
+        },
+      },
     ],
     closingTitle: { vi: "Đi tiếp từ đây", en: "Continue from here" },
     closingBody: {
@@ -545,6 +592,19 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
         ],
       },
       {
+        id: "buoc-dau-nhin-lai-nhip-an",
+        title: { vi: "Bước đầu nhìn lại nhịp ăn hằng ngày — bắt đầu từ đâu?", en: "Taking a First Look at Daily Eating Rhythm — Where to Begin?" },
+        lead: {
+          vi: "Khi bắt đầu nhìn lại sức khỏe chuyển hóa, nhiều người chỉ nhìn vào một bữa ăn cụ thể. Nhưng điều tích lũy nguy cơ lâu dài thường nằm ở chuỗi thói quen, không phải một bữa riêng.",
+          en: "When people begin revisiting metabolic health, they often look at one specific meal. But what accumulates long-term risk usually lives in a chain of habits, not in isolated meals.",
+        },
+        bullets: [
+          { vi: "Nên theo dõi từ bữa nào trong ngày để nhận ra khuôn thói quen dễ nhất?", en: "Which meal of the day is the best starting point for recognizing habit patterns most easily?" },
+          { vi: "Nhịp ăn có nghĩa gì ngoài việc đếm calo hay cân thực phẩm?", en: "What does eating rhythm mean beyond counting calories or weighing food?" },
+          { vi: "Khi nào việc ghi chép đơn giản giúp ích hơn là gây áp lực?", en: "When does simple tracking help rather than create pressure?" },
+        ],
+      },
+      {
         id: "doc-wth-de-mo-rong-cau-hoi",
         title: { vi: "Đọc WTH để mở rộng câu hỏi, không để chốt vội câu trả lời", en: "Read WTH to Widen the Question, Not to Rush the Answer" },
         lead: {
@@ -579,6 +639,13 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
         answer: {
           vi: "Phim có góc nhìn mạnh, nên người xem càng cần đọc chậm hơn. Cách đúng là dùng nó để mở rộng câu hỏi về bữa ăn và môi trường sống, chứ không biến nó thành một kết luận đóng.",
           en: "The film has a strong point of view, which is exactly why the viewer should read more slowly. Its best use is to widen questions about meals and living conditions, not to become a closed conclusion.",
+        },
+      },
+      {
+        question: { vi: "Điểm nào trong nhịp ăn hằng ngày nên được nhìn lại trước tiên?", en: "Which aspect of daily eating rhythm should be examined first?" },
+        answer: {
+          vi: "Thay vì nhìn vào một món cụ thể, hãy nhìn vào nhịp: ăn vào lúc nào, khoảng cách giữa các bữa, mức no và đói, và liệu bữa ăn có đang là phản xạ hay lựa chọn có ý thức. Nhịp lặp lại thường quan trọng hơn thành phần đơn lẻ.",
+          en: "Rather than looking at a specific food, look at the rhythm: when you eat, the spacing between meals, levels of fullness and hunger, and whether meals are reflexive or consciously chosen. The repeating pattern usually matters more than any single ingredient.",
         },
       },
     ],
@@ -689,6 +756,19 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
         ],
       },
       {
+        id: "tu-lo-lang-den-doc-ro-hon",
+        title: { vi: "Từ nỗi lo về ung thư đến cách đọc thông tin rõ ràng hơn", en: "From Cancer Worry to Reading Information More Clearly" },
+        lead: {
+          vi: "Nỗi lo về ung thư thường xuất hiện mạnh hơn sau khi xem phim tài liệu. Một phản ứng lo lắng chưa được đặt câu hỏi đúng cách rất dễ biến thành quyết định vội.",
+          en: "Worry about cancer often intensifies after watching a documentary. An anxious response not yet properly questioned can easily turn into a rushed decision.",
+        },
+        bullets: [
+          { vi: "Phân biệt 'nguy cơ tích lũy' và 'nguyên nhân trực tiếp' giúp ích gì khi đọc tin tức sức khỏe?", en: "How does telling apart 'accumulated risk' from 'direct cause' help when reading health news?" },
+          { vi: "Khi nào nỗi lo trở thành động lực thay đổi hữu ích thay vì chỉ thêm lo?", en: "When does worry become useful motivation for change rather than just adding more fear?" },
+          { vi: "Bước nhỏ nhất gần với đời sống có thể làm ngay mà không cần hiểu hết là gì?", en: "What is the smallest step closest to daily life that can be done now without needing to understand everything first?" },
+        ],
+      },
+      {
         id: "doc-wth-de-mo-rong-cau-hoi",
         title: { vi: "Đọc WTH để mở rộng câu hỏi, không để chốt vội câu trả lời", en: "Read WTH to Widen Questions, Not to Settle Answers Too Fast" },
         lead: {
@@ -723,6 +803,13 @@ export const nutritionDetailPagesI18n: Record<string, NutritionDetailPageI18n> =
         answer: {
           vi: "Nên giữ sự cẩn trọng và tránh nhu cầu chốt quá nhanh vào một thủ phạm. Cách đọc tốt hơn là đi chậm, nhìn rộng và kiểm tra xem điều gì đang được nói quá chắc tay.",
           en: "Keep care and avoid rushing to blame one culprit. A better way is to go slowly, look widely, and check what is being said too confidently.",
+        },
+      },
+      {
+        question: { vi: "Đọc thông tin về thực phẩm và nguy cơ bệnh tật theo cách nào là an toàn hơn?", en: "In what way is reading about food and disease risk safer?" },
+        answer: {
+          vi: "An toàn hơn là đọc với câu hỏi: điều này áp dụng cho ai, trong điều kiện nào? thay vì chỉ hỏi điều này đúng hay sai. Nội dung về thực phẩm và bệnh tật thường cần bối cảnh cụ thể. Đọc chậm và hỏi về điều kiện nghiên cứu trước khi áp vào đời sống của mình.",
+          en: "It is safer to read by asking: who does this apply to, and under what conditions? — rather than simply asking whether it is right or wrong. Content about food and disease usually needs specific context. Read slowly and ask about the study's conditions before applying it to your own life.",
         },
       },
     ],

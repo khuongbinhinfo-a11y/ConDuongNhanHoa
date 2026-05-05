@@ -131,6 +131,10 @@ export type ContentBranchLandingI18n = {
   sevenDayPlan?: SevenDayPlanI18n;
   /** Optional lightweight self-tracking nudge block. */
   selfTrackingBlock?: SelfTrackingBlockI18n;
+  /** Optional FAQ section rendered below selfTrackingBlock. */
+  faqSection?: NutritionFaqSectionI18n;
+  /** Optional seed / content-development ideas section. */
+  seedSection?: NutritionSeedSectionI18n;
   relatedDirections: BranchDirectionI18n[];
   nutritionLanding?: NutritionLandingI18n;
   primaryCta: {
@@ -624,6 +628,76 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
               { vi: "Làm sao biến một luận điểm phim thành clip gần đời sống?", en: "How can a film argument become a short clip close to daily life?" },
             ],
           },
+          {
+            id: "seed-thoi-quen-lap-lai-lau-ngay",
+            title: { vi: "Thói quen ăn uống lặp lại lâu ngày ảnh hưởng đến sức khỏe dài hạn như thế nào?", en: "How Do Long-Repeated Eating Habits Shape Long-Term Health?" },
+            lead: {
+              vi: "Không phải bữa ăn nào cũng tạo ra tác động lớn ngay lập tức. Nhưng những gì lặp lại đủ lâu và đủ quen sẽ dần tạo nên nền tảng sức khỏe — hoặc nguy cơ — mà ta hiếm khi chú ý từ sớm.",
+              en: "Not every meal creates an immediate large impact. But what repeats long enough and becomes familiar gradually shapes a health foundation — or a risk — that we rarely notice early enough.",
+            },
+            prompts: [
+              { vi: "Thói quen nào trong bữa ăn hằng ngày đang lặp lại mà mình ít để ý nhất?", en: "Which daily eating habit repeats most without you noticing?" },
+              { vi: "Vì sao điều bình thường lại khó trở thành đối tượng để xem xét lại?", en: "Why is something normal so difficult to subject to re-examination?" },
+              { vi: "Một thay đổi nhỏ nhất có thể làm được ngay mà không cần thay đổi toàn bộ cách ăn là gì?", en: "What is the smallest change you could make right now without overhauling your whole diet?" },
+            ],
+            href: "/dinh-duong-thien-lanh/suc-khoe-chuyen-hoa-va-bua-an-hang-ngay",
+          },
+          {
+            id: "seed-niem-tin-dinh-duong-can-thoi-gian",
+            title: { vi: "Vì sao thay đổi niềm tin về dinh dưỡng cần thời gian và sự kiên nhẫn?", en: "Why Does Changing a Nutrition Belief Take Time and Patience?" },
+            lead: {
+              vi: "Một niềm tin được lặp lại đủ lâu sẽ cảm thấy như sự thật — dù nó chưa từng được kiểm chứng kỹ. Thay đổi niềm tin đó không chỉ là vấn đề thông tin, mà là quá trình xây dựng lại cách đọc.",
+              en: "A belief repeated long enough begins to feel like truth — even if it was never carefully verified. Changing it is not only about information, but about rebuilding how you read.",
+            },
+            prompts: [
+              { vi: "Niềm tin dinh dưỡng nào mình đang giữ mà chưa thực sự kiểm tra nguồn gốc?", en: "Which nutrition belief do you hold without ever truly checking where it came from?" },
+              { vi: "Vì sao thông tin mới đôi khi không đủ để thay đổi hành vi?", en: "Why is new information sometimes not enough to change behavior?" },
+              { vi: "Bước nào giúp chuyển từ biết đúng sang làm được?", en: "What step helps move from knowing what is right to actually doing it?" },
+            ],
+            href: "/dinh-duong-thien-lanh/kien-thuc-nen-tang",
+          },
+          {
+            id: "seed-khi-nao-nen-nghi-ngo-mot-nghien-cuu",
+            title: { vi: "Khi nào nên nghi ngờ một nghiên cứu dinh dưỡng?", en: "When should you question a nutrition study?" },
+            lead: {
+              vi: "Không phải mọi nghiên cứu được trích dẫn đều có cùng độ tin cậy. Có những dấu hiệu đơn giản giúp người đọc bắt đầu phân biệt — mà không cần là nhà khoa học.",
+              en: "Not every cited study carries the same credibility. There are simple signals that help a reader start telling them apart — without needing to be a scientist.",
+            },
+            prompts: [
+              { vi: "Quy mô và thời gian nghiên cứu nói lên điều gì?", en: "What does the scale and duration of a study tell you?" },
+              { vi: "Ai tài trợ nghiên cứu và điều đó quan trọng ra sao?", en: "Who funded the study and how much does that matter?" },
+              { vi: "Kết quả đang mô tả hay đang giải thích nguyên nhân?", en: "Is the result describing something or explaining a cause?" },
+            ],
+            href: "/dinh-duong-thien-lanh/kien-thuc-nen-tang",
+          },
+          {
+            id: "seed-tu-so-benh-den-thay-doi-ben-vung",
+            title: { vi: "Từ nỗi sợ bệnh đến thay đổi thói quen bền vững", en: "From fear of disease to lasting habit change" },
+            lead: {
+              vi: "Nỗi sợ bệnh thường là ngọn lửa bắt đầu. Nhưng nếu chỉ hành động từ nỗi sợ, thay đổi thường không kéo dài. Điều gì giúp chuyển từ 'tránh bị bệnh' sang 'chọn cách sống mình thật sự muốn'?",
+              en: "Fear of disease is often the initial spark. But when action comes only from fear, change tends not to last. What helps shift from 'avoiding illness' to 'choosing a life you actually want'?",
+            },
+            prompts: [
+              { vi: "Điều gì đang thúc đẩy thay đổi — nỗi sợ hay sự thấu hiểu?", en: "What is driving the change — fear or understanding?" },
+              { vi: "Vì sao thay đổi từ bên trong thường bền hơn thay đổi từ áp lực ngoài?", en: "Why does change from inside usually last longer than change from outside pressure?" },
+              { vi: "Bước nhỏ nào có thể làm mà không cần nỗi sợ làm nhiên liệu?", en: "Which small step can you take without needing fear as fuel?" },
+            ],
+            href: "/dinh-duong-thien-lanh/suc-khoe-chuyen-hoa-va-bua-an-hang-ngay",
+          },
+          {
+            id: "seed-moi-truong-anh-huong-den-chon-lua-thuc-pham",
+            title: { vi: "Môi trường xung quanh ảnh hưởng đến lựa chọn thực phẩm như thế nào?", en: "How does the surrounding environment shape food choices?" },
+            lead: {
+              vi: "Không phải mọi lựa chọn ăn uống đều xuất phát từ ý chí cá nhân. Môi trường — từ nhà bếp, siêu thị, quảng cáo đến cách nhóm bạn ăn — ảnh hưởng sâu hơn nhiều người nhận ra.",
+              en: "Not every food choice comes from personal willpower. The environment — from the kitchen to the grocery store, advertising to how friends eat — influences far more than most people realize.",
+            },
+            prompts: [
+              { vi: "Môi trường thực phẩm xung quanh đang khuyến khích điều gì?", en: "What is the food environment around you encouraging?" },
+              { vi: "Một thay đổi nhỏ trong môi trường có thể thay đổi thói quen như thế nào?", en: "How can a small change in the environment shift a habit?" },
+              { vi: "Khi nào ý chí không đủ để duy trì thay đổi một mình?", en: "When is willpower not enough to sustain change on its own?" },
+            ],
+            href: "/dinh-duong-thien-lanh/ung-thu-va-nhung-cau-hoi-tu-ban-an",
+          },
         ],
       },
       faqSection: {
@@ -662,6 +736,34 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
             answer: {
               vi: "Phim có thể là điểm khởi đầu tốt để mở ra câu hỏi mới, nhưng không nên biến nó thành kết luận cuối cùng. Cách tốt hơn là dùng phim để soi lại điều mình tin và tiếp tục đọc chậm hơn.",
               en: "A documentary can be a good starting point for new questions, but it should not become the final conclusion. It works better as a way to re-examine beliefs and then keep reading more carefully.",
+            },
+          },
+          {
+            question: { vi: "Ăn thuần thực vật có thực sự đảm bảo đủ chất không?", en: "Does a fully plant-based diet truly cover all nutritional needs?" },
+            answer: {
+              vi: "Câu hỏi này không nên được trả lời bằng 'có' hoặc 'không' áp dụng cho tất cả mọi người. Điều quan trọng hơn là cách ăn tổng thể, mức đa dạng của thực phẩm, và nhu cầu thực tế của từng người trong từng bối cảnh sống. WTH không phải lộ trình dinh dưỡng — nó là điểm khởi đầu để đặt lại câu hỏi.",
+              en: "This question should not be answered with a universal yes or no. What matters more is the overall eating pattern, food diversity, and each person's real needs in their specific context. WTH is not a nutrition guide — it is a starting point for reopening questions.",
+            },
+          },
+          {
+            question: { vi: "Vì sao nhiều người biết nên ăn lành mạnh hơn nhưng vẫn không làm được?", en: "Why do many people know they should eat better but still cannot?" },
+            answer: {
+              vi: "Hiểu biết và thay đổi thói quen là hai việc rất khác nhau. Hành vi ăn uống thường gắn sâu với ký ức, cảm xúc, môi trường sống và nhịp sinh hoạt lặp lại. Biết đúng mà không thay đổi được không phải là thiếu ý chí — đó là tín hiệu cho thấy cần nhìn rộng hơn vào toàn bộ bối cảnh.",
+              en: "Knowledge and changing habits are two very different things. Eating behavior is often deeply tied to memory, emotion, environment, and repeated daily rhythms. Knowing the right thing but not being able to change is not a failure of willpower — it is a signal that the full context needs to be looked at more widely.",
+            },
+          },
+          {
+            question: { vi: "Làm sao đọc nhãn thực phẩm mà không bị choáng ngợp?", en: "How can you read food labels without feeling overwhelmed?" },
+            answer: {
+              vi: "Không cần đọc toàn bộ nhãn ngay từ đầu. Bắt đầu từ một tiêu chí: chú ý hai thành phần đầu tiên trong danh sách, vì chúng thường chiếm tỷ lệ lớn nhất. Tạo thói quen nhìn và hỏi một câu trước khi bỏ vào giỏ đã là bước tiến thật sự.",
+              en: "You do not need to read the whole label right away. Start with one criterion: notice the first two ingredients in the list, as they usually make up the largest proportion. Building the habit of looking and asking one question before putting something in the basket is already a real step forward.",
+            },
+          },
+          {
+            question: { vi: "Khi thông tin dinh dưỡng từ bác sĩ và từ người nổi tiếng mâu thuẫn — tin ai?", en: "When nutrition advice from a doctor and from an influencer contradict — who to trust?" },
+            answer: {
+              vi: "Không phải chọn tin hoàn toàn bên nào. Bác sĩ thường nói từ bối cảnh lâm sàng với bệnh nhân cụ thể; người nổi tiếng thường nói từ trải nghiệm cá nhân được mở rộng ra. Điều quan trọng là nhận ra mỗi nguồn đang nói từ góc nhìn nào, và đặt câu hỏi: điều này áp dụng cho ai, trong hoàn cảnh nào?",
+              en: "The goal is not to fully trust one side. Doctors usually speak from clinical context with specific patients; influencers usually speak from personal experience extended outward. The key is recognizing what angle each source is coming from, and asking: who does this apply to, and in what circumstances?",
             },
           },
         ],
@@ -879,7 +981,77 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
         ctaLabel: { vi: "Thử tình huống này", en: "Try this situation" },
         href: "/hanh-dong-thien-lanh#nhung-tinh-huong-de-gap-trong-doi-song",
       },
+      {
+        id: "giu-ket-noi-khi-bat-dong",
+        title: { vi: "Giữ kết nối khi không đồng ý", en: "Stay Connected While Disagreeing" },
+        summary: {
+          vi: "Không đồng ý không có nghĩa là phải rời xa nhau. Nhưng để bất đồng không trở thành rạn nứt, cần phân biệt rõ: tranh luận về điều đang thực sự xảy ra, thay vì trút ra những gì đã bị tích lũy từ lâu mà chưa nói. Một cuộc bất đồng được giữ trong khung kết nối thường kết thúc bằng hiểu biết, không phải bằng người thắng kẻ thua.",
+          en: "Disagreement does not have to mean distance. But to keep a difference of opinion from becoming a rupture, it helps to be clear: argue about what is actually happening right now, rather than unloading what has been held back too long. A disagreement held within a frame of connection usually ends in understanding, not in winners and losers.",
+        },
+        prompt: {
+          vi: "Lần gần nhất bạn không đồng ý với ai, bạn đang tranh luận về chủ đề đó hay về điều sâu hơn phía sau?",
+          en: "The last time you disagreed with someone, were you arguing about that specific topic, or about something deeper that had been building underneath?",
+        },
+        microAction: {
+          vi: "Chọn một bất đồng nhỏ và thử nói: 'Mình không đồng ý với điều này — nhưng mình vẫn muốn hiểu góc nhìn của bạn.'",
+          en: "Pick one small disagreement and try saying: 'I don't agree with this — but I still want to understand your perspective.'",
+        },
+        ctaLabel: { vi: "Thử cách này", en: "Try this approach" },
+        href: "/hanh-dong-thien-lanh#giu-ket-noi-khi-bat-dong",
+      },
+      {
+        id: "biet-khi-nao-lui-buoc",
+        title: { vi: "Biết lúc nào lùi bước là sức mạnh", en: "Knowing When Stepping Back Is Strength" },
+        summary: {
+          vi: "Lùi bước không phải thua. Đôi khi dừng lại đúng lúc giúp giữ được một mối quan hệ, giữ được phẩm giá của mình, và tránh leo thang không cần thiết. Khác nhau ở chỗ: lùi vì hiểu rõ mình muốn gì, không phải lùi vì sợ hoặc kiệt sức.",
+          en: "Stepping back is not defeat. Sometimes pausing at the right moment preserves a relationship, preserves your dignity, and avoids unnecessary escalation. The difference is stepping back because you understand what you want — not because you are afraid or exhausted.",
+        },
+        prompt: {
+          vi: "Lần gần nhất bạn lùi bước trong một xung đột, bạn đang chọn hay đang buông xuôi?",
+          en: "The last time you stepped back from a conflict, were you making a choice or just giving in from exhaustion?",
+        },
+        microAction: {
+          vi: "Trong một cuộc tranh luận hôm nay, thử nói: 'Mình cần dừng lại một chút — không phải để tránh, mà để nói rõ hơn khi bình tĩnh hơn.'",
+          en: "In one disagreement today, try saying: 'I need to pause for a moment — not to avoid, but to speak more clearly when I am calmer.'",
+        },
+        ctaLabel: { vi: "Thử thực hành hôm nay", en: "Practice today" },
+        href: "/hanh-dong-thien-lanh#biet-khi-nao-lui-buoc",
+      },
+      {
+        id: "cam-on-va-noi-nho-dung-luc",
+        title: { vi: "Nói lời nhớ và cảm ơn đúng lúc", en: "Saying 'I Miss You' and 'Thank You' at the Right Moment" },
+        summary: {
+          vi: "Người ta thường giữ lại lời nhớ và lời cảm ơn đến khi có dịp hoặc cảm thấy đủ chắc chắn mới nói. Nhưng đúng lúc thường là ngay lúc đó — trước khi người kia không còn cần nghe nữa, trước khi khoảng cách trở nên bình thường.",
+          en: "People often hold back words of missing or gratitude until the right occasion or until they feel certain enough to say it. But the right moment is usually now — before the other person no longer needs to hear it, before the distance starts to feel normal.",
+        },
+        prompt: {
+          vi: "Ai đó trong cuộc sống của bạn đang chờ nghe một điều bạn vẫn chưa nói — vì bận, vì ngại, hay vì chưa thấy cần thiết?",
+          en: "Is there someone in your life still waiting to hear something you have not said yet — because you were busy, hesitant, or felt it was not necessary?",
+        },
+        microAction: {
+          vi: "Chọn một người hôm nay và nói thật, ngắn gọn: 'Mình nhớ bạn' hoặc 'Cảm ơn vì điều bạn đã làm hôm đó.'",
+          en: "Choose one person today and say simply and honestly: 'I have been thinking of you' or 'Thank you for what you did that day.'",
+        },
+        ctaLabel: { vi: "Làm ngay hôm nay", en: "Do it today" },
+        href: "/hanh-dong-thien-lanh#cam-on-va-noi-nho-dung-luc",
+      },
     ],
+    documentaryBlock: {
+      title: {
+        vi: "Góc nhìn từ Giao tiếp phi bạo lực (NVC)",
+        en: "A Perspective from Nonviolent Communication (NVC)",
+      },
+      description: {
+        vi: "Nonviolent Communication của Marshall Rosenberg không dạy cách không tức giận. Nó dạy cách gọi tên được điều mình đang cần và nói ra theo cách không đẩy người kia vào thế phòng thủ. Góc nhìn này mở ra ba trục thực hành rất gần với đời sống hằng ngày.",
+        en: "Marshall Rosenberg's Nonviolent Communication does not teach you to stop being angry. It teaches you to name what you need and express it in a way that does not put others on the defensive. This perspective opens three practical axes very close to everyday life.",
+      },
+      axes: [
+        { vi: "Quan sát, không đánh giá", en: "Observe, do not evaluate" },
+        { vi: "Cảm nhận, không đổ lỗi", en: "Feel, do not blame" },
+        { vi: "Nhu cầu, không áp đặt yêu cầu", en: "Express need, do not impose demands" },
+      ],
+      href: "/hanh-dong-thien-lanh#goc-nhin-giao-tiep-phi-bao-luc",
+    },
     sevenDayPlan: {
       title: { vi: "Bắt đầu trong 7 ngày", en: "Start in 7 Days" },
       intro: {
@@ -925,6 +1097,165 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
         en: "How many times this week did you keep yourself from reacting too quickly? The goal is not perfection, but gradually increasing how often you choose a healthier response.",
       },
     },
+    faqSection: {
+      title: { vi: "Câu hỏi dễ gặp", en: "Common Questions" },
+      items: [
+        {
+          question: { vi: "Ứng xử thiện lành có nghĩa là không bao giờ tức giận không?", en: "Does wholesome conduct mean never getting angry?" },
+          answer: {
+            vi: "Không. Thiện lành không nằm ở chỗ không có cảm xúc tiêu cực. Tức giận là phản ứng hoàn toàn tự nhiên. Điều khác biệt là ta làm gì với cơn tức giận đó — để nó kiểm soát lời nói và hành động, hay dừng lại đủ để phản hồi theo cách ít gây tổn thương hơn.",
+            en: "No. Wholesome conduct is not about having no negative emotions. Anger is completely natural. The difference is what we do with it — whether we let it control our words and actions, or pause long enough to respond in a less harmful way.",
+          },
+        },
+        {
+          question: { vi: "Vì sao nói điều thật mà không làm ai tổn thương lại khó vậy?", en: "Why is saying what is true without hurting others so difficult?" },
+          answer: {
+            vi: "Vì thật và lành ít khi tự nhiên đi cùng nhau. Ta đã quen nói nhanh, phòng vệ, hoặc dùng lời để thắng thay vì để được hiểu. Học nói thật mà không công kích là kỹ năng — không phải tính cách 'lành' bẩm sinh — và nó cần thực hành có ý thức.",
+            en: "Because honest and kind rarely come naturally together. We are used to speaking quickly, defensively, or to win rather than to be understood. Learning to say what is true without attacking is a skill — not an inborn gentle personality — and it takes practiced, intentional effort.",
+          },
+        },
+        {
+          question: { vi: "Làm thế nào khi mình muốn thay đổi cách ứng xử nhưng người thân không?", en: "What to do when you want to change your conduct but those close to you do not?" },
+          answer: {
+            vi: "Thay đổi bao giờ cũng bắt đầu từ một bên. Nếu cách ứng xử của mình thật sự thay đổi theo hướng ít gây đau hơn — ít đổ lỗi hơn, ít leo thang hơn, nhiều lắng nghe hơn — môi trường xung quanh thường dần phản hồi theo, dù chậm và không đều.",
+            en: "Change always starts from one side. If your conduct genuinely shifts toward less harm — less blame, less escalation, more listening — the environment around you usually responds over time, even if slowly and unevenly.",
+          },
+        },
+        {
+          question: { vi: "Khi nào nên nói và khi nào nên im lặng?", en: "When should you speak and when should you stay silent?" },
+          answer: {
+            vi: "Nói hoặc im lặng đều có thể là thiện lành, tùy thời điểm và mục đích. Câu hỏi tốt hơn là: nếu mình nói lúc này, điều đó giúp ích cho kết nối hay chỉ giải tỏa cho bản thân mình? Im lặng lắng nghe và im lặng né tránh là hai điều rất khác nhau.",
+            en: "Both speaking and staying silent can be wholesome — it depends on timing and purpose. A better question is: if I say this now, does it help the connection or only relieve myself? Listening in silence and avoiding in silence are very different things.",
+          },
+        },
+        {
+          question: { vi: "Phản xạ cũ có thể thay đổi được không hay đã cố định?", en: "Can old reflexes be changed or are they fixed?" },
+          answer: {
+            vi: "Phản xạ theo thói quen có thể thay đổi, nhưng cần thời gian và lặp lại. Bước đầu không phải là ngăn phản xạ ngay trong lúc nó xảy ra, mà là nhận ra nó sau khi xảy ra. Nhận ra là đã đi trước một bước so với chạy theo phản xạ.",
+            en: "Habitual reflexes can change, but it takes time and repetition. The first step is not to stop a reflex in the moment — it is to recognize it after it happens. Recognition is already one step ahead of following the reflex blindly.",
+          },
+        },
+        {
+          question: { vi: "Giữ bình tĩnh khi người kia đang xúc phạm — làm được không?", en: "Is it possible to stay calm when someone is being hurtful?" },
+          answer: {
+            vi: "Được, nhưng không phải bằng cách kìm nén hoàn toàn. Bình tĩnh không phải im lặng chịu đựng. Nó có thể bao gồm nói rõ: 'Mình cần dừng cuộc trò chuyện này lại cho đến khi cả hai ổn định hơn.' Đó vừa là bình tĩnh vừa là ranh giới rõ ràng.",
+            en: "Yes — but not through complete suppression. Staying calm is not silent endurance. It can include saying clearly: 'I need to pause this conversation until both of us are steadier.' That is both calmness and a clear boundary at the same time.",
+          },
+        },
+        {
+          question: { vi: "Bắt đầu từ đâu nếu không biết mình đang ứng xử tệ ở điểm nào?", en: "Where to begin if you do not know where your conduct is failing?" },
+          answer: {
+            vi: "Bắt đầu bằng cách quan sát phản xạ, không phán xét. Dành một tuần chỉ để chú ý xem mình thường phản ứng vội nhất trong tình huống nào — với ai, trong hoàn cảnh nào, sau điều gì. Nhận ra trước, hiểu sau, rồi mới tìm cách sửa.",
+            en: "Begin by observing reflexes without judgment. Spend one week simply noticing where you tend to react most quickly — with whom, in what circumstances, after what trigger. Recognize first, understand later, then find how to improve.",
+          },
+        },
+      ],
+    },
+    seedSection: {
+      title: { vi: "Gợi ý triển khai nội dung", en: "Content Development Ideas" },
+      description: {
+        vi: "Mỗi câu hỏi dưới đây có thể mở ra một video ngắn, bài ngắn hoặc chuỗi nội dung bám sát những tình huống giao tiếp thực trong đời sống.",
+        en: "Each question below can open into a short video, short article, or series of content tied closely to real communication situations in daily life.",
+      },
+      cards: [
+        {
+          id: "phan-xa-nao-dang-can-dung-lai",
+          title: { vi: "Phản xạ giao tiếp nào đang cần dừng lại?", en: "Which communication reflex needs to stop?" },
+          lead: {
+            vi: "Nhiều câu nói gây tổn thương không xuất phát từ ý định xấu, mà từ những phản xạ cũ được lặp lại quá lâu đến mức tự nhiên như thở.",
+            en: "Many hurtful words do not come from bad intentions but from old reflexes repeated so long they feel as natural as breathing.",
+          },
+          prompts: [
+            { vi: "Phản xạ nào trong giao tiếp mình hay dùng nhất khi đang bực?", en: "Which communication reflex do you reach for most when you are upset?" },
+            { vi: "Câu nói đó thật sự đang phục vụ điều gì?", en: "What is that sentence actually serving?" },
+            { vi: "Nếu dừng lại 3 giây, mình sẽ nói khác thế nào?", en: "If you paused 3 seconds, what would you say differently?" },
+          ],
+          href: "/hanh-dong-thien-lanh#loi-noi-va-giao-tiep",
+        },
+        {
+          id: "vi-sao-cach-noi-tao-ra-khac-biet",
+          title: { vi: "Vì sao 'bạn làm tôi buồn' khác với 'tôi đang buồn vì điều này'?", en: "Why does 'you made me sad' differ from 'I am sad about this'?" },
+          lead: {
+            vi: "Một chữ thay đổi trọng tâm từ 'người kia gây ra' sang 'mình đang cảm nhận' — và sự khác biệt đó có thể thay đổi hoàn toàn chiều hướng của cuộc trò chuyện.",
+            en: "A single word shifts the focus from 'the other person caused this' to 'I am experiencing this' — and that difference can completely change the direction of a conversation.",
+          },
+          prompts: [
+            { vi: "Điều gì xảy ra khi ta đặt người kia vào thế phòng thủ ngay từ câu đầu?", en: "What happens when we put the other person on the defensive from the very first sentence?" },
+            { vi: "Nói từ trải nghiệm của mình có khó hơn không?", en: "Is speaking from your own experience any harder?" },
+            { vi: "Câu nào dễ dẫn đến đối thoại hơn — câu đổ lỗi hay câu chia sẻ?", en: "Which sentence leads more easily to dialogue — the blaming one or the sharing one?" },
+          ],
+        },
+        {
+          id: "binh-tinh-la-suc-manh-khong-phai-yeu-duoi",
+          title: { vi: "Giữ bình tĩnh khi bị tổn thương không phải yếu đuối mà là sức mạnh", en: "Staying calm when hurt is strength, not weakness" },
+          lead: {
+            vi: "Nhiều người nhầm bình tĩnh với im lặng chịu đựng. Thật ra, giữ được sự điềm tĩnh trong cơn tổn thương là điều đòi hỏi nội lực, không phải nhún nhường.",
+            en: "Many people confuse calmness with silent endurance. In reality, staying steady while being hurt requires inner strength — not submission.",
+          },
+          prompts: [
+            { vi: "Bình tĩnh và nhún nhường khác nhau ở đâu?", en: "How does staying calm differ from giving in?" },
+            { vi: "Khi nào im lặng là lựa chọn lành, khi nào là né tránh?", en: "When is silence a healthy choice and when is it avoidance?" },
+            { vi: "Mình đang dùng bình tĩnh như bước đệm hay như bức tường?", en: "Are you using calm as a buffer or as a wall?" },
+          ],
+          href: "/hanh-dong-thien-lanh#hieu-minh-de-song-nhe-hon",
+        },
+        {
+          id: "gia-dinh-ai-dung-ai-sai",
+          title: { vi: "Trong gia đình: ai đúng ai sai, hay cả hai đều cần được nghe?", en: "In family conflict: who is right, or do both parties need to be heard?" },
+          lead: {
+            vi: "Phần lớn xung đột trong gia đình không phải tranh luận về sự thật khách quan. Nó thường là hai nhu cầu chưa được nói rõ đang va vào nhau.",
+            en: "Most family conflict is not about objective truth. It is usually two unspoken needs colliding.",
+          },
+          prompts: [
+            { vi: "Quan điểm của ai đang bị ngắt lời hoặc không được hoàn thành trong cuộc trò chuyện này?", en: "Whose perspective is being interrupted or left unfinished in this conversation?" },
+            { vi: "Nếu không ai cần thắng lúc này, cuộc trò chuyện sẽ đi đến đâu?", en: "If no one needed to win right now, where might this conversation go?" },
+            { vi: "Câu nào giúp mở ra để cả hai nói thêm được?", en: "What sentence would help open things up so both people can say more?" },
+          ],
+          href: "/hanh-dong-thien-lanh#ung-xu-trong-gia-dinh",
+        },
+        {
+          id: "tu-te-ngoai-xa-hoi-bat-dau-tu-dieu-nho",
+          title: { vi: "Sự tử tế ở nơi công cộng bắt đầu từ điều rất nhỏ", en: "Kindness in public starts with something very small" },
+          lead: {
+            vi: "Tử tế ngoài xã hội không phải để được khen. Nó là cách một người đã tập cho mình không để stress cá nhân đổ sang người không liên quan.",
+            en: "Kindness in public is not for recognition. It is a way of training yourself not to let personal stress spill onto people who have nothing to do with it.",
+          },
+          prompts: [
+            { vi: "Hành động nhỏ nào hôm nay mình có thể làm không cần ai biết?", en: "What is one small act today that can be done without anyone knowing?" },
+            { vi: "Khi bực bội ở nơi công cộng, phản xạ đầu tiên của mình thường là gì?", en: "When frustrated in public, what is your usual first reflex?" },
+            { vi: "Điều gì giúp mình giữ tôn trọng khi đang chịu nhiều áp lực?", en: "What helps you stay respectful when you are under pressure?" },
+          ],
+          href: "/hanh-dong-thien-lanh#ra-ngoai-xa-hoi-voi-su-tu-te",
+        },
+        {
+          id: "giu-ket-noi-khi-khac-y-kien-voi-nguoi-than",
+          title: { vi: "Bất đồng với người thân — giữ kết nối mà không mất mình", en: "Disagreeing with someone close — stay connected without losing yourself" },
+          lead: {
+            vi: "Bất đồng quan điểm không phải kẻ thù của mối quan hệ. Điều phá vỡ kết nối thường không phải sự khác biệt về ý kiến, mà là cách ta xử lý sự khác biệt đó trong lúc cảm xúc đang cao.",
+            en: "Difference of opinion is not the enemy of a relationship. What breaks connection is usually not the disagreement itself, but how we handle it when emotions are running high.",
+          },
+          prompts: [
+            { vi: "Mình có thể không đồng ý mà vẫn giữ tôn trọng không?", en: "Can you disagree while keeping respect?" },
+            { vi: "Bất đồng nào cần được giải quyết và bất đồng nào mình có thể để yên?", en: "Which disagreements need resolution, and which can you leave alone?" },
+            { vi: "Câu nào mở ra đối thoại thay vì đóng lại tranh luận?", en: "What sentence opens dialogue instead of closing down argument?" },
+          ],
+          href: "/hanh-dong-thien-lanh#giu-ket-noi-khi-bat-dong",
+        },
+        {
+          id: "thu-thach-24-gio-khong-phan-xet",
+          title: { vi: "Thử 24 giờ không phán xét — hành động có thể làm ngay hôm nay", en: "Try 24 hours without judgment — an action for today" },
+          lead: {
+            vi: "Phán xét nhanh là phản xạ rất con người. Nhưng dành 24 giờ để quan sát mà không kết luận ngay là một thực hành đủ khó và đủ thú vị để học thêm điều gì đó về cả mình lẫn người khác.",
+            en: "Quick judgment is a very human reflex. But spending 24 hours observing without immediately concluding is a practice hard enough — and interesting enough — to reveal something about both yourself and others.",
+          },
+          prompts: [
+            { vi: "Với ai hoặc trong tình huống nào mình hay phán xét nhanh nhất?", en: "With whom or in which situations do quick judgments appear most often for you?" },
+            { vi: "Khi không phán xét ngay, điều gì mình có thể nhận ra thêm?", en: "When you do not judge immediately, what else might you notice?" },
+            { vi: "Điều gì mình có thể học về mình sau 24 giờ ấy?", en: "What might you learn about yourself after those 24 hours?" },
+          ],
+        },
+      ],
+    },
     relatedDirections: [
       {
         title: { vi: "Giữ nền từ Dinh dưỡng thiện lành", en: "Keep your base in Wholesome Nutrition" },
@@ -949,6 +1280,22 @@ export const contentBranchesI18n: Record<ContentBranchSlug, ContentBranchLanding
           en: "If you want to go deeper, pick whichever direction is closest to what you are working through.",
         },
         href: "/",
+      },
+      {
+        title: { vi: "Sang Lời nói thiện lành", en: "Continue to Wholesome Speech" },
+        description: {
+          vi: "Từ cách ứng xử, đi sâu hơn vào cách nói — chọn từ, đặt câu, và nói thật mà không làm đau.",
+          en: "From conduct, go deeper into speech — choosing words, framing sentences, and being honest without causing harm.",
+        },
+        href: "/loi-noi-thien-lanh",
+      },
+      {
+        title: { vi: "Khám phá Suy nghĩ thiện lành", en: "Explore Wholesome Thoughts" },
+        description: {
+          vi: "Kết nối cách ứng xử bên ngoài với sự rõ ràng và ổn định của đời sống nội tâm.",
+          en: "Connect outer conduct with the clarity and steadiness of inner life.",
+        },
+        href: "/suy-nghi-thien-lanh",
       },
     ],
     primaryCta: {
